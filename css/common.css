@@ -1,0 +1,196 @@
+.seperator {
+    border-left: 1px solid #9490A0;
+    opacity: 0.4;
+    height: 15px;
+}
+
+.scrollable-text {
+    opacity: 0.4;
+}
+
+.active-content {
+    opacity: 1;
+}
+
+/* Buttons */
+
+.gradient-border-btn {
+    cursor: var(--cursor-image), pointer;
+    outline: none;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50rem;
+}
+
+.gradient-border-btn::before {
+    background: linear-gradient(-45deg, #0a74e1, #00c0b8, #0a74e1, #00c0b8, #0a74e1);
+    background-size: 200% 200%;
+    animation: rainbow-text 4s infinite 2s linear alternate;
+}
+
+.gradient-border-btn::before,
+.gradient-border-btn::after {
+    content: "";
+    background-size: 200% 200%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    border-radius: 50rem;
+    z-index: -1;
+}
+
+.gradient-border-btn::after {
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: var(--nila-bg-color);
+    background-size: 200% 200%;
+}
+
+.gradient-border-btn:hover::after,
+.btn:hover {
+    background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
+    background-size: 400% 400%;
+    animation: rainbow-text 2s infinite linear alternate;
+}
+
+.gradient-border-btn:hover.gradient-text {
+    background: #fff !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-btn:hover::before {
+    background-color: transparent;
+    color: #fff;
+}
+
+.gradient-text-animation:hover {
+    animation: rainbow-text 1s infinite 1s linear alternate;
+}
+
+.btn {
+    background-color: #0760ef;
+    color: var(--title-color);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+
+
+/* /\ Buttons /\ */
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.focus-border {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-image: var(--gradient-color);
+    transition: width 0.5s ease-in;
+}
+
+.email-input:focus~.focus-border {
+    width: 80%;
+}
+
+.email-input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #6a6a6a;
+    padding: 15px 0;
+    color: whitesmoke;
+    transition-delay: 0.5s;
+}
+
+.t {
+    font-size: 40px;
+    line-height: 1.4;
+}
+
+.link-hover:hover {
+    background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
+    background-size: 400% 400%;
+    animation: rainbow-text 1s infinite linear alternate;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.link-hover img {
+    margin-left: 3px;
+}
+
+.link-hover:hover img {
+    margin-left: 8px;
+}
+
+.text-hover,
+.copy-rights {
+    position: relative;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.text-hover {
+    cursor: pointer;
+}
+
+.text-hover:hover {
+    opacity: 1;
+}
+
+.text-hover:hover::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    border-radius: 25em;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    animation: border-slide-in 0.3s ease-in;
+}
+
+
+#footer {
+    width: 90vw;
+    height: 100px;
+    color: var(--description-color);
+}
+
+.footer-line {
+    background: url("../assets//img/nila-footer-line.jpg") repeat-x;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 30px;
+    background-size: 5%;
+}
+
+.social-media img {
+    height: 18px;
+    transition: filter 0.3s ease-in;
+    cursor: pointer;
+}
+
+.social-media img:hover {
+    filter: brightness(2);
+}

@@ -1,0 +1,14 @@
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" fill="none" height="8.24" width="43.41" viewBox="0 0 43.41 8.24">
+    <!--Created with Nila (0.3.7-beta.2)-->
+    <g>
+        <polyline points="0.71 7.12  5.71 1.62  10.71 7.12  16.21 1.62  21.71 7.12  27.21 1.62  32.21 7.12  37.21 1.62  42.71 7.12" stroke="#00D0B0"></polyline>
+        <rect transform="rotate(314,5.71,6.12)" width="2" x="4.71" y="5.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,10.71,2.12)" width="2" x="9.71" y="1.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,21.71,2.12)" width="2" x="20.71" y="1.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,32.71,2.12)" width="2" x="31.71" y="1.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,26.71,6.12)" width="2" x="25.71" y="5.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,37.71,6.12)" width="2" x="36.71" y="5.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+        <rect transform="rotate(314,16.12,6.12)" width="2" x="15.12" y="5.12" height="2" stroke-linejoin="round" stroke-linecap="round" stroke="#00D0B0"></rect>
+    </g>
+</svg>

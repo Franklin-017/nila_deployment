@@ -1,0 +1,47 @@
+.cursor {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cursor_circle {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        background-blend-mode: difference;
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .video_section_cursor {
+        position: relative;
+        display: none;
+        width: 300px;
+        height: 300px;
+        margin-top: -50%;
+        margin-left: -50%;
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .cursor.remove_circle .cursor_circle {
+        width: 5px;
+        height: 5px;
+    }
+
+    .cursor.video_section .cursor_circle {
+        display: none;
+    }
+
+    .cursor.video_section .video_section_cursor {
+        display: block;
+    }
+}
