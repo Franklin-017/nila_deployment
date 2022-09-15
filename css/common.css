@@ -17,7 +17,7 @@
 .gradient-border-btn {
     cursor: var(--cursor-image), pointer;
     outline: none;
-    padding: 15px;
+    padding: 15px 25px;
     position: relative;
     cursor: pointer;
     border-radius: 50rem;
