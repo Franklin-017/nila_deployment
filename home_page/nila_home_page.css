@@ -1,0 +1,121 @@
+@import url("../style.css");
+
+.hs-title {
+  font-size: 80px;
+  color: var(--title-color);
+}
+
+
+.text-slide {
+  position: relative;
+  height: 100px;
+  width: 270px;
+  border-right: 2px solid var(--accent-color);
+  transition: width 1s ease-in;
+  display: inline-block;
+}
+
+.hs-animate-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+}
+
+.is-visible {
+  opacity: 1;
+}
+
+/* video section */
+.vs-content {
+  font-size: 239px;
+  color: rgb(42, 44, 48);
+}
+
+.vs-top-content,
+.vs-bottom-content {
+  width: 110%;
+}
+
+.content-animation .vs-top-content {
+  animation: slide-in-right-spring 4s linear;
+}
+
+.content-animation .vs-bottom-content {
+  animation: slide-in-left-spring 4s linear;
+}
+
+.vs-top-content {
+  transform: translateX(-110px);
+}
+
+.vs-bottom-content {
+  transform: translateX(-200px);
+}
+
+/* /video section/ */
+
+.love-icon {
+  width: 55px;
+}
+
+.bottom-card-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.card-layout {
+  min-height: 500px;
+  background-color: rgb(11, 15, 32);
+  border-radius: 20px;
+}
+
+.animation-wrapper img {
+  width: 400px;
+}
+
+.card-img {
+  height: 300px;
+}
+
+.col-content {
+  opacity: 0.1;
+  transition: opacity 0.5s ease-in;
+}
+
+.col-content:hover {
+  opacity: 1;
+}
+
+.col-content .gradient-text {
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hide-img {
+  width: 0px;
+  transition: all 0.5s ease-in;
+}
+
+.content-selected .hide-img {
+  width: 80px;
+}
+
+.content-selected .col-content {
+  opacity: 1;
+}
+
+.content-selected .gradient-text {
+  background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

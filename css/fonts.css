@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Zoho_Puvi_Medium";
+    src: url(../assets/fonts/Zoho_Puvi_Medium.ttf);
+}
+
+@font-face {
+    font-family: "Zoho_Puvi_Regular";
+    src: url(../assets/fonts/Zoho_Puvi_Regular.ttf);
+}
+
+@font-face {
+    font-family: "Zoho_Puvi_Bold";
+    src: url(../assets/fonts/Zoho_Puvi_Bold.ttf);
+}
+
+@font-face {
+    font-family: "Zoho_Puvi_Extrabold";
+    src: url(../assets/fonts/Zoho_Puvi_Extrabold.ttf);
+}
+
+@font-face {
+    font-family: "Zoho_Puvi_Semibold";
+    src: url(../assets/fonts/Zoho_Puvi_Semibold.ttf);
+}
+
+@font-face {
+    font-family: "Zoho_Puvi_Light";
+    src: url(../assets/fonts/Zoho_Puvi_Light.ttf);
+}

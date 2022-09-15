@@ -1,0 +1,48 @@
+@import url("./css/utility.css");
+@import url("./css/cursor.css");
+@import url("./css/fonts.css");
+@import url("./css/navbar.css");
+@import url("./css/common.css");
+@import url("./css/animation.css");
+@import url("./css/responsive.css");
+
+:root {
+    --nila-bg-color: #090D18;
+    --accent-color: #0063f4;
+    --gradient-color: -webkit-linear-gradient(-45deg, #0063f4 60%, #00d0b0 85%);
+    --video-title-font-size: 130px;
+    --title-font-size: 70px;
+    --text-xs: 0.625rem;
+    --text-s: 0.875rem;
+    --text-m: 1.2rem;
+    --text-l: 1.5rem;
+    --text-xl: 2rem;
+    --text-xxl: 3rem;
+    --title-color: #FFFFFF;
+    --description-color: #AAAEB8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Zoho_Puvi_Regular";
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: var(--nila-bg-color);
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--description-color);
+}
+
+li {
+    list-style: none;
+}
