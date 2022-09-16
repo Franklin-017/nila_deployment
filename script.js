@@ -190,4 +190,16 @@ const setActiveState = () => {
         }
     }
 }
+
+const closeWaitlistSlider = document.querySelector(".close-waitlist-slider");
+const waitlistSlider = document.querySelector(".join-waitlist-slider");
+const joinWaitlistBtn = document.querySelector(".join-waitlist-btn");
+
+closeWaitlistSlider.addEventListener("click", () => {
+    waitlistSlider.classList.add("close")
+})
+
+joinWaitlistBtn.addEventListener("click", () => {
+    waitlistSlider.classList.remove("close")
+})
 // ignorei18n_end 
