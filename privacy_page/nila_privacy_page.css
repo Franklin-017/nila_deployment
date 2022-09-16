@@ -59,8 +59,12 @@ body::after {
     margin-bottom: 60px;
 }
 
-.privacy-container a {
+.privacy-container a .text-hover {
     color: var(--accent-color);
+}
+
+.privacy-container a .text-hover::after {
+    background: var(--accent-color);
 }
 
 .privacy-container ul {
