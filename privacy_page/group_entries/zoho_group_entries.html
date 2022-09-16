@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/svg/nila_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./zoho_group_entries.css">
+    <title>Zoho - Group Entities Details | Nila</title>
+</head>
+
+<body>
+    <header class="ge-header sticky">
+        <a href="../../index.html">
+            <img class="nila-logo" src="../../assets/svg/nilagradient-dark.svg" />
+        </a>
+    </header>
+
+    <div class="ge-container">
+        <section class="mb-3 sticky main-title-header">
+            <a class="breadcrumb" href="../nila_privacy_page.html">
+                <span class="left-arrow"><</span>
+                <span>Privacy Policy</span>
+            </a>
+            <div class="main-title-wrapper">
+                <span class="accent-color main-title puvi-regular">Zoho group</span>
+                <span class="gradient-text main-title puvi-regular">entries</span>
+            </div>
+        </section>
+
+        <div class="table-container sticky">
+            <table class="ge-table">
+                <tbody>
+                    <tr>
+                        <th>SI. No</th>
+                        <th>Name of the entity</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Zoho Corporation</td>
+                        <td>4141 Hacienda Drive Pleasanton, California 94588, USA</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Zoho Corporation B.V.</td>
+                        <td>Beneluxlaan 4B, 3527 HT UTRECHT, The Netherlands</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Zoho Corporation Pvt. Ltd.</td>
+                        <td>Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District - 603202,
+                            India</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Zoho Technologies Private Limited</td>
+                        <td>Silaraipuravu Village, Mathalamparai, Tenkasi District 627 814, India</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Zoho Corporation Pte. Ltd.</td>
+                        <td>105 Cecil Street, #10-04, The Octagon, Singapore 069534</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Zoho(Beijing) Technology Co., Ltd.</td>
+                        <td>3F, KPHZ International Technology Transfer Center, No.28, Houtun Road, HaiDian District,
+                            Beijing, China, 100192</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Zoho Japan Corporation</td>
+                        <td>Minato-Mirai-Center building 13F, 3-6-1, Nishi-ku, Yokohama 221-0012, Japan</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Zoho Corporation Pty. Ltd.</td>
+                        <td>Office 8, Level 4, 194 Varsity Parade, Varsity Lakes QLD 4227 Australia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-line"></div>
+            <div class="flex align-center justify-space-between h-3">
+                <div class="flex w-5">
+                    <div class="pr-5 text-s flex align-center justify-space-between">Designed in Nila <img
+                            class="heart-icon pl-1" src="../../assets/svg/heart_icon.svg">
+                    </div>
+
+                    <div class="social-media flex align-center justify-space-between">
+                        <div class="pr-2" cursor-class="remove_circle">
+                            <a href="https://www.youtube.com/nila" target="_blank">
+                                <img src="../../assets/svg/twitter_icon.svg" />
+                            </a>
+                        </div>
+                        <div class="pr-2" cursor-class="remove_circle">
+                            <a href="https://twitter.com/nila" target="_blank">
+                                <img src="../../assets/svg/youtube_icon.svg" />
+                            </a>
+                        </div>
+                        <div class="pr-2" cursor-class="remove_circle">
+                            <a href="https://www.instagram.com/niladotdesign/" target="_blank">
+                                <img src="../../assets/svg/instagram_icon.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex align-center justify-center">
+                    <div class="pr-2" cursor-class="remove_circle">
+                        <a class="text-hover" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
+                    </div>
+                    <div class="seperator pl-2"></div>
+                    <div class="pr-2" cursor-class="remove_circle">
+                        <a class="page_active">Privacy</a>
+                    </div>
+                    <div class="seperator pl-2"></div>
+                    <div class="copy-rights" cursor-class="remove_circle">© 2022 Nila.All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const mainTitleHeaderNode = document.querySelector(".main-title-header");
+        const mainTitleWrapperNode = document.querySelector(".main-title-wrapper");
+        const nilaLogo = document.querySelector(".nila-logo");
+
+        window.addEventListener("scroll", () => {
+            if (mainTitleHeaderNode.getBoundingClientRect().top <= 30) {
+                mainTitleWrapperNode.classList.add("shrink");
+                nilaLogo.classList.add("shrink");
+            } else {
+                mainTitleWrapperNode.classList.remove("shrink");
+                nilaLogo.classList.remove("shrink");
+            }
+        })
+    </script>
+</body>
+</html>
