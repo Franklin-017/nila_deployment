@@ -16,7 +16,7 @@
 }
 
 .navlink,
-.navlink-btn, 
+.navlink-btn,
 .active {
     font-size: 18px;
     position: relative;
@@ -38,7 +38,7 @@
 .active::after {
     content: '';
     position: absolute;
-    background-image: linear-gradient(120deg, var(--accent-color) 0 50%,  rgb(0, 208, 176) 99% 100%);
+    background-image: linear-gradient(120deg, var(--accent-color) 0 50%, rgb(0, 208, 176) 99% 100%);
     border-radius: 25em;
     bottom: 0;
     left: 0;
@@ -73,4 +73,46 @@
 
 .navbar-squeeze .gradient-border-btn {
     width: 115px;
+}
+
+
+@media screen and (max-width: 425px) {
+
+
+    .brand-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navlinks {
+        height: 6vh;
+    }
+
+    .navlink,
+    .navlink-btn,
+    .active {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .navbar-squeeze .brand-logo {
+        width: 10px;
+        height: 5vh;
+    }
+
+    .navbar-squeeze .navlinks {
+        height: 5vh;
+    }
+
+    .navbar-squeeze .navlink,
+    .navbar-squeeze .navlink-btn,
+    .navbar-squeeze .active {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+
+    .navbar-squeeze .gradient-border-btn {
+        width: 70px;
+    }
 }

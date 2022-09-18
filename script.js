@@ -196,10 +196,10 @@ const waitlistSlider = document.querySelector(".join-waitlist-slider");
 const joinWaitlistBtn = document.querySelector(".join-waitlist-btn");
 
 closeWaitlistSlider.addEventListener("click", () => {
-    waitlistSlider.classList.add("close")
+    waitlistSlider.classList.remove("open");
 })
 
 joinWaitlistBtn.addEventListener("click", () => {
-    waitlistSlider.classList.remove("close")
+    waitlistSlider.classList.add("open");
 })
 // ignorei18n_end 

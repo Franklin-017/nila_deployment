@@ -67,21 +67,21 @@ let carouselContent = "";
 
 weAreNillaCarouselContent.forEach(content => {
     carouselContent = carouselContent + `
-        <div class="carousel-content flex">
-            <div class="pr-5">
+        <div class="carousel-content flex flex-col-mobile mobile-center">
+            <div class="pr-5 mp-0">
                 <div class="wan-img-wrapper">
                     <img id="caricature" src="${content.image}" />
                     <div class="circular-path"></div>
                 </div>
             </div>
-            <div class="w-5 pl-5">
+            <div class="w-5 mw-10 pl-5 mp-0 text-center-mobile">
                 <div class="">
                     <h1 id="person_name" class="text-xl title-color">${content.name}</h1>
                 </div>
                 <div class="pb-2">
                     <h4 class="text-m title-color">${content.role}</h4>
                 </div>
-                <div class="w-80 text-m  primary-color pb-2">${content.accomplishment}</div>
+                <div class="w-8 mw-auto text-m  primary-color pb-2">${content.accomplishment}</div>
             </div>
         </div>
     `;

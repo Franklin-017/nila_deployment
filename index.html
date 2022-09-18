@@ -22,15 +22,16 @@
             <img class="brand-logo" src="./assets/svg/nila_logo.svg" />
         </a>
 
-        <div class="navlinks w-3 flex align-center justify-space-evenly">
+        <div class="navlinks flex align-center justify-space-evenly">
             <div class="navlink-wrapper" cursor-class="remove_circle">
                 <a href="./index.html" class="navlink active">Home</a>
             </div>
             <div class="navlink-wrapper" cursor-class="remove_circle">
                 <a href="./about_page/nila_about_page.html" class="navlink">About</a>
             </div>
-            <div class="navlink-btn-wrapper flex align-center justify-center ml-4" cursor-class="remove_circle">
-                <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join Waitlist</button>
+            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile" cursor-class="remove_circle">
+                <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join
+                    Waitlist</button>
             </div>
         </div>
     </nav>
@@ -71,7 +72,7 @@
 
     <div class="container">
         <section id="heroSection" class="flex align-center h-fullvh">
-            <div class="w-5" data-aos="fade-up">
+            <div class="w-5 mw-10" data-aos="fade-up">
                 <span class="text-slide">
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-visible">Design</span>
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-hidden">Collaborate</span>
@@ -94,30 +95,33 @@
                 </div>
             </div>
 
-            <div class="w-5 flex align-center justify-center">
+            <div class="w-5 flex align-center justify-center hide-in-mobile">
                 <div class="hs-animation-section animation-wrapper">
                     <canvas></canvas>
                 </div>
             </div>
         </section>
+    </div>
 
-        <section id="videoSection" class="h-fullvh w-fullvw flex align-center">
-            <div class="vs-content w-10">
-                <div class="vs-top-content">
-                    <h1>Design better,</h1>
-                </div>
-                <div class="vs-bottom-content flex justify-end">
-                    <h1>together.</h1>
-                </div>
+    <section id="videoSection" class="h-fullvh w-fullvw flex align-center overflow-hidden">
+        <div class="vs-content w-10">
+            <div class="vs-top-content">
+                <h1>Design better,</h1>
             </div>
-        </section>
-        <section class="h-fullvh w-10 flex align-center justify-center mb-6">
-            <div class="w-5">
+            <div class="vs-bottom-content flex justify-end">
+                <h1>together.</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="h-fullvh w-10 flex align-center justify-center mb-6 flex-col-mobile">
+            <div class="w-5 mw-10 mobile-center">
                 <div class="fog-animation-section animation-wrapper" data-aos="fade-up">
                     <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
                 </div>
             </div>
-            <div class="w-6 pl-5 flex align-start justify-center flex-col">
+            <div class="w-6 mw-10 pl-5 mp-0 flex align-start justify-center flex-col">
                 <div class="pb-3" data-aos="fade-up">
                     <h1 class="title">Hey, <span class="accent-color">product <span class="gradient-text">designers.
                             </span></span>
@@ -128,7 +132,7 @@
                     <h3>We do too. That's why Nila is natively Mac.</h3>
                 </div>
                 <div data-aos="fade-up">
-                    <p class="text-l primary-color w-8 line-height">
+                    <p class="text-l primary-color w-8 mw-10 line-height">
                         Design on a dedicated space, away from the
                         100+ browser tabs. Built on Apple's tried and
                         tested frameworks, Nila for Mac feels right at
@@ -144,13 +148,13 @@
 
         <section class="pt-6 mb-6">
             <div class="w-10 flex justify-center pb-6">
-                <div class="w-6 text-center">
+                <div class="w-6 mw-10 text-center">
                     <div class="title-wrapper pb-1" data-aos="fade-up">
                         <h1 class="title">Go from design to <span class="gradient-text">prototype.</span>&nbsp;<span
                                 class="gradient-text">Like magic.</span>
                         </h1>
                     </div>
-                    <div class="primary-color w-8 m-auto pb-4" data-aos="fade-up">
+                    <div class="primary-color w-8 mw-10 m-auto pb-4" data-aos="fade-up">
                         <p class="text-xl">All the tools you need to bring your biggest and boldest
                             ideas to life.
                         </p>
@@ -159,7 +163,7 @@
             </div>
 
             <div class="bottom-card-layout w-8">
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/about_design_section.svg" />
                     </div>
@@ -179,7 +183,7 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/future_of_design_img.svg" />
                     </div>
@@ -196,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/future_of_design_img.svg" />
                     </div>
@@ -214,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/about_design_section.svg" />
                     </div>
@@ -230,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/future_of_design_img.svg" />
                     </div>
@@ -247,7 +251,7 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
                     <div class="w-8 m-auto pb-6">
                         <img class="card-img" src="./assets/about_design_section.svg" />
                     </div>
@@ -267,8 +271,8 @@
         </section>
 
         <section class="flex flex-col pt-6 h-auto">
-            <div class="flex align-start pt-6 justify-center h-fullvh">
-                <div class="w-5 flex justify-center">
+            <div class="flex align-start pt-6 justify-center h-fullvh flex-col-rev-mobile">
+                <div class="w-5 mw-10 flex justify-center">
                     <div class="w-8">
                         <h1 class="title pb-4" data-aos="fade-up"><span class="gradient-text">Collaboration meets
                                 creativity.</span> On the
@@ -286,8 +290,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-5">
-                    <div class="flex align-center justify-center fog-animation-section animation-wrapper"
+                <div class="w-5 mw-10">
+                    <div class="flex align-center justify-center  fog-animation-section animation-wrapper"
                         data-aos="fade-up">
                         <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
                     </div>
@@ -295,16 +299,17 @@
             </div>
             <div class="flex align-center mb-6">
                 <div class="w-5">
-                    <div class="flex align-center mb-5 content-selected" data-aos="fade-up">
+                    <div class="flex align-center mb-5 mb-2-mobile content-selected" data-aos="fade-up">
                         <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color w-6 col-content team-invite pl-5 text-xxl"
+                        <div class="primary-color w-6 mw-10 col-content team-invite pl-5 mpl-2 text-xxl"
                             cursor-class="remove_circle">
                             <span class="gradient-text">Invite your team early on. Or later. It's your call.</span>
                         </div>
                     </div>
-                    <div class="flex align-center mb-5" data-aos="fade-up">
+                    <div class="flex align-center mb-5 mb-2-mobile" data-aos="fade-up">
                         <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color w-8 col-content collab pl-5 text-xxl" cursor-class="remove_circle">
+                        <div class="primary-color w-8 mw-10 col-content collab pl-5 mpl-2 text-xxl"
+                            cursor-class="remove_circle">
                             <span class="gradient-text">Comment.</span><br />
                             <span class="gradient-text">Converse.</span><br />
                             <span class="gradient-text">Compare changes.</span>
@@ -312,7 +317,8 @@
                     </div>
                     <div class="flex align-center" data-aos="fade-up">
                         <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color col-content smooth w-5 pl-5 text-xxl" cursor-class="remove_circle">
+                        <div class="primary-color col-content smooth w-5 mw-10 pl-5 mpl-2 text-xxl"
+                            cursor-class="remove_circle">
                             <span class="gradient-text">Smoother handoffs.</span></br>
                             <span class="gradient-text">more clarity.</span>
                         </div>
@@ -336,20 +342,19 @@
         </section>
 
         <section class="h-fullvh flex align-center justify-center">
-            <div class="flex">
-                <div class="w-5" data-aos="fade-up">
+            <div class="flex flex-col-mobile">
+                <div class="w-5 mw-10 mobile-center" data-aos="fade-up">
                     <div class="fog-animation-section animation-wrapper">
                         <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
                     </div>
                 </div>
-                <div class="w-5 flex align-center justify-center">
+                <div class="w-5 mw-10 flex align-center justify-center">
                     <div class="w-10">
                         <h1 class="title mb-3" data-aos="fade-up"><span class="gradient-text">Fly solo.</span>
                             <span class="accent-color">Or work</span><span class="gradient-text">with teams.</span> You
-                            do
-                            you.
+                            do you.
                         </h1>
-                        <div class="primary-color w-8" data-aos="fade-up">
+                        <div class="primary-color w-8 mw-10" data-aos="fade-up">
                             <p class="text-xl">
                                 Connect everyone in the design
                                 process on a workspace that works
@@ -365,8 +370,8 @@
         </section>
 
         <section id="launchUpdate" class="h-fullvh flex justify-center flex-col pb-6">
-            <div class="w-10 pb-5">
-                <div class="w-5">
+            <div class="w-10 pb-5 pb-5-mobile">
+                <div class="w-5 mw-8">
                     <h1 class="title" data-aos="fade-up">Sign up for
                         <span class="gradient-text">early access today.</span>
                     </h1>
@@ -374,11 +379,11 @@
             </div>
             <div class="w-10">
                 <div class="input-wrapper" data-aos="fade-up">
-                    <input type="email" class="email-input text-l puvi-light"
+                    <input type="email" class="email-input mw-10 text-l puvi-light"
                         placeholder="Your email address goes here" />
                     <span class="focus-border"></span>
                 </div>
-                <div class="flex align-center pt-5" data-aos="fade-up">
+                <div class="flex align-center pt-5 pb-5-mobile" data-aos="fade-up">
                     <div class="pr-5">
                         <button class="btn text-m pt-1 pb-1 pr-2 pl-2" cursor-class="remove_circle">Get Launch
                             update</button>
@@ -392,8 +397,8 @@
 
         <footer id="footer" class="mt-6">
             <div class="footer-line"></div>
-            <div class="flex align-center justify-space-between h-3">
-                <div class="flex w-5">
+            <div class="flex align-center justify-space-between h-3 flex-col-mobile align-start-mobile">
+                <div class="flex justify-space-between-mobile w-5 mw-10">
                     <div class="pr-5 text-s flex align-center justify-space-between">Designed in Nila <img
                             class="heart-icon pl-1" src="./assets/svg/heart_icon.svg">
                     </div>
@@ -409,22 +414,22 @@
                                 <img src="./assets/svg/youtube_icon.svg" />
                             </a>
                         </div>
-                        <div class="pr-2" cursor-class="remove_circle">
+                        <div class="pr-2 mp-0" cursor-class="remove_circle">
                             <a href="https://www.instagram.com/niladotdesign/" target="_blank">
                                 <img src="./assets/svg/instagram_icon.svg" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="flex align-center justify-center">
-                    <div class="pr-2" cursor-class="remove_circle">
+                <div class="flex align-center justify-center mobile-center mw-10">
+                    <div class="pr-2 pr-2-mobile" cursor-class="remove_circle">
                         <a class="text-hover" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
                     </div>
-                    <div class="seperator pl-2"></div>
-                    <div class="pr-2" cursor-class="remove_circle">
+                    <div class="seperator pl-2 pl-2-mobile"></div>
+                    <div class="pr-2 pr-2-mobile" cursor-class="remove_circle">
                         <a class="text-hover" target="_blank" href="./privacy_page/nila_privacy_page.html">Privacy</a>
                     </div>
-                    <div class="seperator pl-2"></div>
+                    <div class="seperator pl-2 pl-2-mobile"></div>
                     <div class="copy-rights" cursor-class="remove_circle">© 2022 Nila.All rights reserved.</div>
                 </div>
             </div>

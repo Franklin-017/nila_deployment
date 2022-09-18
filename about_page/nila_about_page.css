@@ -65,6 +65,9 @@
 }
 
 #carousel-controller {
+  position: relative;
+  top: 0;
+  left: 0;
   min-width: 30vw;
 }
 
@@ -83,8 +86,8 @@
 }
 
 .list {
-    cursor: pointer;
-    /* opacity: 0.6; */
+  cursor: pointer;
+  /* opacity: 0.6; */
 }
 
 .list:hover {
@@ -92,10 +95,95 @@
 }
 
 .list.gradient-text {
-    opacity: 1;
-    background: linear-gradient(90deg, var(--accent-color) 40%, rgb(0, 208, 176) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
+  opacity: 1;
+  background: linear-gradient(90deg, var(--accent-color) 40%, rgb(0, 208, 176) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+
+@media screen and (max-width: 425px) {
+  .subtitle-mobile {
+    font-size: 20px;
+  }
+
+  .main-text {
+    font-size: 40px;
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 30px;
+  }
+
+  .vs-center-heart {
+    width: 50px;
+    left: calc(50% - 25px);
+  }
+
+  .vs-content-left {
+    left: 15%;
+  }
+
+  .vs-content-right {
+    right: 15%;
+  }
+
+  #carousel-controller {
+    min-width: 90vw;
+    overflow-x: auto;
+    margin-bottom: 50px;
+  }
+
+  #carousel {
+    overflow: hidden;
+  }
+
+  .carousel-content {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+
+  #caricature {
+    height: 200px;
+  }
+
+  .vs-animation-section {
+    width: 350px;
+  }
+
+  .leads {
+    width: 811px;
+  }
+
+  .leads li {
+    font-size: 16px;
+    margin-right: 60px;
+  }
+
+  .leads li:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .vs-content-left {
+    left: 10%;
+  }
+
+  .vs-content-right {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .vs-content-left {
+    left: 5%;
+  }
+
+  .vs-content-right {
+    right: 5%;
+  }
 }
