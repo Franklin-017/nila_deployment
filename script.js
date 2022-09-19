@@ -5,15 +5,23 @@ const videoSectionCursor = {
     renderer: 'svg',
     loop: true,
     autoplay: true,
+    path: '../assets/lottie/clickanddrag.json'
+}
+
+const canvasCursor = {
+    container: document.querySelector('.canvas_section_cursor'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
     path: './assets/lottie/clickanddrag.json'
 }
 
 bodymovin.loadAnimation(videoSectionCursor);
+bodymovin.loadAnimation(canvasCursor);
 
 // Cursor Functionalities
 const mouseCursor = document.querySelector(".cursor");
 const cursorCircle = document.querySelector(".cursor_circle");
-const videoCursorAnimation = document.querySelector(".video_section_cursor");
 
 const mouse = { x: -100, y: -100 };
 const pos = { x: 0, y: 0 };
@@ -81,25 +89,8 @@ function animateNavbar() {
 
 const animationList = [
     {
-        "target": ["slide-up-1", "slide-up-2", "slide-up-3", "slide-up-4", "slide-up-5"],
-        "classNamesToRemove": ["flip-y", "opacity-0"]
-    },
-    {
-        "target": ["wan-slide-up", "wan-carousel-slide-up", "wan-list-slide-up", "lu-slide-up", "lu-btn-slide-up"],
-        "classNamesToRemove": ["transform-slide-down", "opacity-0"]
-    },
-    {
-        "target": ["vs-content-right", "vs-content-left"],
-        "classNamesToRemove": ["transform-slide-right", "transform-slide-left", "opacity-0"]
-    },
-    {
-        "target": ["vs-content", "vs-center-heart"],
-        "classNamesToAdd": ["content-animation", "heart-scale-in"],
-    },
-    {
-        "target": ["email-input"],
-        "classNamesToRemove": ["w-0"],
-        "classNamesToAdd": ["w-8"]
+        "target": ["vs-content"],
+        "classNamesToAdd": ["content-animation"],
     }
 ];
 
@@ -131,7 +122,6 @@ const canTriggerAnimation = (target, conditionalOffset = 0.85) => {
 };
 
 const animateUsingClassNames = ({ target, classNamesToAdd, classNamesToRemove, conditionalOffset }) => {
-    console.log(target);
     target.forEach((ele) => {
         let elementToAnimate = canTriggerAnimation(ele, conditionalOffset);
         if (elementToAnimate !== undefined && elementToAnimate) {
@@ -160,14 +150,6 @@ const animateUsingClassNames = ({ target, classNamesToAdd, classNamesToRemove, c
         }
     });
 }
-
-(() => {
-    animateUsingClassNames({
-        "target": ["hs-slide-up"],
-        "classNamesToAdd": [],
-        "classNamesToRemove": ["flip-y"]
-    });
-})();
 
 const setActiveState = () => {
     const elements = document.getElementsByClassName("t");

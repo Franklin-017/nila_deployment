@@ -1,10 +1,161 @@
+// Lottie file animation
+const logoAnimation = {
+    container: document.querySelector('.logo-animation'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '../assets/lottie/logo-animation.json'
+}
+
+const thirdFoldAnimation = {
+    container: document.querySelector('.animation-section-3'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '../assets/lottie/page3.json'
+}
+
+const cardOneElement = document.querySelector('.card-img-1');
+const cardOne = {
+    container: cardOneElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/flexiblevector.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const cardTwoElement = document.querySelector('.card-img-2');
+const cardTwo = {
+    container: cardTwoElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/autolayouts.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const cardThreeElement = document.querySelector('.card-img-3');
+const cardThree = {
+    container: cardThreeElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/sharedstyles.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const cardFourElement = document.querySelector('.card-img-4');
+const cardFour = {
+    container: cardFourElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/sharedstyles.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const cardFiveElement = document.querySelector('.card-img-5');
+const cardFive = {
+    container: cardFiveElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/sharedstyles.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const cardSixElement = document.querySelector('.card-img-6');
+const cardSix = {
+    container: cardSixElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/sharedstyles.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+bodymovin.loadAnimation(logoAnimation);
+const cardOneAnimation = bodymovin.loadAnimation(cardOne);
+const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
+const cardThreeAnimation = bodymovin.loadAnimation(cardThree);
+const cardFourAnimation = bodymovin.loadAnimation(cardFour);
+const cardFiveAnimation = bodymovin.loadAnimation(cardFive);
+const cardSixAnimation = bodymovin.loadAnimation(cardSix);
+const thirdFoldLoader = bodymovin.loadAnimation(thirdFoldAnimation);
+// /* Lottie file animation */
+
+const pageLoader = document.querySelector('.page-loader');
+
+setTimeout(() => {
+    pageLoader.classList.add("close");
+    document.querySelector("html").classList.remove("overflow-hidden");
+}, 3000);
+
+window.addEventListener("scroll", () => {
+    const { scrollTop, clientHeight } = document.documentElement;
+    const nodeElementPosition = document.querySelector(".animation-section-3").getBoundingClientRect().top;
+    if ((scrollTop > (scrollTop + nodeElementPosition).toFixed() - clientHeight * 0.85)) {
+        thirdFoldLoader.play();
+    }
+})
+
+const cardsElement = [
+    {
+        element: cardOneElement,
+        animation: cardOneAnimation
+    }, 
+    {
+        element: cardTwoElement,
+        animation: cardTwoAnimation
+    },
+    {
+        element: cardThreeElement,
+        animation: cardThreeAnimation
+    },
+    {
+        element: cardFourElement,
+        animation: cardFourAnimation
+    },
+    {
+        element: cardFiveElement,
+        animation: cardFiveAnimation
+    },
+    {
+        element: cardSixElement,
+        animation: cardSixAnimation
+    }
+];
+
+cardsElement.forEach(({element, animation}) => {
+    element.addEventListener("mouseenter", () => {
+        animation.play();
+    })
+
+    element.addEventListener("mouseleave", () => {
+        animation.goToAndStop(0, true);
+    })
+})
+
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
 
 setInterval(() => {
     textSlide.style.width = "0px";
     textSlide.style.overflow = "hidden";
-    setTimeout(()=> {
+    setTimeout(() => {
         textAnimation.forEach(node => {
             node.classList.toggle("is-hidden");
             node.classList.toggle("is-visible");
@@ -45,12 +196,12 @@ const contentList = [
             </p>
         </div>
     `
-    ]
+]
 
 function unselectSelectedContent() {
     collaborationContentNode.forEach(node => {
         let parentNode = node.parentNode;
-        parentNode.classList.remove("content-selected"); 
+        parentNode.classList.remove("content-selected");
     })
 }
 
@@ -72,7 +223,7 @@ collaborationContentNode.forEach(contentNode => {
             let greatParentNode = parentNode.parentNode;
             unselectSelectedContent();
             renderHeadingsContent(parentNode);
-            greatParentNode.classList.add("content-selected"); 
+            greatParentNode.classList.add("content-selected");
         }
     })
 })

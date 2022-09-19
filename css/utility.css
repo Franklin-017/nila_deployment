@@ -597,112 +597,13 @@
     min-height: 100vh;
 }
 
-@media screen and (max-width: 2560px) {
-    .text-s {
-        font-size: 16px;
-    }
-
-    .text-m {
-        font-size: 24px;
-    }
-
-    .text-l {
-        font-size: 28px;
-    }
-
-    .text-xl {
-        font-size: 42px;
-    }
-
-    .text-xxl {
-        font-size: 50px;
-    }
-
-    .title {
-        font-size: 60px;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    .text-xs {
-        font-size: var(--text-xs);
-    }
-
-    .text-s {
-        font-size: var(--text-s);
-    }
-
-    .text-m {
-        font-size: var(--text-m);
-    }
-
-    .text-l {
-        font-size: var(--text-l);
-    }
-
-    .text-xl {
-        font-size: var(--text-xl);
-    }
-
-    .text-xxl {
-        font-size: var(--text-xxl);
-    }
-
-    .title {
-        font-size: var(--title-font-size);
-        color: var(--title-color);
-        line-height: 1.1;
-        letter-spacing: -1.3px;
-    }
-}
-
 @media screen and (max-width: 1024px) {
-    .text-s {
-        font-size: 14px;
-    }
-
-    .text-m {
-        font-size: 16px;
-    }
-
-    .text-l {
-        font-size: 18px;
-    }
-
-    .text-xl {
-        font-size: 24px;
-    }
-
-    .text-xxl {
-        font-size: 28px;
-    }
-
-    .title {
-        font-size: 42px;
-    }
-
     .w-4-sl {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .text-m {
-        font-size: 14px;
-    }
-
-    .text-l {
-        font-size: 16px;
-    }
-
-    .text-xl {
-        font-size: 20px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
-
     .flex-col-tablet {
         flex-direction: column;
     }
@@ -750,33 +651,8 @@
         font-size: 10px;
     }
 
-    .text-s {
-        font-size: 10px;
-    }
-
-    .text-m {
-        font-size: 12px;
-    }
-
-    .text-l {
-        font-size: 13px;
-    }
-
-    .text-xl {
-        font-size: 16px;
-    }
-
-    .text-xxl {
-        font-size: 24px;
-    }
-
     .text-center-mobile {
         text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        letter-spacing: -1.3px;
     }
 
     .mobile-center {

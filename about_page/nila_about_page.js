@@ -1,4 +1,12 @@
 // Lottie file animation 
+const logoAnimation = {
+    container: document.querySelector('.logo-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/logo-animation.json'
+}
+
 const secondFoldAnimation = {
     container: document.querySelector('.vs-animation-section'),
     renderer: 'svg',
@@ -23,9 +31,17 @@ const fourthFoldAnimation = {
     path: '../assets/lottie/our_mission_mandala.json'
 }
 
+bodymovin.loadAnimation(logoAnimation);
 bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
 bodymovin.loadAnimation(fourthFoldAnimation);
+
+const pageLoader = document.querySelector('.page-loader');
+
+setTimeout(() => {
+    pageLoader.classList.add("close");
+    document.querySelector("html").classList.remove("overflow-hidden");
+}, 3000);
 
 // Fifth fold carousel
 

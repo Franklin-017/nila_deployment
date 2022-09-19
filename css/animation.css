@@ -107,7 +107,7 @@
   }
 }
 
-@keyframes slide-in-right-spring {
+/* @keyframes slide-in-right-spring {
   0% {
     transform: translateX(-100%);
   } 10% {
@@ -153,4 +153,4 @@
   } 100% {
     transform: translateX(-200px);
   }
-}
+} */

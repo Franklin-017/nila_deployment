@@ -1,33 +1,48 @@
-/* Waitlist slider */
-
-.join-waitlist-slider {
-    width: 100vw;
+.page-loader {
     position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--nila-bg-color);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-loader.close {
+    display: none;
+}
+/* Waitlist slider */
+.join-waitlist-slider {
+    position: fixed;
+    right: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 10;
     display: flex;
     justify-content: end;
-    transform: translateX(100%);
-    transition: background-color 0.1s, transform 0.5s ease-in;
 }
 
 .waitlist-container {
+    position: fixed;
+    right: -500%;
     height: 100vh;
     width: 500px;
     background-color: #fff;
     padding: 40px 50px;
     letter-spacing: -1.2px;
+    z-index: 9;
     line-height: 1.2;
-    transition: transform 0.5s ease-in;
-    transition: background-color 0s, transform 0.5s ease-in;
+    transition: right 0.5s ease;
 }
 
 .join-waitlist-slider.open {
     background-color: #030303b8;
-    transform: translateX(0%);
+    right: 0%;
 }
 
 .join-waitlist-slider.open .waitlist-container {
-    transform: translateX(0%);
+    right: 0%;
 }
 
 .close-waitlist-slider {
@@ -112,10 +127,12 @@
 .gradient-border-btn {
     cursor: var(--cursor-image), pointer;
     outline: none;
-    padding: 15px;
+    text-align: center;
+    padding: 12px 24px;
     position: relative;
     cursor: pointer;
     border-radius: 50rem;
+    width: 150px;
 }
 
 .gradient-border-btn::before {
@@ -171,13 +188,16 @@
 }
 
 .btn {
-    background-color: #0760ef;
-    color: var(--title-color);
     border: none;
     outline: none;
     border-radius: 50px;
     cursor: pointer;
-    letter-spacing: -1px;
+    text-align: center;
+}
+
+.get-update-btn {
+    background-color: #0760ef;
+    color: var(--title-color);
 }
 
 
@@ -291,9 +311,16 @@
 }
 
 @media screen and (max-width: 2560px) {
-    .btn {
-        padding: 20px;
-        letter-spacing: -1.5px;
+    .get-update-btn {
+        padding: 16px 36px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .get-update-btn {
+        padding: 12px 24px;
+        font-size: 16px;
     }
 }
 
@@ -326,9 +353,9 @@
         padding: 7px 12px;
         font-size: 14px;
     }
-    .btn {
-        padding: 14px;
-        letter-spacing: 1px;
+    .get-update-btn {
+        padding: 12px 24px;
+        font-size: 14px;
     }
 }
 
@@ -340,8 +367,8 @@
     .t {
         font-size: 16px;
     }
-
     .waitlist-container {
+        width: 100vw;
         padding: 10px 20px;
         line-height: 1;
     }
@@ -393,6 +420,11 @@
     .text-hover,
     .copy-rights {
         font-size: 10px;
+    }
+
+    .get-update-btn {
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .gradient-border-btn {

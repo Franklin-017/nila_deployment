@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/svg/nila_logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/nila-favico.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./home_page/nila_home_page.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -15,6 +15,12 @@
 <body class="product-page-bg">
     <div class="cursor">
         <div class="cursor_circle"></div>
+        <div class="video_section_cursor"></div>
+        <div class="canvas_section_cursor"></div>
+    </div>
+
+    <div class="page-loader">
+        <div class="logo-animation"></div>
     </div>
 
     <nav class="navbar flex align-center justify-space-between">
@@ -29,7 +35,8 @@
             <div class="navlink-wrapper" cursor-class="remove_circle">
                 <a href="./about_page/nila_about_page.html" class="navlink">About</a>
             </div>
-            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile" cursor-class="remove_circle">
+            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile"
+                cursor-class="remove_circle">
                 <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join
                     Waitlist</button>
             </div>
@@ -77,7 +84,7 @@
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-visible">Design</span>
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-hidden">Collaborate</span>
                 </span>
-                <h1 class="hs-title puvi-regular">with the power of the Mac.</h1>
+                <h1 class="hs-title puvi-regular">with the power<br /> of the Mac.</h1>
                 <div class="pt-5 w-10 line-height" data-aos="fade-up">
                     <p class="text-l primary-color pb-3">
                         Nila is where product designers craft the best
@@ -95,7 +102,8 @@
                 </div>
             </div>
 
-            <div class="w-5 flex align-center justify-center hide-in-mobile">
+            <div class="w-5 flex align-center justify-center hide-in-mobile canvas-wrapper"
+                cursor-class="canvas_section">
                 <div class="hs-animation-section animation-wrapper">
                     <canvas></canvas>
                 </div>
@@ -103,7 +111,7 @@
         </section>
     </div>
 
-    <section id="videoSection" class="h-fullvh w-fullvw flex align-center overflow-hidden">
+    <section id="videoSection" class="h-fullvh w-fullvw flex align-center overflow-hidden" cursor-class="video_section">
         <div class="vs-content w-10">
             <div class="vs-top-content">
                 <h1>Design better,</h1>
@@ -117,12 +125,11 @@
     <div class="container">
         <section class="h-fullvh w-10 flex align-center justify-center mb-6 flex-col-mobile">
             <div class="w-5 mw-10 flex align-center justify-center">
-                <div class="fog-animation-section animation-wrapper" data-aos="fade-up">
-                    <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
+                <div class="animation-section-3 animation-wrapper" data-aos="fade-up" data-aos-duration="1000">
                 </div>
             </div>
             <div class="w-6 mw-10 pl-5 mp-0 flex align-start justify-center flex-col">
-                <div class="pb-3" data-aos="fade-up">
+                <div class="pb-3 line-height" data-aos="fade-up">
                     <h1 class="title">Hey, <span class="accent-color">product <span class="gradient-text">designers.
                             </span></span>
                         We know you <img class="love-icon" src="./assets/svg/heart.svg" /> native Mac.
@@ -150,12 +157,13 @@
             <div class="w-10 flex justify-center pb-6">
                 <div class="w-6 mw-10 text-center">
                     <div class="title-wrapper pb-1" data-aos="fade-up">
-                        <h1 class="title">Go from design to <br /><span class="gradient-text">prototype.</span>&nbsp;<span
-                                class="gradient-text">Like magic.</span>
+                        <h1 class="title">Go from design to <br /><span
+                                class="gradient-text">prototype.</span>&nbsp;<span class="gradient-text">Like
+                                magic.</span>
                         </h1>
                     </div>
-                    <div class="primary-color w-8 mw-10 m-auto pb-4" data-aos="fade-up">
-                        <p class="text-xl">All the tools you need to bring your biggest and boldest
+                    <div class="primary-color w-7 mw-10 m-auto pb-4" data-aos="fade-up">
+                        <p class="text-l">All the tools you need to bring your biggest and boldest
                             ideas to life.
                         </p>
                     </div>
@@ -163,16 +171,15 @@
             </div>
 
             <div class="bottom-card-layout w-8 m-auto">
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/about_design_section.svg" />
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-1">
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Flexible Vectors</h2>
                         </div>
                         <div class="primary-color">
-                            <p class="text-l">
+                            <p class="text-m line-height">
                                 Build high-quality screens with powerful
                                 vector-based graphics. Nila helps you
                                 scale layers with contextual tools that
@@ -183,16 +190,15 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/future_of_design_img.svg" />
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-2">
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Auto Layouts</h2>
                         </div>
                         <div class="primary-color">
-                            <p class="text-l">
+                            <p class="text-m line-height">
                                 Resize your designs as you add text and create responsive layouts that simply adapt to
                                 any changes you make.
                             </p>
@@ -200,16 +206,14 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/future_of_design_img.svg" />
-                    </div>
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-3"></div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Animated prototypes</h2>
                         </div>
                         <div class="primary-color">
-                            <p class="text-l">
+                            <p class="text-m line-height">
                                 Connect screen elements for gestures, actions, and interactive overlays. With Nila, you
                                 can make every little transition detail count and handoff the smoothest user experiences
                                 with clarity.
@@ -218,32 +222,30 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/about_design_section.svg" />
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-4">
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Preview designs</h2>
                         </div>
                         <div class="primary-color">
-                            <p class="text-l">
+                            <p class="text-m line-height">
                                 All the presentation settings you need so your work is always ready for display. Pre-
                                 view any screen or device interaction just as you design them.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/future_of_design_img.svg" />
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-5">
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Shared Styles</h2>
                         </div>
-                        <div class="primary-color">
-                            <p class="text-l">
+                        <div class="primary-color w-9">
+                            <p class="text-m line-height">
                                 Create Styles for a Text or Layer and apply them anywhere across your
                                 designs - all at one go.
                             </p>
@@ -251,16 +253,15 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="flex justify-center align-center pb-6">
-                        <img class="card-img" src="./assets/about_design_section.svg" />
+                <div class="card-layout p-5 mp-2">
+                    <div class="flex justify-center align-center pb-6 card-img-6">
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
                             <h2 class="text-xl">Reusable Components</h2>
                         </div>
                         <div class="primary-color">
-                            <p class="text-l">
+                            <p class="text-m line-height">
                                 With every Instance connected to the Leader, Components make it a breeze to scale your
                                 designs with speed and consistency.
                             </p>
@@ -278,7 +279,7 @@
                                 creativity.</span> On the
                             cloud.
                         </h1>
-                        <p class="primary-color text-xl pb-6" data-aos="fade-up">
+                        <p class="primary-color text-l line-height pb-6" data-aos="fade-up">
                             Nila for Web brings everyone on the
                             same page (literally) — having all your
                             stakeholders connected to a single
@@ -355,7 +356,7 @@
                             do you.
                         </h1>
                         <div class="primary-color w-8 mw-10" data-aos="fade-up">
-                            <p class="text-xl">
+                            <p class="text-l line-height">
                                 Connect everyone in the design
                                 process on a workspace that works
                                 best for you and your team. With Nila,
@@ -371,11 +372,9 @@
 
         <section id="launchUpdate" class="h-fullvh flex justify-center flex-col pb-6">
             <div class="w-10 pb-5 pb-5-mobile">
-                <div class="w-5 mw-8">
-                    <h1 class="title" data-aos="fade-up">Sign up for<br />
-                        <span class="gradient-text">early access today.</span>
+                    <h1 class="hs-title" data-aos="fade-up">Sign up for<br />
+                        <span class="accent-color">early access </span><span class="gradient-text">today.</span>
                     </h1>
-                </div>
             </div>
             <div class="w-10">
                 <div class="input-wrapper" data-aos="fade-up">
@@ -385,7 +384,7 @@
                 </div>
                 <div class="flex align-center pt-5 pb-5-mobile" data-aos="fade-up">
                     <div class="pr-5">
-                        <button class="btn text-m pt-1 pb-1 pr-2 pl-2" cursor-class="remove_circle">Get Launch
+                        <button class="btn get-update-btn" cursor-class="remove_circle">Get Launch
                             update</button>
                     </div>
                     <a href="#" class="gradient-text text-m link-hover" cursor-class="remove_circle">Learn more
@@ -398,7 +397,8 @@
         <footer id="footer" class="mt-6">
             <div class="footer-line"></div>
             <div class="flex align-center justify-space-between h-3 flex-col-tablet flex-col-mobile align-start-mobile">
-                <div class="flex justify-space-between-mobile justify-space-between-tablet mb-2-tablet w-5 w-4-sl tw-10 mw-10">
+                <div
+                    class="flex justify-space-between-mobile justify-space-between-tablet mb-2-tablet w-5 w-4-sl tw-10 mw-10">
                     <div class="pr-5 text-s flex align-center justify-space-between">Designed in Nila <img
                             class="heart-icon pl-1" src="./assets/svg/heart_icon.svg">
                     </div>

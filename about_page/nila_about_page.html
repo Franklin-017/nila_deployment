@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/svg/nila_logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/nila-favico.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./nila_about_page.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -16,6 +16,10 @@
     <div class="cursor">
         <div class="cursor_circle"></div>
         <div class="video_section_cursor"></div>
+    </div>
+
+    <div class="page-loader">
+        <div class="logo-animation"></div>
     </div>
 
 
@@ -31,7 +35,8 @@
             <div class="navlink-wrapper" cursor-class="remove_circle">
                 <a href="./nila_about_page.html" class="navlink active">About</a>
             </div>
-            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile" cursor-class="remove_circle">
+            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile"
+                cursor-class="remove_circle">
                 <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join
                     Waitlist</button>
             </div>
@@ -92,20 +97,24 @@
             </div>
         </section>
 
-        <section id="videoSection" class="flex align-center justify-center h-fullvh overflow-hidden" cursor-class="video_section">
-            <div class="vs-content-wrapper flex align-center justify-center">
-                <div class="vs-content-left" data-aos="slide-right">
-                    <h1 class="puvi-regular">Unique</h1>
-                </div>
-                <div class="vs-animation-section animation-wrapper">
-                    <img class="vs-center-heart" data-aos="zoom-in" src="../assets/svg/heart.svg" />
-                </div>
-                <div class="vs-content-right" data-aos="slide-left">
-                    <h1 class="puvi-regular">Design</h1>
-                </div>
-            </div>
-        </section>
+    </div>
 
+    <section id="videoSection" class="flex align-center justify-center h-fullvh overflow-hidden"
+        cursor-class="video_section">
+        <div class="vs-content-wrapper flex align-center justify-center">
+            <div class="vs-content-left" data-aos="slide-right">
+                <h1 class="puvi-regular">Unique</h1>
+            </div>
+            <div class="vs-animation-section animation-wrapper">
+                <img class="vs-center-heart" data-aos="zoom-in" src="../assets/svg/heart.svg" />
+            </div>
+            <div class="vs-content-right" data-aos="slide-left">
+                <h1 class="puvi-regular">Design</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
         <section id="aboutDesignSection" class="w-10 h-auto flex align-start justify-center pb-5">
             <div class="sticky w-4 flex justify-center  sticky-top">
                 <div class="ads-animation-section animation-wrapper" data-aos="fade-up"></div>
@@ -180,8 +189,7 @@
         <section id="weAreNila" class="pt-5 h-auto">
             <div class="w-7 mw-10 line-height">
                 <div class="pb-2" data-aos="fade-up">
-                    <h1 class="title puvi-medium">We are <span
-                            class="gradient-text puvi-medium">Nila</span></h1>
+                    <h1 class="title puvi-medium">We are <span class="gradient-text puvi-medium">Nila</span></h1>
                 </div>
 
                 <div class="w-5 mw-8 pb-5" data-aos="fade-up">
@@ -233,8 +241,8 @@
                     <span class="focus-border"></span>
                 </div>
                 <div class="flex align-center pt-5" data-aos="fade-up">
-                        <button class="btn text-m pt-1 pb-1 pr-2 pl-2 mr-5" cursor-class="remove_circle">Get Launch
-                            update</button>
+                    <button class="btn get-update-btn mr-5" cursor-class="remove_circle">Get Launch
+                        update</button>
                     <a href="#" class="gradient-text text-m link-hover" cursor-class="remove_circle">Learn more
                         <img class="transition" src="../assets/svg/arrow_icon.svg" />
                     </a>
@@ -245,7 +253,8 @@
         <footer id="footer" class="mt-6">
             <div class="footer-line"></div>
             <div class="flex align-center justify-space-between h-3 flex-col-tablet flex-col-mobile align-start-mobile">
-                <div class="flex justify-space-between-mobile justify-space-between-tablet mb-2-tablet w-5 w-4-sl tw-10 mw-10">
+                <div
+                    class="flex justify-space-between-mobile justify-space-between-tablet mb-2-tablet w-5 w-4-sl tw-10 mw-10">
                     <div class="pr-5 text-s flex align-center justify-space-between">Designed in Nila <img
                             class="heart-icon pl-1" src="../assets/svg/heart_icon.svg">
                     </div>

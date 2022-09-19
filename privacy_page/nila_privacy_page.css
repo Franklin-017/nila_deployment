@@ -1,7 +1,8 @@
 .privacy-header {
+    position: sticky;
     width: 95vw;
     height: 12vh;
-    top: 0; 
+    top: 0;
     padding: 3%;
     background-color: #fff;
     box-shadow: 0 0 30px 30px #fff;
@@ -39,20 +40,20 @@ body::after {
     z-index: 2;
 }
 
-
-
 .privacy-container .text-l {
     font-size: 20px;
     font-family: 'Zoho_Puvi_Regular';
     line-height: 1.7;
     width: 75%;
     margin-bottom: 20px;
+    width: 80%;
 }
 
 .privacy-container .text-xl {
     font-size: 29px;
     font-family: 'Zoho_Puvi_Regular';
     margin-bottom: 20px;
+    width: 80%;
 }
 
 .privacy-container .mb-6 {
@@ -63,12 +64,13 @@ body::after {
     margin: 30px 0 40px;
 }
 
-.privacy-container li{
+.privacy-container li {
     position: relative;
     font-size: 19px;
     font-family: 'Zoho_Puvi_Regular';
     padding-left: 50px;
     margin-bottom: 18px;
+    width: 80%;
 }
 
 .privacy-container li::after {
@@ -181,4 +183,51 @@ body::after {
 
 .privacy-container .social-media img:hover {
     filter: brightness(0);
+}
+
+@media screen and (max-width: 1385px) {
+    .priv-box {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .privacy-container .text-l {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .privacy-container .text-xl {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .privacy-container li {
+        font-size: 15px;
+    }
+
+    .main-title-wrapper {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .privacy-container {
+        width: 90vw;
+    }
+
+    .privacy-container .text-l {
+        font-size: 14px;
+        line-height: 1.3;
+        width: 90%;
+    }
+
+    .privacy-container .text-xl {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .main-title-wrapper {
+        font-size: 50px;
+    }
 }

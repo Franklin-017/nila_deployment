@@ -7,7 +7,7 @@
 
 .text-slide {
   position: relative;
-  height: 100px;
+  height: 90px;
   width: 270px;
   border-right: 2px solid var(--accent-color);
   transition: width 1s ease-in;
@@ -30,7 +30,6 @@
 
 /* video section */
 .vs-content {
-  font-size: 239px;
   color: rgb(42, 44, 48);
 }
 
@@ -72,6 +71,11 @@
   min-height: 500px;
   background-color: rgb(11, 15, 32);
   border-radius: 20px;
+}
+
+.animation-section-3 {
+  position: relative;
+  left: -33%;
 }
 
 .animation-wrapper img {
@@ -119,9 +123,37 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 2560px) {
+  .vs-content {
+    font-size: 350px;
+    letter-spacing: -25px;
+  }
+
+  .vs-top-content {
+    transform: translateX(-50px);
+  }
+
+  .vs-bottom-content {
+    transform: translateX(-170px);
+  }
+}
+
+@media screen and (max-width: 1440px) {
   .card-img {
     height: 400px;
+  }
+
+  .vs-content {
+    font-size: 250px;
+    letter-spacing: -10px;
+  }
+
+  .vs-top-content {
+    transform: translateX(-35px);
+  }
+
+  .vs-bottom-content {
+    transform: translateX(-120px);
   }
 }
 
@@ -136,7 +168,7 @@
   }
 
   .vs-content {
-    font-size: 160px;
+    font-size: 180px;
   }
 
   .vs-top-content {
@@ -144,7 +176,7 @@
   }
 
   .vs-bottom-content {
-    transform: translateX(-40px);
+    transform: translateX(-90px);
   }
 
   .animation-wrapper img {
@@ -169,7 +201,7 @@
     width: 136px;
   }
   .vs-content {
-    font-size: 120px;
+    font-size: 140px;
   }
 
   .vs-top-content {
@@ -177,7 +209,7 @@
   }
 
   .vs-bottom-content {
-    transform: translateX(-55px);
+    transform: translateX(-70px);
   }
   .card-img {
     height: 200px;
@@ -201,7 +233,8 @@
   }
 
   .vs-content {
-    font-size: 50px;
+    font-size: 79px;
+    letter-spacing: -5px;
   }
 
   .vs-top-content {
@@ -237,5 +270,27 @@
 
   .content-selected .hide-img {
     width: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+    .vs-content {
+    font-size: 70px;
+    letter-spacing: -5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    .vs-content {
+    font-size: 62px;
+    letter-spacing: -5px;
+  }
+
+    .vs-top-content {
+    transform: translateX(-15px);
+  }
+
+  .vs-bottom-content {
+    transform: translateX(-30px);
   }
 }
