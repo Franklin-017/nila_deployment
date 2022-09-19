@@ -45,7 +45,7 @@ const cardThree = {
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: '../assets/lottie/sharedstyles.json',
+    path: '../assets/lottie/animatedprototypes.json',
     rendererSettings: {
         progressiveLoad: true,
     }
