@@ -50,14 +50,6 @@
   z-index: 1;
 }
 
-.vs-content-left {
-  left: 10%;
-}
-
-.vs-content-right {
-  right: 10%;
-}
-
 /* video section */
 
 .sticky-top {
@@ -103,6 +95,137 @@
   background-size: 200% auto;
 }
 
+@media screen and (max-width: 2560px) {
+  .main-text {
+    font-size: 80px;
+  }
+
+  .vs-center-heart {
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 150px;
+  }
+
+  .vs-content-left {
+    left: 15%;
+  }
+
+  .vs-content-right {
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .main-text {
+    font-size: 70px;
+  }
+
+  .vs-center-heart {
+    width: 130px;
+    left: calc(50% - 65px);
+  }
+
+  .vs-content-left {
+  left: 5%;
+}
+
+.vs-content-right {
+  right: 5%;
+}
+}
+
+@media screen and (max-width: 1024px) {
+  .hs-animation-section {
+    width: 400px;
+  }
+
+  .main-text {
+    font-size: 55px;
+  }
+
+  .vs-center-heart {
+    width: 120px;
+    left: calc(50% - 60px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 110px;
+  }
+
+  .vs-content-left {
+    left: 0%;
+  }
+
+  .vs-content-right {
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hs-animation-section {
+    width: 300px;
+  }
+
+  .main-text {
+    font-size: 40px;
+  }
+
+  .vs-center-heart {
+    width: 80px;
+    left: calc(50% - 40px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 90px;
+  }
+
+  .vs-content-left {
+    left: 0%;
+  }
+
+  .vs-content-right {
+    right: 0%;
+  }
+
+  #carousel-controller {
+    min-width: 90vw;
+    overflow-x: auto;
+    margin-bottom: 50px;
+  }
+
+  .carousel-content {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+
+  #caricature {
+    height: 250px;
+  }
+
+  .vs-animation-section {
+    width: 350px;
+  }
+
+  .leads {
+    width: 885px;
+  }
+
+  .leads li {
+    font-size: 18px;
+    margin-right: 60px;
+  }
+
+  .leads li:last-child {
+    margin-right: 0px;
+  }
+}
+
 
 @media screen and (max-width: 425px) {
   .subtitle-mobile {
@@ -135,10 +258,6 @@
     min-width: 90vw;
     overflow-x: auto;
     margin-bottom: 50px;
-  }
-
-  #carousel {
-    overflow: hidden;
   }
 
   .carousel-content {

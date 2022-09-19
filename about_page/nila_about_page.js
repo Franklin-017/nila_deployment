@@ -74,7 +74,7 @@ weAreNillaCarouselContent.forEach(content => {
                     <div class="circular-path"></div>
                 </div>
             </div>
-            <div class="w-5 mw-10 pl-5 mp-0 text-center-mobile">
+            <div class="w-5 mw-10 tw-10 pl-5 mp-0 text-center-mobile">
                 <div class="">
                     <h1 id="person_name" class="text-xl title-color">${content.name}</h1>
                 </div>

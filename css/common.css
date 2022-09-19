@@ -4,26 +4,26 @@
     width: 100vw;
     position: fixed;
     z-index: 10;
-    background-color: #030303b8;
     display: flex;
     justify-content: end;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: background-color 0.1s, transform 0.5s ease-in;
 }
 
 .waitlist-container {
     height: 100vh;
-    width: 100%;
+    width: 500px;
     background-color: #fff;
-    padding: 60px 70px;
+    padding: 40px 50px;
     letter-spacing: -1.2px;
     line-height: 1.2;
+    transition: transform 0.5s ease-in;
+    transition: background-color 0s, transform 0.5s ease-in;
 }
 
 .join-waitlist-slider.open {
-    background-color: transparent;
+    background-color: #030303b8;
     transform: translateX(0%);
-    transition: transform 0.5s ease-in;
 }
 
 .join-waitlist-slider.open .waitlist-container {
@@ -46,16 +46,15 @@
 
 .waitlist-email-wrapper {
     margin-top: 70px;
-    padding: 15px 0 15px 15px;
+    padding: 13px 0 13px 13px;
     border: 2px solid #ECF1FA;
     border-radius: 5rem;
     width: 100%;
 }
 
-
 .waitlist-email {
-    width: 68%;
-    font-size: 18px;
+    width: 64%;
+    font-size: 16px;
     outline: none;
 }
 
@@ -291,6 +290,48 @@
     filter: brightness(2);
 }
 
+@media screen and (max-width: 2560px) {
+    .btn {
+        padding: 20px;
+        letter-spacing: -1.5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .t {
+        font-size: 24px;
+    }
+
+    .subtitle-sl {
+        font-size: 36px;
+    }
+
+    .close-waitlist-slider {
+        right: 20px;
+        top: 15px;
+    }
+
+    .waitlist-container {
+        padding: 20px;
+        width: 500px;
+    }
+
+    .waitlist-email {
+        width: 72%;
+        font-size: 14px;
+    }
+
+    .waitlist-btn {
+        width: 30%;
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .btn {
+        padding: 14px;
+        letter-spacing: 1px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .seperator {
         height: 8px;
@@ -360,7 +401,7 @@
     }
 }
 
-@media  screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .waitlist-btn {
         width: 45%;
     }

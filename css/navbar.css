@@ -21,7 +21,7 @@
     font-size: 18px;
     position: relative;
     padding: 14px;
-    /* transition: 0.3s width ease-in; */
+    transition: 0.3s all ease-in;
 }
 
 .navlink {
@@ -77,8 +77,6 @@
 
 
 @media screen and (max-width: 425px) {
-
-
     .brand-logo {
         width: 20px;
         height: 20px;
