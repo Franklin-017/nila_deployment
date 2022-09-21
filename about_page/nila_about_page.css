@@ -111,6 +111,16 @@
   }
 }
 
+@media screen and (max-width: 1620px) {
+  .vs-content-left {
+    left: 6%;
+  }
+
+  .vs-content-right {
+    right: 6%;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .main-text {
     font-size: 70px;
@@ -134,15 +144,17 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .hs-animation-section {
-    width: 400px;
+@media screen and (max-width: 1210px) {
+  .vs-content-left {
+    left: 6%;
   }
 
-  .main-text {
-    font-size: 55px;
+  .vs-content-right {
+    right: 6%;
   }
+}
 
+@media screen and (max-width: 1095px) {
   .vs-center-heart {
     width: 110px;
     left: calc(50% - 55px);
@@ -159,6 +171,36 @@
 
   .vs-content-right {
     right: 0%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hs-animation-section {
+    width: 400px;
+  }
+
+  .main-text {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .vs-center-heart {
+    width: 90px;
+    left: calc(50% - 45px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 90px;
+  }
+
+  .vs-content-left {
+    left: 5%;
+  }
+
+  .vs-content-right {
+    right: 5%;
   }
 }
 
@@ -182,11 +224,11 @@
   }
 
   .vs-content-left {
-    left: 0%;
+    left: 3%;
   }
 
   .vs-content-right {
-    right: 0%;
+    right: 3%;
   }
 
   #carousel-controller {
@@ -215,6 +257,46 @@
 
   .leads li:last-child {
     margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .vs-center-heart {
+    width: 70px;
+    left: calc(50% - 35px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 70px;
+  }
+
+  .vs-content-left {
+    left: 5%;
+  }
+
+  .vs-content-right {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .vs-center-heart {
+    width: 70px;
+    left: calc(50% - 35px);
+  }
+
+  .vs-content-left,
+  .vs-content-right {
+    font-size: 50px;
+  }
+
+  .vs-content-left {
+    left: 3%;
+  }
+
+  .vs-content-right {
+    right: 3%;
   }
 }
 

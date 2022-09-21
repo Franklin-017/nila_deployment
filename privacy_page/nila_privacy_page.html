@@ -13,7 +13,7 @@
 
 <body>
     <header class="privacy-header sticky">
-        <a href="../index.html" >
+        <a href="../index.html">
             <img class="privacy-nila-logo" src="../assets/svg/nilagradient-dark.svg" />
         </a>
     </header>
@@ -23,7 +23,8 @@
             <span class="gradient-text main-title puvi-medium">policy</span>
         </section>
         <div class="mb-6">
-            <p class="text-l puvi-light">Zoho, including its group entities <a class="text-hover" href="./group_entries/zoho_group_entries.html">listed here</a> <br />
+            <p class="text-l">Zoho, including its group entities <a class="text-hover"
+                    href="./group_entries/zoho_group_entries.html">listed here</a> <br />
                 ("we", "our", or "us") is the provider of Nila.</p>
         </div>
 
@@ -41,7 +42,8 @@
             <p class="text-xl">What personal information do we collect</p>
             <p class="text-l">We only collect your email address when you subscribe to our email subscription form
                 available in our
-                webpages <a class="text-hover" href="https://nila.cloud/">nila.cloud</a> or <a class="text-hover" href="../index.html">nila.design.</a></p>
+                webpages <a class="text-hover" href="https://nila.cloud/">nila.cloud</a> or <a class="text-hover"
+                    href="../index.html">nila.design.</a></p>
         </div>
 
         <div class="mb-6">
@@ -66,7 +68,8 @@
             <p class="text-xl">Who we share your information with</p>
 
             <p class="text-l">
-                Depending on the region you are from, one or more <a class="text-hover" href="./group_entries/zoho_group_entries.html">group entities</a> of Zoho will have
+                Depending on the region you are from, one or more <a class="text-hover"
+                    href="./group_entries/zoho_group_entries.html">group entities</a> of Zoho will have
                 access to the
                 personal information. We do not sell your personal information. We share your personal information in
                 the ways described in this Privacy Notice, and only with parties who adopt appropriate confidentiality
@@ -112,8 +115,9 @@
             <p class="text-xl">International transfers</p>
 
             <p class="text-l">
-                Depending on the region you are from, we may share your personal information with one or more <a class="text-hover"
-                    href="./group_entries/zoho_group_entries.html">group entities</a> of Zoho. By subscribing to emails from Zoho regarding Nila, you consent
+                Depending on the region you are from, we may share your personal information with one or more <a
+                    class="text-hover" href="./group_entries/zoho_group_entries.html">group entities</a> of Zoho. By
+                subscribing to emails from Zoho regarding Nila, you consent
                 to the processing, transfer, and storage of your personal information within those countries where Zoho
                 operates. Such transfer is subject to a group company agreement that is based on EU Commission's Model
                 Contractual Clauses.
@@ -168,9 +172,9 @@
 
         <footer id="footer">
             <div class="footer-line"></div>
-            <div class="flex align-center justify-space-between h-3">
-                <div class="flex w-5">
-                    <div class="pr-5 text-s flex align-center justify-space-between">Designed in Nila <img
+            <div class="h-3 footer-container">
+                <div class="flex left-content">
+                    <div class="pr-5 flex align-center justify-space-between">Designed in Nila <img
                             class="heart-icon pl-1" src="../assets/svg/heart_icon.svg">
                     </div>
 
@@ -193,7 +197,7 @@
                     </div>
 
                 </div>
-                <div class="flex align-center justify-center">
+                <div class="right-content">
                     <div class="pr-2" cursor-class="remove_circle">
                         <a class="text-hover" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
                     </div>
@@ -212,7 +216,7 @@
         const nilaLogo = document.querySelector(".privacy-nila-logo");
 
         window.addEventListener("scroll", () => {
-            if (mainTitleWrapperNode.getBoundingClientRect().top <= 32) {
+            if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) === 0) {
                 mainTitleWrapperNode.classList.add("shrink");
                 nilaLogo.classList.add("shrink");
             } else {
@@ -220,6 +224,7 @@
                 nilaLogo.classList.remove("shrink");
             }
         })
+
     </script>
 </body>
 

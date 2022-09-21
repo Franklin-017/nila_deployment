@@ -15,6 +15,23 @@ const thirdFoldAnimation = {
     path: '../assets/lottie/page3.json'
 }
 
+const flySoloAnimation = {
+    container: document.querySelector('.fly-solo-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/page3.json'
+}
+
+const collabSectionElement = document.querySelector('.collab-animation-section');
+const collabSectionAnimation = {
+    container: collabSectionElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/collabMandala.json'
+}
+
 const cardOneElement = document.querySelector('.card-img-1');
 const cardOne = {
     container: cardOneElement,
@@ -57,7 +74,7 @@ const cardFour = {
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: '../assets/lottie/sharedstyles.json',
+    path: '../assets/lottie/animatedprototypes.json',
     rendererSettings: {
         progressiveLoad: true,
     }
@@ -81,13 +98,50 @@ const cardSix = {
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: '../assets/lottie/sharedstyles.json',
+    path: '../assets/lottie/reusablecomponents.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const inviteTeamElement = document.querySelector('.invite-team-animation');
+const inviteTeamLottie = {
+    container: inviteTeamElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/inviteurteam.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const smootherHandsoffElement = document.querySelector('.smoother-handsoff-animation');
+const smootherHandsoffLottie = {
+    container: smootherHandsoffElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/smootherhandsoff.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const commentConverseElement = document.querySelector('.comment-converse-animation');
+const commentConverseLottie = {
+    container: commentConverseElement,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: '../assets/lottie/commentconverse.json',
     rendererSettings: {
         progressiveLoad: true,
     }
 }
 
 bodymovin.loadAnimation(logoAnimation);
+bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
 const cardThreeAnimation = bodymovin.loadAnimation(cardThree);
@@ -95,6 +149,10 @@ const cardFourAnimation = bodymovin.loadAnimation(cardFour);
 const cardFiveAnimation = bodymovin.loadAnimation(cardFive);
 const cardSixAnimation = bodymovin.loadAnimation(cardSix);
 const thirdFoldLoader = bodymovin.loadAnimation(thirdFoldAnimation);
+const collabSectionLoader = bodymovin.loadAnimation(collabSectionAnimation);
+const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
+const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
+const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
 // /* Lottie file animation */
 
 const pageLoader = document.querySelector('.page-loader');
@@ -116,7 +174,7 @@ const cardsElement = [
     {
         element: cardOneElement,
         animation: cardOneAnimation
-    }, 
+    },
     {
         element: cardTwoElement,
         animation: cardTwoAnimation
@@ -139,14 +197,25 @@ const cardsElement = [
     }
 ];
 
-cardsElement.forEach(({element, animation}) => {
-    element.addEventListener("mouseenter", () => {
-        animation.play();
-    })
+const cardlayout = document.querySelectorAll(".card-container");
 
-    element.addEventListener("mouseleave", () => {
-        animation.goToAndStop(0, true);
-    })
+
+cardlayout.forEach((layout) => {
+    layout.addEventListener("mouseenter", (event) => {
+        cardsElement.forEach(({ element, animation }) => {
+            if (event.target.children[0].children[0] === element) {
+                animation.play();
+            }
+        })
+    });
+
+    layout.addEventListener("mouseleave", (event) => {
+        cardsElement.forEach(({ element, animation }) => {
+            if (event.target.children[0].children[0] === element) {
+                animation.goToAndStop(0, true);
+            }
+        })
+    });
 })
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
@@ -171,27 +240,27 @@ const collaborationContentNode = document.querySelectorAll(".col-content");
 const contentList = [
     `
         <div class="primary-color" data-aos="fade-up">
-            <p class="text-l pb-2">
+            <p class="text-m pb-2">
                 We understand that having autonomy over your designs is key. That's why your drafts are completely private until you invite other folks for feedback and handoff. Just share links to your prototypes or embed them anywhere on the web whenever you're ready.
             </p>
-            <p class="text-l">
+            <p class="text-m">
                 You don't have to dig through multiple files to find the latest version. With Nila, designers, developers and marketers can explore and iterate in the same file all at the same time, without ever losing context.
             </p>
         </div>
     `,
     `
         <div class="primary-color" data-aos="fade-up">
-            <p class="text-l pb-2">
+            <p class="text-m pb-2">
                 Feedback fuels great design. With a dedicated space for comments, Nila makes it easy for teams to spark conversations around anything they create. Everyone can bring more context to their comments with marked elements, pinned selections, replies, @mentions and emoji reactions. 
             </p>
-            <p class="text-l">
+            <p class="text-m">
                 Oh, and here's the really cool bit: you can quickly compare changes side-by-side to see who changed what, without ever having to switch tabs or hunt for files.
             </p>
         </div>
     `,
     `
         <div class="primary-color" data-aos="fade-up">
-            <p class="text-l pb-2">
+            <p class="text-m pb-2">
                 File exports are a thing of the past–so of course, you can copy design specs and code for any element with Inspect and download assets in any format. You'll never find anyone in your team asking, "Is this the latest file?" again. Just design and handoff. It's that simple. 
             </p>
         </div>
@@ -205,14 +274,22 @@ function unselectSelectedContent() {
     })
 }
 
-const collabContentWrapper = document.getElementById("collab-content-wrapper");
+// const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
+// const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
+// const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
+
+const collabContentWrapper = document.querySelector(".collab-content-wrapper");
 function renderHeadingsContent(node) {
     if (node.className.includes("team-invite")) {
         collabContentWrapper.innerHTML = contentList[0];
+        inviteTeamLoader.play();
     } else if (node.className.includes("collab")) {
         collabContentWrapper.innerHTML = contentList[1];
+        commentConverseLoader.play();
     } else if (node.className.includes("smooth")) {
         collabContentWrapper.innerHTML = contentList[2];
+        smootherHandsoffLoader.play();
+
     }
 }
 
@@ -227,3 +304,27 @@ collaborationContentNode.forEach(contentNode => {
         }
     })
 })
+
+const homeSectionContentWords = ["with the power<br /> of the Mac.", "with the flexibility<br /> of the cloud."];
+
+const homeSectionContentElement = document.querySelector(".animate-content");
+let homeSectionContentWordIndex = 0;
+
+const animateContent = () => {
+    setInterval(() => {
+        homeSectionContentElement.style.transform = "translateY(30%)";
+        homeSectionContentElement.style.opacity = 0;
+        homeSectionContentWordIndex++;
+        if (homeSectionContentWordIndex >= homeSectionContentWords.length) {
+            homeSectionContentWordIndex = 0;
+        }
+    }, 10000)
+}
+
+homeSectionContentElement.addEventListener("transitionend", () => {
+    homeSectionContentElement.innerHTML = homeSectionContentWords[homeSectionContentWordIndex];
+    homeSectionContentElement.style.transform = "translateY(0%)";
+    homeSectionContentElement.style.opacity = 1;
+})
+
+animateContent();

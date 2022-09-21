@@ -128,11 +128,9 @@
     cursor: var(--cursor-image), pointer;
     outline: none;
     text-align: center;
-    padding: 12px 24px;
     position: relative;
     cursor: pointer;
     border-radius: 50rem;
-    width: 150px;
 }
 
 .gradient-border-btn::before {

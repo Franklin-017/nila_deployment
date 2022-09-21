@@ -36,13 +36,6 @@ bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
 bodymovin.loadAnimation(fourthFoldAnimation);
 
-const pageLoader = document.querySelector('.page-loader');
-
-setTimeout(() => {
-    pageLoader.classList.add("close");
-    document.querySelector("html").classList.remove("overflow-hidden");
-}, 3000);
-
 // Fifth fold carousel
 
 const weAreNillaCarouselContent = [
@@ -90,12 +83,12 @@ weAreNillaCarouselContent.forEach(content => {
                     <div class="circular-path"></div>
                 </div>
             </div>
-            <div class="w-5 mw-10 tw-10 pl-5 mp-0 text-center-mobile">
+            <div class="w-7 mw-10 tw-10 pl-5 mp-0 text-center-mobile">
                 <div class="">
                     <h1 id="person_name" class="text-xl title-color">${content.name}</h1>
                 </div>
                 <div class="pb-2">
-                    <h4 class="text-m title-color">${content.role}</h4>
+                    <h4 class="text-l title-color">${content.role}</h4>
                 </div>
                 <div class="w-8 mw-auto text-m  primary-color pb-2">${content.accomplishment}</div>
             </div>

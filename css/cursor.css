@@ -29,18 +29,15 @@
     }
 
     .video_section_cursor,
-    .canvas_section_cursor {
+    .canvas_section_cursor,
+    .opacity_cursor {
         position: relative;
         display: none;
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
         transform: translate(-45%, -45%);
         transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
             width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    .canvas_cursor {
-        display: block;
     }
 
     .cursor.remove_circle .cursor_circle {
@@ -56,6 +53,16 @@
     .cursor.video_section .video_section_cursor,
     .cursor.canvas_section .canvas_section_cursor {
         display: block;
+    }
+
+    .cursor.hero_section .opacity_cursor {
+        display: block;
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+    .cursor.cursor.hero_section .opacity_cursor #heroSection::after {
+        opacity: 0;
     }
 }
 

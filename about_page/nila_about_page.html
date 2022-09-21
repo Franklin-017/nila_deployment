@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-hidden">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -18,28 +18,18 @@
         <div class="video_section_cursor"></div>
     </div>
 
-    <div class="page-loader">
-        <div class="logo-animation"></div>
-    </div>
-
-
-    <nav class="navbar flex align-center justify-space-between">
+    <nav class="navbar">
         <a class="brand-logo-wrapper flex align-center justify-center" href="../index.html">
             <img class="brand-logo" src="../assets/svg/nila_logo.svg" />
         </a>
 
-        <div class="navlinks flex align-center justify-space-evenly">
-            <div class="navlink-wrapper" cursor-class="remove_circle">
-                <a href="../index.html" class="navlink">Home</a>
+        <div class="navlinks">
+            <div class="navbar-nav">
+                <a href="../index.html" class="navlink" cursor-class="remove_circle">Home</a>
+                <a href="./nila_about_page.html" class="navlink active" cursor-class="remove_circle">About</a>
             </div>
-            <div class="navlink-wrapper" cursor-class="remove_circle">
-                <a href="./nila_about_page.html" class="navlink active">About</a>
-            </div>
-            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile"
-                cursor-class="remove_circle">
-                <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join
-                    Waitlist</button>
-            </div>
+            <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text" cursor-class="remove_circle">Join
+                Waitlist</button>
         </div>
     </nav>
 
@@ -187,7 +177,7 @@
         </section>
 
         <section id="weAreNila" class="pt-5 h-auto">
-            <div class="w-7 mw-10 line-height">
+            <div class="w-7 mw-10 line-height mb-6">
                 <div class="pb-2" data-aos="fade-up">
                     <h1 class="title puvi-medium">We are <span class="gradient-text puvi-medium">Nila</span></h1>
                 </div>
@@ -226,9 +216,9 @@
             </div>
         </section>
 
-        <section id="launchUpdate" class="h-fullvh flex justify-center flex-col pb-6">
+        <section id="launchUpdate" class="h-auto flex justify-center flex-col pb-6">
             <div class="w-10 pb-5">
-                <div class="w-5">
+                <div class="w-5 mb-6">
                     <h1 class="title" data-aos="fade-up">Be the first to see what we're
                         <span class="gradient-text">building.</span>
                     </h1>
@@ -236,7 +226,7 @@
             </div>
             <div class="w-10">
                 <div class="input-wrapper" data-aos="fade-up">
-                    <input type="email" class="email-input text-l puvi-light"
+                    <input type="email" class="email-input text-m puvi-light"
                         placeholder="Your email address goes here" />
                     <span class="focus-border"></span>
                 </div>

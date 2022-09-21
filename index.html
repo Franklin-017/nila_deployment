@@ -17,29 +17,26 @@
         <div class="cursor_circle"></div>
         <div class="video_section_cursor"></div>
         <div class="canvas_section_cursor"></div>
+        <div class="opacity_cursor"></div>
     </div>
 
     <div class="page-loader">
         <div class="logo-animation"></div>
     </div>
 
-    <nav class="navbar flex align-center justify-space-between">
+    <nav class="navbar">
         <a class="brand-logo-wrapper flex align-center justify-center" href="./index.html">
             <img class="brand-logo" src="./assets/svg/nila_logo.svg" />
         </a>
 
-        <div class="navlinks flex align-center justify-space-evenly">
-            <div class="navlink-wrapper" cursor-class="remove_circle">
-                <a href="./index.html" class="navlink active">Home</a>
+        <div class="navlinks">
+            <div class="navbar-nav">
+                <a href="./index.html" class="navlink active" cursor-class="remove_circle">Home</a>
+                <a href="./about_page/nila_about_page.html" class="navlink" cursor-class="remove_circle">About</a>
             </div>
-            <div class="navlink-wrapper" cursor-class="remove_circle">
-                <a href="./about_page/nila_about_page.html" class="navlink">About</a>
-            </div>
-            <div class="navlink-btn-wrapper flex align-center justify-center ml-4 ml-0-mobile"
-                cursor-class="remove_circle">
-                <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text">Join
-                    Waitlist</button>
-            </div>
+            <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text"
+                cursor-class="remove_circle">Join
+                Waitlist</button>
         </div>
     </nav>
 
@@ -76,33 +73,23 @@
             <div class="waitlist-footer"></div>
         </div>
     </div>
-
     <div class="container">
-        <section id="heroSection" class="flex align-center h-fullvh">
-            <div class="w-5 mw-10" data-aos="fade-up">
+        <section id="heroSection" class="flex align-center h-fullvh" cursor-class="hero_section">
+            <div class="hs-content" data-aos="fade-up">
                 <span class="text-slide">
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-visible">Design</span>
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-hidden">Collaborate</span>
                 </span>
-                <h1 class="hs-title puvi-regular">with the power<br /> of the Mac.</h1>
-                <div class="pt-5 w-10 line-height" data-aos="fade-up">
-                    <p class="text-l primary-color pb-3">
-                        Nila is where product designers craft the best
-                        user experiences on a native Mac app, while
-                        bringing the rest of the team into the design
-                        process, on the Web.
-                    </p>
-                </div>
-                <div class="w-10" data-aos="fade-up">
-                    <p class="text-l primary-color">
-                        With a complete platform where they design
-                        and work in-sync, teams build incredible
-                        products together.
-                    </p>
-                </div>
+                <h1 class="hs-title puvi-regular transition animate-content">with the power<br /> of the Mac.</h1>
+                <p class="primary-color pb-3 hero-section-content line-height" data-aos="fade-up">
+                    Nila is where product designers craft the best
+                    user experiences on a native Mac app, while
+                    bringing the rest of the team into the design
+                    process, on the Web.
+                </p>
             </div>
 
-            <div class="w-5 flex align-center justify-center hide-in-mobile canvas-wrapper"
+            <div class="w-5 flex align-center justify-center canvas-wrapper"
                 cursor-class="canvas_section">
                 <div class="hs-animation-section animation-wrapper">
                     <canvas></canvas>
@@ -111,72 +98,68 @@
         </section>
     </div>
 
-    <section id="videoSection" class="h-fullvh w-fullvw flex align-center overflow-hidden" cursor-class="video_section">
+    <section id="videoSection" class="video-section-container" cursor-class="video_section">
         <div class="vs-content w-10">
-            <div class="vs-top-content">
-                <h1>Design better,</h1>
+            <div class="vs-top-content" data-aos="slide-left">
+                <img src="./assets/img/design_better.png" />
             </div>
-            <div class="vs-bottom-content flex justify-end">
-                <h1>together.</h1>
+            <div class="vs-bottom-content flex justify-end" data-aos="slide-right">
+                <img src="./assets/img/together.png" />
             </div>
         </div>
     </section>
 
     <div class="container">
-        <section class="h-fullvh w-10 flex align-center justify-center mb-6 flex-col-mobile">
-            <div class="w-5 mw-10 flex align-center justify-center">
-                <div class="animation-section-3 animation-wrapper" data-aos="fade-up" data-aos-duration="1000">
+        <section class="native-mac-section-container flex-col-mobile">
+            <div class="animation-wrapper-3">
+                <div class="animation-section-3" data-aos="fade-up" data-aos-duration="1000">
                 </div>
             </div>
-            <div class="w-6 mw-10 pl-5 mp-0 flex align-start justify-center flex-col">
-                <div class="pb-3 line-height" data-aos="fade-up">
-                    <h1 class="title">Hey, <span class="accent-color">product <span class="gradient-text">designers.
-                            </span></span>
-                        We know you <img class="love-icon" src="./assets/svg/heart.svg" /> native Mac.
-                    </h1>
-                </div>
-                <div class="title-color w-7 text-xl pb-3" data-aos="fade-up">
-                    <h3>We do too. That's why Nila is natively Mac.</h3>
-                </div>
-                <div data-aos="fade-up">
-                    <p class="text-l primary-color w-8 mw-10 line-height">
-                        Design on a dedicated space, away from the
-                        100+ browser tabs. Built on Apple's tried and
-                        tested frameworks, Nila for Mac feels right at
-                        home with the rest of your OS. Just like you,
-                        we're big on speed and precision – Nila comes
-                        with native font rendering, P3 color profiles,
-                        dark UI, offline mode, and everything else
-                        you'd expect from native Mac.
-                    </p>
-                </div>
+            <div class="mw-10 mp-0 native-mac-section-content">
+                <h1 class="title pb-3" data-aos="fade-up">Hey,
+                    <span class="accent-color">product
+                        <span class="gradient-text">designers.</span>
+                    </span>
+                    We know you
+                    <img class="love-icon" src="./assets/svg/heart.svg" />
+                    native Mac.
+                </h1>
+                <h3 class="native-mac-section-subtitle" data-aos="fade-up">We do too. That's why Nila is natively Mac.
+                </h3>
+                <p class="text-m primary-color mw-10 line-height" data-aos="fade-up">
+                    Design on a dedicated space, away from the
+                    100+ browser tabs. Built on Apple's tried and
+                    tested frameworks, Nila for Mac feels right at
+                    home with the rest of your OS. Just like you,
+                    we're big on speed and precision – Nila comes
+                    with native font rendering, P3 color profiles,
+                    dark UI, offline mode, and everything else
+                    you'd expect from native Mac.
+                </p>
             </div>
         </section>
 
-        <section class="pt-6 mb-6">
-            <div class="w-10 flex justify-center pb-6">
-                <div class="w-6 mw-10 text-center">
-                    <div class="title-wrapper pb-1" data-aos="fade-up">
-                        <h1 class="title">Go from design to <br /><span
-                                class="gradient-text">prototype.</span>&nbsp;<span class="gradient-text">Like
-                                magic.</span>
-                        </h1>
-                    </div>
-                    <div class="primary-color w-7 mw-10 m-auto pb-4" data-aos="fade-up">
-                        <p class="text-l">All the tools you need to bring your biggest and boldest
-                            ideas to life.
-                        </p>
-                    </div>
-                </div>
+        <section class="prototype-section-container">
+            <div class="flex justify-center flex-col text-center pb-6">
+                <h1 class="title" data-aos="fade-up">Go from design to <br /><span
+                        class="gradient-text">prototype.</span>&nbsp;<span class="gradient-text">Like
+                        magic.</span>
+                </h1>
+                <p class="prototype-section-subtitle primary-color text-l line-height mw-10 m-auto" data-aos="fade-up">
+                    All the tools you need to
+                    bring your biggest and boldest
+                    ideas to life.
+                </p>
             </div>
 
-            <div class="bottom-card-layout w-8 m-auto">
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-1">
+            <div class="bottom-card-layout">
+                <div class="card-container p-5 mp-2">
+                    <div class="card-media">
+                        <div class="card-img-1"></div>
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
-                            <h2 class="text-xl">Flexible Vectors</h2>
+                            <h2 class="text-l">Flexible Vectors</h2>
                         </div>
                         <div class="primary-color">
                             <p class="text-m line-height">
@@ -190,12 +173,13 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-2">
+                <div class="card-container p-5 mp-2">
+                    <div class="card-media">
+                        <div class="card-img-2"></div>
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
-                            <h2 class="text-xl">Auto Layouts</h2>
+                            <h2 class="text-l">Auto Layouts</h2>
                         </div>
                         <div class="primary-color">
                             <p class="text-m line-height">
@@ -206,11 +190,13 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-3"></div>
+                <div class="card-container p-5 mp-2">
+                    <div class="card-media">
+                        <div class="card-img-3"></div>
+                    </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
-                            <h2 class="text-xl">Animated prototypes</h2>
+                            <h2 class="text-l">Animated prototypes</h2>
                         </div>
                         <div class="primary-color">
                             <p class="text-m line-height">
@@ -222,12 +208,13 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-4">
+                <div class="card-container p-5 mp-2">
+                    <div class="card-media">
+                        <div class="card-img-4"></div>
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
-                            <h2 class="text-xl">Preview designs</h2>
+                            <h2 class="text-l">Preview designs</h2>
                         </div>
                         <div class="primary-color">
                             <p class="text-m line-height">
@@ -237,12 +224,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-5">
+                <div class="card-container p-5 mp-2">
+                    <div class="card-media">
+                        <div class="card-img-5"></div>
                     </div>
                     <div class="card-content">
                         <div class="title-color pb-2">
-                            <h2 class="text-xl">Shared Styles</h2>
+                            <h2 class="text-l">Shared Styles</h2>
                         </div>
                         <div class="primary-color w-9">
                             <p class="text-m line-height">
@@ -253,86 +241,76 @@
                     </div>
                 </div>
 
-                <div class="card-layout p-5 mp-2">
-                    <div class="flex justify-center align-center pb-6 card-img-6">
+                <div class="card-container mp-2">
+                    <div class="card-media">
+                        <div class="card-img-6"></div>
                     </div>
                     <div class="card-content">
-                        <div class="title-color pb-2">
-                            <h2 class="text-xl">Reusable Components</h2>
-                        </div>
-                        <div class="primary-color">
-                            <p class="text-m line-height">
-                                With every Instance connected to the Leader, Components make it a breeze to scale your
-                                designs with speed and consistency.
-                            </p>
-                        </div>
+                        <h2 class="card-title text-l title-color pb-2">Reusable Components</h2>
+                        <p class="card-description text-m primary-color line-height">
+                            With every Instance connected to the Leader, Components make it a breeze to scale your
+                            designs with speed and consistency.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="flex flex-col pt-6 h-auto">
-            <div class="flex align-start pt-6 justify-center h-fullvh flex-col-rev-mobile">
-                <div class="w-5 mw-10 flex justify-center">
-                    <div class="w-8">
-                        <h1 class="title pb-4" data-aos="fade-up"><span class="gradient-text">Collaboration meets
-                                creativity.</span> On the
-                            cloud.
-                        </h1>
-                        <p class="primary-color text-l line-height pb-6" data-aos="fade-up">
-                            Nila for Web brings everyone on the
-                            same page (literally) — having all your
-                            stakeholders connected to a single
-                            source of truth minimizes friction in the
-                            design process and leads to simpler
-                            feedback loops. Now, your team can
-                            focus on iterating faster and better
-                            than ever before.
-                        </p>
-                    </div>
+        <section class="collab-section-container">
+            <div class="collab-section-header-container flex-col-rev-mobile">
+                <div class="mw-10 collab-header-content">
+                    <h1 class="title collab-header-title" data-aos="fade-up"><span class="accent-color">Collaboration
+                            meets
+                            <span class="gradient-text">creativity.</span></span> On the
+                        cloud.
+                    </h1>
+                    <p class="collab-header-description primary-color text-m" data-aos="fade-up">
+                        Nila for Web brings everyone on the
+                        same page (literally) — having all your
+                        stakeholders connected to a single
+                        source of truth minimizes friction in the
+                        design process and leads to simpler
+                        feedback loops. Now, your team can
+                        focus on iterating faster and better
+                        than ever before.
+                    </p>
                 </div>
-                <div class="w-5 mw-10">
-                    <div class="flex align-center justify-center  fog-animation-section animation-wrapper"
-                        data-aos="fade-up">
-                        <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
-                    </div>
-                </div>
+                <div class="collab-animation-wrapper collab-animation-section" data-aos="fade-up"></div>
             </div>
-            <div class="flex align-center mb-6">
-                <div class="w-5">
-                    <div class="flex align-center mb-5 mb-2-mobile content-selected" data-aos="fade-up">
-                        <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color w-6 mw-10 col-content team-invite pl-5 mpl-2 text-xxl"
+
+            <div class="collab-feature-section">
+                <div class="collab-feature-controller">
+                    <div class="collab-feature-controller-container mb-2-mobile content-selected" data-aos="fade-up">
+                        <div class="invite-team-animation show-on-hover"></div>
+                        <div class="primary-color mw-10 col-content team-invite mpl-2 text-xl"
                             cursor-class="remove_circle">
                             <span class="gradient-text">Invite your team early on. Or later. It's your call.</span>
                         </div>
                     </div>
-                    <div class="flex align-center mb-5 mb-2-mobile" data-aos="fade-up">
-                        <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color w-8 mw-10 col-content collab pl-5 mpl-2 text-xxl"
-                            cursor-class="remove_circle">
+                    <div class="collab-feature-controller-container mb-2-mobile" data-aos="fade-up">
+                        <div class="comment-converse-animation show-on-hover"></div>
+                        <div class="primary-color mw-10 col-content collab mpl-2 text-xl" cursor-class="remove_circle">
                             <span class="gradient-text">Comment.</span><br />
                             <span class="gradient-text">Converse.</span><br />
                             <span class="gradient-text">Compare changes.</span>
                         </div>
                     </div>
                     <div class="flex align-center" data-aos="fade-up">
-                        <img class="hide-img" src="./assets/svg/nila_logo.svg" />
-                        <div class="primary-color col-content smooth w-5 mw-10 pl-5 mpl-2 text-xxl"
-                            cursor-class="remove_circle">
+                        <div class="smoother-handsoff-animation show-on-hover"></div>
+                        <div class="primary-color col-content smooth mw-10 mpl-2 text-xl" cursor-class="remove_circle">
                             <span class="gradient-text">Smoother handoffs.</span></br>
                             <span class="gradient-text">more clarity.</span>
                         </div>
                     </div>
                 </div>
-                <div class="w-5 line-height" id="collab-content-wrapper">
-                    <div class="primary-color" data-aos="fade-up">
-                        <p class="text-l pb-2">
+                <div class="collab-content-wrapper">
+                    <div class="primary-color">
+                        <p class="text-m pb-2">
                             We understand that having autonomy over your designs is key. That's why your drafts are
                             completely private until you invite other folks for feedback and handoff. Just share links
                             to your prototypes or embed them anywhere on the web whenever you're ready.
                         </p>
-                        <p class="text-l">
+                        <p class="text-m">
                             You don't have to dig through multiple files to find the latest version. With Nila,
                             designers, developers and marketers can explore and iterate in the same file all at the same
                             time, without ever losing context.
@@ -342,43 +320,35 @@
             </div>
         </section>
 
-        <section class="h-fullvh flex align-center justify-center">
-            <div class="flex flex-col-mobile">
-                <div class="w-5 mw-10 flex align-center justify-center" data-aos="fade-up">
-                    <div class="fog-animation-section animation-wrapper">
-                        <img src="./assets/future_of_design_img.svg" class="fog-right-img" />
-                    </div>
+        <section class="fly-solo-section-container">
+            <div class="fly-solo-animation" data-aos="fade-up"></div>
+            <div class="mw-10 fly-solo-content-header">
+                <h1 class="title fly-solo-content-title " data-aos="fade-up"><span class="gradient-text">Fly
+                        solo.</span>
+                    <span class="accent-color">Or work</span><span class="gradient-text">with teams.</span> You
+                    do you.
+                </h1>
+                <div class="primary-color fly-solo-content-description mw-10" data-aos="fade-up">
+                    <p class="text-m line-height">
+                        Connect everyone in the design
+                        process on a workspace that works
+                        best for you and your team. With Nila,
+                        you're always in the driver's seat to
+                        control who can view, add comments,
+                        and edit your Projects.
+                    </p>
                 </div>
-                <div class="w-5 mw-10 flex align-center justify-center">
-                    <div class="w-10">
-                        <h1 class="title mb-3" data-aos="fade-up"><span class="gradient-text">Fly solo.</span>
-                            <span class="accent-color">Or work</span><span class="gradient-text">with teams.</span> You
-                            do you.
-                        </h1>
-                        <div class="primary-color w-8 mw-10" data-aos="fade-up">
-                            <p class="text-l line-height">
-                                Connect everyone in the design
-                                process on a workspace that works
-                                best for you and your team. With Nila,
-                                you're always in the driver's seat to
-                                control who can view, add comments,
-                                and edit your Projects.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <section id="launchUpdate" class="h-fullvh flex justify-center flex-col pb-6">
-            <div class="w-10 pb-5 pb-5-mobile">
-                    <h1 class="hs-title" data-aos="fade-up">Sign up for<br />
-                        <span class="accent-color">early access </span><span class="gradient-text">today.</span>
-                    </h1>
+        <section id="launchUpdate" class="h-auto flex justify-center flex-col pb-6">
+            <div class="w-10 mb-6 pb-5 pb-5-mobile">
+                <h1 class="hs-title" data-aos="fade-up">Sign up for<br />
+                    <span class="accent-color">early access </span><span class="gradient-text">today.</span>
+                </h1>
             </div>
             <div class="w-10">
                 <div class="input-wrapper" data-aos="fade-up">
-                    <input type="email" class="email-input mw-10 text-l puvi-light"
+                    <input type="email" class="email-input mw-10 text-m puvi-light"
                         placeholder="Your email address goes here" />
                     <span class="focus-border"></span>
                 </div>
