@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     height: 56px;
-    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .navlinks {
@@ -22,7 +22,6 @@
     align-items: center;
     justify-content: end;
     font-size: 18px;
-    transition: all 0.3s linear;
 }
 
 .navbar-nav {
@@ -34,7 +33,7 @@
 .navbar-nav .navlink {
     position: relative;
     padding: 14px 0;
-    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .navlink:first-child {
@@ -48,7 +47,6 @@
 .navlink-btn {
     text-align: center;
     padding: 14px 36px;
-    transition: all 0.3s linear;
 }
 
 .navlink:hover,

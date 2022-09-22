@@ -16,8 +16,8 @@ const canvasCursor = {
     path: './assets/lottie/clickanddrag.json'
 }
 
-bodymovin.loadAnimation(videoSectionCursor);
-bodymovin.loadAnimation(canvasCursor);
+// bodymovin.loadAnimation(videoSectionCursor);
+// bodymovin.loadAnimation(canvasCursor);
 
 // Cursor Functionalities
 const mouseCursor = document.querySelector(".cursor");
@@ -73,8 +73,11 @@ cursorModifiers.forEach((cursorModifier) => {
 const navbar = document.querySelector(".navbar");
 
 function animateNavbar() {
+    let transition = "all 0.3s ease-in";
     if (window.scrollY !== 0) {
         navbar.classList.add("navbar-squeeze");
+        document.querySelector(".brand-logo").style.transition = transition;
+        document.querySelector(".navlinks").style.transition = transition;
     } else {
         navbar.classList.remove("navbar-squeeze");
     }

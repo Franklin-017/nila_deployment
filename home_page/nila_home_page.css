@@ -13,7 +13,8 @@
 .hs-title {
   font-size: var(--hero-section-font-size);
   color: var(--title-color);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  line-height: 1.1;
 }
 
 .hs-title.gradient-text {
@@ -44,8 +45,9 @@
 }
 
 .hero-section-content {
-  width: 80%;
+  width: 95%;
   font-size: 24px;
+  line-height: 1.4;
 }
 
 /* /Hero Section/ */
@@ -62,6 +64,10 @@
 .vs-content {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .vs-top-content,
@@ -73,7 +79,9 @@
 .vs-bottom-content img,
 .vs-top-content img {
   width: calc(100vw);
+  display: flex;
 }
+
 /* /video section/ */
 
 /* Native Mac Section */
@@ -104,11 +112,15 @@
 }
 
 .native-mac-section-content {
-  width: 50%;
+  width: 40%;
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
+}
+
+.native-mac-section-title {
+  padding-bottom: 30px;
 }
 
 .native-mac-section-subtitle {
@@ -116,10 +128,12 @@
   width: 85%;
   padding-bottom: 30px;
   font-size: 35px;
+  line-height: 1.4;
 }
 
 .native-mac-section-description {
-  width: 90%;
+  width: 100%;
+  line-height: 1.4;
 }
 
 /* /Native Mac Section/ */
@@ -135,30 +149,37 @@
   width: 40%;
   padding-top: 20px;
   padding-bottom: 40px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .bottom-card-layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 0 auto;
   width: 80%;
 }
 
 .card-container {
-  min-height: 500px;
   background-color: #1b1f2a;
   border-radius: 20px;
-  padding: 50px;
+  padding: 40px;
 }
 
 .card-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
-  min-height: 410px;
+  margin-bottom: 60px;
+  height: 200px;
+}
+
+.card-content {
+  line-height: 1.4;
+}
+
+.card-title {
+  padding-bottom: 20px;
 }
 
 /* /Prototype Section/ */
@@ -193,7 +214,7 @@
 
 .collab-header-description {
   width: 70%;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .collab-animation-wrapper {
@@ -204,7 +225,7 @@
 }
 
 .collab-feature-section {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -270,10 +291,14 @@
 
 .collab-content-wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   height: 100%;
   width: 40%;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+.collab-content.mb {
+  margin-bottom: 50px;
 }
 
 /* /Collab Section/ */
@@ -308,17 +333,48 @@
 
 /* Responsiveness  */
 
-@media screen and (max-width: 1665px) {
-  .hero-section-content {
-    width: 90%;
+@media screen and (max-width: 1770px) {
+
+  /* Native Mac Section */
+  .native-mac-section-content {
+    width: 50%;
   }
+
+  .native-mac-section-subtitle {
+    width: 75%;
+    padding-bottom: 30px;
+  }
+
+  .native-mac-section-description {
+    width: 90%;
+    font-size: 22px;
+  }
+
+  /* /Native Mac Section/ */
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1750px) {
+
+  /* Prototype Section */
+  .bottom-card-layout {
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+  }
+
+  .card-media {
+    height: 350px;
+  }
+
+  /* /Prototype Section/ */
+}
+
+
+@media screen and (max-width: 1495px) {
   :root {
     --hero-section-font-size: 70px;
   }
 
+  /* Hero Section */
   .hero-section-content {
     font-size: 22px;
   }
@@ -327,13 +383,36 @@
     height: 80px;
     width: 243px;
   }
+
+  /* Hero Section */
+  /* Native Mac Section */
+  .love-icon {
+    width: 40px;
+  }
+
+  .native-mac-section-subtitle {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+
+  .native-mac-section-description {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  /* /Native Mac Section/ */
 }
 
-@media screen and (max-width: 1357px) {
-  .hero-section-content {
+@media screen and (max-width: 1415px) {
+
+  /* Prototype Section */
+  .bottom-card-layout {
     width: 80%;
   }
+
+  /* /Prototype Section/ */
 }
+
 
 @media screen and (max-width: 1295px) {
   :root {
@@ -350,7 +429,22 @@
   }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1275px) {
+
+  /* Native Mac Section */
+  .native-mac-section-subtitle {
+    width: 80%;
+    font-size: 28px;
+  }
+
+  .native-mac-section-description {
+    font-size: 20px;
+  }
+
+  /* /Native Mac Section/ */
+}
+
+@media screen and (max-width: 1150px) {
   :root {
     --hero-section-font-size: 55px;
   }
@@ -360,29 +454,33 @@
     width: 193px;
   }
 
-  .hero-section-content {
+  /* Prototype Section */
+  .bottom-card-layout {
     width: 90%;
   }
 
-  .card-img {
-    height: 400px;
-  }
-
-  .vs-content {
-    font-size: 250px;
-    letter-spacing: -10px;
-  }
-
-  .vs-top-content {
-    transform: translateX(-35px);
-  }
-
-  .vs-bottom-content {
-    transform: translateX(-120px);
-  }
+  /* /Prototype Section/ */
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
+
+  /* Native Mac Section */
+  .native-mac-section-subtitle {
+    font-size: 26px;
+  }
+
+  .love-icon {
+    width: 30px;
+  }
+
+  .native-mac-section-description {
+    font-size: 18px;
+  }
+
+  /* /Native Mac Section/ */
+}
+
+@media screen and (max-width: 1025px) {
   :root {
     --hero-section-font-size: 50px;
   }
@@ -396,16 +494,19 @@
     width: 176px;
   }
 
+  /* Prototype Section */
+  .card-media {
+    height: 150px;
+  }
+
+  .card-title {
+    padding-bottom: 7px;
+  }
+
+  /* /Prototype Section/ */
+
   .animation-wrapper img {
     width: 300px;
-  }
-
-  .love-icon {
-    width: 25px;
-  }
-
-  .card-img {
-    height: 250px;
   }
 }
 
@@ -422,7 +523,24 @@
   .hero-section-content {
     font-size: 16px;
   }
+
+  /* Native Mac Section */
+  .native-mac-section-subtitle {
+    font-size: 22px;
+  }
+
+  .love-icon {
+    width: 25px;
+  }
+
+  .native-mac-section-description {
+    font-size: 16px;
+  }
+
+  /* /Native Mac Section/ */
 }
+
+/* ************* Tablet Screen Width ************* */
 
 @media screen and (max-width: 835px) {
   :root {
@@ -440,18 +558,57 @@
 
   .hero-section-content {
     font-size: 18px;
-    width: 80%;
   }
 
   .canvas-wrapper {
     display: none;
   }
 
-  .card-img {
-    height: 200px;
+  /* Native Mac Section */
+  .native-mac-section-subtitle {
+    width: 85%;
   }
+
+  /* /Native Mac Section/ */
 }
 
+@media screen and (max-width: 768px) {
+
+  /* Native Mac Section */
+  .native-mac-section-title {
+    padding-bottom: 10px;
+  }
+
+  .native-mac-section-subtitle {
+    font-size: 20px;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+
+  .love-icon {
+    width: 20px;
+  }
+
+  .native-mac-section-description {
+    font-size: 14px;
+  }
+
+  /* /Native Mac Section/ */
+  /* Prototype Section */
+  .card-container {
+    padding: 20px;
+  }
+
+  .card-media {
+    margin-bottom: 30px;
+  }
+
+  /* /Prototype Section/ */
+}
+
+/* ************* /Tablet Screen Width/ ************* */
+
+/* ************* Mobile screen Width ************* */
 @media screen and (max-width: 555px) {
   :root {
     --hero-section-font-size: 45px;
@@ -465,6 +622,57 @@
   .hero-section-content {
     font-size: 16px;
   }
+
+  /* Native Mac Section */
+  .native-mac-section-container {
+    flex-direction: column;
+  }
+
+  .animation-wrapper-3 {
+    position: static;
+    width: 100%;
+    height: 300px;
+  }
+
+  .animation-section-3 {
+    position: static;
+    height: 85%;
+  }
+
+  .native-mac-section-content {
+    width: 70%;
+  }
+
+  .native-mac-section-title {
+    padding-bottom: 20px;
+    width: 90%;
+  }
+
+  .native-mac-section-subtitle {
+  padding-bottom: 20px;
+}
+
+  /* /Native Mac Section/ */
+
+  /* Prototype Section */
+  .bottom-card-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-card-layout {
+    width: 70%;
+  }
+
+  .card-container {
+    padding: 40px;
+  }
+
+  .card-media {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* /Prototype Section/ */
 }
 
 @media screen and (max-width: 425px) {
@@ -481,28 +689,26 @@
     font-size: 14px;
   }
 
-  .animation-wrapper img {
-    width: 200px;
-    margin-bottom: 50px;
+  /* Native Mac Section */
+  .native-mac-section-content {
+    width: 80%;
   }
-
   .love-icon {
     width: 20px;
   }
 
-  .bottom-card-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    margin: 0 auto;
+  /* /Native Mac Section/ */
+
+  /* Prototype Section */
+  .card-container {
+    padding: 30px;
   }
 
-  .card-layout {
-    min-height: unset;
-  }
+  /* Prototype Section */
 
-  .card-img {
-    height: 150px;
+  .animation-wrapper img {
+    width: 200px;
+    margin-bottom: 50px;
   }
 
   .col-content.text-xxl {
@@ -514,9 +720,8 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {}
 
-}
+@media screen and (max-width: 320px) {}
 
-@media screen and (max-width: 320px) {
-}
+/* ************* /Mobile screen Width/ ************* */

@@ -1,3 +1,19 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const src = urlParams.get('src');
+const pageLoader = document.querySelector('.page-loader');
+
+if (src !== "prenila") {
+    setTimeout(() => {
+        pageLoader.classList.add("close");
+        document.querySelector("html").classList.remove("overflow-hidden");
+    }, 3000);
+} else {
+    pageLoader.classList.add("close");
+    document.querySelector("html").classList.remove("overflow-hidden");
+}
+
 // Lottie file animation
 const logoAnimation = {
     container: document.querySelector('.logo-animation'),
@@ -74,7 +90,7 @@ const cardFour = {
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: '../assets/lottie/animatedprototypes.json',
+    path: '../assets/lottie/previewdesigns.json',
     rendererSettings: {
         progressiveLoad: true,
     }
@@ -155,13 +171,6 @@ const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
 const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
 // /* Lottie file animation */
 
-const pageLoader = document.querySelector('.page-loader');
-
-setTimeout(() => {
-    pageLoader.classList.add("close");
-    document.querySelector("html").classList.remove("overflow-hidden");
-}, 3000);
-
 window.addEventListener("scroll", () => {
     const { scrollTop, clientHeight } = document.documentElement;
     const nodeElementPosition = document.querySelector(".animation-section-3").getBoundingClientRect().top;
@@ -239,8 +248,8 @@ const collaborationContentNode = document.querySelectorAll(".col-content");
 
 const contentList = [
     `
-        <div class="primary-color" data-aos="fade-up">
-            <p class="text-m pb-2">
+        <div class="primary-color collab-content" data-aos="fade-up">
+            <p class="text-m">
                 We understand that having autonomy over your designs is key. That's why your drafts are completely private until you invite other folks for feedback and handoff. Just share links to your prototypes or embed them anywhere on the web whenever you're ready.
             </p>
             <p class="text-m">
@@ -249,8 +258,8 @@ const contentList = [
         </div>
     `,
     `
-        <div class="primary-color" data-aos="fade-up">
-            <p class="text-m pb-2">
+        <div class="primary-color collab-content" data-aos="fade-up">
+            <p class="text-m">
                 Feedback fuels great design. With a dedicated space for comments, Nila makes it easy for teams to spark conversations around anything they create. Everyone can bring more context to their comments with marked elements, pinned selections, replies, @mentions and emoji reactions. 
             </p>
             <p class="text-m">
@@ -259,8 +268,8 @@ const contentList = [
         </div>
     `,
     `
-        <div class="primary-color" data-aos="fade-up">
-            <p class="text-m pb-2">
+        <div class="primary-color collab-content mb" data-aos="fade-up">
+            <p class="text-m">
                 File exports are a thing of the past–so of course, you can copy design specs and code for any element with Inspect and download assets in any format. You'll never find anyone in your team asking, "Is this the latest file?" again. Just design and handoff. It's that simple. 
             </p>
         </div>
@@ -281,12 +290,15 @@ function unselectSelectedContent() {
 const collabContentWrapper = document.querySelector(".collab-content-wrapper");
 function renderHeadingsContent(node) {
     if (node.className.includes("team-invite")) {
+        collabContentWrapper.style.alignItems = "start";
         collabContentWrapper.innerHTML = contentList[0];
         inviteTeamLoader.play();
     } else if (node.className.includes("collab")) {
+        collabContentWrapper.style.alignItems = "center";
         collabContentWrapper.innerHTML = contentList[1];
         commentConverseLoader.play();
     } else if (node.className.includes("smooth")) {
+        collabContentWrapper.style.alignItems = "end";
         collabContentWrapper.innerHTML = contentList[2];
         smootherHandsoffLoader.play();
 
@@ -312,6 +324,7 @@ let homeSectionContentWordIndex = 0;
 
 const animateContent = () => {
     setInterval(() => {
+        homeSectionContentElement.classList.add("transition");
         homeSectionContentElement.style.transform = "translateY(30%)";
         homeSectionContentElement.style.opacity = 0;
         homeSectionContentWordIndex++;

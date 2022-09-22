@@ -514,6 +514,12 @@
     letter-spacing: -1.3px;
 }
 
+.title .gradient-text,
+.title .accent-color {
+    font-size:  calc(var(--title-font-size) + 2px);
+    font-family: "Zoho_Puvi_Regular";
+}
+
 .content {
     margin-bottom: 40px;
     color: var(--description-color);
