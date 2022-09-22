@@ -16,8 +16,8 @@ const canvasCursor = {
     path: './assets/lottie/clickanddrag.json'
 }
 
-// bodymovin.loadAnimation(videoSectionCursor);
-// bodymovin.loadAnimation(canvasCursor);
+bodymovin.loadAnimation(videoSectionCursor);
+bodymovin.loadAnimation(canvasCursor);
 
 // Cursor Functionalities
 const mouseCursor = document.querySelector(".cursor");
