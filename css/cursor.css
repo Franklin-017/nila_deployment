@@ -35,9 +35,13 @@
         display: none;
         width: 400px;
         height: 400px;
-        transform: translate(-45%, -45%);
+        transform: translate(-46%, -45%);
         transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
             width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .canvas_section_cursor {
+        transform: translate(-45%, -45%);
     }
 
     .cursor.remove_circle .cursor_circle {

@@ -202,6 +202,8 @@
 
     .navlink-btn {
         font-size: 12px;
+        height: 30px;
+        padding: 4px 12px;
     }
 
     .navbar-squeeze .navlinks {

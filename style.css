@@ -48,7 +48,7 @@ li {
     :root {
         --text-xs: 14px;
         --text-s: 16px;
-        --text-m: 24px;
+        --text-m: 22px;
         --text-l: 28px;
         --text-xl: 42px;
         --text-xxl: 50px;
@@ -65,12 +65,6 @@ li {
 
 @media screen and (max-width: 1440px) {
     :root {
-        --text-xs: 14px;
-        --text-s: 16px;
-        --text-m: 24px;
-        --text-l: 28px;
-        --text-xl: 42px;
-        --text-xxl: 50px;
         --video-title-font-size: 120px;
     }
 }

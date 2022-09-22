@@ -156,6 +156,40 @@ const commentConverseLottie = {
     }
 }
 
+
+const inviteTeamLottieMobile = {
+    container: document.querySelector('.invite-team-animation-mobile'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/inviteurteam.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const smootherHandsoffLottieMobile = {
+    container: document.querySelector('.smoother-handsoff-animation-mobile'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/smootherhandsoff.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
+const commentConverseLottieMobile = {
+    container: document.querySelector('.comment-converse-animation-mobile'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/commentconverse.json',
+    rendererSettings: {
+        progressiveLoad: true,
+    }
+}
+
 bodymovin.loadAnimation(logoAnimation);
 bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
@@ -169,6 +203,9 @@ const collabSectionLoader = bodymovin.loadAnimation(collabSectionAnimation);
 const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
 const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
 const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
+bodymovin.loadAnimation(inviteTeamLottieMobile);
+bodymovin.loadAnimation(smootherHandsoffLottieMobile);
+bodymovin.loadAnimation(commentConverseLottieMobile);
 // /* Lottie file animation */
 
 window.addEventListener("scroll", () => {
@@ -283,9 +320,6 @@ function unselectSelectedContent() {
     })
 }
 
-// const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
-// const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
-// const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
 
 const collabContentWrapper = document.querySelector(".collab-content-wrapper");
 function renderHeadingsContent(node) {

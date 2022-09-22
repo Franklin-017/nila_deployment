@@ -150,6 +150,8 @@
   padding-top: 20px;
   padding-bottom: 40px;
   line-height: 1.4;
+  font-size: 26px;
+  margin: 0 auto;
 }
 
 .bottom-card-layout {
@@ -188,7 +190,6 @@
 .collab-section-container {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
   height: auto;
 }
 
@@ -196,12 +197,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
   height: 100vh;
 }
 
 .collab-header-content {
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -218,10 +218,15 @@
 }
 
 .collab-animation-wrapper {
-  width: 50%;
+  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.collab-animation-section {
+  position: absolute;
+  width: 60vw;
 }
 
 .collab-feature-section {
@@ -293,12 +298,16 @@
   display: flex;
   align-items: start;
   height: 100%;
-  width: 40%;
+  width: 50%;
   line-height: 1.4;
 }
 
 .collab-content.mb {
   margin-bottom: 50px;
+}
+
+.collab-feature-section-mobile {
+  display: none;
 }
 
 /* /Collab Section/ */
@@ -309,13 +318,9 @@
   width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
-.fly-solo-animation {
-  width: 50%;
-}
-
+.fly-solo-animation,
 .fly-solo-content-header {
   width: 50%;
 }
@@ -369,6 +374,15 @@
   /* /Prototype Section/ */
 }
 
+@media screen and (max-width: 1565px) {
+
+  /* Collab Section */
+  .collab-header-content {
+    width: 80%;
+  }
+
+  /* Collab Section */
+}
 
 @media screen and (max-width: 1495px) {
   :root {
@@ -428,6 +442,13 @@
     height: 69px;
     width: 210px;
   }
+
+  /* Prototype Section */
+  .prototype-section-subtitle {
+    width: 60%;
+  }
+
+  /* /Prototype Section/ */
 }
 
 @media screen and (max-width: 1275px) {
@@ -443,6 +464,12 @@
   }
 
   /* /Native Mac Section/ */
+
+  /* Collab Section */
+  .col-content {
+    font-size: 36px;
+  }
+  /* /Collab Section/ */
 }
 
 @media screen and (max-width: 1150px) {
@@ -479,6 +506,12 @@
   }
 
   /* /Native Mac Section/ */
+  /* Collab Section */
+  .col-content {
+    font-size: 32px;
+    width: 60%;
+  }
+  /* /Collab Section/ */
 }
 
 @media screen and (max-width: 1025px) {
@@ -496,6 +529,10 @@
   }
 
   /* Prototype Section */
+  .prototype-section-subtitle {
+    font-size: 22px;
+  }
+
   .card-media {
     height: 150px;
   }
@@ -524,6 +561,13 @@
   .hero-section-content {
     font-size: 16px;
   }
+
+  /* Prototype Section */
+  .prototype-section-subtitle {
+    font-size: 18px;
+  }
+
+  /* /Prototype Section/ */
 
   /* Native Mac Section */
   .native-mac-section-subtitle {
@@ -571,6 +615,13 @@
   }
 
   /* /Native Mac Section/ */
+
+  /* Collab Section */
+  .collab-header-title {
+    padding-bottom: 10px;
+  }
+
+  /* /Collab Section/ */
 }
 
 @media screen and (max-width: 768px) {
@@ -596,6 +647,10 @@
 
   /* /Native Mac Section/ */
   /* Prototype Section */
+  .prototype-section-subtitle {
+    font-size: 16px;
+  }
+
   .card-container {
     padding: 20px;
   }
@@ -605,6 +660,16 @@
   }
 
   /* /Prototype Section/ */
+  /* Collab Section */
+  .col-content {
+    font-size: 20px;
+    width: 60%;
+    padding-left: 20px;
+  }
+  .collab-header-content {
+    width: 80%;
+  }
+  /* /Collab Section/ */
 }
 
 /* ************* /Tablet Screen Width/ ************* */
@@ -645,17 +710,25 @@
   }
 
   .native-mac-section-title {
-    padding-bottom: 20px;
     width: 90%;
   }
 
   .native-mac-section-subtitle {
-  padding-bottom: 20px;
-}
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .native-mac-section-description {
+    line-height: 1.2;
+  }
 
   /* /Native Mac Section/ */
 
   /* Prototype Section */
+  .prototype-section-subtitle {
+    width: 80%;
+  }
+
   .bottom-card-layout {
     grid-template-columns: 1fr;
   }
@@ -674,6 +747,89 @@
   }
 
   /* /Prototype Section/ */
+
+  /* Collab Section */
+  .collab-section-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .collab-section-header-container {
+    flex-direction: column-reverse;
+  }
+
+  .collab-animation-section,
+  .collab-animation-wrapper {
+    position: static;
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+
+  .collab-header-content {
+    width: 100%;
+  }
+
+  .collab-feature-section {
+    display: none;
+  }
+
+  .collab-feature-section-mobile {
+    display: block;
+  }
+
+  .collab-feature-container {
+    margin-bottom: 50px;
+  }
+
+  .animation-mobile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .invite-team-animation-mobile,
+  .comment-converse-animation-mobile,
+  .smoother-handsoff-animation-mobile {
+    width: 50%;
+  }
+
+  .collab-feature-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .collab-feature-description {
+    line-height: 1.2;
+    width: 80%;
+  }
+
+  /* /Collab Section/ */
+
+  /* Fly Solo Section */
+  .fly-solo-section-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .fly-solo-animation {
+    margin-bottom: 50px;
+  }
+
+  .fly-solo-animation,
+  .fly-solo-content-header {
+    width: 100%;
+  }
+
+  .fly-solo-content-title {
+    margin-bottom: 10px;
+    width: 70%;
+  }
+
+  /* /Fly Solo Section/ */
 }
 
 @media screen and (max-width: 425px) {
@@ -692,8 +848,9 @@
 
   /* Native Mac Section */
   .native-mac-section-content {
-    width: 80%;
+    width: 90%;
   }
+
   .love-icon {
     width: 20px;
   }
@@ -701,6 +858,10 @@
   /* /Native Mac Section/ */
 
   /* Prototype Section */
+  .prototype-section-subtitle {
+    width: 100%;
+  }
+
   .card-container {
     padding: 30px;
   }
@@ -721,7 +882,18 @@
   }
 }
 
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 375px) {
+  .collab-feature-title {
+    width: 90%;
+  }
+
+  .collab-feature-description {
+    width: 90%;
+  }
+  .fly-solo-content-title {
+    width: 80%;
+  }
+}
 
 @media screen and (max-width: 320px) {}
 
