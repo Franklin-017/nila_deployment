@@ -31,6 +31,14 @@ const fourthFoldAnimation = {
     path: '../assets/lottie/our_mission_mandala.json'
 }
 
+const caricatureAnimation = {
+    container: document.querySelector('.circular-path'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/caricature.json'
+}
+
 bodymovin.loadAnimation(logoAnimation);
 bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
@@ -116,6 +124,7 @@ weAreNillaCarouselContent.forEach(content => {
 })
 
 carouselSlider.innerHTML = carouselContent;
+bodymovin.loadAnimation(caricatureAnimation);
 
 let slides = document.querySelectorAll(".carousel-content");
 let sliderIndex = 0;

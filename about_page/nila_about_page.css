@@ -3,6 +3,8 @@
   width: 500px;
 }
 
+
+
 .hs-animation-section {
   width: 600px;
 }
@@ -71,6 +73,10 @@
   max-width: 70vw;
 }
 
+.circular-path {
+  width: 500px;
+  height: 500px;
+}
 
 .wan-img-wrapper {
   position: relative;

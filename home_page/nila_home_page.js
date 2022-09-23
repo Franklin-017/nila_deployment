@@ -26,7 +26,7 @@ const logoAnimation = {
 const heroSectionAnimation = {
     container: document.querySelector('.hs-animation-section'),
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: '../assets/lottie/page1.json'
 }
@@ -256,6 +256,7 @@ const videoSection = document.querySelector(".vs-content");
 const iFrameElement = document.querySelector(".branding-video-wrapper");
 
 videoSection.addEventListener("click", () => {
+    videoSection.classList.remove("content-animation");
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(1)";
     iFrameElement.style.visibility = "visible";
@@ -265,6 +266,7 @@ videoSection.addEventListener("click", () => {
 const closeVideo = document.querySelector(".close-video");
 
 closeVideo.addEventListener("click", () => {
+    videoSection.classList.add("content-animation");
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(0)";
     iFrameElement.style.visibility = "hidden";
@@ -294,6 +296,11 @@ cardlayout.forEach((layout) => {
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
+
+setTimeout(() => {
+    document.querySelector(".hs-animation-wrapper").style.display = "none";
+    document.querySelector(".draw-canvas").style.display = "block";
+}, 20030);
 
 setInterval(() => {
     textSlide.style.width = "0px";
