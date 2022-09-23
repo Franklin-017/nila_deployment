@@ -21,7 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    font-size: 18px;
 }
 
 .navbar-nav {
@@ -32,7 +31,7 @@
 
 .navbar-nav .navlink {
     position: relative;
-    padding: 14px 0;
+    padding: 5px 0;
     cursor: pointer;
 }
 
@@ -46,7 +45,7 @@
 
 .navlink-btn {
     text-align: center;
-    padding: 14px 36px;
+    padding: 10px 24px;
 }
 
 .navlink:hover,
@@ -77,7 +76,7 @@
     }
 
     .navlinks {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .navbar-squeeze .brand-logo {
@@ -85,7 +84,7 @@
     }
 
     .navbar-squeeze .navlinks {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -99,19 +98,15 @@
     }
 
     .navlinks {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .navlink {
         padding: 12px 0;
     }
 
-    .navlink-btn {
-        padding: 12px 26px;
-    }
-
     .navbar-squeeze .navlinks {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
