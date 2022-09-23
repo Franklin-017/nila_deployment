@@ -36,16 +36,24 @@ bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
 bodymovin.loadAnimation(fourthFoldAnimation);
 
-// const videoSection = document.querySelector(".vs-content-wrapper");
+const videoSection = document.querySelector(".vs-content-wrapper");
+const iFrameElement = document.querySelector(".branding-video-wrapper");
 
-// videoSection.addEventListener("click", () => {
-//     const brandingVideo = document.querySelector(".branding-video");
-//     brandingVideo.style.visibility = "visible";
-//     brandingVideo.style.width = "100vw";
-//     brandingVideo.style.height = "100vh";
-//     // document.querySelector("html").style.overflow = "hidden";
-//     // document.querySelector(".navbar").style.display = "none";
-// })
+videoSection.addEventListener("click", () => {
+    iFrameElement.style.transition = 'all 0.5s ease-in';
+    iFrameElement.style.transform = "scale(1)";
+    iFrameElement.style.visibility = "visible";
+    document.querySelector("html").classList.add("overflow-hidden");
+})
+
+const closeVideo = document.querySelector(".close-video");
+
+closeVideo.addEventListener("click", () => {
+    iFrameElement.style.transition = 'all 0.5s ease-in';
+    iFrameElement.style.transform = "scale(0)";
+    iFrameElement.style.visibility = "hidden";
+    document.querySelector("html").classList.remove("overflow-hidden");
+})
 
 // Fifth fold carousel
 

@@ -116,6 +116,14 @@
     visibility: hidden;
     transform: scale(0);
 }
+
+.close-video {
+  position: absolute;
+  width: 18px;
+  top: 25px;
+  right: 50px;
+  cursor: pointer;
+}
 /* /Branding Video/ */
 
 .product-page-bg {
