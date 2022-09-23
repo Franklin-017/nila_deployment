@@ -115,10 +115,10 @@ li {
 
 @media screen and (max-width: 425px) {
     :root {
-        --title-font-size:24px;
+        --title-font-size:30px;
         --text-xs: 8px;
         --text-s: 10px;
-        --text-m: 12px;
+        --text-m: 16px;
         --text-l: 14px;
         --text-xl: 16px;
         --text-xxl: 20px;

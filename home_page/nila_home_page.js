@@ -23,6 +23,14 @@ const logoAnimation = {
     path: '../assets/lottie/logo-animation.json'
 }
 
+const heroSectionAnimation = {
+    container: document.querySelector('.hs-animation-section'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/page1.json'
+}
+
 const thirdFoldAnimation = {
     container: document.querySelector('.animation-section-3'),
     renderer: 'svg',
@@ -191,6 +199,7 @@ const commentConverseLottieMobile = {
 }
 
 bodymovin.loadAnimation(logoAnimation);
+bodymovin.loadAnimation(heroSectionAnimation);
 bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
@@ -242,6 +251,16 @@ const cardsElement = [
         animation: cardSixAnimation
     }
 ];
+
+const videoSection = document.querySelector(".vs-content");
+
+videoSection.addEventListener("click", () => {
+    const iFrameElement = document.querySelector(".branding-video-wrapper");
+    iFrameElement.style.transition = 'all 0.5s ease-in';
+    iFrameElement.style.transform = "scale(1)";
+    iFrameElement.style.visibility = "visible";
+    document.querySelector("html").style.overflow = "hidden";
+})
 
 const cardlayout = document.querySelectorAll(".card-container");
 

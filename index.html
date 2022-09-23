@@ -31,17 +31,17 @@
 
         <div class="navlinks">
             <div class="navbar-nav">
-                <a class="navlink active" cursor-class="remove_circle">Home</a>
-                <a href="./about_page/nila_about_page.html" class="navlink" cursor-class="remove_circle">About</a>
+                <a class="navlink active" cursor-class="squeeze_circle">Home</a>
+                <a href="./about_page/nila_about_page.html" class="navlink" cursor-class="squeeze_circle">About</a>
             </div>
             <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text"
-                cursor-class="remove_circle">Join
+                cursor-class="squeeze_circle">Join
                 Waitlist</button>
         </div>
     </nav>
 
     <div class="join-waitlist-slider close">
-        <div class="close-waitlist-slider" cursor-class="remove_circle">
+        <div class="close-waitlist-slider" cursor-class="squeeze_circle">
             <svg data-name="Layer 3" id="closeicon-signPopup" viewBox="0 0 22 21.77" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <style type="text/css">
@@ -66,7 +66,7 @@
                         class="gradient-text">building</span></span>
             </div>
 
-            <div class="waitlist-email-wrapper" cursor-class="remove_circle">
+            <div class="waitlist-email-wrapper" cursor-class="squeeze_circle">
                 <input type="email" class="waitlist-email" placeholder="Your email address goes here" />
                 <span class="waitlist-btn">Join waitlist ></span>
             </div>
@@ -89,22 +89,49 @@
                 </p>
             </div>
 
-            <div class="w-5 flex align-center justify-center canvas-wrapper" cursor-class="canvas_section">
-                <div class="hs-animation-section animation-wrapper">
-                    <canvas></canvas>
+            <div class="canvas-wrapper" cursor-class="canvas_section">
+                <div class="hs-animation-wrapper">
+                    <div class="hs-animation-section"></div>
                 </div>
+
+                <!-- <canvas></canvas> -->
             </div>
         </section>
     </div>
 
     <section id="videoSection" class="video-section-container" cursor-class="video_section">
-        <div class="vs-content w-10">
+        <div class="vs-content">
             <div class="vs-top-content" data-aos="slide-left">
                 <img src="./assets/img/design_better.png" />
             </div>
             <div class="vs-bottom-content" data-aos="slide-right">
                 <img src="./assets/img/together.png" />
             </div>
+        </div>
+        <div class="branding-video-wrapper">
+            <div class="close-video">
+                <svg data-name="Layer 3" id="closeicon-signPopup" viewBox="0 0 22 21.77"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style type="text/css">
+                            .cls-3 {
+                                fill: none;
+                                stroke: #ffffff;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 3px;
+                            }
+                        </style>
+                    </defs>
+                    <title></title>
+                    <path class="cls-3" d="M11,10.82,1.5,20.27,11,10.82,1.63,1.5,11,10.82l9.24-9.2L11,10.82l9.5,9.45Z"
+                        data-name="Union 1" id="Union_3"></path>
+                </svg>
+            </div>
+            <iframe class="branding-video"
+                src="https://player.vimeo.com/video/683774352?h=40bdcc301f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479;color=ffffff"
+                frameborder="0" height="100%" width="100%" allow="autoplay; fullscreen; picture-in-picture"
+                color="#ffffff" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
     </section>
 
@@ -281,13 +308,13 @@
                 <div class="collab-feature-controller">
                     <div class="collab-feature-controller-container content-selected" data-aos="fade-up">
                         <div class="invite-team-animation show-on-hover"></div>
-                        <div class="primary-color col-content team-invite text-xl" cursor-class="remove_circle">
+                        <div class="primary-color col-content team-invite text-xl" cursor-class="squeeze_circle">
                             <span class="gradient-text">Invite your team early on. Or later. It's your call.</span>
                         </div>
                     </div>
                     <div class="collab-feature-controller-container" data-aos="fade-up">
                         <div class="comment-converse-animation show-on-hover"></div>
-                        <div class="primary-color  col-content collab text-xl" cursor-class="remove_circle">
+                        <div class="primary-color  col-content collab text-xl" cursor-class="squeeze_circle">
                             <span class="gradient-text">Comment.</span><br />
                             <span class="gradient-text">Converse.</span><br />
                             <span class="gradient-text">Compare changes.</span>
@@ -295,7 +322,7 @@
                     </div>
                     <div class="flex align-center" data-aos="fade-up">
                         <div class="smoother-handsoff-animation show-on-hover"></div>
-                        <div class="primary-color col-content smooth text-xl" cursor-class="remove_circle">
+                        <div class="primary-color col-content smooth text-xl" cursor-class="squeeze_circle">
                             <span class="gradient-text">Smoother handoffs.</span></br>
                             <span class="gradient-text">more clarity.</span>
                         </div>
@@ -319,11 +346,13 @@
             <!-- Tablet Section -->
             <div class="collab-feature-section-mobile">
                 <div class="collab-feature-container">
-                    <div class="animation-mobile-wrapper">
-                        <div class="invite-team-animation-mobile" data-aos="fade-up"></div>
+                    <div class="collab-feature-header">
+                        <div class="animation-mobile-wrapper">
+                            <div class="invite-team-animation-mobile" data-aos="fade-up"></div>
+                        </div>
+                        <h1 class="title-color collab-feature-title" data-aos="fade-up">Invite
+                            your team early on. Or later. It's your call.</h1>
                     </div>
-                    <h1 class="title-color collab-feature-title" data-aos="fade-up">Invite
-                        your team early on. Or later. It's your call.</h1>
                     <div class="primary-color collab-feature-description" data-aos="fade-up">
                         <div class="primary-color collab-content" data-aos="fade-up">
                             <p class="text-m">
@@ -340,14 +369,16 @@
                     </div>
                 </div>
                 <div class="collab-feature-container">
-                    <div class="animation-mobile-wrapper">
-                        <div class="comment-converse-animation-mobile" data-aos="fade-up"></div>
+                    <div class="collab-feature-header">
+                        <div class="animation-mobile-wrapper">
+                            <div class="comment-converse-animation-mobile" data-aos="fade-up"></div>
+                        </div>
+                        <h1 class="title-color collab-feature-title" data-aos="fade-up">
+                            <span class="gradient-text">Comment.</span>
+                            <span class="gradient-text">Converse.</span>
+                            <span class="gradient-text">Compare changes.</span>
+                        </h1>
                     </div>
-                    <h1 class="title-color collab-feature-title" data-aos="fade-up">
-                        <span class="gradient-text">Comment.</span>
-                        <span class="gradient-text">Converse.</span>
-                        <span class="gradient-text">Compare changes.</span>
-                    </h1>
                     <div class="primary-color collab-feature-description" data-aos="fade-up">
                         <p class="text-m">
                             We understand that having autonomy over your designs is key. That's why your drafts are
@@ -364,13 +395,15 @@
                     </div>
                 </div>
                 <div class="collab-feature-container">
-                    <div class="animation-mobile-wrapper">
-                        <div class="smoother-handsoff-animation-mobile" data-aos="fade-up"></div>
+                    <div class="collab-feature-header">
+                        <div class="animation-mobile-wrapper">
+                            <div class="smoother-handsoff-animation-mobile" data-aos="fade-up"></div>
+                        </div>
+                        <h1 class="title-color collab-feature-title" data-aos="fade-up">
+                            <span class="gradient-text">Smoother handoffs.</span>
+                            <span class="gradient-text">more clarity.</span>
+                        </h1>
                     </div>
-                    <h1 class="title-color collab-feature-title" data-aos="fade-up">
-                        <span class="gradient-text">Smoother handoffs.</span>
-                        <span class="gradient-text">more clarity.</span>
-                    </h1>
                     <div class="primary-color collab-feature-description" data-aos="fade-up">
                         <div class="primary-color collab-content mb" data-aos="fade-up">
                             <p class="text-m">
@@ -420,10 +453,10 @@
                 </div>
                 <div class="flex align-center pt-5 pb-5-mobile" data-aos="fade-up">
                     <div class="pr-5">
-                        <button class="btn get-update-btn" cursor-class="remove_circle">Get Launch
+                        <button class="btn get-update-btn" cursor-class="squeeze_circle">Get Launch
                             update</button>
                     </div>
-                    <a href="#" class="gradient-text text-m link-hover" cursor-class="remove_circle">Learn more
+                    <a href="#" class="gradient-text text-m link-hover" cursor-class="squeeze_circle">Learn more
                         <img class="transition" src="./assets/svg/arrow_icon.svg" />
                     </a>
                 </div>
@@ -440,17 +473,17 @@
                     </div>
 
                     <div class="social-media flex align-center justify-space-between">
-                        <div class="pr-2" cursor-class="remove_circle">
+                        <div class="pr-2" cursor-class="squeeze_circle">
                             <a href="https://twitter.com/nila" target="_blank">
                                 <img src="./assets/svg/twitter_icon.svg" />
                             </a>
                         </div>
-                        <div class="pr-2" cursor-class="remove_circle">
+                        <div class="pr-2" cursor-class="squeeze_circle">
                             <a href="https://www.youtube.com/nila" target="_blank">
                                 <img src="./assets/svg/youtube_icon.svg" />
                             </a>
                         </div>
-                        <div class="pr-2 mp-0" cursor-class="remove_circle">
+                        <div class="pr-2 mp-0" cursor-class="squeeze_circle">
                             <a href="https://www.instagram.com/niladotdesign/" target="_blank">
                                 <img src="./assets/svg/instagram_icon.svg" />
                             </a>
@@ -458,15 +491,15 @@
                     </div>
                 </div>
                 <div class="flex align-center justify-center mobile-center mw-10">
-                    <div class="pr-2 pr-2-mobile" cursor-class="remove_circle">
+                    <div class="pr-2 pr-2-mobile" cursor-class="squeeze_circle">
                         <a class="text-hover" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
                     </div>
                     <div class="seperator pl-2 pl-2-mobile"></div>
-                    <div class="pr-2 pr-2-mobile" cursor-class="remove_circle">
+                    <div class="pr-2 pr-2-mobile" cursor-class="squeeze_circle">
                         <a class="text-hover" target="_blank" href="./privacy_page/nila_privacy_page.html">Privacy</a>
                     </div>
                     <div class="seperator pl-2 pl-2-mobile"></div>
-                    <div class="copy-rights" cursor-class="remove_circle">© 2022 Nila.All rights reserved.</div>
+                    <div class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</div>
                 </div>
             </div>
         </footer>

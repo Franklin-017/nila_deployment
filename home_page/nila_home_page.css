@@ -50,6 +50,22 @@
   line-height: 1.4;
 }
 
+.canvas-wrapper {
+  width: 50%;
+}
+
+.hs-animation-wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.hs-animation-section {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65vw;
+  height: 80vh;
+}
 /* /Hero Section/ */
 
 /* video section */
@@ -680,6 +696,11 @@
     --hero-section-font-size: 45px;
   }
 
+  #heroSection {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .text-slide {
     height: 53px;
     width: 160px;
@@ -688,6 +709,14 @@
   .hero-section-content {
     font-size: 16px;
   }
+
+  /* Video Section */
+  .video-section-container {
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  /* /Video Section/ */
 
   /* Native Mac Section */
   .native-mac-section-container {
@@ -714,19 +743,20 @@
   }
 
   .native-mac-section-subtitle {
-    font-size: 17px;
-    line-height: 1.2;
+    font-size: 22px;
   }
 
   .native-mac-section-description {
-    line-height: 1.2;
+    font-size: 16px;
+
   }
 
   /* /Native Mac Section/ */
 
   /* Prototype Section */
   .prototype-section-subtitle {
-    width: 80%;
+    width: 100%;
+    font-size: 20px;
   }
 
   .bottom-card-layout {
@@ -741,9 +771,24 @@
     padding: 40px;
   }
 
+  .card-title {
+    font-size: 19px;
+  }
+
+  .card-content {
+    font-size: 18px;
+  }
+
   .card-media {
     height: auto;
     margin-bottom: 0;
+  }
+
+  .collab-feature-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   /* /Prototype Section/ */
@@ -785,13 +830,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    position: relative;
+  }
+
+  .collab-feature-title {
+    width: 60%;
   }
 
   .invite-team-animation-mobile,
   .comment-converse-animation-mobile,
   .smoother-handsoff-animation-mobile {
     width: 50%;
+    width: 150px;
+
   }
 
   .collab-feature-title {
@@ -834,16 +885,16 @@
 
 @media screen and (max-width: 425px) {
   :root {
-    --hero-section-font-size: 35px;
+    --hero-section-font-size: 38px;
   }
 
   .text-slide {
-    height: 42px;
-    width: 126px;
+    height: 45px;
+    width: 136px;
   }
 
   .hero-section-content {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   /* Native Mac Section */

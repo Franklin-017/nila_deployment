@@ -5,7 +5,7 @@ const videoSectionCursor = {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../assets/lottie/clickanddrag.json'
+    path: '../assets/lottie/clicktoplay.json'
 }
 
 const canvasCursor = {

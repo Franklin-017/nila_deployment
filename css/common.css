@@ -27,12 +27,12 @@
     position: fixed;
     right: -500%;
     height: 100vh;
-    width: 500px;
+    width: 600px;
     background-color: #fff;
     padding: 40px 50px;
     letter-spacing: -1.2px;
     z-index: 9;
-    line-height: 1.2;
+    line-height: 1;
     transition: right 0.5s ease;
 }
 
@@ -103,6 +103,20 @@
 }
 
 /* Waitlist slider */
+
+/* Branding Video */
+.branding-video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--nila-bg-color);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    visibility: hidden;
+    transform: scale(0);
+}
+/* /Branding Video/ */
 
 .product-page-bg {
     background-color: var(--nila-bg-color);

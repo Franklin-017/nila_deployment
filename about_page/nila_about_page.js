@@ -36,6 +36,17 @@ bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
 bodymovin.loadAnimation(fourthFoldAnimation);
 
+// const videoSection = document.querySelector(".vs-content-wrapper");
+
+// videoSection.addEventListener("click", () => {
+//     const brandingVideo = document.querySelector(".branding-video");
+//     brandingVideo.style.visibility = "visible";
+//     brandingVideo.style.width = "100vw";
+//     brandingVideo.style.height = "100vh";
+//     // document.querySelector("html").style.overflow = "hidden";
+//     // document.querySelector(".navbar").style.display = "none";
+// })
+
 // Fifth fold carousel
 
 const weAreNillaCarouselContent = [

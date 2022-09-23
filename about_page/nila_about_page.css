@@ -18,6 +18,10 @@
 /* /Image Style/ */
 
 /* video section */
+#videoSection {
+  margin-bottom: 100px;
+  position: relative;
+}
 .vs-animation-section {
   position: relative;
 }
@@ -26,6 +30,7 @@
   position: absolute;
   top: 40%;
   left: 50%;
+  animation: heart-beat 1s linear infinite;
 }
 
 .vs-content-wrapper {
@@ -41,6 +46,13 @@
   color: var(--title-color);
   font-family: "Zoho_Puvi_Bold";
   z-index: 1;
+}
+
+.branding-video {
+  width: 0;
+  height: 0;
+  z-index: 1000;
+  visibility: hidden;
 }
 
 /* video section */
