@@ -7,14 +7,6 @@
   width: 600px;
 }
 
-.vs-img,
-.ads-left-img,
-.fog-right-img,
-.hs-img {
-  width: 100%;
-  height: auto;
-}
-
 /* /Image Style/ */
 
 /* video section */
@@ -32,6 +24,10 @@
   top: 40%;
   left: 50%;
   animation: heart-beat 1s linear infinite;
+}
+
+.vs-play-video {
+  display: none;
 }
 
 .vs-content-wrapper {
@@ -442,6 +438,14 @@
   .vs-center-heart {
     width: 50px;
     left: calc(50% - 25px);
+    display: none;
+  }
+
+  .vs-play-video {
+    display: block;
+    position: absolute;
+    top: 37%;
+    left: 42%;
   }
 
   .vs-content-left {
