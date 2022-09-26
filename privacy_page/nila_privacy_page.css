@@ -202,12 +202,6 @@ body::after {
     color: #757575;
 }
 
-.privacy-container .social-media img {
-    height: 18px;
-    transition: filter 0.3s ease-in;
-    cursor: pointer;
-}
-
 .privacy-container .social-media img:hover {
     filter: brightness(0);
 }
