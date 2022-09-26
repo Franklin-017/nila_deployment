@@ -190,15 +190,6 @@ console.log(screen.width)
 
 emailInput.addEventListener("input", () => {
     hideInputErrorMessage();
-    if (emailInput!=="") {
-        if (screen.width > 425) {
-            focusBorder.style.width = "80%";
-        } else {
-            focusBorder.style.width = "100%";
-        }
-    } else {
-        focusBorder.style.width = "0%";
-    }
 })
 
 addToWaitlistbtn.addEventListener("click", () => {

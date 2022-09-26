@@ -12,7 +12,8 @@
 .page-loader.close {
     display: none;
 }
-/* Waitlist slider */
+
+/* ****************************** Waitlist slider ****************************** */
 .join-waitlist-slider {
     position: fixed;
     right: 100%;
@@ -27,7 +28,7 @@
     position: fixed;
     right: -500%;
     height: 100vh;
-    width: 600px;
+    width: 500px;
     background-color: #fff;
     padding: 40px 50px;
     letter-spacing: -1.2px;
@@ -47,12 +48,40 @@
 
 .close-waitlist-slider {
     position: absolute;
-    width: 16px;
-    height: 16px;
-    right: 50px;
-    top: 40px;
+    width: 36px;
+    height: 36px;
+    right: 30px;
+    top: 15px;
     cursor: pointer;
-    z-index: inherit;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.cls-3 {
+    fill: none;
+    stroke: #525252;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    transition: all 0.3s ease-in;
+}
+
+.close-waitlist-slider:hover {
+    background: rgb(213, 213, 213);
+}
+
+.close-waitlist-slider:hover .cls-3 {
+    stroke: #fff;
+}
+
+.close-waitlist-slider svg {
+    width: 12px;
+    height: 12px;
+    z-index: 10;
 }
 
 .waitlist-title-wrapper {
@@ -71,6 +100,10 @@
     width: 64%;
     font-size: 16px;
     outline: none;
+}
+
+.waitlist-email:focus .waitlist-email-wrapper {
+    border: 2px solid var(--accent-color);
 }
 
 .waitlist-btn {
@@ -102,7 +135,7 @@
     height: 110px;
 }
 
-/* Waitlist slider */
+/* ****************************** /Waitlist slider/ ****************************** */
 
 /* Branding Video */
 .branding-video-wrapper {
@@ -117,13 +150,36 @@
     transform: scale(0);
 }
 
-.close-video {
-  position: absolute;
-  width: 18px;
-  top: 25px;
-  right: 50px;
-  cursor: pointer;
+.video-close {
+    fill: none;
+    stroke: #ffffff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
 }
+
+.close-video {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-video svg {
+    width: 18px;
+}
+
+.close-video:hover {
+    background: rgb(213, 213, 213);
+}
+
 /* /Branding Video/ */
 
 .product-page-bg {
@@ -382,6 +438,7 @@
         padding: 7px 12px;
         font-size: 14px;
     }
+
     .get-update-btn {
         padding: 12px 24px;
         font-size: 14px;
@@ -396,6 +453,7 @@
     .t {
         font-size: 16px;
     }
+
     .waitlist-container {
         width: 100vw;
         padding: 10px 20px;
@@ -410,8 +468,8 @@
     }
 
     .waitlist-title-wrapper {
-        margin-top: 200px;
-        font-size: 40px;
+        margin-top: 50px;
+        font-size: 50px;
     }
 
     .waitlist-email-wrapper {
