@@ -482,7 +482,8 @@
   }
 
   .wan-img-wrapper {
-    left: 23%;
+    left: 20%;
+    width: 100%;
     height: 250px;
   }
 
