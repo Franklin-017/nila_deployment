@@ -94,7 +94,7 @@ body::after {
 }
 
 .privacy-container .text-hover {
-    color: #666666;
+    color: #5c5c5c;
 }
 
 .text-l .text-hover {
@@ -189,6 +189,7 @@ body::after {
 .left-content {
     display: flex;
     width: 50%;
+    color: #2c2c2c;
 }
 
 .right-content {
@@ -198,7 +199,7 @@ body::after {
 }
 
 .privacy-container .copy-rights {
-    color: #666666;
+    color: #757575;
 }
 
 .privacy-container .social-media img {
