@@ -32,7 +32,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 .vs-content-wrapper {
@@ -40,6 +39,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .vs-animation-section {
@@ -739,6 +739,8 @@
 
   .video-section-container {
     height: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .vs-content-left,
