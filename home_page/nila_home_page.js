@@ -44,7 +44,7 @@ const flySoloAnimation = {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../assets/lottie/flysolo.json'
+    path: '../assets/lottie/page3.json'
 }
 
 const collabSectionElement = document.querySelector('.collab-animation-section');

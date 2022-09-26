@@ -291,7 +291,7 @@
 .copy-rights {
     position: relative;
     font-size: 16px;
-    opacity: 0.5;
+    color: #9490a0;
 }
 
 .text-hover {
@@ -440,6 +440,11 @@
 
     .email-input {
         padding: 5px 0;
+        width: 100%;
+    }
+
+    .email-input:focus~.focus-border {
+        width: 100%;
     }
 
     .social-media img {

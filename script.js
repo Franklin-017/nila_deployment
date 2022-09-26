@@ -82,13 +82,6 @@ function animateNavbar() {
         navbar.classList.remove("navbar-squeeze");
     }
 }
-/*
-{
-    classList: [],
-    addClass: [],
-    removeClass: []
-}
-*/
 
 const animationList = [
     {
@@ -193,10 +186,16 @@ const addToWaitlistbtn = document.querySelector(".get-update-btn");
 const errorMessage = document.querySelector(".error-message");
 const focusBorder = document.querySelector(".focus-border");
 
+console.log(screen.width)
+
 emailInput.addEventListener("input", () => {
     hideInputErrorMessage();
     if (emailInput!=="") {
-        focusBorder.style.width = "80%";
+        if (screen.width > 425) {
+            focusBorder.style.width = "80%";
+        } else {
+            focusBorder.style.width = "100%";
+        }
     } else {
         focusBorder.style.width = "0%";
     }
