@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="container">
-        <section id="heroSection" class="flex align-center h-fullvh" cursor-class="hero_section">
+        <section class="heroSection" cursor-class="hero_section">
             <div class="hs-content" data-aos="fade-up">
                 <span class="text-slide">
                     <span class="hs-title puvi-medium gradient-text hs-animate-text is-visible">Design</span>
@@ -100,7 +100,8 @@
             <div class="close-video">
                 <svg data-name="Layer 3" id="closeicon-signPopup" viewBox="0 0 22 21.77"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path class="video-close" d="M11,10.82,1.5,20.27,11,10.82,1.63,1.5,11,10.82l9.24-9.2L11,10.82l9.5,9.45Z"
+                    <path class="video-close"
+                        d="M11,10.82,1.5,20.27,11,10.82,1.63,1.5,11,10.82l9.24-9.2L11,10.82l9.5,9.45Z"
                         data-name="Union 1" id="Union_3"></path>
                 </svg>
             </div>
@@ -142,7 +143,7 @@
         </section>
 
         <section class="prototype-section-container">
-            <div class="flex justify-center flex-col text-center pb-6">
+            <div class="prototype-top-content">
                 <h1 class="title" data-aos="fade-up">Go from design to <br /><span
                         class="gradient-text">prototype.</span>&nbsp;<span class="gradient-text">Like
                         magic.</span>
@@ -155,7 +156,7 @@
             </div>
 
             <div class="bottom-card-layout">
-                <div class="card-container p-5 mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-1"></div>
                     </div>
@@ -171,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="card-container p-5 mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-2"></div>
                     </div>
@@ -188,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="card-container p-5 mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-3"></div>
                     </div>
@@ -206,7 +207,7 @@
                     </div>
                 </div>
 
-                <div class="card-container p-5 mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-4"></div>
                     </div>
@@ -222,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container p-5 mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-5"></div>
                     </div>
@@ -239,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="card-container mp-2">
+                <div class="card-container">
                     <div class="card-media">
                         <div class="card-img-6"></div>
                     </div>
@@ -356,18 +357,21 @@
                         </h1>
                     </div>
                     <div class="primary-color collab-feature-description" data-aos="fade-up">
-                        <p class="text-m">
-                            We understand that having autonomy over your designs is key. That's why your drafts are
-                            completely private until you invite other folks for feedback and handoff. Just share
-                            links
-                            to your prototypes or embed them anywhere on the web whenever you're ready.
-                        </p>
-                        <p class="text-m">
-                            You don't have to dig through multiple files to find the latest version. With Nila,
-                            designers, developers and marketers can explore and iterate in the same file all at the
-                            same
-                            time, without ever losing context.
-                        </p>
+                        <div class="primary-color collab-content" data-aos="fade-up">
+                            <div class="primary-color collab-content" data-aos="fade-up">
+                                <p class="text-m">
+                                    We understand that having autonomy over your designs is key. That's why your drafts
+                                    are completely private until you invite other folks for feedback and handoff. Just
+                                    share links to your prototypes or embed them anywhere on the web whenever you're
+                                    ready.
+                                </p>
+                                <p class="text-m">
+                                    You don't have to dig through multiple files to find the latest version. With Nila,
+                                    designers, developers and marketers can explore and iterate in the same file all at
+                                    the same time, without ever losing context.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="collab-feature-container">
@@ -397,13 +401,13 @@
 
         <section class="fly-solo-section-container">
             <div class="fly-solo-animation" data-aos="fade-up"></div>
-            <div class="mw-10 fly-solo-content-header">
+            <div class="fly-solo-content-header">
                 <h1 class="title fly-solo-content-title " data-aos="fade-up"><span class="gradient-text">Fly
                         solo.</span>
                     <span class="accent-color">Or work</span><span class="gradient-text">with teams.</span> You
                     do you.
                 </h1>
-                <div class="primary-color fly-solo-content-description mw-10" data-aos="fade-up">
+                <div class="primary-color fly-solo-content-description" data-aos="fade-up">
                     <p class="text-m">
                         Connect everyone in the design
                         process on a workspace that works
@@ -415,28 +419,21 @@
                 </div>
         </section>
 
-        <section id="launchUpdate" class="h-auto flex justify-center flex-col pb-6">
-            <div class="w-10 mb-6 pb-5 pb-5-mobile">
-                <h1 class="hs-title" data-aos="fade-up">Sign up for<br />
-                    <span class="accent-color">early access </span><span class="gradient-text">today.</span>
-                </h1>
+        <section class="launch-update-section">
+            <h1 class="hs-title" data-aos="fade-up">Sign up for<br />
+                <span class="accent-color">early access </span><span class="gradient-text">today.</span>
+            </h1>
+            <div class="input-wrapper" data-aos="fade-up">
+                <input type="email" class="email-input text-xl puvi-light" placeholder="Your email address goes here" />
+                <span class="focus-border"></span>
             </div>
-            <div class="w-10">
-                <div class="input-wrapper" data-aos="fade-up">
-                    <input type="email" class="email-input mw-10 text-m puvi-light"
-                        placeholder="Your email address goes here" />
-                    <span class="focus-border"></span>
-                </div>
-                <p class="error-message"></p>
-                <div class="flex align-center pt-5 pb-5-mobile" data-aos="fade-up">
-                    <div class="pr-5">
-                        <button class="btn get-update-btn" cursor-class="squeeze_circle">Get Launch
-                            update</button>
-                    </div>
-                    <a href="#" class="gradient-text text-m link-hover" cursor-class="squeeze_circle">Learn more
-                        <img class="transition" src="./assets/svg/arrow_icon.svg" />
-                    </a>
-                </div>
+            <p class="error-message"></p>
+            <div class="launch-cta-section" data-aos="fade-up">
+                <button class="btn get-update-btn" cursor-class="squeeze_circle">Get Launch
+                    update</button>
+                <a href="#" class="gradient-text text-m link-hover" cursor-class="squeeze_circle">Learn more
+                    <img class="transition" src="./assets/svg/arrow_icon.svg" />
+                </a>
             </div>
         </section>
 

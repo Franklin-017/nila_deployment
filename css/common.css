@@ -274,13 +274,27 @@
 .get-update-btn {
     background-color: #0760ef;
     color: var(--title-color);
+    margin-right: 20px;
 }
 
 
 /* ****************************** /\ Buttons /\ ****************************** */
 
+/* ****************************** Get In touch section ****************************** */
+.launch-update-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
 .input-wrapper {
     position: relative;
+}
+
+.launch-cta-section {
+    margin-top: 50px;
 }
 
 .error-message {
@@ -320,6 +334,9 @@
     color: whitesmoke;
     transition-delay: 0.5s;
 }
+
+/* ****************************** /\ Get In touch section /\ ****************************** */
+
 
 .t {
     font-size: 40px;
@@ -417,14 +434,14 @@
 @media screen and (max-width: 2560px) {
     .get-update-btn {
         padding: 16px 36px;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 1440px) {
     .get-update-btn {
         padding: 12px 24px;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -460,7 +477,7 @@
 
     .get-update-btn {
         padding: 12px 24px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -541,6 +558,10 @@
         width: 100%;
     }
 
+    .focus-border.error {
+        width: 100%;
+    }
+
     .email-input:focus~.focus-border {
         width: 100%;
     }
@@ -564,7 +585,7 @@
 
     .get-update-btn {
         padding: 10px 20px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 

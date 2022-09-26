@@ -6,6 +6,12 @@
 }
 
 /* Hero Section */
+.heroSection {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .hs-content {
   width: 50%;
 }
@@ -171,6 +177,14 @@
   height: auto;
   width: 100%;
   margin-top: 200px;
+}
+
+.prototype-top-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .prototype-section-subtitle {
@@ -826,6 +840,10 @@
     width: 100%;
   }
 
+  .collab-header-description {
+    width: 100%;
+  }
+
   .collab-feature-section {
     display: none;
   }
@@ -865,7 +883,7 @@
 
   .collab-feature-description {
     line-height: 1.2;
-    width: 80%;
+    width: 100%;
   }
 
   /* /Collab Section/ */
@@ -890,6 +908,10 @@
   .fly-solo-content-title {
     margin-bottom: 10px;
     width: 70%;
+  }
+
+  .fly-solo-content-description {
+    width: 100%;
   }
 
   /* /Fly Solo Section/ */
