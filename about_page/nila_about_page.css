@@ -33,22 +33,25 @@
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  position: relative;
 }
 
 .vs-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .vs-animation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .vs-center-heart {
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 50%;
   animation: heart-beat 1s linear infinite;
 }
@@ -57,18 +60,12 @@
   display: none;
 }
 
-.vs-content-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 
 .vs-content-left,
 .vs-content-right {
   font-size: var(--video-title-font-size);
   position: absolute;
   color: var(--title-color);
-  font-family: "Zoho_Puvi_Bold";
   z-index: 1;
 }
 
@@ -424,17 +421,14 @@
 
   .vs-center-heart {
     width: 120px;
-    top: 40%;
     left: calc(50% - 60px);
   }
 
   .vs-content-left {
-    top: 45%;
     left: 10%;
   }
 
   .vs-content-right {
-    top: 45%;
     right: 10%;
   }
 }
@@ -484,7 +478,6 @@
 @media screen and (max-width: 1095px) {
   .vs-center-heart {
     width: 90px;
-    top: 43%;
     left: calc(50% - 45px);
   }
 
@@ -494,12 +487,10 @@
   }
 
   .vs-content-left {
-    top: 48%;
     left: 10%;
   }
 
   .vs-content-right {
-    top: 48%;
     right: 10%;
   }
 
@@ -762,22 +753,15 @@
   .vs-play-video {
     display: block;
     position: absolute;
-    top: 40%;
-    left: 45%;
+    left: 44%;
   }
 
   .vs-content-left {
-    top: 42%;
     left: 20%;
   }
 
   .vs-content-right {
-    top: 42%;
     right: 20%;
-  }
-
-  .vs-animation-section {
-    width: 350px;
   }
 
   .about-design-container {
@@ -874,6 +858,16 @@
 
   .main-text {
     font-size: 40px;
+  }
+  .vs-play-video {
+    left: 42%;
+  }
+  .vs-content-left {
+    left: 10%;
+  }
+
+  .vs-content-right {
+    right: 10%;
   }
 }
 
