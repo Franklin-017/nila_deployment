@@ -60,6 +60,7 @@
 /* Carousel Section */
 #carousel-controller {
   min-width: 30vw;
+  margin-top: 60px;
 }
 
 #carousel {
@@ -75,7 +76,7 @@
 
 .carousel-desc {
   width: 80%;
-  padding: 15px;
+  height: auto;
 }
 
 .carousel-slider {
@@ -356,6 +357,7 @@
     min-width: 90vw;
     overflow-x: auto;
     margin-bottom: 50px;
+    margin-top: 0;
   }
 
   .carousel-content {
