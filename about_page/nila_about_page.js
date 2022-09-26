@@ -46,8 +46,14 @@ bodymovin.loadAnimation(fourthFoldAnimation);
 
 const videoSection = document.querySelector(".vs-content-wrapper");
 const iFrameElement = document.querySelector(".branding-video-wrapper");
+const brandingVideo = document.querySelector(".branding-video");
+const win = brandingVideo.contentWindow;
+const videoUrl = 'https://player.vimeo.com/video/683774352?h=40bdcc301f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479;color=0063f4';
+
 
 videoSection.addEventListener("click", () => {
+    win.postMessage("playVideo", videoUrl);
+    console.log(win.postMessage("playVideo", videoUrl))
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(1)";
     iFrameElement.style.visibility = "visible";
@@ -57,6 +63,8 @@ videoSection.addEventListener("click", () => {
 const closeVideo = document.querySelector(".close-video");
 
 closeVideo.addEventListener("click", () => {
+    win.postMessage("pauseVideo", videoUrl);
+    console.log("Pause")
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(0)";
     iFrameElement.style.visibility = "hidden";
@@ -103,16 +111,16 @@ let carouselContent = "";
 
 weAreNillaCarouselContent.forEach(content => {
     carouselContent = carouselContent + `
-        <div class="carousel-content">
+        <div class="carousel-container">
             <div class="wan-img-wrapper ${content.name.replace(" ", "_").toLowerCase()}">
                 <div class="pic-gradient"></div>
                 <div class="pic-gradient-anim"></div>
                 <img id="caricature" src="${content.image}" />
             </div>
-            <div class="w-7 mw-10 tw-10 pl-5 mp-0 text-center-mobile">
-                <h1 class="person-name text-xl title-color">${content.name}</h1>
-                <h4 class="text-l title-color prof-role">${content.role}</h4>
-                <p class="text-m  primary-color carousel-desc">${content.accomplishment}</p>
+            <div class="carousel-content">
+                <p class="person-name">${content.name}</p>
+                <p class="prof-role">${content.role}</p>
+                <p class="primary-color carousel-desc">${content.accomplishment}</p>
             </div>
         </div>
     `;
@@ -121,7 +129,7 @@ weAreNillaCarouselContent.forEach(content => {
 carouselSlider.innerHTML = carouselContent;
 bodymovin.loadAnimation(caricatureAnimation);
 
-let slides = document.querySelectorAll(".carousel-content");
+let slides = document.querySelectorAll(".carousel-container");
 let sliderIndex = 0;
 let slideIntervalId;
 
@@ -131,12 +139,13 @@ firstClone.id = "first-clone";
 carouselSlider.append(firstClone);
 
 const carouselWidth = slides[sliderIndex].clientWidth;
-let slideInterval = 2000000;
+let slideInterval = 200000;
 
 const startSlide = () => {
     slideIntervalId = setInterval(() => {
         sliderIndex++;
         highlightCarouselText(sliderIndex);
+        console.log(carouselWidth * sliderIndex)
         carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
         carouselSlider.style.transition = "0.7s";
     }, slideInterval);
@@ -144,7 +153,7 @@ const startSlide = () => {
 startSlide();
 
 carouselSlider.addEventListener("transitionend", () => {
-    slides = document.querySelectorAll(".carousel-content");
+    slides = document.querySelectorAll(".carousel-container");
     if (slides[sliderIndex].id === firstClone.id) {
         carouselSlider.style.transition = 'none';
         sliderIndex = 0;

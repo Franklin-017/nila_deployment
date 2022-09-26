@@ -1,18 +1,45 @@
-/* Image Style */
-.animation-wrapper {
-  width: 500px;
+/* hero section */
+.hero-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.hs-animation-section {
-  width: 600px;
+.main-text {
+  width: 90%;
 }
 
-/* /Image Style/ */
+.hero-section-subtitle {
+  margin-top: 30px;
+  font-size: 28px;
+  width: 80%;
+}
+
+.hs-animation-wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* /\ hero section /\ */
 
 /* video section */
-#videoSection {
-  margin-bottom: 100px;
+.video-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
+}
+
+.vs-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .vs-animation-section {
@@ -47,41 +74,169 @@
 
 /* video section */
 
-.sticky-top {
+/* about design section */
+.about-design-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-bottom: 50px;
+  margin-top: 200px;
+}
+
+.animation-wrapper {
+  position: sticky;
+  width: 50%;
+  display: flex;
+  justify-content: center;
   top: 150px;
 }
 
+.about-design-content {
+  width: 50%;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.t {
+  font-size: 38px;
+  line-height: 1.2;
+  color: var(--title-color);
+}
+
+.scrollable-text {
+  opacity: 0.4;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+.active-content {
+  opacity: 1;
+}
+
+/* /\ about design section /\ */
+
+/* our mission section */
+.our-mission-container {
+  margin-top: 200px;
+}
+
+.our-mission-top-layout {
+  width: 60%;
+}
+
+.our-mission-title {
+  margin-bottom: 20px;
+}
+
+.out-mission-subheading {
+  width: 80%;
+  line-height: 1.4;
+}
+
+.our-mission-bottom-layout {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.our-mission-bottom-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.our-mission-bottom-content-title {
+  width: 90%;
+  line-height: 1;
+  color: var(--title-color);
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+/* /\ our mission section /\ */
+
 /* We are nila section */
+.we-are-nila-container {
+  margin-top: 100px;
+  height: auto;
+}
+
+.we-are-nila-top-layout {
+  width: 70%;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.we-are-nila-title {
+  margin-bottom: 20px;
+}
+
+.we-are-nila-top-layout-content {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.we-are-nila-bottom-layout {
+  display: flex;
+  width: 100%;
+}
 
 /* Carousel Section */
 #carousel-controller {
-  min-width: 30vw;
+  min-width: 20vw;
   margin-top: 60px;
+  z-index: 1;
+  box-shadow: 10px 0px 20px var(--nila-bg-color);
+}
+
+.list-wrapper {
+  padding-bottom: 30px;
+}
+
+.list {
+  cursor: pointer;
+  font-size: var(--text-m);
+}
+
+.list:hover {
+  color: var(--title-color);
+}
+
+.list.gradient-text {
+  opacity: 1;
+  background: linear-gradient(90deg, var(--accent-color) 40%, rgb(0, 208, 176) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
 }
 
 #carousel {
   overflow: hidden;
 }
 
-.carousel-content {
-  min-width: 70vw;
-  max-width: 70vw;
+.carousel-slider {
   display: flex;
   align-items: start;
+  line-height: 1.2;
 }
 
-.carousel-desc {
-  width: 80%;
-  height: auto;
-}
-
-.carousel-slider {
+.carousel-container {
+  min-width: 80vw;
+  max-width: 80vw;
   display: flex;
   align-items: start;
 }
 
 .wan-img-wrapper {
-  width: 28%;
+  width: 20%;
   z-index: 1;
   position: relative;
   top: 50px;
@@ -145,10 +300,8 @@
   right: 10px;
   width: 20px;
   height: 20px;
-  /* background: #0d0914; */
   background: rgba(54, 173, 193, 1);
   border-radius: 50%;
-  /*border: 2px solid #0063F4; */
   box-sizing: border-box;
   z-index: 9;
   content: "";
@@ -187,30 +340,45 @@
   background: transparent;
 }
 
-.list {
-  cursor: pointer;
+.carousel-content {
+  width: 70%;
+  padding-left: 10px;
+  margin-top: 60px;
 }
 
-.list:hover {
+.person-name {
+  font-size: var(--text-xl);
   color: var(--title-color);
 }
 
-.list.gradient-text {
-  opacity: 1;
-  background: linear-gradient(90deg, var(--accent-color) 40%, rgb(0, 208, 176) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
+.prof-role {
+  font-size: 24px;
+  color: var(--title-color);
+  margin-bottom: 15px;
 }
 
-/* /We are nila section/ */
+.carousel-desc {
+  width: 90%;
+  height: auto;
+  font-size: 24px;
+}
+
+/* /\ We are nila section /\ */
 
 @media screen and (max-width: 2560px) {
+
+  /* hero section */
   .main-text {
     font-size: 80px;
   }
 
+  .hero-section-subtitle {
+    font-size: 28px;
+  }
+
+  /* /\ hero section /\ */
+
+  /* /\ video section /\ */
   .vs-animation-section {
     width: 1300px;
   }
@@ -227,6 +395,8 @@
   .vs-content-right {
     right: 10%;
   }
+
+  /* /\ video section /\ */
 }
 
 @media screen and (max-width: 1620px) {
@@ -244,21 +414,38 @@
     font-size: 70px;
   }
 
+  .hero-section-subtitle {
+    font-size: 26px;
+  }
+
   .vs-animation-section {
     width: 1100px;
   }
 
   .vs-center-heart {
-    width: 140px;
-    left: calc(50% - 70px);
+    width: 120px;
+    top: 40%;
+    left: calc(50% - 60px);
   }
 
   .vs-content-left {
+    top: 45%;
     left: 10%;
   }
 
   .vs-content-right {
+    top: 45%;
     right: 10%;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .wan-img-wrapper {
+    min-width: 250px;
+  }
+  .carousel-content {
+    width: 60%;
+    padding-left: 50px;
   }
 }
 
@@ -272,23 +459,53 @@
   }
 }
 
+@media screen and (max-width: 1180px) {
+
+  /* hero section */
+  .main-text {
+    font-size: 60px;
+  }
+
+  .hero-section-subtitle {
+    font-size: 24px;
+  }
+
+  /* /\ hero section /\ */
+
+  .out-mission-subheading {
+    width: 100%;
+  }
+
+  .we-are-nila-top-layout-content {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1095px) {
   .vs-center-heart {
-    width: 110px;
-    left: calc(50% - 55px);
+    width: 90px;
+    top: 43%;
+    left: calc(50% - 45px);
   }
 
   .vs-content-left,
   .vs-content-right {
-    font-size: 110px;
+    font-size: 100px;
   }
 
   .vs-content-left {
-    left: 0%;
+    top: 48%;
+    left: 10%;
   }
 
   .vs-content-right {
-    right: 0%;
+    top: 48%;
+    right: 10%;
+  }
+
+  .out-mission-subheading ,
+  .we-are-nila-top-layout-content {
+    font-size: 24px;
   }
 }
 
@@ -299,6 +516,30 @@
 
   .main-text {
     font-size: 55px;
+  }
+
+  .hero-section-subtitle {
+    font-size: 22px;
+  }
+
+  .t {
+    font-size: 28px;
+  }
+
+  .our-mission-bottom-content-title {
+    font-size: 36px;
+  }
+}
+
+
+
+@media screen and (max-width: 917px) {
+  .main-text {
+    font-size: 50px;
+  }
+
+  .hero-section-subtitle {
+    font-size: 20px;
   }
 }
 
@@ -319,6 +560,10 @@
 
   .vs-content-right {
     right: 5%;
+  }
+
+  .our-mission-bottom-content-title {
+    font-size: 32px;
   }
 }
 
@@ -349,6 +594,18 @@
     right: 3%;
   }
 
+  .t {
+    font-size: 26px;
+  }
+
+  .our-mission-bottom-content-title {
+    font-family: 20px;
+  }
+
+  .we-are-nila-bottom-layout {
+    flex-direction: column;
+  }
+
   #carousel-controller {
     min-width: 90vw;
     overflow-x: auto;
@@ -356,7 +613,22 @@
     margin-top: 0;
   }
 
-  .carousel-content {
+  .leads {
+    display: flex;
+    align-items: center;
+  }
+
+  .list-wrapper {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .list {
+    font-size: 18px;
+  }
+
+  .carousel-container {
     min-width: 90vw;
     max-width: 90vw;
   }
@@ -366,16 +638,29 @@
     top: 0;
   }
 
+  .carousel-content {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .person-name {
+    font-size: 36px;
+  }
+
+  .prof-role {
+    font-size: 20px;
+  }
+
+  .carousel-desc {
+    font-size: 20px;
+    width: 90%;
+  }
+
   .leads {
-    width: 885px;
+    width: 892px;
   }
 
-  .leads li {
-    font-size: 18px;
-    margin-right: 60px;
-  }
-
-  .leads li:last-child {
+  .list:last-child {
     margin-right: 0px;
   }
 }
@@ -400,6 +685,24 @@
   }
 }
 
+@media screen and (max-width: 639px) {
+  .carousel-content {
+    margin-left: 40px;
+  }
+  .person-name {
+    font-size: 30px;
+  }
+
+  .prof-role {
+    font-size: 18px;
+  }
+
+  .carousel-desc {
+    font-size: 16px;
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 595px) {
   .vs-center-heart {
     width: 70px;
@@ -420,14 +723,31 @@
   }
 }
 
+@media screen and (max-width: 555px) {
+  .t {
+    font-size: 22px;
+  }
 
-@media screen and (max-width: 425px) {
-  .subtitle-mobile {
+
+  .main-text {
+    width: 100%;
+  }
+
+  .hero-section-subtitle {
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  .hs-animation-wrapper {
+    display: none;
+  }
+
+  .hero-section-subtitle {
     font-size: 20px;
   }
 
-  .main-text {
-    font-size: 40px;
+  .video-section-container {
+    height: auto;
   }
 
   .vs-content-left,
@@ -436,74 +756,124 @@
   }
 
   .vs-center-heart {
-    width: 50px;
-    left: calc(50% - 25px);
     display: none;
   }
 
   .vs-play-video {
     display: block;
     position: absolute;
-    top: 37%;
-    left: 42%;
+    top: 40%;
+    left: 45%;
   }
 
   .vs-content-left {
-    left: 15%;
+    top: 42%;
+    left: 20%;
   }
 
   .vs-content-right {
-    right: 15%;
+    top: 42%;
+    right: 20%;
   }
 
   .vs-animation-section {
     width: 350px;
   }
 
-  #carousel-controller {
-    min-width: 90vw;
-    overflow-x: auto;
-    margin-bottom: 50px;
-  }
-
-  .carousel-content {
-    min-width: 90vw;
-    max-width: 90vw;
+  .about-design-container {
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .person-name {
-    font-size: 22px;
-    margin-top: 30px;
-  }
-
-  .prof-role {
-    font-size: 18px;
-    padding-bottom: 0;
-  }
-
-  .carousel-desc {
     width: 100%;
   }
 
+  .about-design-content {
+    width: 100%;
+    align-items: start;
+  }
+
+  .animation-wrapper {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .our-mission-container {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .our-mission-top-layout {
+    width: 100%;
+  }
+
+  .out-mission-subheading {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .our-mission-bottom-layout {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .our-mission-bottom-content {
+    width: 100%;
+  }
+
+  .our-mission-bottom-content-title {
+    font-size: 32px;
+  }
+
+  .we-are-nila-container {
+    width: 100%;
+  }
+
+  .we-are-nila-top-layout {
+    width: 100%;
+  }
+
+  .we-are-nila-top-layout-content {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    justify-content: center;
+  }
   .wan-img-wrapper {
     left: 20%;
     width: 100%;
     height: 250px;
   }
 
-  .leads {
-    width: 811px;
+  .carousel-content {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
   }
 
-  .leads li {
-    font-size: 16px;
-    margin-right: 60px;
+  .prof-role {
+    font-size: 20px;
   }
 
-  .leads li:last-child {
-    margin-right: 0px;
+  .carousel-desc {
+    font-size: 18px;
+    width: 95%;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .subtitle-mobile {
+    font-size: 20px;
+  }
+
+  .main-text {
+    font-size: 40px;
   }
 }
 
