@@ -118,8 +118,8 @@ const canTriggerAnimation = (target, conditionalOffset = 0.85) => {
             } else {
                 return false;
             }
-        } catch(err) {
-            
+        } catch (err) {
+
         }
     }
 };
@@ -156,7 +156,7 @@ const animateUsingClassNames = ({ target, classNamesToAdd, classNamesToRemove, c
 
 const setActiveState = () => {
     const elements = document.getElementsByClassName("t");
-    const { scrollTop  } = document.documentElement;
+    const { scrollTop } = document.documentElement;
 
     for (let ind = 0; ind < elements.length; ind++) {
         let cur_element = elements[ind];
@@ -187,4 +187,58 @@ closeWaitlistSlider.addEventListener("click", () => {
 joinWaitlistBtn.addEventListener("click", () => {
     waitlistSlider.classList.add("open");
 })
+
+const emailInput = document.querySelector(".email-input");
+const addToWaitlistbtn = document.querySelector(".get-update-btn");
+const errorMessage = document.querySelector(".error-message");
+const focusBorder = document.querySelector(".focus-border");
+
+emailInput.addEventListener("input", () => {
+    hideInputErrorMessage();
+    if (emailInput!=="") {
+        focusBorder.style.width = "80%";
+    } else {
+        focusBorder.style.width = "0%";
+    }
+})
+
+addToWaitlistbtn.addEventListener("click", () => {
+    let email = emailInput.value;
+    if (email === "") {
+        showInputErrorMessage("Please enter your email address");
+        return;
+    }
+    if (isValidEmail(email)) {
+        addToWaitlist(email);
+    } else {
+        showInputErrorMessage("Please enter a valid email");
+    }
+})
+
+function isValidEmail(email) {
+    const emailPattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    console.log(emailPattern.test(email))
+    return emailPattern.test(email);
+}
+
+function showInputErrorMessage(message) {
+    focusBorder.classList.add("error");
+    errorMessage.innerText = message; 
+}
+
+function hideInputErrorMessage() {
+    focusBorder.classList.remove("error");
+    errorMessage.innerText = ""; 
+}
+
+function addToWaitlist(email) {
+    fetch("https://stage.localnila.com/joinwaitlist", {
+        method: 'POST',
+        headers: {
+            "Accept": 'application/json, text/plain */*',
+            "Content-type": 'application/json'
+        },
+        body: JSON.stringify({ emailId: email })
+    })
+}
 // ignorei18n_end 

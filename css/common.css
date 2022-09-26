@@ -225,9 +225,12 @@
 
 .input-wrapper {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    height: 10px;
 }
 
 .focus-border {
@@ -239,6 +242,12 @@
     height: 1px;
     background-image: var(--gradient-color);
     transition: width 0.5s ease-in;
+}
+
+.focus-border.error {
+    background-image: none;
+    background-color: red;
+    width: 80%;
 }
 
 .email-input:focus~.focus-border {

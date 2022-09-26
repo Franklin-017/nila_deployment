@@ -68,31 +68,31 @@ closeVideo.addEventListener("click", () => {
 const weAreNillaCarouselContent = [
     {
         name: "Karthikeyan J",
-        image: "../assets/caricature/karthikeyan.svg",
+        image: "../assets/caricature/karthikeyan.png",
         role: "Head of product",
         accomplishment: "During his 15 years of leading product teams, Karthik noticed several challenges that came in the way of designing and shipping great products. That's when he came up with the idea for a platform that could simplify the way teams design together."
     },
     {
         name: "Jerome Joel",
-        image: "../assets/caricature/jerome.svg",
+        image: "../assets/caricature/jerome.png",
         role: "Product Designer",
         accomplishment: "As the first designer on a team designing a platform for designers, Jerome is passionate about shaping the future of design - this is what inspires him every single day. Jerome spent over 5 years crafting mobile app interfaces before he joined the Nila team."
     },
     {
         name: "Meera Sapra",
-        image: "../assets/caricature/meera_sapra.svg",
+        image: "../assets/caricature/meera_sapra.png",
         role: "Head of Marketing ",
         accomplishment: "With over 14 years of her life’s work in product management and marketing for business software, Meera believes design is key to both product-building and storytelling. She now focuses on building Nila as a brand that designers would love."
     },
     {
         name: "Praburaj Moorthy",
-        image: "../assets/caricature/praburaj.svg",
+        image: "../assets/caricature/praburaj.png",
         role: "Engineering Lead ",
         accomplishment: "After a decade of developing presentation software for iOS, Prabu found himself fascinated by the vision of building a powerful native platform where designers can create their best work. He now leads our development efforts for the Nila Mac app found himself intrigued by the problems that would often come up during the design collaboration process. He now leads our development efforts towards building Nila as a platform that will solve these problems."
     },
     {
         name: "Jagadeesan Krishnan",
-        image: "../assets/caricature/jagadeesan.svg",
+        image: "../assets/caricature/jagadeesan.png",
         role: "Lead web developer ",
         accomplishment: "With over 7 years of engineering and product-building experience, Jagadeesan was one of the first web developers to join our team. He now drives our engineering efforts to Nila as a platform that will redefine how people design together."
     }
@@ -103,21 +103,16 @@ let carouselContent = "";
 
 weAreNillaCarouselContent.forEach(content => {
     carouselContent = carouselContent + `
-        <div class="carousel-content flex flex-col-mobile mobile-center">
-            <div class="pr-5 mp-0">
-                <div class="wan-img-wrapper">
-                    <img id="caricature" src="${content.image}" />
-                    <div class="circular-path"></div>
-                </div>
+        <div class="carousel-content">
+            <div class="wan-img-wrapper ${content.name.replace(" ", "_").toLowerCase()}">
+                <div class="pic-gradient"></div>
+                <div class="pic-gradient-anim"></div>
+                <img id="caricature" src="${content.image}" />
             </div>
             <div class="w-7 mw-10 tw-10 pl-5 mp-0 text-center-mobile">
-                <div class="">
-                    <h1 id="person_name" class="text-xl title-color">${content.name}</h1>
-                </div>
-                <div class="pb-2">
-                    <h4 class="text-l title-color">${content.role}</h4>
-                </div>
-                <div class="w-8 mw-auto text-m  primary-color pb-2">${content.accomplishment}</div>
+                <h1 class="person-name text-xl title-color">${content.name}</h1>
+                <h4 class="text-l title-color prof-role">${content.role}</h4>
+                <p class="text-m  primary-color carousel-desc">${content.accomplishment}</p>
             </div>
         </div>
     `;
@@ -136,7 +131,7 @@ firstClone.id = "first-clone";
 carouselSlider.append(firstClone);
 
 const carouselWidth = slides[sliderIndex].clientWidth;
-let slideInterval = 20000;
+let slideInterval = 2000000;
 
 const startSlide = () => {
     slideIntervalId = setInterval(() => {
