@@ -175,10 +175,12 @@ const joinWaitlistBtn = document.querySelector(".join-waitlist-btn");
 
 closeWaitlistSlider.addEventListener("click", () => {
     waitlistSlider.classList.remove("open");
+    document.querySelector("html").classList.remove("overflow-hidden");
 })
 
 joinWaitlistBtn.addEventListener("click", () => {
     waitlistSlider.classList.add("open");
+    document.querySelector("html").classList.add("overflow-hidden");
 })
 
 const emailInput = document.querySelector(".email-input");
@@ -207,7 +209,6 @@ addToWaitlistbtn.addEventListener("click", () => {
 
 function isValidEmail(email) {
     const emailPattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    console.log(emailPattern.test(email))
     return emailPattern.test(email);
 }
 
