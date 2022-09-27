@@ -755,7 +755,7 @@
   }
 
   .hero-section-content {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   /* Video Section */
@@ -788,19 +788,22 @@
   }
 
   .native-mac-section-content {
-    width: 70%;
+    width: 100%;
   }
 
   .native-mac-section-title {
-    width: 90%;
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 10px;
   }
 
   .native-mac-section-subtitle {
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 7px;
   }
 
   .native-mac-section-description {
-    font-size: 16px;
+    font-size: 20px;
 
   }
 
@@ -825,12 +828,12 @@
   }
 
   .card-title {
-    font-size: 21px;
+    font-size: 22px;
     letter-spacing: -1px;
   }
 
-  .card-content {
-    font-size: 18px;
+  .card-desc {
+    font-size: 19px;
   }
 
   .card-media {
@@ -869,8 +872,14 @@
     width: 100%;
   }
 
+  .collab-header-title {
+    width: 100%;
+  }
+
   .collab-header-description {
     width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
   }
 
   .collab-feature-section {
@@ -893,7 +902,13 @@
   }
 
   .collab-feature-title {
-    width: 60%;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 24px;
+  }
+
+  .collab-content p {
+    font-size: 18px;
   }
 
   .invite-team-animation-mobile,
@@ -901,13 +916,6 @@
   .smoother-handsoff-animation-mobile {
     width: 50%;
     width: 150px;
-
-  }
-
-  .collab-feature-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-    width: 80%;
   }
 
   .collab-feature-description {
@@ -936,11 +944,15 @@
 
   .fly-solo-content-title {
     margin-bottom: 10px;
-    width: 70%;
+    width: 100%;
   }
 
   .fly-solo-content-description {
     width: 100%;
+  }
+
+  .fly-solo-content-description p {
+    font-size: 18px;
   }
 
   /* /Fly Solo Section/ */
@@ -1008,6 +1020,10 @@
   .vs-play-video {
     display: block;
     width: 40px;
+  }
+
+  .card-container {
+    padding: 15px;
   }
 
   .fly-solo-content-title {
