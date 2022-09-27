@@ -400,18 +400,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 30%;
 }
 
-.left-content {
+.footer-left-content {
     display: flex;
     width: 50%;
     color: #2c2c2c;
 }
 
-.right-content {
+.design-with-nila  {
+    padding-right: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.heart-icon {
+    padding-left: 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media a {
+    padding-right: 20px;
 }
 
 .social-media img {
@@ -422,6 +438,20 @@
 
 .social-media img:hover {
     filter: brightness(2);
+}
+
+.footer-right-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-link {
+    padding-right: 20px;
+}
+
+.footer-right-content .seperator {
+    padding-left: 20px;
 }
 
 /* ****************************** /\ Footer Section /\ ****************************** */
