@@ -44,7 +44,6 @@
 .breadcrumb {
     font-size: 16px;
     color: #666666;
-    cursor: pointer;
 }
 
 .breadcrumb .left-arrow {
@@ -132,7 +131,6 @@ table{
 .ge-container .social-media img {
     height: 18px;
     transition: filter 0.3s ease-in;
-    cursor: pointer;
 }
 
 .ge-container .social-media img:hover {

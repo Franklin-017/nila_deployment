@@ -324,6 +324,7 @@ const contentList = [
             <p class="text-m">
                 We understand that having autonomy over your designs is key. That's why your drafts are completely private until you invite other folks for feedback and handoff. Just share links to your prototypes or embed them anywhere on the web whenever you're ready.
             </p>
+            <br />
             <p class="text-m">
                 You don't have to dig through multiple files to find the latest version. With Nila, designers, developers and marketers can explore and iterate in the same file all at the same time, without ever losing context.
             </p>
@@ -334,6 +335,7 @@ const contentList = [
             <p class="text-m">
                 Feedback fuels great design. With a dedicated space for comments, Nila makes it easy for teams to spark conversations around anything they create. Everyone can bring more context to their comments with marked elements, pinned selections, replies, @mentions and emoji reactions. 
             </p>
+            <br />
             <p class="text-m">
                 Oh, and here's the really cool bit: you can quickly compare changes side-by-side to see who changed what, without ever having to switch tabs or hunt for files.
             </p>

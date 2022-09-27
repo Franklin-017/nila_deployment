@@ -65,7 +65,7 @@
     font-size: var(--title-font-size);
     color: var(--title-color);
     line-height: 1.1;
-    letter-spacing: -1.3px;
+    letter-spacing: -3px;
 }
 
 .title .gradient-text,

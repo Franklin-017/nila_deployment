@@ -17,7 +17,7 @@
 
 .brand-logo {
     height: 56px;
-    cursor: pointer;
+    cursor: none;
 }
 
 .navlinks {
@@ -35,7 +35,7 @@
 .navbar-nav .navlink {
     position: relative;
     padding: 5px 0;
-    cursor: pointer;
+    cursor: none;
 }
 
 .navlink:first-child {
@@ -48,7 +48,10 @@
 
 .navlink-btn {
     text-align: center;
-    padding: 10px 24px;
+    font-size: 16px;
+    padding: 15px 24px;
+    transition: all 0.3s ease-in;
+    cursor: none;
 }
 
 .navlink:hover,
@@ -89,6 +92,10 @@
     .navbar-squeeze .navlinks {
         font-size: 19px;
     }
+
+    .navbar-squeeze .navlink-btn {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 1327px) {
@@ -119,7 +126,8 @@
     }
 
     .navlink-btn {
-        padding: 10px 20px;
+        font-size: 14px;
+        padding: 12px 20px;
     }
 
     .brand-logo {
@@ -132,6 +140,10 @@
 
     .navbar-squeeze .navlinks {
         font-size: 16px;
+    }
+
+    .navbar-squeeze .navlink-btn {
+        font-size: 13px;
     }
 
     .navlink:first-child {
@@ -148,11 +160,11 @@
         height: 36px;
     }
 
-    .navlinks {
+    .navlink {
         font-size: 16px;
     }
 
-    .navbar-squeeze .navlinks {
+    .navbar-squeeze .navlink {
         font-size: 14px;
     }
 
@@ -162,17 +174,12 @@
 }
 
 @media screen and (max-width: 679px) {
-    .navlinks {
+    .navlink {
         font-size: 14px;
     }
 
-    .navbar-squeeze .navlinks {
+    .navbar-squeeze .navlink {
         font-size: 12px;
-    }
-
-    .navlink-btn {
-        width: auto;
-        height: 35px;
     }
 
     .navlink:last-child {
@@ -190,7 +197,7 @@
         height: 28px;
     }
 
-    .navlinks {
+    .navlink {
         font-size: 14px;
     }
 
@@ -198,13 +205,7 @@
         padding: 10px 0;
     }
 
-    .navlink-btn {
-        font-size: 12px;
-        height: 30px;
-        padding: 4px 12px;
-    }
-
-    .navbar-squeeze .navlinks {
+    .navbar-squeeze .navlink {
         font-size: 12px;
     }
 

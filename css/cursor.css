@@ -10,11 +10,11 @@
 @media (hover: hover) and (pointer: fine) {
     .cursor_circle {
         position: relative;
-        width: 18px;
-        height: 18px;
-        transform: translate(-45%, -45%);
+        width: 22px;
+        height: 22px;
+        transform: translate(-50%, -60%);
         border-radius: 50%;
-        background-color: var(--accent-color);
+        background-color: var(--moon-color);
         background-blend-mode: difference;
         transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
             width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);

@@ -21,6 +21,7 @@
   color: var(--title-color);
   margin-bottom: 30px;
   line-height: 1.1;
+  letter-spacing: -3px;
 }
 
 .hs-title.gradient-text {
@@ -241,6 +242,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  overflow: hidden;
 }
 
 .collab-section-header-container {
@@ -272,6 +274,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .collab-animation-section {
@@ -327,7 +330,6 @@
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in;
   display: inline-block;
-  cursor: pointer;
 }
 
 .content-selected .show-on-hover {
@@ -349,6 +351,9 @@
   align-items: start;
   height: 100%;
   width: 50%;
+}
+
+.collab-content{
   line-height: 1.4;
 }
 

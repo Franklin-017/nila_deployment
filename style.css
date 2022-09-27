@@ -6,8 +6,9 @@
 @import url("./css/animation.css");
 
 :root {
-    --nila-bg-color: #090D18;
+    --nila-bg-color: #0c0914;
     --accent-color: #0063f4;
+    --moon-color:#baeeee;
     --gradient-color: -webkit-linear-gradient(-45deg, #0063f4 60%, #00d0b0 85%);
     --video-title-font-size: 130px;
     --title-font-size: 70px;
@@ -33,6 +34,7 @@
 
 html {
     overflow-x: hidden;
+    cursor: none;
 }
 
 a {

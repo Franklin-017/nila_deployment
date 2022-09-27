@@ -202,7 +202,6 @@
 }
 
 .list {
-  cursor: pointer;
   font-size: var(--text-m);
 }
 
@@ -549,6 +548,17 @@
     font-size: 90px;
   }
 
+  .vs-center-heart {
+    display: none;
+  }
+
+  .vs-play-video {
+    display: block;
+    position: absolute;
+    width: 80px;
+    left: 45%;
+  }
+
   .vs-content-left {
     left: 5%;
   }
@@ -723,7 +733,6 @@
     font-size: 22px;
   }
 
-
   .main-text {
     width: 100%;
   }
@@ -752,13 +761,8 @@
     font-size: 30px;
   }
 
-  .vs-center-heart {
-    display: none;
-  }
-
   .vs-play-video {
-    display: block;
-    position: absolute;
+    width: 60px;
     left: 44%;
   }
 
