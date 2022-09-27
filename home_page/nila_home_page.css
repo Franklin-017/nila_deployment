@@ -825,7 +825,8 @@
   }
 
   .card-title {
-    font-size: 24px;
+    font-size: 21px;
+    letter-spacing: -1px;
   }
 
   .card-content {
