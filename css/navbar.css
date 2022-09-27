@@ -9,10 +9,13 @@
     align-items: center;
 }
 
-.brand-logo {
+.brand-logo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.brand-logo {
     height: 56px;
     cursor: pointer;
 }

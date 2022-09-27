@@ -34,6 +34,7 @@
   justify-content: center;
   height: 100vh;
   max-width: 100vw;
+  position: relative;
   overflow: hidden;
 }
 
