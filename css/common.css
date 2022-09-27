@@ -573,7 +573,6 @@
 }
 
 @media screen and (max-width: 555px) {
-
     .footer-right-content {
         justify-content: center;
         line-height: 1.2;
@@ -587,6 +586,11 @@
     .social-media a:last-child {
         padding-right: 0px;
     }
+
+    .heart-icon {
+    height: 9px;
+    padding-left: 7px;
+}
 
     .footer-link,
     .copy-rights,
