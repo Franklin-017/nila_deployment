@@ -180,12 +180,6 @@ body::after {
     background: url("../assets/img/nila-privacy-footer-line.jpeg");
 }
 
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .left-content {
     display: flex;
     width: 50%;
