@@ -551,6 +551,10 @@
         font-size: 16px;
     }
 
+    .copy-rights {
+        margin-right: 0;
+    }
+
     .footer-right-content .seperator {
         padding-left: 10px;
     }
