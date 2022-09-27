@@ -52,6 +52,8 @@
     padding: 15px 24px;
     transition: all 0.3s ease-in;
     cursor: none;
+    width: 140px;
+    height: 50px;
 }
 
 .navlink:hover,
@@ -184,6 +186,11 @@
 
     .navlink:last-child {
         margin-right: 40px;
+    }
+    
+    .navlink-btn  {
+        width: 120px;
+        height: 40px;
     }
 }
 
