@@ -14,7 +14,7 @@ body {
 }
 
 .ge-header {
-    width: 95vw;
+    width: 100vw;
     height: 125px;
     top: 0; 
     background-color: #f0f5ff;
@@ -25,6 +25,7 @@ body {
     align-items: center;
     position: sticky;
     position: -webkit-sticky;
+    /* box-shadow: 0px 0px 50px #a3b8e8; */
 }
 
 .privacy-report-title-wrapper {
@@ -131,7 +132,7 @@ table{
     width: 45%;
 }
 
-tbody:nth-child(even) {
+tr:nth-child(even) {
     background-color: #f8f9fc;
 }
 
@@ -139,7 +140,6 @@ tbody:nth-child(even) {
     font-size: 20px;
     line-height: 1.4;
     color: #4f5460;
-    background-color: #f0f5ff;
     border-bottom: 1px solid #e1e4ed;
     border-right: 1px solid #e1e4ed;
     vertical-align: center;
