@@ -6,7 +6,7 @@
 @import url("./css/animation.css");
 
 :root {
-    --nila-bg-color: #0c0914;
+    --nila-bg-color: #090d18;
     --accent-color: #0063f4;
     --moon-color:#baeeee;
     --gradient-color: -webkit-linear-gradient(-45deg, #0063f4 60%, #00d0b0 85%);
@@ -18,8 +18,8 @@
     --text-l: 1.5rem;
     --text-xl: 2rem;
     --text-xxl: 3rem;
-    --title-color: #FFFFFF;
-    --description-color: #AAAEB8;
+    --title-color: #babfca;
+    --description-color: #858a95;
 }
 
 * {
@@ -50,8 +50,8 @@ li {
     :root {
         --text-xs: 14px;
         --text-s: 16px;
-        --text-m: 22px;
-        --text-l: 28px;
+        --text-m: 20px;
+        --text-l: 26px;
         --text-xl: 42px;
         --text-xxl: 50px;
         --video-title-font-size: 160px;

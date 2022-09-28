@@ -48,12 +48,21 @@
 
 .navlink-btn {
     text-align: center;
-    font-size: 16px;
+    font-size: 17px;
     padding: 15px 24px;
     transition: all 0.3s ease-in;
     cursor: none;
-    width: 140px;
+    width: 160px;
     height: 50px;
+}
+
+.navlink-btn.gradient-text {
+    background: -webkit-linear-gradient(299deg, #0063f4 60%, #00d0b0 85%);
+    background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .navlink:hover,

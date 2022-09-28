@@ -8,6 +8,8 @@
 
 .main-text {
   width: 90%;
+  letter-spacing: -2px;
+  font-weight: 600;
 }
 
 .hero-section-subtitle {
@@ -64,6 +66,12 @@
   display: none;
 }
 
+.vs-character {
+  position: absolute;
+  width: 200px;
+  bottom: -104px;
+  z-index: 1;
+}
 
 .vs-content-left,
 .vs-content-right {
@@ -71,6 +79,8 @@
   position: absolute;
   color: var(--title-color);
   z-index: 1;
+  font-weight: 600;
+  letter-spacing: -4px;
 }
 
 /* video section */
@@ -90,7 +100,7 @@
   position: sticky;
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   top: 150px;
 }
 
@@ -155,7 +165,7 @@
 
 .our-mission-bottom-content-title {
   width: 90%;
-  line-height: 1;
+  line-height: 1.2;
   color: var(--title-color);
   font-size: 46px;
   margin-bottom: 30px;
@@ -180,8 +190,10 @@
 }
 
 .we-are-nila-top-layout-content {
-  width: 50%;
+  width: 75%;
   margin-bottom: 50px;
+  font-size: 26px;
+  line-height: 1.4;
 }
 
 .we-are-nila-bottom-layout {
@@ -203,6 +215,7 @@
 
 .list {
   font-size: var(--text-m);
+  color: #2d313c;
 }
 
 .list:hover {
@@ -347,20 +360,22 @@
 }
 
 .person-name {
-  font-size: var(--text-xl);
+  font-size: 34px;
   color: var(--title-color);
 }
 
 .prof-role {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--title-color);
   margin-bottom: 15px;
 }
 
 .carousel-desc {
-  width: 90%;
+  width: 55%;
   height: auto;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #737883;
 }
 
 /* /\ We are nila section /\ */
@@ -380,7 +395,7 @@
 
   /* /\ video section /\ */
   .vs-animation-section {
-    width: 1300px;
+    width: 1000px;
   }
 
   .vs-center-heart {
@@ -419,7 +434,7 @@
   }
 
   .vs-animation-section {
-    width: 1100px;
+    width: 900px;
   }
 
   .vs-center-heart {

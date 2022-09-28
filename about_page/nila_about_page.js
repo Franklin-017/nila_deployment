@@ -120,7 +120,7 @@ weAreNillaCarouselContent.forEach(content => {
             <div class="carousel-content">
                 <p class="person-name">${content.name}</p>
                 <p class="prof-role">${content.role}</p>
-                <p class="primary-color carousel-desc">${content.accomplishment}</p>
+                <p class="carousel-desc">${content.accomplishment}</p>
             </div>
         </div>
     `;

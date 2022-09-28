@@ -5,17 +5,18 @@
     top: 0;
     border-radius: 50%;
     pointer-events: none;
+    /* mix-blend-mode: difference; */
 }
 
 @media (hover: hover) and (pointer: fine) {
     .cursor_circle {
         position: relative;
-        width: 22px;
-        height: 22px;
+        width: 50px;
+        height: 50px;
         transform: translate(-50%, -60%);
         border-radius: 50%;
+        opacity: 0.6;
         background-color: var(--moon-color);
-        background-blend-mode: difference;
         transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
             width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
@@ -36,8 +37,8 @@
         width: 170px;
         height: 170px;
         transform: translate(-41%, -42%);
-        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-            width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        /* transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1); */
     }
 
     .canvas_section_cursor {

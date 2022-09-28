@@ -1,7 +1,7 @@
 @import url("../style.css");
 
 :root {
-  --hero-section-font-size: 80px;
+  --hero-section-font-size: 75px;
   --hero-section-gradient-font-size: calc(var(--hero-section-font-size) + 2px);
 }
 
@@ -21,20 +21,25 @@
   color: var(--title-color);
   margin-bottom: 30px;
   line-height: 1.1;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
+  font-weight: 600;
 }
 
 .hs-title.gradient-text {
   font-size: var(--hero-section-gradient-font-size);
 }
 
+.hs-title.collab-gradient {
+  background-image: -webkit-linear-gradient(-45deg, #0063f4 82%, #00d0b0 89%);
+}
+
 .text-slide {
   position: relative;
   height: 90px;
-  width: 276px;
+  width: 242px;
   transition: width 1s ease-in;
   display: inline-block;
-  animation: blink 0.5s linear infinite;
+  animation: blink 1s linear infinite;
 }
 
 .hs-animate-text {
@@ -52,7 +57,7 @@
 }
 
 .hero-section-content {
-  width: 95%;
+  width: 85%;
   font-size: 24px;
   line-height: 1.4;
 }
@@ -149,7 +154,7 @@
 
 .animation-section-3 {
   position: absolute;
-  left: -40%;
+  left: -50%;
   top: 10%;
   height: 75vh;
 }
@@ -197,7 +202,7 @@
 }
 
 .prototype-section-subtitle {
-  width: 40%;
+  width: 50%;
   padding-top: 20px;
   padding-bottom: 40px;
   line-height: 1.4;
@@ -232,7 +237,7 @@
 }
 
 .card-title {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 /* /Prototype Section/ */
@@ -261,7 +266,7 @@
 
 .collab-header-title {
   padding-bottom: 40px;
-  width: 70%;
+  width: 80%;
 }
 
 .collab-header-description {
@@ -314,8 +319,8 @@
 }
 
 .col-content {
-  width: 50%;
-  padding-left: 50px;
+  width: 66%;
+  padding-left: 20px;
   opacity: 0.1;
   transition: opacity 0.5s ease-in;
 }
@@ -341,7 +346,7 @@
 }
 
 .content-selected .gradient-text {
-  background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
+  background: -webkit-linear-gradient(317deg, #0063f4 9%, #00d0b0 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -355,6 +360,7 @@
 
 .collab-content{
   line-height: 1.4;
+  width: 75%;
 }
 
 .collab-content.mb {
@@ -382,7 +388,7 @@
 
 .fly-solo-content-title {
   margin-bottom: 30px;
-  width: 80%;
+  width: 90%;
 }
 
 .fly-solo-content-description {
@@ -419,7 +425,6 @@
   /* Prototype Section */
   .bottom-card-layout {
     grid-template-columns: repeat(2, 1fr);
-    width: 70%;
   }
 
   .card-media {

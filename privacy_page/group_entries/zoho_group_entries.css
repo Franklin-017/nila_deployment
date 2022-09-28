@@ -14,7 +14,7 @@
     width: 95vw;
     height: 125px;
     top: 0; 
-    background-color: #fff;
+    background-color: #f0f5ff;
     padding: 3%;
     z-index: 1;
     margin: auto;
@@ -34,6 +34,12 @@
 .ge-container {
     width: 80vw;
     margin: auto;
+}
+
+.table-container,
+.main-title-header {
+    position: sticky;
+    position: -webkit-sticky;
 }
 
 .main-title-header {
