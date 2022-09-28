@@ -1,13 +1,16 @@
+body {
+    background-color: #f0f5ff;
+}
  body::after {
     content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url("../../assets/img/nila-privacy-top-mandala.png") no-repeat;
-    width: 300px;
-    height: 210px;
+    position: fixed;
+    top: -55px;
+    right: -22px;
+    background: url(../../assets/svg/nila-privacy-top-mandala.svg) no-repeat;
+    width: 264px;
+    height: 386px;
     background-size: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 .ge-header {
@@ -20,6 +23,17 @@
     margin: auto;
     display: flex;
     align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.privacy-report-title-wrapper {
+    padding-top: 0px;
+}
+
+.main-title {
+    font-weight: 600;
+    letter-spacing: -3px;
 }
 
 .nila-logo {
@@ -72,30 +86,36 @@
 
 table{
     border-spacing: 0;
-    border: 1px solid #e7e6ed;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .ge-table {
     width: 100%;
     margin: 0 auto;
     border-collapse: separate;
+    box-shadow: 0px 0px 50px #a3b8e8;
 }
 
 .ge-table th {
     padding: 15px 40px;
     font-size: 20px;
     font-family: 'Zoho_Puvi_Medium';
-    color: #010101;
+    color: #3e434e;
     font-weight: normal;
-    background-color: #f2f7fe;
-    border-right: 1px solid #e7e6ed;
-    border-top: 1px solid #e7e6ed;
-    border-bottom: 1px solid #e7e6ed;
+    background-color: #e1e4ed;
     text-align: left;
     position: sticky;
     top: 125px;
+    height: 70px;
 }
+
+/* .ge-table th:first-child {
+    border-top-left-radius: 50px;
+}
+
+.ge-table th:last-child {
+    border-top-right-radius: 50px;
+} */
 
 .ge-table th:first-child {
     width: 15%;
@@ -111,15 +131,30 @@ table{
     width: 45%;
 }
 
+tbody:nth-child(even) {
+    background-color: #f8f9fc;
+}
+
 .ge-table td {
-    font-size: 16px;
-    color: #010101;
-    border-bottom: 1px solid #e7e6ed;
-    border-right: 1px solid #e7e6ed;
-    vertical-align: top;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #4f5460;
+    background-color: #f0f5ff;
+    border-bottom: 1px solid #e1e4ed;
+    border-right: 1px solid #e1e4ed;
+    vertical-align: center;
     padding: 30px 40px;
     text-align: left;
 }
+
+.ge-container td:last-child {
+    border-right: none;
+}
+
+.ge-table td:first-child {
+    text-align: center;
+}
+
 
 .ge-container #footer {
     width: 80vw;
@@ -127,7 +162,7 @@ table{
 }
 
 .ge-container .footer-line {
-    background: url("../../assets/img/nila-privacy-footer-line.jpeg");
+    background: url("../../assets/img/nila-privacy-footer-line.png");
 }
 
 .ge-container .copy-rights {
@@ -141,4 +176,31 @@ table{
 
 .ge-container .social-media img:hover {
     filter: brightness(0);
+}
+
+.ge-container .copy-rights {
+    color: #444545;
+    cursor: pointer;
+}
+
+.social-media a,
+.footer-link {
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    color: #333333;
+}
+
+.ge-container .text-hover::after {
+    background: #010101;
+}
+
+.ge-container .social-media img {
+    filter: brightness(0);
+    cursor: pointer;
+}
+
+.ge-container .social-media img:hover {
+    filter: brightness(1);
 }

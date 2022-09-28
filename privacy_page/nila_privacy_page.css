@@ -129,12 +129,11 @@ body::after {
 .text-l .text-hover {
     font-size: var(--content-font-size);
     color: var(--accent-color);
-    opacity: 1;
+    cursor: pointer;
 }
 
-.privacy-container .page_active {
-    opacity: 1;
-    color: #010101;
+.footer-active {
+    color: #080808;
 }
 
 .privacy-container .text-hover::after {
@@ -212,10 +211,17 @@ body::after {
 
 .privacy-container .copy-rights {
     color: #444545;
+    cursor: pointer;
+}
+
+.social-media a,
+.footer-link {
+    cursor: pointer;
 }
 
 .privacy-container .social-media img {
     filter: brightness(0);
+    cursor: pointer;
 }
 
 .privacy-container .social-media img:hover {
