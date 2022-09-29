@@ -195,7 +195,7 @@ body::after {
 }
 
 .privacy-container .footer-line {
-    background: url("../assets/img/nila-privacy-footer-line.png");
+    background: url("../../assets/img/nila-privacy-footer-line.png");
 }
 
 .left-content {
@@ -221,6 +221,7 @@ body::after {
 
 .privacy-container .social-media img {
     cursor: pointer;
+    height: 28px;
 }
 
 .privacy-container .social-media img:hover {

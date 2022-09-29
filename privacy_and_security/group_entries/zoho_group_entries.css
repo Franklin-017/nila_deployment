@@ -170,7 +170,7 @@ tr:nth-child(even) {
 }
 
 .ge-container .social-media img {
-    height: 18px;
+    height: 28px;
     transition: filter 0.3s ease-in;
 }
 
@@ -197,10 +197,8 @@ tr:nth-child(even) {
 }
 
 .ge-container .social-media img {
-    filter: brightness(0);
     cursor: pointer;
 }
 
 .ge-container .social-media img:hover {
-    filter: brightness(1);
 }
