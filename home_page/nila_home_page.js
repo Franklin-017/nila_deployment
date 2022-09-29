@@ -36,7 +36,7 @@ const thirdFoldAnimation = {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: '../assets/lottie/page_3_test1.json'
+    path: '../assets/lottie/page3.json'
 }
 
 const flySoloAnimation = {
