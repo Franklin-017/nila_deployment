@@ -385,6 +385,10 @@
   width: 50%;
 }
 
+.fly-solo-animation img {
+  margin-right: 125px;
+}
+
 .fly-solo-content-title {
   margin-bottom: 30px;
   width: 90%;

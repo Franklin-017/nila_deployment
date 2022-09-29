@@ -418,7 +418,7 @@
 }
 
 .social-media img {
-    height: 24px;
+    height: 32px;
     stroke: red;
     transition: filter 0.3s ease-in;
     cursor: none;
