@@ -1,10 +1,10 @@
 .accordion {
-    /* background-color: #eee; */
-    color: #444;
+    background-color: transparent;
+    color: #3e434e;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: none;
+    box-shadow: 0px 0px 7px #a3b8e8;
     text-align: left;
     outline: none;
     font-size: 15px;
@@ -22,7 +22,7 @@
 
 .accordion-active,
 .accordion:hover {
-    background-color: #ccc;
+    background-color: #a3b8e8;
 }
 
 .accordion:after {
@@ -42,15 +42,16 @@
 }
 
 .panel {
-    background-color: white;
+    background-color: transparent;
     max-height: 0;
+    box-shadow: 0px 0px 7px #a3b8e8;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    margin-bottom: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .panel.text-l {
     width: 100%;
+    margin-bottom: 30px;
 }
