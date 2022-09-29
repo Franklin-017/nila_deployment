@@ -212,7 +212,7 @@ body::after {
 
 .privacy-container .copy-rights {
     color: #444545;
-    cursor: pointer;
+    cursor: auto;
 }
 
 .social-media a,
