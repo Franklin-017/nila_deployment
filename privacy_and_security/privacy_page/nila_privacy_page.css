@@ -220,12 +220,10 @@ body::after {
 }
 
 .privacy-container .social-media img {
-    filter: brightness(0);
     cursor: pointer;
 }
 
 .privacy-container .social-media img:hover {
-    filter: brightness(1);
 }
 
 @media screen and (max-width: 1335px) {
