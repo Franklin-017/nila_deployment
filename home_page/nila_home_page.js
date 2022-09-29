@@ -200,7 +200,7 @@ const commentConverseLottieMobile = {
 
 bodymovin.loadAnimation(logoAnimation);
 bodymovin.loadAnimation(heroSectionAnimation);
-bodymovin.loadAnimation(flySoloAnimation);
+// bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
 const cardThreeAnimation = bodymovin.loadAnimation(cardThree);

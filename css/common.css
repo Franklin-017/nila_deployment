@@ -238,9 +238,9 @@
 
 .gradient-border-btn:hover::after,
 .btn:hover {
-    background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
+    background: linear-gradient(90deg, #0a74e1 , #64f1ec, #0a74e1);
     background-size: 400% 400%;
-    animation: rainbow-text 0.3s infinite linear alternate;
+    animation: rainbow-text 5s infinite linear alternate;
 }
 
 .gradient-border-btn:hover.gradient-text {
