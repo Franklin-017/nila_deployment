@@ -396,7 +396,7 @@ let homeSectionContentWordIndex = 0;
 const animateContent = () => {
     setInterval(() => {
         homeSectionContentElement.classList.add("transition");
-        homeSectionContentElement.style.transform = "translateY(30%)";
+        homeSectionContentElement.style.transform = "translateY(15%)";
         homeSectionContentElement.style.opacity = 0;
         homeSectionContentWordIndex++;
         if (homeSectionContentWordIndex >= homeSectionContentWords.length) {

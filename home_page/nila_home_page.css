@@ -60,6 +60,7 @@
   width: 85%;
   font-size: 24px;
   line-height: 1.4;
+  letter-spacing: 0.6px;
 }
 
 .canvas-wrapper {
@@ -181,7 +182,8 @@
 
 .native-mac-section-description {
   width: 100%;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
 }
 
 /* /Native Mac Section/ */
@@ -236,6 +238,11 @@
   line-height: 1.4;
 }
 
+.card-desc {
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+
 .card-title {
   padding-bottom: 15px;
 }
@@ -271,7 +278,8 @@
 
 .collab-header-description {
   width: 70%;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
 }
 
 .collab-animation-wrapper {
@@ -334,6 +342,7 @@
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in;
   display: inline-block;
+  font-family: "Zoho_Puvi_Regular";
 }
 
 .content-selected .show-on-hover {
@@ -358,7 +367,8 @@
 }
 
 .collab-content{
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
   width: 75%;
 }
 
@@ -396,7 +406,8 @@
 
 .fly-solo-content-description {
   width: 80%;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
 }
 
 /* /Fly Solo Section/ */
@@ -913,6 +924,7 @@
     margin-bottom: 15px;
     width: 80%;
     font-size: 24px;
+    font-family: "Zoho_Puvi_regular";
   }
 
   .collab-content p {

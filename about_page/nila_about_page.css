@@ -115,8 +115,9 @@
 
 .t {
   font-size: 38px;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--title-color);
+  font-weight: 600;
 }
 
 .scrollable-text {
@@ -147,6 +148,7 @@
 .out-mission-subheading {
   width: 80%;
   line-height: 1.4;
+  letter-spacing: 0.6px;
 }
 
 .our-mission-bottom-layout {
@@ -193,7 +195,8 @@
   width: 75%;
   margin-bottom: 50px;
   font-size: 26px;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
 }
 
 .we-are-nila-bottom-layout {
@@ -216,6 +219,7 @@
 .list {
   font-size: var(--text-m);
   color: #2d313c;
+  letter-spacing: 0.6px;
 }
 
 .list:hover {
@@ -360,21 +364,26 @@
 }
 
 .person-name {
-  font-size: 34px;
+  font-size: 28px;
   color: var(--title-color);
+  letter-spacing: 0.6px;
+  line-height: 1.5;
 }
 
 .prof-role {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--title-color);
   margin-bottom: 15px;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
 }
 
 .carousel-desc {
   width: 55%;
   height: auto;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
   color: #737883;
 }
 

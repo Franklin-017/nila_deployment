@@ -399,6 +399,7 @@
     align-items: center;
     justify-content: space-between;
     color: #636771;
+    letter-spacing: 0.6px;
 }
 
 .heart-icon {
@@ -413,18 +414,25 @@
 }
 
 .social-media a {
-    padding-right: 20px;
+    margin-right: 20px;
     cursor: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .social-media img {
-    height: 32px;
+    height: 16px;
     stroke: red;
     transition: filter 0.3s ease-in;
     cursor: none;
 }
 
 .social-media img:hover {
+    filter: brightness(2);
 }
 
 .footer-right-content {
@@ -435,6 +443,7 @@
 
 .footer-link {
     margin-right: 20px;
+    letter-spacing: 0.6px;
 }
 
 .text-hover,
