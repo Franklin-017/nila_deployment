@@ -444,14 +444,17 @@
 }
 
 @media screen and (max-width: 555px) {
-    
-
     .heart-icon {
         height: 9px;
         padding-left: 7px;
     }
 
-    
+    .close-video {
+        width: 36px;
+        height: 36px;
+        top: 24%;
+        right: 10px;
+    }
 }
 
 @media screen and (max-width: 425px) {
