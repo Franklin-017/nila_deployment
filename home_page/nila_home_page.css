@@ -773,6 +773,11 @@
     width: 160px;
   }
 
+  .hs-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .hero-section-content {
     font-size: 20px;
   }
@@ -853,6 +858,7 @@
 
   .card-desc {
     font-size: 19px;
+    line-height: 1.4;
   }
 
   .card-media {
@@ -903,6 +909,10 @@
 
   .collab-feature-section {
     display: none;
+  }
+
+  .collab-content {
+    width: 100%;
   }
 
   .collab-feature-section-mobile {

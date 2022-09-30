@@ -127,3 +127,14 @@
 .section-container {
     min-height: 100vh;
 }
+
+
+@media screen and (max-width: 555px) {
+    .container {
+        width: 90vw;
+    }
+
+    .title {
+        line-height: 1.3;
+    }
+}
