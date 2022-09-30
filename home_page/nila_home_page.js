@@ -252,10 +252,16 @@ const cardsElement = [
     }
 ];
 
+const brandingVideoElement = document.querySelector(".branding-video");
+const vimeoPlayerController = new Vimeo.Player(brandingVideoElement);
+
 const videoSection = document.querySelector(".vs-content");
 const iFrameElement = document.querySelector(".branding-video-wrapper");
 
 videoSection.addEventListener("click", () => {
+    if (vimeoPlayerController) {
+        vimeoPlayerController.play();
+    }
     videoSection.classList.remove("content-animation");
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(1)";
@@ -266,6 +272,9 @@ videoSection.addEventListener("click", () => {
 const closeVideo = document.querySelector(".close-video");
 
 closeVideo.addEventListener("click", () => {
+    if (vimeoPlayerController) {
+        vimeoPlayerController.pause();
+    }
     videoSection.classList.add("content-animation");
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(0)";

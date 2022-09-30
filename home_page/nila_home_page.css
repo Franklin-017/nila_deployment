@@ -261,7 +261,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
 }
 
 .collab-header-content {
@@ -295,7 +296,7 @@
 }
 
 .collab-feature-section {
-  height: 80vh;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -970,6 +971,10 @@
   .fly-solo-animation,
   .fly-solo-content-header {
     width: 100%;
+  }
+
+  .fly-solo-animation img{
+    margin-right: 0;
   }
 
   .fly-solo-content-title {

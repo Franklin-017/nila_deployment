@@ -53,7 +53,6 @@ const videoUrl = 'https://player.vimeo.com/video/683774352?h=40bdcc301f&amp;badg
 
 videoSection.addEventListener("click", () => {
     win.postMessage("playVideo", videoUrl);
-    console.log(win.postMessage("playVideo", videoUrl))
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(1)";
     iFrameElement.style.visibility = "visible";
@@ -64,7 +63,6 @@ const closeVideo = document.querySelector(".close-video");
 
 closeVideo.addEventListener("click", () => {
     win.postMessage("pauseVideo", videoUrl);
-    console.log("Pause")
     iFrameElement.style.transition = 'all 0.5s ease-in';
     iFrameElement.style.transform = "scale(0)";
     iFrameElement.style.visibility = "hidden";
@@ -145,7 +143,6 @@ const startSlide = () => {
     slideIntervalId = setInterval(() => {
         sliderIndex++;
         highlightCarouselText(sliderIndex);
-        console.log(carouselWidth * sliderIndex)
         carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
         carouselSlider.style.transition = "0.7s";
     }, slideInterval);

@@ -238,7 +238,7 @@
 
 .gradient-border-btn:hover::after,
 .btn:hover {
-    background: linear-gradient(90deg, #0a74e1 , #64f1ec, #0a74e1);
+    background: linear-gradient(90deg, #0a74e1, #64f1ec, #0a74e1);
     background-size: 400% 400%;
     animation: rainbow-text 5s infinite linear alternate;
 }
@@ -367,85 +367,6 @@
 }
 
 /* ****************************** Footer Section ****************************** */
-#footer {
-    width: 80vw;
-    min-height: 100px;
-    color: var(--description-color);
-}
-
-.footer-line {
-    background: url("../assets/img/nila-footer-line.jpg") repeat-x;
-    width: 100%;
-    height: 4px;
-    margin-bottom: 30px;
-    background-size: 5%;
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-left-content {
-    display: flex;
-    width: 50%;
-    color: #2c2c2c;
-}
-
-.design-with-nila {
-    padding-right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #636771;
-    letter-spacing: 0.6px;
-}
-
-.heart-icon {
-    height: 16px;
-    padding-left: 10px;
-}
-
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.social-media a {
-    margin-right: 20px;
-    cursor: none;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.social-media img {
-    height: 16px;
-    stroke: red;
-    transition: filter 0.3s ease-in;
-    cursor: none;
-}
-
-.social-media img:hover {
-    filter: brightness(2);
-}
-
-.footer-right-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-link {
-    margin-right: 20px;
-    letter-spacing: 0.6px;
-}
-
 .text-hover,
 .copy-rights {
     position: relative;
@@ -470,10 +391,6 @@
     animation: border-slide-in 0.3s ease-in;
 }
 
-.footer-right-content .seperator {
-    padding-left: 20px;
-}
-
 /* ****************************** /\ Footer Section /\ ****************************** */
 
 @media screen and (max-width: 2560px) {
@@ -487,12 +404,6 @@
     .get-update-btn {
         padding: 12px 24px;
         font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1048px) {
-    .footer-left-content {
-        width: 40%;
     }
 }
 
@@ -530,92 +441,17 @@
         padding: 12px 24px;
         font-size: 16px;
     }
-
-    .footer-link,
-    .copy-rights,
-    .design-with-nila {
-        font-size: 14px;
-    }
-
-    .design-with-nila {
-        padding-right: 30px;
-    }
-
-    .social-media img {
-        height: 16px;
-    }
-}
-
-@media screen and (max-width: 880px) {
-
-    .footer-left-content {
-        width: 40%;
-    }
-
-    .social-media a {
-        padding-right: 10px;
-    }
-
-    .social-media img {
-        height: 16px;
-    }
-
-    .footer-link,
-    .copy-rights {
-        margin-right: 10px;
-        font-size: 16px;
-    }
-
-    .copy-rights {
-        margin-right: 0;
-    }
-
-    .footer-right-content .seperator {
-        padding-left: 10px;
-    }
-}
-
-@media screen and (max-width: 820px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-left-content {
-        width: 100%;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 555px) {
-    .footer-right-content {
-        justify-content: center;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-
-    .social-media a {
-        padding-right: 15px;
-    }
-
-    .social-media a:last-child {
-        padding-right: 0px;
-    }
+    
 
     .heart-icon {
-    height: 9px;
-    padding-left: 7px;
-}
-
-    .footer-link,
-    .copy-rights,
-    .design-with-nila {
-        font-size: 12px;
+        height: 9px;
+        padding-left: 7px;
     }
 
-    .footer-right-content .seperator {
-        height: 16px;
-    }
+    
 }
 
 @media screen and (max-width: 425px) {
@@ -683,42 +519,8 @@
         width: 100%;
     }
 
-    .social-media img {
-        height: 16px;
-    }
-
-    .footer-link,
-    .copy-rights {
-        font-size: 12px;
-    }
-
     .get-update-btn {
         padding: 10px 20px;
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 383px) {
-    .social-media a {
-        padding-right: 12px;
-    }
-
-    .social-media a:last-child {
-        padding-right: 0px;
-    }
-
-    .footer-link {
-        margin-right: 10px;
-    }
-
-    .footer-link,
-    .copy-rights,
-    .design-with-nila {
-        font-size: 10px;
-    }
-
-    .footer-right-content .seperator {
-        height: 13px;
-        padding-left: 10px;
     }
 }
