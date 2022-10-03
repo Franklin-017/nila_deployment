@@ -787,6 +787,10 @@
     font-size: 30px;
   }
 
+  .vs-character {
+    display: none;
+  }
+
   .vs-play-video {
     width: 60px;
     left: 44%;
