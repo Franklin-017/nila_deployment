@@ -174,16 +174,16 @@ const waitlistSlider = document.querySelector(".join-waitlist-slider");
 const joinWaitlistBtn = document.querySelector(".join-waitlist-btn");
 const emailWaitlist = document.querySelector(".waitlist-email");
 
-closeWaitlistSlider.addEventListener("click", () => {
-    waitlistSlider.classList.remove("open");
-    document.querySelector("html").classList.remove("overflow-hidden");
-})
+// closeWaitlistSlider.addEventListener("click", () => {
+//     waitlistSlider.classList.remove("open");
+//     document.querySelector("html").classList.remove("overflow-hidden");
+// })
 
-joinWaitlistBtn.addEventListener("click", () => {
-    waitlistSlider.classList.add("open");
-    document.querySelector("html").classList.add("overflow-hidden");
-    emailWaitlist.focus();
-})
+// joinWaitlistBtn.addEventListener("click", () => {
+//     waitlistSlider.classList.add("open");
+//     document.querySelector("html").classList.add("overflow-hidden");
+//     emailWaitlist.focus();
+// })
 
 const emailInput = document.querySelector(".email-input");
 const addToWaitlistbtn = document.querySelector(".get-update-btn");
