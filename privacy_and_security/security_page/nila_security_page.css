@@ -2,3 +2,14 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 18vh;
 }
+
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+.nav-menu {
+  font-size: 20px;
+  line-height: 1.5;
+}

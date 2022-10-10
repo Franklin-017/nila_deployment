@@ -1,21 +1,7 @@
-body {
-    background-color: #f0f5ff;
-}
- body::after {
-    content: "";
-    position: fixed;
-    top: -55px;
-    right: -22px;
-    background: url(../../assets/svg/nila-privacy-top-mandala.svg) no-repeat;
-    width: 264px;
-    height: 386px;
-    background-size: 100%;
-    z-index: 1;
-}
+@import url('../privacy_and_security.css');
 
-.ge-header {
+.privacy-header {
     width: 100vw;
-    height: 125px;
     top: 0; 
     background-color: #f0f5ff;
     padding: 3%;
@@ -25,7 +11,7 @@ body {
     align-items: center;
     position: sticky;
     position: -webkit-sticky;
-    /* box-shadow: 0px 0px 50px #a3b8e8; */
+    box-shadow: none;
 }
 
 .privacy-report-title-wrapper {
@@ -94,7 +80,6 @@ table{
     width: 100%;
     margin: 0 auto;
     border-collapse: separate;
-    box-shadow: 0px 0px 50px #a3b8e8;
 }
 
 .sticky th {
@@ -110,7 +95,7 @@ table{
     font-weight: normal;
     background-color: #e1e4ed;
     text-align: left;
-    top: 125px;
+    top: 124px;
     height: 70px;
 }
 
@@ -157,52 +142,5 @@ tr:nth-child(even) {
 
 .ge-table td:first-child {
     text-align: center;
-}
-
-
-.ge-container #footer {
-    width: 80vw;
-    margin-top: 150px;
-}
-
-.ge-container .footer-line {
-    background: url("../../assets/img/nila-privacy-footer-line.png");
-}
-
-.ge-container .copy-rights {
-    color: #666666;
-}
-
-.ge-container .social-media img {
-    height: 28px;
-    transition: filter 0.3s ease-in;
-}
-
-.ge-container .social-media img:hover {
-    filter: brightness(0);
-}
-
-.ge-container .copy-rights {
-    color: #444545;
-    cursor: pointer;
-}
-
-.social-media a,
-.footer-link {
-    cursor: pointer;
-}
-
-.footer-link:hover {
-    color: #333333;
-}
-
-.ge-container .text-hover::after {
-    background: #010101;
-}
-
-.ge-container .social-media img {
-    cursor: pointer;
-}
-
-.ge-container .social-media img:hover {
+    border-left: 1px solid #e1e4ed;
 }
