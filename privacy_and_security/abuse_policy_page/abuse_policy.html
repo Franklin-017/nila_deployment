@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shortcut icon" href="../../assets/img/nila-favico.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../privacy_and_security.css" />
+    <title>Abuse Policy | Nila</title>
+  </head>
+  <body>
+    <header class="privacy-header sticky">
+      <a href="../../index.html?src=prenila">
+        <img class="privacy-nila-logo" src="../../assets/svg/nilagradient-dark.svg" />
+      </a>
+    </header>
+    <div class="privacy-container">
+      <section class="privacy-report-title-wrapper">
+        <span class="accent-color main-title puvi-medium">Abuse Policy</span>
+      </section>
+      <p class="description">
+        We treat all abuse reports concerning Nila seriously and are dedicated to investigating all violations submitted to us. If you come across content on
+        Nila that you think violates our <a href="../terms_of_service_page/terms_of_service.html">Terms of Service</a>, please report a violation. After you
+        submit a report, we'll investigate it and take the appropriate action. We'll get back to you only if we require additional details or have more
+        information to share. We may close your report without a response, if we believe that the reported instance does not amount to a violation.
+      </p>
+
+      <div class="dashed-border"></div>
+
+      <p class="subheading">Types of Abuse</p>
+      <p class="description">We have sorted various kinds of abuse into the following categories:</p>
+
+      <p class="description">
+        <strong>Spam, Malware and Phishing –</strong> Users are prohibited from using Nila for the transmission of "junk mail", "spam", "chain letters",
+        “phishing” or unsolicited mass distribution of email. An example of a phishing attempt is an email requesting you to reveal your credit card number to
+        be eligible for a prize amount.
+      </p>
+
+      <p class="description">
+        <strong>Promotes Hatred, Violence or Illegal/Offensive Activities–</strong> Transmission or publishing any content that (i) is unlawful, illegal,
+        hateful, promotes racism or promotes discrimination or hatred based on ethnicity, and (ii) defames, abuses, harasses, stalks, threatens or otherwise
+        violates privacy and other legal rights of others, are explicitly considered as prohibited activities by Nila.
+      </p>
+
+      <p class="description">
+        <strong>Sexually Explicit Material–</strong> Sexually explicit materials are those materials that contain adult or mature content. We do not authorize
+        users to publish or transmit sexually explicit material using Nila.
+      </p>
+
+      <p class="description">
+        <strong>Child Exploitation–</strong> We have a zero tolerance policy towards content that exploits children. This means we will terminate the accounts
+        of any user that we find sharing or publishing child abuse content. We will also report the content and its owner to law enforcement authorities.
+      </p>
+
+      <p class="description">
+        <strong>Personal and Confidential Information –</strong> We do not allow use of Nila to publish personal and confidential information of persons that is
+        not publicly accessible without their explicit consent. Examples of personal and confidential information are full name, phone number, address, social
+        security number, credit card number, government issued identification card details and bank information.
+      </p>
+
+      <p class="description">
+        <strong>Copyright infringement–</strong> Copyright infringement occurs when someone other than the copyright holder copies the “expression” of a work.
+        If you discover that there has been copyright infringement by a Nila user involving your work we will take necessary action as specified here.
+      </p>
+
+      <p class="description">
+        <strong>Other Violations–</strong> If you believe that you have a violation to report, that does not fall within any of the categories mentioned above,
+        you may choose this to report such violation. Please note that you will be required to provide a description of such violation for us to take an
+        appropriate action.
+      </p>
+
+      <footer id="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+          <div class="footer-left-content">
+            <p class="design-with-nila title-color">
+              Designed in Nila
+              <img class="heart-icon" src="../../assets/svg/heart_icon.svg" />
+            </p>
+
+            <div class="social-media">
+              <a href="https://twitter.com/nila" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/twitter_icon.svg" />
+              </a>
+              <a href="https://www.instagram.com/niladotdesign/" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/instagram_icon.svg" />
+              </a>
+              <a href="https://www.youtube.com/nila" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/youtube_icon.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-right-content">
+            <div class="footer-links">
+              <a class="footer-link" cursor-class="squeeze_circle" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
+              <div class="seperator"></div>
+              <a class="footer-link" href="../cookie_policy_page/cookie_policy.html" cursor-class="squeeze_circle">Cookies Policy</a>
+              <div class="seperator"></div>
+              <a class="footer-link" cursor-class="squeeze_circle" href="../security_page/nila_security_page.html">Security</a>
+            </div>
+            <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
+      const nilaLogo = document.querySelector(".privacy-nila-logo");
+
+      window.addEventListener("scroll", () => {
+        if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
+          mainTitleWrapperNode.classList.add("shrink");
+          nilaLogo.classList.add("shrink");
+        } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 30) {
+          mainTitleWrapperNode.classList.remove("shrink");
+          nilaLogo.classList.remove("shrink");
+        }
+      });
+    </script>
+  </body>
+</html>
