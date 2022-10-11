@@ -302,11 +302,6 @@ interactiveCanvas.addEventListener("mouseenter", () => { document.querySelector(
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
 
-(() => {
-    let initialWidth = document.querySelector(".is-visible").clientWidth + 3;
-    textSlide.style.width = initialWidth + "px";
-})();
-
 setInterval(() => {
   textSlide.style.width = "0px";
   textSlide.style.overflow = "hidden";
