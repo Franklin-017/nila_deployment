@@ -20,12 +20,16 @@
 }
 
 .hs-animation-wrapper {
-  width: 60%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.hs-animation {
+    width: 500px;
+  }
 
 /* /\ hero section /\ */
 
@@ -529,7 +533,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .hs-animation-section {
+  .hs-animation {
     width: 400px;
   }
 
@@ -598,7 +602,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hs-animation-section {
+  .hs-animation{
     width: 300px;
   }
 
