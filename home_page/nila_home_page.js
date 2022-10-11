@@ -297,6 +297,7 @@ const interactiveCanvas = document.querySelector(".interactive-canvas");
 interactiveCanvas.addEventListener("mousedown", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
 interactiveCanvas.addEventListener("mouseleave", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
 interactiveCanvas.addEventListener("mouseup", () => { document.querySelector(".canvas_section_cursor").style.display = "block" });
+interactiveCanvas.addEventListener("mouseenter", () => { document.querySelector(".canvas_section_cursor").style.display = "block" });
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
