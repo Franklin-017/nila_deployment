@@ -23,14 +23,6 @@ const logoAnimation = {
   path: "../assets/lottie/logo-animation.json"
 };
 
-const heroSectionAnimation = {
-  container: document.querySelector(".hs-animation-section"),
-  renderer: "svg",
-  loop: false,
-  autoplay: true,
-  path: "../assets/lottie/page1.json"
-};
-
 const thirdFoldAnimation = {
   container: document.querySelector(".animation-section-3"),
   renderer: "svg",
@@ -198,7 +190,6 @@ const commentConverseLottieMobile = {
 };
 
 bodymovin.loadAnimation(logoAnimation);
-bodymovin.loadAnimation(heroSectionAnimation);
 // bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
@@ -301,14 +292,19 @@ cardlayout.forEach((layout) => {
   });
 });
 
+const interactiveCanvas = document.querySelector(".interactive-canvas");
+
+interactiveCanvas.addEventListener("mousedown", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
+interactiveCanvas.addEventListener("mouseleave", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
+interactiveCanvas.addEventListener("mouseup", () => { document.querySelector(".canvas_section_cursor").style.display = "block" });
+
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
 
-setTimeout(() => {
-  document.querySelector(".hs-animation-wrapper").style.display = "none";
-  document.querySelector(".interactive-canvas").style.display = "block";
-  document.querySelector(".draw-canvas").style.display = "block";
-}, 20030);
+(() => {
+    let initialWidth = document.querySelector(".is-visible").clientWidth + 3;
+    textSlide.style.width = initialWidth + "px";
+})();
 
 setInterval(() => {
   textSlide.style.width = "0px";
@@ -350,12 +346,11 @@ function renderHeadingsContent(node) {
 function showRespCollabContent(index) {
   collabContent.forEach((element, ind) => {
     if (ind === index - 1) {
-      element.style.display = "block";
-      element.dataset.aos = "fade-up";
-      console.log(element.dataset.aos)
+      element.style.transform = "translateY(0)";
+      element.style.opacity = 1;
     } else {
-      element.style.display = "none";
-      element.dataset.aos = '';
+      element.style.transform = "translateY(20%)";
+      element.style.opacity = 0;
     }
   });
 }

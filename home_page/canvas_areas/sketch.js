@@ -5,7 +5,7 @@ var Bodies = Matter.Bodies;
 var engine, world;
 
 let randomIndexList = [];
-var automaticDeletion = false;
+var automaticDeletion = true;
 
 let randomColor;
 
