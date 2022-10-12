@@ -6,11 +6,13 @@ const pageLoader = document.querySelector(".page-loader");
 
 if (src !== "prenila") {
   setTimeout(() => {
-    pageLoader.classList.add("close");
+    pageLoader.style.transition = "all 0.5s ease-in";
+    pageLoader.style.transform = "scale(0)";
+    pageLoader.style.visibility = "hidden";
     document.querySelector("html").classList.remove("overflow-hidden");
-  }, 3000);
+  }, 4030);
 } else {
-  pageLoader.classList.add("close");
+  pageLoader.style.visibility = "hidden";
   document.querySelector("html").classList.remove("overflow-hidden");
 }
 

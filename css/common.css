@@ -9,8 +9,8 @@
     align-items: center;
 }
 
-.page-loader.close {
-    display: none;
+.logo-animation {
+    width: 500px;
 }
 
 /* ****************************** Waitlist slider ****************************** */
