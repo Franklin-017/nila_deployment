@@ -13,6 +13,12 @@
   --accent-color: #0063f4;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   cursor: auto;
 }
@@ -42,12 +48,22 @@ a {
   text-decoration: none;
 }
 
+.gradient-text {
+  background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
+  background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .accent-color {
   color: var(--accent-color);
 }
 
 .dashed-border {
   border-bottom: 2px dashed rgb(220, 220, 220);
+  margin-block: 50px;
 }
 
 .seperator {
@@ -107,6 +123,7 @@ a {
 
 .privacy-container .section-title {
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .last-updated-on {
@@ -209,22 +226,28 @@ a.text-hover {
 
 .privacy-container #footer {
   width: 80vw;
-  margin-top: 150px;
+  margin-top: 100px;
+  min-height: 150px;
 }
-
 
 .privacy-container .footer-line {
   background: url("../../assets/img/nila-privacy-footer-line.png");
+  margin-bottom: 20px;
 }
 
 .privacy-container .footer-container {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .privacy-container .footer-left-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.privacy-container .footer-links {
+  margin-bottom: 15px;
 }
 
 .privacy-container .social-media img {
@@ -260,6 +283,11 @@ a.text-hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 80px;
+}
+
+.margin-bottom {
+  margin-bottom: 80px;
 }
 
 @media screen and (max-width: 1335px) {

@@ -52,7 +52,6 @@
     height: 36px;
     right: 30px;
     top: 15px;
-    cursor: none;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -114,7 +113,6 @@
     padding: 10px 14px;
     border-radius: 5rem;
     letter-spacing: 0.3px;
-    cursor: none;
 }
 
 .waitlist-email::placeholder {
@@ -168,7 +166,6 @@
     height: 36px;
     top: 25px;
     right: 50px;
-    cursor: none;
     border-radius: 50%;
     transition: all 0.3s ease-in;
     display: flex;
@@ -202,8 +199,8 @@
     outline: none;
     text-align: center;
     position: relative;
-    cursor: none;
     border-radius: 50rem;
+    cursor: pointer;
 }
 
 .gradient-border-btn::before {
@@ -262,7 +259,6 @@
     border: none;
     outline: none;
     border-radius: 50px;
-    cursor: none;
     text-align: center;
 }
 
@@ -345,9 +341,6 @@
 }
 
 /* ****************************** /\ Get In touch section /\ ****************************** */
-.link-hover {
-    cursor: none;
-}
 
 .link-hover:hover {
     background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
@@ -372,7 +365,6 @@
     position: relative;
     font-size: 16px;
     color: #636771;
-    cursor: none;
 }
 
 .text-hover:hover {
