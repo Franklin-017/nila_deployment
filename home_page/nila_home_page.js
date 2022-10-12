@@ -313,7 +313,7 @@ setInterval(() => {
     const contentWidth = document.querySelector(".is-visible").clientWidth + 3;
     textSlide.style.width = contentWidth + "px";
   }, 1000);
-}, 10000);
+}, 5000);
 
 const collaborationContentNode = document.querySelectorAll(".col-content");
 
@@ -377,7 +377,7 @@ const animateContent = () => {
     if (homeSectionContentWordIndex >= homeSectionContentWords.length) {
       homeSectionContentWordIndex = 0;
     }
-  }, 10000);
+  }, 5000);
 };
 
 homeSectionContentElement.addEventListener("transitionend", () => {
