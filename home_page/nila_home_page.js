@@ -292,12 +292,40 @@ cardlayout.forEach((layout) => {
   });
 });
 
-const interactiveCanvas = document.querySelector(".interactive-canvas");
+console.log(mouseOverBodies);
 
-interactiveCanvas.addEventListener("mousedown", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
-interactiveCanvas.addEventListener("mouseleave", () => {document.querySelector(".canvas_section_cursor").style.display = "none" });
-interactiveCanvas.addEventListener("mouseup", () => { document.querySelector(".canvas_section_cursor").style.display = "block" });
-interactiveCanvas.addEventListener("mouseenter", () => { document.querySelector(".canvas_section_cursor").style.display = "block" });
+const interactiveCanvas = document.querySelector(".interactive-canvas");
+let isMouseDown = false;
+
+interactiveCanvas.addEventListener("mousemove", () => {
+  if (mouseOverBodies || isMouseDown) {
+    document.querySelector(".canvas_section_cursor").style.display = "none";
+  } else {
+    document.querySelector(".canvas_section_cursor").style.display = "block";
+  }
+  if (mouseOverBodies) {
+    interactiveCanvas.classList.remove("canvas-cursor");
+    interactiveCanvas.style.cursor = "auto";
+  } else {
+    interactiveCanvas.classList.add("canvas-cursor");
+    interactiveCanvas.style.cursor = "";
+  }
+});
+
+interactiveCanvas.addEventListener("mousedown", () => {
+  document.querySelector(".canvas_section_cursor").style.display = "none";
+  isMouseDown = true;
+});
+interactiveCanvas.addEventListener("mouseleave", () => {
+  document.querySelector(".canvas_section_cursor").style.display = "none";
+});
+interactiveCanvas.addEventListener("mouseup", () => {
+  document.querySelector(".canvas_section_cursor").style.display = "block";
+  isMouseDown = false;
+});
+interactiveCanvas.addEventListener("mouseenter", () => {
+  document.querySelector(".canvas_section_cursor").style.display = "block";
+});
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
@@ -342,7 +370,7 @@ function renderHeadingsContent(node) {
 function showRespCollabContent(index) {
   collabContent.forEach((element, ind) => {
     if (ind === index - 1) {
-      element.style.transform = "translateY(0)";
+      element.style.transform = "translateY(30px)";
       element.style.opacity = 1;
     } else {
       element.style.transform = "translateY(20%)";
