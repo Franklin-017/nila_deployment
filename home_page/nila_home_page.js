@@ -8,6 +8,7 @@ if (src !== "prenila") {
   setTimeout(() => {
     pageLoader.style.transition = "all 0.5s ease-in";
     pageLoader.style.transform = "scale(0)";
+    pageLoader.style.opacity = 0;
     pageLoader.style.visibility = "hidden";
     document.querySelector("html").classList.remove("overflow-hidden");
   }, 4030);
