@@ -63,6 +63,16 @@
   letter-spacing: 0.6px;
 }
 
+.blank {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  width: 50%;
+  height: 100%;
+  visibility: hidden;
+}
+
 .canvas-wrapper {
   width: 50%;
 }
@@ -77,12 +87,6 @@
   bottom: 0;
   right: 0;
   width: 65vw;
-}
-
-.draw-canvas {
-  width: 100%;
-  height: 100vh;
-  display: none;
 }
 
 /* /Hero Section/ */
@@ -925,10 +929,11 @@
 
   .collab-feature-section-mobile {
     display: block;
+    margin-top: 30px;
   }
 
   .collab-feature-container {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .animation-mobile-wrapper {

@@ -418,3 +418,14 @@ homeSectionContentElement.addEventListener("transitionend", () => {
 });
 
 animateContent();
+
+
+const canvasWrapper = document.querySelector(".canvas-wrapper");
+
+canvasWrapper.onwheel = () => {
+  document.querySelector(".blank").style.visibility = "visible";
+};
+
+document.querySelector(".blank").onmousemove = () => {
+  document.querySelector(".blank").style.visibility = "hidden";
+} 
