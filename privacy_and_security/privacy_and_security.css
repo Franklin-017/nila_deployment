@@ -8,7 +8,7 @@
   --main-font-size: 80px;
   --main-font-size-shrink: 50px;
   --title-font-size: 35px;
-  --content-font-size: 22px;
+  --content-font-size: 20px;
   --list-font-size: 20px;
   --accent-color: #0063f4;
 }
@@ -62,7 +62,6 @@ a {
 }
 
 .dashed-border {
-  border-bottom: 2px dashed rgb(220, 220, 220);
   margin-block: 50px;
 }
 
@@ -122,8 +121,21 @@ a {
 }
 
 .privacy-container .section-title {
-  font-size: 50px;
+  font-size: 20px;
   margin-bottom: 30px;
+  position: relative;
+  margin-left: 35px;
+}
+
+.privacy-container .section-title::after {
+  content: '';
+  background: #00d0b0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -35px;
+  width: 30px;
+  height: 4px;
 }
 
 .last-updated-on {
@@ -132,7 +144,7 @@ a {
 
 .description {
   font-size: var(--content-font-size);
-  line-height: 1.3;
+  line-height: 1.6;
   width: 75%;
   margin-bottom: 20px;
   width: var(--content-width);

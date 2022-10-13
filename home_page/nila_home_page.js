@@ -373,10 +373,10 @@ function renderHeadingsContent(node) {
 function showRespCollabContent(index) {
   collabContent.forEach((element, ind) => {
     if (ind === index - 1) {
-      element.style.transform = "translateY(30px)";
+      element.style.transform = "translateY(60px)";
       element.style.opacity = 1;
     } else {
-      element.style.transform = "translateY(20%)";
+      element.style.transform = "translateY(30%)";
       element.style.opacity = 0;
     }
   });
