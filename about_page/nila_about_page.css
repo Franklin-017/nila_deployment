@@ -595,10 +595,6 @@
   .vs-content-right {
     right: 5%;
   }
-
-  .our-mission-bottom-content-title {
-    font-size: 32px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -633,7 +629,7 @@
   }
 
   .our-mission-bottom-content-title {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .we-are-nila-bottom-layout {
@@ -663,8 +659,8 @@
   }
 
   .carousel-container {
-    min-width: 90vw;
-    max-width: 90vw;
+    min-width: 91vw;
+    max-width: 91vw;
   }
 
   .wan-img-wrapper {
@@ -782,8 +778,6 @@
 
   .video-section-container {
     height: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
   }
 
   .vs-content-left,
@@ -802,10 +796,12 @@
 
   .vs-content-left {
     left: 20%;
+    letter-spacing: 0;
   }
 
   .vs-content-right {
     right: 20%;
+    letter-spacing: 0;
   }
 
   .about-design-container {

@@ -83,7 +83,7 @@
 
 .navbar-squeeze {
     background-color: var(--nila-bg-color);
-    box-shadow: 0 10px 50px 50px var(--nila-bg-color);
+    box-shadow: 0 10px 14px  var(--nila-bg-color);
 }
 
 @media screen and (max-width: 2560px) {

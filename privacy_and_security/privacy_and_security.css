@@ -136,6 +136,7 @@ a {
   width: 75%;
   margin-bottom: 20px;
   width: var(--content-width);
+  text-transform: capitalize;
 }
 
 .subheading {
