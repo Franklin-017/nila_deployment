@@ -72,6 +72,7 @@ function setup() {
     canvasmouse.pixelRatio = pixelDensity();
     mConstraint = MouseConstraint.create(engine, {mouse: canvasmouse});
     World.add(world,[ground,leftWall,rightWall,ceilWall,mConstraint]);
+    frameRate(60);
 }
 
 function removeGround() {
@@ -140,7 +141,7 @@ function draw() {
             i-=1;
         }
     } 
-    if(removeGroundFlag && countBodies((height/100)*60) == 0 ) {
+    if(removeGroundFlag && countBodies((height/100)*60) <= 1 ) {
         removeGroundFlag = false;
         addGround();
     } 
@@ -279,7 +280,7 @@ function mouseReleased() {
                 checkCollision();    
                 break;
           }
-          if(countBodies((height/100)*30) >= 3) {
+          if(countBodies((height/100)*30) >= 2) {
             removeGroundFlag = true;
             removeGround();
         }  

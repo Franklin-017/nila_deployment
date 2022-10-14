@@ -240,7 +240,7 @@ a.text-hover {
 .privacy-container #footer {
   width: 80vw;
   margin-top: 100px;
-  min-height: 150px;
+  min-height: 180px;
 }
 
 .privacy-container .footer-line {
@@ -250,13 +250,14 @@ a.text-hover {
 
 .privacy-container .footer-container {
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .privacy-container .footer-left-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 .privacy-container .footer-links {
