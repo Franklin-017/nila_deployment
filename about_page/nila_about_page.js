@@ -92,18 +92,23 @@ startSlide();
 
 let touchStartingPos;
 let touchEndingPos;
+let swipeVerticalStartPos;
+let swipeVerticalEndPos;
 
 carouselSlider.addEventListener("touchstart", (e) => {
   touchStartingPos = e.touches[0].clientX;
+  swipeVerticalStartPos = e.touches[0].clientY;
 });
 
 carouselSlider.addEventListener("touchmove", (e) => {
   const touchSwipe = e.touches[0].clientX;
+  const verticalSwipe = e.touches[0].clientY;
+  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - verticalSwipe) > 10;
 
-  if (touchStartingPos < touchSwipe) {
+  if (!isVerticalSwipe && touchStartingPos < touchSwipe) {
     const swipeTransition = parseInt(carouselWidth * sliderIndex - touchSwipe);
     carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
-  } else if (touchStartingPos > touchSwipe) {
+  } else if (!isVerticalSwipe && touchStartingPos > touchSwipe) {
     const swipeTransition = parseInt(carouselWidth * sliderIndex + touchSwipe);
     carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
   }
@@ -111,16 +116,18 @@ carouselSlider.addEventListener("touchmove", (e) => {
 
 carouselSlider.addEventListener("touchend", (e) => {
   touchEndingPos = e.changedTouches[0].clientX;
+  swipeVerticalEndPos =  e.changedTouches[0].clientY;
   let swipeDistance = touchStartingPos - touchEndingPos;
+  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - swipeVerticalEndPos) > 50;
 
-  if (swipeDistance > 100) {
+  if (!isVerticalSwipe && swipeDistance > 100) {
     clearTimeout(slideIntervalId);
     startSlide();
     highlightCarouselText(sliderIndex);
     sliderIndex++;
     carouselSlider.style.transition = "0.7s";
     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
-  } else if (swipeDistance < -100) {
+  } else if (!isVerticalSwipe && swipeDistance < -100) {
     clearTimeout(slideIntervalId);
     startSlide();
     sliderIndex--;

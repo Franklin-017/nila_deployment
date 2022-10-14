@@ -404,6 +404,10 @@
     font-size: 28px;
   }
 
+  .hs-animation {
+    padding-bottom: 100px;
+  }
+
   /* /\ hero section /\ */
 
   /* /\ video section /\ */
@@ -428,6 +432,10 @@
 }
 
 @media screen and (max-width: 1620px) {
+  .hs-animation {
+    padding-bottom: 50px;
+  }
+
   .vs-content-left {
     left: 6%;
   }
