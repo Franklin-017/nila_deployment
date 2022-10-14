@@ -394,7 +394,7 @@ collaborationContentNode.forEach((contentNode) => {
   });
 });
 
-const homeSectionContentWords = ["with the power<br /> of the Mac.", "with the flexibility<br /> of the cloud."];
+const homeSectionContentWords = ["the best product experiences. Together.", "with the flexibility<br /> of the cloud."];
 
 const homeSectionContentElement = document.querySelector(".animate-content");
 let homeSectionContentWordIndex = 0;
@@ -419,7 +419,6 @@ homeSectionContentElement.addEventListener("transitionend", () => {
 
 animateContent();
 
-
 const canvasWrapper = document.querySelector(".canvas-wrapper");
 
 canvasWrapper.onwheel = () => {
@@ -428,4 +427,4 @@ canvasWrapper.onwheel = () => {
 
 document.querySelector(".blank").onmousemove = () => {
   document.querySelector(".blank").style.visibility = "hidden";
-} 
+};
