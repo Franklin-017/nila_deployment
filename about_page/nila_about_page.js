@@ -100,20 +100,6 @@ carouselSlider.addEventListener("touchstart", (e) => {
   swipeVerticalStartPos = e.touches[0].clientY;
 });
 
-carouselSlider.addEventListener("touchmove", (e) => {
-  const touchSwipe = e.touches[0].clientX;
-  const verticalSwipe = e.touches[0].clientY;
-  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - verticalSwipe) > 10;
-
-  if (!isVerticalSwipe && touchStartingPos < touchSwipe) {
-    const swipeTransition = parseInt(carouselWidth * sliderIndex - touchSwipe);
-    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
-  } else if (!isVerticalSwipe && touchStartingPos > touchSwipe) {
-    const swipeTransition = parseInt(carouselWidth * sliderIndex + touchSwipe);
-    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
-  }
-});
-
 carouselSlider.addEventListener("touchend", (e) => {
   touchEndingPos = e.changedTouches[0].clientX;
   swipeVerticalEndPos =  e.changedTouches[0].clientY;
@@ -144,7 +130,8 @@ carouselSlider.addEventListener("touchend", (e) => {
   }
 });
 
-carouselSlider.addEventListener("transitionend", () => {
+carouselSlider.addEventListener("transitionend", (e) => {
+    console.log(e)
   if (slides[sliderIndex].id === "first-clone") {
     carouselSlider.style.transition = "none";
     sliderIndex = 1;
@@ -153,6 +140,20 @@ carouselSlider.addEventListener("transitionend", () => {
     carouselSlider.style.transition = "none";
     sliderIndex = slides.length - 2;
     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
+  }
+});
+
+carouselSlider.addEventListener("touchmove", (e) => {
+  const touchSwipe = e.touches[0].clientX;
+  const verticalSwipe = e.touches[0].clientY;
+  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - verticalSwipe) > 10;
+
+  if (!isVerticalSwipe && touchStartingPos < touchSwipe) {
+    const swipeTransition = parseInt(carouselWidth * sliderIndex - touchSwipe);
+    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
+  } else if (!isVerticalSwipe && touchStartingPos > touchSwipe) {
+    const swipeTransition = parseInt(carouselWidth * sliderIndex + touchSwipe);
+    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
   }
 });
 

@@ -140,7 +140,7 @@ function draw() {
             i-=1;
         }
     } 
-    if(removeGroundFlag && countBodies(300) == 0) {
+    if(removeGroundFlag && countBodies((height/100)*60) == 0 ) {
         removeGroundFlag = false;
         addGround();
     } 
@@ -279,7 +279,7 @@ function mouseReleased() {
                 checkCollision();    
                 break;
           }
-          if(countBodies(200) >= 2) {
+          if(countBodies((height/100)*30) >= 3) {
             removeGroundFlag = true;
             removeGround();
         }  
