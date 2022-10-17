@@ -9,6 +9,8 @@ MouseConstraint = Matter.MouseConstraint;
 var engine,
     world;
 
+let touchEventFlag = false;
+
 let addGroundFlag = true;
 let mouseDraggedFlag = true;
 
@@ -152,7 +154,7 @@ function drawRectangle() {
 
 function drawCircle() {
     circleRadius = Math.sqrt(shapeWidth*shapeWidth + shapeHeight*shapeHeight)
-    ellipse(startX,startY,circleRadius*2,circleRadius*2);
+    ellipse(startX,startY,circleRadius,circleRadius);
 }
 function drawTriangle() {
     vertexLeftX = Math.min(startX,clientX);
@@ -232,16 +234,45 @@ function mousePressedEvent() {
     
 }
 
+function touchStarted() {
+    touchEventFlag = true;
+    mousePressedFlag = true;
+    startX = mouseX;
+    startY = mouseY;
+    let position = {x:startX,y:startY};
+    if(Matter.Query.point(bodiesList,position).length) {
+        World.add(world,mConstraint);
+        mouseDrawFlag = false;
+        startX = 0;
+        startY = 0;
+    }
+    else {
+        World.remove(world,mConstraint);
+    }
+    if(!(Array.isArray(randomIndexList) && randomIndexList.length)) {
+        generateRandomIndex();
+    }
+    if(!collisionCheckFlag) {
+        randomColor = color(getRandomColor());
+    }
+}
+
 function mouseMovedEvent() {
     let position = {x:mouseX,y:mouseY};
     mouseOverBodies = Matter.Query.point(bodiesList,position).length
+}
+
+function mouseReleasedEvent() {
+    mConstraint.mouse.mouseup(event);
 }
 
 function mouseReleased() {
     mouseDrawFlag = false;
     mousePressedFlag = false;
     mouseDraggedFlag = false;
-    mConstraint.mouse.mouseup(event);
+    // if(!touchEventFlag) {
+    //     mConstraint.mouse.mouseup(event);
+    // }
     if(shapeWidth && shapeHeight) {
         switch(shapesCounter) {
             case 0:
@@ -250,7 +281,7 @@ function mouseReleased() {
                 checkCollision();
                 break;
             case 1:
-                shapesList.push(new Circle(startX,startY,circleRadius*2,randomColor));
+                shapesList.push(new Circle(startX,startY,circleRadius,randomColor));
                 bodiesList.push(shapesList[shapesList.length-1].body);
                 checkCollision();
                 break;
@@ -294,3 +325,5 @@ function mouseReleased() {
     shapeWidth = 0;
     shapeHeight = 0;
 }
+
+

@@ -38,7 +38,7 @@ const flySoloAnimation = {
   container: document.querySelector(".fly-solo-animation"),
   renderer: "svg",
   loop: false,
-  autoplay: true,
+  autoplay: false,
   path: "../assets/lottie/flysolo.json"
 };
 
@@ -193,7 +193,6 @@ const commentConverseLottieMobile = {
 };
 
 bodymovin.loadAnimation(logoAnimation);
-bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
 const cardThreeAnimation = bodymovin.loadAnimation(cardThree);
@@ -201,6 +200,7 @@ const cardFourAnimation = bodymovin.loadAnimation(cardFour);
 const cardFiveAnimation = bodymovin.loadAnimation(cardFive);
 const cardSixAnimation = bodymovin.loadAnimation(cardSix);
 const thirdFoldLoader = bodymovin.loadAnimation(thirdFoldAnimation);
+const flySoloLoader = bodymovin.loadAnimation(flySoloAnimation);
 const collabSectionLoader = bodymovin.loadAnimation(collabSectionAnimation);
 const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
 const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
@@ -294,8 +294,6 @@ cardlayout.forEach((layout) => {
     });
   });
 });
-
-console.log(mouseOverBodies);
 
 const interactiveCanvas = document.querySelector(".interactive-canvas");
 let isMouseDown = false;
@@ -412,8 +410,8 @@ const animateContent = () => {
 };
 
 homeSectionContentElement.addEventListener("transitionend", () => {
-  homeSectionContentElement.innerHTML = homeSectionContentWords[homeSectionContentWordIndex];
   homeSectionContentElement.style.transform = "translateY(0%)";
+  homeSectionContentElement.innerHTML = homeSectionContentWords[homeSectionContentWordIndex];
   homeSectionContentElement.style.opacity = 1;
 });
 

@@ -130,10 +130,6 @@ startSlide();
 //   }
 // });
 
-window.addEventListener("touchstart", (e) => {
-  console.log(e)
-})
-
 carouselSlider.addEventListener("transitionend", (e) => {
   if (slides[sliderIndex].id === "first-clone") {
     carouselSlider.style.transition = "none";
