@@ -90,48 +90,51 @@ const startSlide = () => {
 };
 startSlide();
 
-let touchStartingPos;
-let touchEndingPos;
-let swipeVerticalStartPos;
-let swipeVerticalEndPos;
+// let touchStartingPos;
+// let touchEndingPos;
+// let swipeVerticalStartPos;
+// let swipeVerticalEndPos;
 
-carouselSlider.addEventListener("touchstart", (e) => {
-  touchStartingPos = e.touches[0].clientX;
-  swipeVerticalStartPos = e.touches[0].clientY;
-});
+// carouselSlider.addEventListener("touchstart", (e) => {
+//   touchStartingPos = e.touches[0].clientX;
+//   swipeVerticalStartPos = e.touches[0].clientY;
+// });
 
-carouselSlider.addEventListener("touchend", (e) => {
-  touchEndingPos = e.changedTouches[0].clientX;
-  swipeVerticalEndPos =  e.changedTouches[0].clientY;
-  let swipeDistance = touchStartingPos - touchEndingPos;
-  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - swipeVerticalEndPos) > 50;
+// carouselSlider.addEventListener("touchend", (e) => {
+//   touchEndingPos = e.changedTouches[0].clientX;
+//   swipeVerticalEndPos =  e.changedTouches[0].clientY;
+//   let swipeDistance = touchStartingPos - touchEndingPos;
+//   let isVerticalSwipe = Math.abs(swipeVerticalStartPos - swipeVerticalEndPos) > 50;
 
-  if (!isVerticalSwipe && swipeDistance > 100) {
-    clearTimeout(slideIntervalId);
-    startSlide();
-    highlightCarouselText(sliderIndex);
-    sliderIndex++;
-    carouselSlider.style.transition = "0.7s";
-    carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
-  } else if (!isVerticalSwipe && swipeDistance < -100) {
-    clearTimeout(slideIntervalId);
-    startSlide();
-    sliderIndex--;
-    console.log(sliderIndex);
-    highlightCarouselText(sliderIndex - 1);
-    carouselSlider.style.transition = "0.7s";
-    carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
-  } else {
-    clearTimeout(slideIntervalId);
-    startSlide();
-    highlightCarouselText(sliderIndex);
-    carouselSlider.style.transition = "0.7s";
-    carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
-  }
-});
+//   if (!isVerticalSwipe && swipeDistance > 100) {
+//     clearTimeout(slideIntervalId);
+//     startSlide();
+//     highlightCarouselText(sliderIndex);
+//     sliderIndex++;
+//     carouselSlider.style.transition = "0.7s";
+//     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
+//   } else if (!isVerticalSwipe && swipeDistance < -100) {
+//     clearTimeout(slideIntervalId);
+//     startSlide();
+//     sliderIndex--;
+//     console.log(sliderIndex);
+//     highlightCarouselText(sliderIndex - 1);
+//     carouselSlider.style.transition = "0.7s";
+//     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
+//   } else {
+//     clearTimeout(slideIntervalId);
+//     startSlide();
+//     highlightCarouselText(sliderIndex);
+//     carouselSlider.style.transition = "0.7s";
+//     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
+//   }
+// });
+
+window.addEventListener("touchstart", (e) => {
+  console.log(e)
+})
 
 carouselSlider.addEventListener("transitionend", (e) => {
-    console.log(e)
   if (slides[sliderIndex].id === "first-clone") {
     carouselSlider.style.transition = "none";
     sliderIndex = 1;
@@ -143,19 +146,19 @@ carouselSlider.addEventListener("transitionend", (e) => {
   }
 });
 
-carouselSlider.addEventListener("touchmove", (e) => {
-  const touchSwipe = e.touches[0].clientX;
-  const verticalSwipe = e.touches[0].clientY;
-  let isVerticalSwipe = Math.abs(swipeVerticalStartPos - verticalSwipe) > 10;
+// carouselSlider.addEventListener("touchmove", (e) => {
+//   const touchSwipe = e.touches[0].clientX;
+//   const verticalSwipe = e.touches[0].clientY;
+//   let isVerticalSwipe = Math.abs(swipeVerticalStartPos - verticalSwipe) > 10;
 
-  if (!isVerticalSwipe && touchStartingPos < touchSwipe) {
-    const swipeTransition = parseInt(carouselWidth * sliderIndex - touchSwipe);
-    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
-  } else if (!isVerticalSwipe && touchStartingPos > touchSwipe) {
-    const swipeTransition = parseInt(carouselWidth * sliderIndex + touchSwipe);
-    carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
-  }
-});
+//   if (!isVerticalSwipe && touchStartingPos < touchSwipe) {
+//     const swipeTransition = parseInt(carouselWidth * sliderIndex - touchSwipe);
+//     carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
+//   } else if (!isVerticalSwipe && touchStartingPos > touchSwipe) {
+//     const swipeTransition = parseInt(carouselWidth * sliderIndex + touchSwipe);
+//     carouselSlider.style.transform = "translateX(-" + swipeTransition + "px)";
+//   }
+// });
 
 const carousel = document.getElementById("carousel");
 
@@ -212,3 +215,29 @@ futureOfDesignElement.addEventListener("transitionend", () => {
 });
 
 animateWords();
+
+// Swiper
+// var menu = ["Karthikeyan J", "Jerome Joel", "Meera Sapra", "Praburaj Moorthy", "Jagadeesan Krishnan"];
+// var mySwiper = new Swiper(".swiper", {
+//   loop: true,
+//   autoplay: {
+//     delay: 100000,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     renderBullet: function (index, className) {
+//       return `<li class="list-wrapper primary-color gradient-text ${ className }">
+//                 <div class="list" cursor-class="squeeze_circle"> ${ menu[index] } </div>
+//               </li>`;
+//       // return '<div class="' + className + '">' + menu[index] + "</div>";
+//     },
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   }
+// });
+// Swiper

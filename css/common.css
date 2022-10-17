@@ -236,8 +236,8 @@
 
 .gradient-border-btn:hover::after,
 .btn:hover {
-    background: linear-gradient(90deg, #0a74e1, #64f1ec, #0a74e1);
-    background-size: 400% 400%;
+    background: linear-gradient(45deg, #0063f4, #00d0b0);
+    background-size: 100%;
     animation: rainbow-text 5s infinite linear alternate;
 }
 
@@ -264,7 +264,7 @@
 }
 
 .get-update-btn {
-    background-color: #0760ef;
+    background-color: var(--accent-color);
     color: var(--title-color);
     margin-right: 20px;
 }

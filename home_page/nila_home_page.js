@@ -37,9 +37,9 @@ const thirdFoldAnimation = {
 const flySoloAnimation = {
   container: document.querySelector(".fly-solo-animation"),
   renderer: "svg",
-  loop: true,
+  loop: false,
   autoplay: true,
-  path: "../assets/lottie/page3.json"
+  path: "../assets/lottie/flysolo.json"
 };
 
 const collabSectionElement = document.querySelector(".collab-animation-section");
@@ -193,7 +193,7 @@ const commentConverseLottieMobile = {
 };
 
 bodymovin.loadAnimation(logoAnimation);
-// bodymovin.loadAnimation(flySoloAnimation);
+bodymovin.loadAnimation(flySoloAnimation);
 const cardOneAnimation = bodymovin.loadAnimation(cardOne);
 const cardTwoAnimation = bodymovin.loadAnimation(cardTwo);
 const cardThreeAnimation = bodymovin.loadAnimation(cardThree);

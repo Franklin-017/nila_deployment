@@ -1,4 +1,5 @@
 // ignorei18n_start
+document.designMode = "on";
 // Cursor Lottie file animation
 const videoSectionCursor = {
   container: document.querySelector(".video_section_cursor"),
