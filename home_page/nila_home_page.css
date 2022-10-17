@@ -14,6 +14,7 @@
 
 .hs-content {
   width: 50%;
+  z-index: 2;
 }
 
 .hs-title {
@@ -57,7 +58,7 @@
 }
 
 .hero-section-content {
-  width: 85%;
+  width: 70%;
   font-size: 24px;
   line-height: 1.4;
   letter-spacing: 0.6px;
@@ -74,7 +75,11 @@
 }
 
 .canvas-wrapper {
-  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 .hs-animation-wrapper {
@@ -680,10 +685,6 @@
     --hero-section-font-size: 60px;
   }
 
-  .hs-content {
-    width: 100%;
-  }
-
   .text-slide {
     height: 69px;
     width: 210px;
@@ -783,11 +784,6 @@
   .text-slide {
     height: 53px;
     width: 160px;
-  }
-
-  .hs-content {
-    width: 90%;
-    margin: 0 auto;
   }
 
   .hero-section-content {

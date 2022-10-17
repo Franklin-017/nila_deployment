@@ -49,7 +49,7 @@ var shapesCounter = 0;
 var shapesList = [];
 var bodiesList = [];
 function setup() {
-    var canvas = createCanvas(innerWidth / 2,innerHeight);
+    var canvas = createCanvas(innerWidth,innerHeight);
     canvas.parent("canvas");
     canvas.mousePressed(mousePressedEvent);
     canvas.mouseMoved(mouseMovedEvent);
