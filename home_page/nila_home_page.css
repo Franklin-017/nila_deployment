@@ -58,7 +58,7 @@
 }
 
 .hero-section-content {
-  width: 70%;
+  width: 80%;
   font-size: 24px;
   line-height: 1.4;
   letter-spacing: 0.6px;
@@ -685,6 +685,10 @@
     --hero-section-font-size: 60px;
   }
 
+  .hs-content {
+    width: 100%;
+  }
+
   .text-slide {
     height: 69px;
     width: 210px;
@@ -784,6 +788,11 @@
   .text-slide {
     height: 53px;
     width: 160px;
+  }
+
+  .hs-content {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .hero-section-content {
