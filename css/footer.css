@@ -24,18 +24,22 @@
     color: #2c2c2c;
 }
 
-.design-with-nila {
-    padding-right: 30px;
+.contribution-wrapper {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+}
+
+.design-with-nila {
     color: #636771;
     letter-spacing: 0.6px;
 }
 
 .heart-icon {
     height: 16px;
-    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 30px;
 }
 
 .social-media {
@@ -117,7 +121,6 @@
 
     .design-with-nila {
         padding-right: 0px;
-        width: auto;
     }
 
     .copy-rights {
@@ -135,7 +138,6 @@
 
     .footer-left-content {
         width: 100%;
-        justify-content: space-between;
         margin-bottom: 20px;
     }
 
@@ -167,6 +169,10 @@
         margin-bottom: 10px;
     }
 
+    .heart-icon {
+        height: 13px;
+    }
+
     .social-media a {
         width: 24px;
         margin-right: 5px;
@@ -185,7 +191,7 @@
 
     .footer-link,
     .design-with-nila {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .copy-rights {

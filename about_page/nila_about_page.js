@@ -44,14 +44,17 @@ bodymovin.loadAnimation(secondFoldAnimation);
 bodymovin.loadAnimation(thirdFoldAnimation);
 bodymovin.loadAnimation(fourthFoldAnimation);
 
+const brandingVideoElement = document.querySelector(".branding-video");
+const vimeoPlayerController = new Vimeo.Player(brandingVideoElement);
+
 const videoSection = document.querySelector(".vs-content-wrapper");
 const iFrameElement = document.querySelector(".branding-video-wrapper");
-const brandingVideo = document.querySelector(".branding-video");
-const win = brandingVideo.contentWindow;
-const videoUrl = "https://player.vimeo.com/video/683774352?h=40bdcc301f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479;color=0063f4";
 
 videoSection.addEventListener("click", () => {
-  win.postMessage("playVideo", videoUrl);
+  if (vimeoPlayerController) {
+    vimeoPlayerController.play();
+  }
+  videoSection.classList.remove("content-animation");
   iFrameElement.style.transition = "all 0.5s ease-in";
   iFrameElement.style.transform = "scale(1)";
   iFrameElement.style.visibility = "visible";
@@ -61,7 +64,10 @@ videoSection.addEventListener("click", () => {
 const closeVideo = document.querySelector(".close-video");
 
 closeVideo.addEventListener("click", () => {
-  win.postMessage("pauseVideo", videoUrl);
+  if (vimeoPlayerController) {
+    vimeoPlayerController.pause();
+  }
+  videoSection.classList.add("content-animation");
   iFrameElement.style.transition = "all 0.5s ease-in";
   iFrameElement.style.transform = "scale(0)";
   iFrameElement.style.visibility = "hidden";

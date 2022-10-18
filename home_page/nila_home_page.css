@@ -693,10 +693,6 @@
     font-size: 18px;
   }
 
-  .canvas-wrapper {
-    display: none;
-  }
-
   .vs-play-video {
     display: block;
     width: 100px;
@@ -784,6 +780,10 @@
 
   .hero-section-content {
     font-size: 20px;
+  }
+
+  .canvas-wrapper {
+    display: none;
   }
 
   /* Video Section */

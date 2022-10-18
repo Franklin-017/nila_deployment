@@ -173,22 +173,20 @@ const joinWaitlistBtn = document.querySelector(".join-waitlist-btn");
 const emailWaitlist = document.querySelector(".waitlist-email");
 
 closeWaitlistSlider.addEventListener("click", () => {
-    waitlistSlider.classList.remove("open");
-    document.querySelector("html").classList.remove("overflow-hidden");
-})
+  waitlistSlider.classList.remove("open");
+  document.querySelector("html").classList.remove("overflow-hidden");
+});
 
 joinWaitlistBtn.addEventListener("click", () => {
-    waitlistSlider.classList.add("open");
-    document.querySelector("html").classList.add("overflow-hidden");
-    emailWaitlist.focus();
-})
+  waitlistSlider.classList.add("open");
+  document.querySelector("html").classList.add("overflow-hidden");
+  emailWaitlist.focus();
+});
 
 const emailInput = document.querySelector(".email-input");
 const addToWaitlistbtn = document.querySelector(".get-update-btn");
 const errorMessage = document.querySelector(".error-message");
 const focusBorder = document.querySelector(".focus-border");
-
-console.log(screen.width);
 
 emailInput.addEventListener("input", () => {
   hideInputErrorMessage();
@@ -232,6 +230,24 @@ function addToWaitlist(email) {
     body: JSON.stringify({ emailId: email })
   });
 }
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("open");
+
+  document.querySelector(".navlinks").style.transition = "all 0.5s ease-in";
+    document.querySelector(".navbar").style.transition = "all 0.5s ease-in";
+  if (document.querySelector(".hamburger-menu.open")) {
+    document.querySelector(".navbar").style.backgroundColor = "#090d18f7";
+    document.querySelector(".navlinks").style.transform = "translateY(0%)";
+    document.querySelector("html").style.overflow = "hidden";
+  } else {
+    document.querySelector(".navlinks").style.zIndex = "-1";
+    document.querySelector(".navlinks").style.transform = "translateY(-110%)";
+    document.querySelector("html").style.overflow = "auto";
+    document.querySelector(".navbar").style.backgroundColor = "";
+  }
+});
 
 history.scrollRestoration = "manual";
 

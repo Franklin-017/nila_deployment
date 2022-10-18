@@ -1,238 +1,276 @@
 .navbar {
-    width: 100%;
-    padding-inline: 5%;
-    position: fixed;
-    z-index: 3;
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  padding-inline: 5%;
+  position: fixed;
+  z-index: 3;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .brand-logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brand-logo {
-    height: 56px;
+  height: 56px;
 }
 
 .navlinks {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-nav .navlink {
-    position: relative;
-    padding: 5px 0;
-    letter-spacing: 0.6px;
+  position: relative;
+  padding: 5px 0;
+  letter-spacing: 0.6px;
 }
 
 .navlink:first-child {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .navlink:last-child {
-    margin-right: 80px;
+  margin-right: 80px;
 }
 
 .navlink-btn {
-    text-align: center;
-    font-size: 17px;
-    padding: 15px 24px;
-    transition: all 0.3s ease-in;
-    width: 160px;
-    height: 50px;
-    letter-spacing: 0.6px;
+  text-align: center;
+  font-size: 17px;
+  padding: 15px 24px;
+  transition: all 0.3s ease-in;
+  width: 160px;
+  height: 50px;
+  letter-spacing: 0.6px;
 }
 
 .navlink-btn.gradient-text {
-    background: -webkit-linear-gradient(299deg, #0063f4 60%, #00d0b0 85%);
-    background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+  background: -webkit-linear-gradient(299deg, #0063f4 60%, #00d0b0 85%);
+  background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .navlink:hover,
 .navlink.active {
-    color: #fff;
+  color: #fff;
 }
 
 .active::after {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(120deg, var(--accent-color) 0 50%, rgb(0, 208, 176) 99% 100%);
-    border-radius: 25em;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    animation: border-slide-in 0.3s ease-in;
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(120deg, var(--accent-color) 0 50%, rgb(0, 208, 176) 99% 100%);
+  border-radius: 25em;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  animation: border-slide-in 0.3s ease-in;
+}
+
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 10vw;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  position: absolute;
+}
+
+.line-2 {
+  top: 7px;
+}
+
+.line-3 {
+  top: 14px;
+}
+
+.line-1,
+.line-3 {
+  width: 25px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.5s ease-in;
+}
+
+.line-2 {
+  width: 15px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.5s ease-in;
+}
+
+.hamburger-menu.open .line-2 {
+  opacity: 0;
+}
+
+.hamburger-menu.open .line-1 {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu.open .line-3 {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .navbar-squeeze {
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    /* box-shadow: 10px 10px 14px 20px rgba(9, 13, 24, 0.479); */
-    /* border: 1px solid #ffffff15; */
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 @media screen and (max-width: 2560px) {
-    .brand-logo {
-        height: 56px;
-    }
+  .brand-logo {
+    height: 56px;
+  }
 
-    .navlinks {
-        font-size: 20px;
-    }
+  .navlinks {
+    font-size: 20px;
+  }
 
-    .navbar-squeeze .brand-logo {
-        height: 50px;
-    }
+  .navbar-squeeze .brand-logo {
+    height: 50px;
+  }
 
-    .navbar-squeeze .navlinks {
-        font-size: 19px;
-    }
+  .navbar-squeeze .navlinks {
+    font-size: 19px;
+  }
 
-    .navbar-squeeze .navlink-btn {
-        font-size: 15px;
-    }
+  .navbar-squeeze .navlink-btn {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1327px) {
-    .brand-logo {
-        height: 54px;
-    }
+  .brand-logo {
+    height: 54px;
+  }
 
-    .navbar-squeeze .brand-logo {
-        height: 48px;
-    }
+  .navbar-squeeze .brand-logo {
+    height: 48px;
+  }
 
-    .navlinks {
-        font-size: 18px;
-    }
+  .navlinks {
+    font-size: 18px;
+  }
 
-    .navlink {
-        padding: 12px 0;
-    }
+  .navlink {
+    padding: 12px 0;
+  }
 
-    .navbar-squeeze .navlinks {
-        font-size: 17px;
-    }
+  .navbar-squeeze .navlinks {
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 885px) {
-    .navlinks {
-        font-size: 18px;
-    }
+  .navlinks {
+    font-size: 18px;
+  }
 
-    .navlink-btn {
-        font-size: 14px;
-        padding: 12px 20px;
-    }
+  .navlink-btn {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
 
-    .brand-logo {
-        height: 50px;
-    }
+  .brand-logo {
+    height: 50px;
+  }
 
-    .navbar-squeeze .brand-logo {
-        height: 40px;
-    }
+  .navbar-squeeze .brand-logo {
+    height: 40px;
+  }
 
-    .navbar-squeeze .navlinks {
-        font-size: 16px;
-    }
+  .navbar-squeeze .navlinks {
+    font-size: 16px;
+  }
 
-    .navbar-squeeze .navlink-btn {
-        font-size: 13px;
-    }
+  .navbar-squeeze .navlink-btn {
+    font-size: 12px;
+  }
 
-    .navlink:first-child {
-        margin-right: 20px;
-    }
+  .navlink:first-child {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 771px) {
-    .brand-logo {
-        height: 40px;
-    }
+  .hamburger-menu {
+    display: block;
+  }
+  .brand-logo {
+    position: absolute;
+    top: 20px;
+    left: 5vw;
+    height: 40px;
+  }
 
-    .navbar-squeeze .brand-logo {
-        height: 36px;
-    }
 
-    .navlink {
-        font-size: 16px;
-    }
+  .navlinks {
+    width: 100vw;
+    height: 90vh;
+    background-color: #090d18f7;
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    transform: translateY(-110%);
+    z-index: -1;
+  }
 
-    .navbar-squeeze .navlink {
-        font-size: 14px;
-    }
+  .navlinks,
+  .navbar-nav {
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .navlink:last-child {
-        margin-right: 50px;
-    }
+  .navlink {
+    margin-bottom: 50px;
+    font-size: 32px;
+  }
+
+  .navlink:first-child,
+  .navlink:last-child {
+    margin-right: 0px;
+  }
 }
 
 @media screen and (max-width: 679px) {
-    .navlink {
-        font-size: 14px;
-    }
-
-    .navbar-squeeze .navlink {
-        font-size: 12px;
-    }
-
-    .navlink:last-child {
-        margin-right: 40px;
-    }
-    
-    .navlink-btn  {
-        width: 120px;
-        height: 40px;
-    }
+  .navlink-btn {
+    width: 120px;
+    height: 40px;
+  }
 }
 
-
 @media screen and (max-width: 485px) {
-    .brand-logo {
-        height: 30px;
-    }
+  .brand-logo {
+    height: 36px;
+  }
 
-    .navbar-squeeze .brand-logo {
-        height: 28px;
-    }
-
-    .navlink {
-        font-size: 14px;
-    }
-
-    .navbar-nav .navlink {
-        padding: 10px 0;
-    }
-
-    .navbar-squeeze .navlink {
-        font-size: 12px;
-    }
-
-    .navlink:first-child {
-        margin-right: 15px;
-    }
-
-    .navlink:last-child {
-        margin-right: 30px;
-    }
-
+  .navlink {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 }

@@ -50,11 +50,8 @@ a {
 
 .gradient-text {
   background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
-  background-clip: border-box;
-  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .accent-color {
@@ -122,13 +119,14 @@ a {
 
 .privacy-container .section-title {
   font-size: 20px;
-  margin-bottom: 30px;
+  font-weight: bolder;
+  margin-bottom: 15px;
   position: relative;
   margin-left: 35px;
 }
 
 .privacy-container .section-title::after {
-  content: '';
+  content: "";
   background: #00d0b0;
   position: absolute;
   top: 50%;
@@ -148,7 +146,6 @@ a {
   width: 75%;
   margin-bottom: 20px;
   width: var(--content-width);
-  text-transform: capitalize;
 }
 
 .subheading {
@@ -168,34 +165,30 @@ a {
   font-size: var(--list-font-size);
   padding-left: 35px;
   margin-bottom: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  background: url("../../assets/svg/bullet_point.svg") no-repeat left 5px;
+  background-size: 18px;
   width: var(--content-width);
+  list-style-type: none;
   color: #3e434e;
 }
 
-.privacy-container li::after {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translateY(-50%);
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url("../../assets/svg/bullet_point.svg");
-  background-size: 20px;
+.anti-spam-list li {
+  font-size: var(--list-font-size);
+}
+
+.anti-spam-list li::after {
+  transform: translateY(50%);
 }
 
 a.text-hover {
   color: var(--accent-color);
 }
 
-.footer-active {
-  color: #080808;
-  padding-right: 20px;
-}
-
 .privacy-report-title-wrapper {
   top: 0;
-  padding-top: 30px;
+  padding-top: 15px;
   z-index: 2;
   font-size: var(--main-font-size);
   transition: font-size 0.3s ease-in;
@@ -257,7 +250,11 @@ a.text-hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.privacy-container .footer-right-content {
+  margin-bottom: 10px;
 }
 
 .privacy-container .footer-links {
@@ -274,7 +271,8 @@ a.text-hover {
 }
 
 .text-hover:hover::after,
-.footer-link:hover::after {
+.footer-link:hover::after,
+.footer-active::after {
   content: "";
   position: absolute;
   background: var(--accent-color);
@@ -290,7 +288,8 @@ a.text-hover {
   text-decoration: none;
 }
 
-.footer-link:hover::after {
+.footer-link:hover::after,
+.footer-active::after {
   background-color: #202020;
 }
 
@@ -298,6 +297,19 @@ a.text-hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 80px;
+  gap: 20px;
+}
+
+.contact-div {
+  font-size: 22px;
+  color: #8892a9;
+  font-family: "Zoho_Puvi_Medium";
+  margin-bottom: 10px;
+}
+
+.grid-container .description {
+  font-size: 23px;
+  line-height: 1.4;
 }
 
 .margin-bottom {

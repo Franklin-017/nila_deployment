@@ -303,11 +303,6 @@ const interactiveCanvas = document.querySelector(".interactive-canvas");
 let isMouseDown = false;
 
 interactiveCanvas.addEventListener("mousemove", () => {
-  if (mouseOverBodies || isMouseDown) {
-    document.querySelector(".canvas_section_cursor").style.display = "none";
-  } else {
-    document.querySelector(".canvas_section_cursor").style.display = "block";
-  }
   if (mouseOverBodies) {
     interactiveCanvas.classList.remove("canvas-cursor");
     interactiveCanvas.style.cursor = "auto";
@@ -315,21 +310,6 @@ interactiveCanvas.addEventListener("mousemove", () => {
     interactiveCanvas.classList.add("canvas-cursor");
     interactiveCanvas.style.cursor = "";
   }
-});
-
-interactiveCanvas.addEventListener("mousedown", () => {
-  document.querySelector(".canvas_section_cursor").style.display = "none";
-  isMouseDown = true;
-});
-interactiveCanvas.addEventListener("mouseleave", () => {
-  document.querySelector(".canvas_section_cursor").style.display = "none";
-});
-interactiveCanvas.addEventListener("mouseup", () => {
-  document.querySelector(".canvas_section_cursor").style.display = "block";
-  isMouseDown = false;
-});
-interactiveCanvas.addEventListener("mouseenter", () => {
-  document.querySelector(".canvas_section_cursor").style.display = "block";
 });
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
