@@ -2,7 +2,7 @@
     width: 100%;
     padding-inline: 5%;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     height: 12vh;
     display: flex;
     justify-content: space-between;
@@ -82,8 +82,9 @@
 }
 
 .navbar-squeeze {
-    background-color: var(--nila-bg-color);
-    box-shadow: 0 10px 14px  var(--nila-bg-color);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    /* box-shadow: 10px 10px 14px 20px rgba(9, 13, 24, 0.479); */
 }
 
 @media screen and (max-width: 2560px) {

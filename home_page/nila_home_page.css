@@ -177,13 +177,9 @@
   flex-direction: column;
 }
 
-.native-mac-section-title {
-  padding-bottom: 30px;
-}
-
 .native-mac-section-subtitle {
   color: var(--title-color);
-  width: 85%;
+  width: 90%;
   padding-bottom: 30px;
   font-size: 35px;
   line-height: 1.4;
@@ -439,7 +435,6 @@
   }
 
   .native-mac-section-subtitle {
-    width: 75%;
     padding-bottom: 30px;
   }
 
@@ -546,7 +541,6 @@
 
   /* Native Mac Section */
   .native-mac-section-subtitle {
-    width: 80%;
     font-size: 28px;
   }
 
@@ -707,13 +701,6 @@
     width: 100px;
   }
 
-  /* Native Mac Section */
-  .native-mac-section-subtitle {
-    width: 85%;
-  }
-
-  /* /Native Mac Section/ */
-
   /* Collab Section */
   .collab-header-title {
     padding-bottom: 10px;
@@ -731,7 +718,6 @@
 
   .native-mac-section-subtitle {
     font-size: 20px;
-    width: 90%;
     padding-bottom: 10px;
   }
 

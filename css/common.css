@@ -234,12 +234,6 @@
     background-size: 200% 200%;
 }
 
-.gradient-border-btn:hover::after,
-.btn:hover {
-    background: linear-gradient(45deg, #0063f4, #00d0b0);
-    background-size: 100%;
-    animation: rainbow-text 5s infinite linear alternate;
-}
 
 .gradient-border-btn:hover.gradient-text {
     background: #fff !important;

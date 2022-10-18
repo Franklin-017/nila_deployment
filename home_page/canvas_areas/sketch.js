@@ -9,8 +9,6 @@ MouseConstraint = Matter.MouseConstraint;
 var engine,
     world;
 
-let touchEventFlag = false;
-
 let addGroundFlag = true;
 let mouseDraggedFlag = true;
 
@@ -136,7 +134,7 @@ function draw() {
     }
     for(var i=0;i<shapesList.length;i++) {
         shapesList[i].show();
-        if(shapesList[i].body.bounds.max.y>height+50 && !mouseDraggedFlag) {
+        if(shapesList[i].body.bounds.max.y>height+50 && !mouseDraggedFlag && removeGroundFlag) {
             bodiesList.splice(i+4,1);
             world.bodies.splice(i+3,1);
             shapesList.splice(i,1);
@@ -235,7 +233,6 @@ function mousePressedEvent() {
 }
 
 function touchStarted() {
-    touchEventFlag = true;
     mousePressedFlag = true;
     startX = mouseX;
     startY = mouseY;
@@ -262,17 +259,10 @@ function mouseMovedEvent() {
     mouseOverBodies = Matter.Query.point(bodiesList,position).length
 }
 
-function mouseReleasedEvent() {
-    mConstraint.mouse.mouseup(event);
-}
-
 function mouseReleased() {
     mouseDrawFlag = false;
     mousePressedFlag = false;
     mouseDraggedFlag = false;
-    // if(!touchEventFlag) {
-    //     mConstraint.mouse.mouseup(event);
-    // }
     if(shapeWidth && shapeHeight) {
         switch(shapesCounter) {
             case 0:

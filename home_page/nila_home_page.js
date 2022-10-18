@@ -212,9 +212,13 @@ bodymovin.loadAnimation(commentConverseLottieMobile);
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
-  const nodeElementPosition = document.querySelector(".animation-section-3").getBoundingClientRect().top;
-  if (scrollTop > (scrollTop + nodeElementPosition).toFixed() - clientHeight * 0.85) {
+  const foldThreePosition = document.querySelector(".animation-section-3").getBoundingClientRect().top;
+  if (scrollTop > (scrollTop + foldThreePosition).toFixed() - clientHeight * 0.85) {
     thirdFoldLoader.play();
+  }
+  const flySoloSectionPosition = document.querySelector(".fly-solo-animation").getBoundingClientRect().top;
+  if (scrollTop > (scrollTop + foldThreePosition).toFixed() - clientHeight * 0.80) {
+    flySoloLoader.play();
   }
 });
 
