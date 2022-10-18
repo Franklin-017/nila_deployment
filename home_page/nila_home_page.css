@@ -764,7 +764,7 @@
   }
 
   .heroSection {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -775,7 +775,6 @@
 
   .hs-content {
     width: 100%;
-    margin: 0 auto;
   }
 
   .hero-section-content {
@@ -803,6 +802,8 @@
   /* Native Mac Section */
   .native-mac-section-container {
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .animation-wrapper-3 {
@@ -840,6 +841,8 @@
   /* Prototype Section */
   .prototype-section-container {
     margin-top: 0px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .prototype-top-content {
@@ -847,8 +850,8 @@
   }
 
   .prototype-section-subtitle {
-    width: 100%;
-    font-size: 18px;
+    width: 90%;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 0;
   }
@@ -858,7 +861,7 @@
   }
 
   .bottom-card-layout {
-    width: 100%;
+    width: 90%;
   }
 
   .card-container {
@@ -891,7 +894,7 @@
 
   /* Collab Section */
   .collab-section-container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 100px;
   }
@@ -973,7 +976,7 @@
   .fly-solo-section-container {
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -1021,9 +1024,6 @@
   }
 
   /* Prototype Section */
-  .prototype-section-subtitle {
-    width: 100%;
-  }
 
   .card-container {
     padding: 30px;
