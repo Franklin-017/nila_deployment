@@ -84,6 +84,7 @@
 .navbar-squeeze {
     background-color: transparent;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     /* box-shadow: 10px 10px 14px 20px rgba(9, 13, 24, 0.479); */
     /* border: 1px solid #ffffff15; */
 }
