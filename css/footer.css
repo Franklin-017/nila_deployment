@@ -174,9 +174,13 @@
         height: 13px;
     }
 
+    .social-media img {
+        height: 16px;
+    }
+
     .social-media a {
         width: 24px;
-        margin-right: 5px;
+        margin-right: 15px;
     }
 
     .social-media a:last-child {
@@ -212,11 +216,6 @@
     }
 }
 
-@media screen and (max-width: 425px) {
-    .social-media img {
-        height: 16px;
-    }
-}
 
 @media screen and (max-width: 383px) {
 

@@ -1,528 +1,532 @@
 .page-loader {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--nila-bg-color);
-    z-index: 200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--nila-bg-color);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-animation {
-    width: 500px;
+  width: 500px;
 }
 
 /* ****************************** Waitlist slider ****************************** */
 .join-waitlist-slider {
-    position: fixed;
-    right: 100%;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    display: flex;
-    justify-content: end;
+  position: fixed;
+  right: 100%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: end;
 }
 
 .waitlist-container {
-    position: fixed;
-    right: -600px;
-    height: 100%;
-    width: 600px;
-    background-color: #fff;
-    padding: 40px 50px;
-    letter-spacing: -1.2px;
-    z-index: 9;
-    line-height: 1;
-    transition: right 0.5s ease;
+  position: fixed;
+  right: -600px;
+  height: 100%;
+  width: 600px;
+  background-color: #fff;
+  padding: 40px 50px;
+  letter-spacing: -1.2px;
+  z-index: 9;
+  line-height: 1;
+  transition: right 0.5s ease;
 }
 
 .join-waitlist-slider.open {
-    background-color: #030303b8;
-    right: 0%;
+  background-color: #030303b8;
+  right: 0%;
 }
 
 .join-waitlist-slider.open .waitlist-container {
-    right: 0%;
+  right: 0%;
 }
 
 .close-waitlist-slider {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    right: 30px;
-    top: 15px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease-in;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  right: 30px;
+  top: 15px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
 }
 
 .cls-3 {
-    fill: none;
-    stroke: #525252;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3px;
-    transition: all 0.3s ease-in;
+  fill: none;
+  stroke: #525252;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  transition: all 0.3s ease-in;
 }
 
 .close-waitlist-slider:hover {
-    background: rgb(213, 213, 213);
+  background: rgb(213, 213, 213);
 }
 
 .close-waitlist-slider:hover .cls-3 {
-    stroke: #fff;
+  stroke: #fff;
 }
 
 .close-waitlist-slider svg {
-    width: 12px;
-    height: 12px;
-    z-index: 10;
+  width: 12px;
+  height: 12px;
+  z-index: 10;
 }
 
 .waitlist-title-wrapper {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 .waitlist-email-wrapper {
-    margin-top: 70px;
-    padding: 13px 0 13px 13px;
-    border: 2px solid #ECF1FA;
-    border-radius: 5rem;
-    width: 100%;
+  margin-top: 70px;
+  padding: 13px 0 13px 13px;
+  border: 2px solid #ecf1fa;
+  border-radius: 5rem;
+  width: 100%;
 }
 
 .waitlist-email {
-    width: 68%;
-    font-size: 22px;
-    outline: none;
+  width: 68%;
+  font-size: 22px;
+  outline: none;
 }
 
 .waitlist-email:focus .waitlist-email-wrapper {
-    border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 .waitlist-btn {
-    width: 30%;
-    background-color: var(--accent-color);
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 14px;
-    border-radius: 5rem;
-    letter-spacing: 0.3px;
+  width: 30%;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 5rem;
+  letter-spacing: 0.3px;
 }
 
 .waitlist-email::placeholder {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .waitlist-footer {
-    position: relative;
-    bottom: 50px;
-    width: 100%;
-    height: 110px;
+  position: relative;
+  bottom: 50px;
+  width: 100%;
+  height: 110px;
 }
 
 .waitlist-content {
-    height: 100%;
+  height: 100%;
 }
 
 .footer-mandala {
-    background: url("../assets/img/signin-bottom-mandala.png") bottom no-repeat;
-    background-size: 80%;
-    width: 100%;
-    height: 110px;
+  background: url("../assets/img/signin-bottom-mandala.png") bottom no-repeat;
+  background-size: 80%;
+  width: 100%;
+  height: 110px;
 }
 
 /* ****************************** /Waitlist slider/ ****************************** */
 
 /* ****************************** Branding Video ****************************** */
 .branding-video-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--nila-bg-color);
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    visibility: hidden;
-    transform: scale(0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--nila-bg-color);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  visibility: hidden;
+  transform: scale(0);
 }
 
 .video-close {
-    fill: none;
-    stroke: #ffffff;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
 }
 
 .close-video {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 25px;
-    right: 50px;
-    border-radius: 50%;
-    transition: all 0.3s ease-in;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 25px;
+  right: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .close-video svg {
-    width: 18px;
+  width: 18px;
 }
 
 .close-video:hover {
-    background: rgb(213, 213, 213);
+  background: rgb(213, 213, 213);
 }
 
 /* ****************************** /Branding Video/ ****************************** */
 
 .product-page-bg {
-    background-color: var(--nila-bg-color);
+  background-color: var(--nila-bg-color);
 }
 
 .seperator {
-    border-left: 1px solid #9490A0;
-    opacity: 0.4;
-    height: 15px;
+  border-left: 1px solid #9490a0;
+  opacity: 0.4;
+  height: 15px;
 }
 
 /* ****************************** Buttons ****************************** */
 
 .gradient-border-btn {
-    outline: none;
-    text-align: center;
-    position: relative;
-    border-radius: 50rem;
-    cursor: pointer;
+  outline: none;
+  text-align: center;
+  position: relative;
+  border-radius: 50rem;
+  cursor: pointer;
 }
 
 .gradient-border-btn::before {
-    background: linear-gradient(-45deg, #0a74e1, #00c0b8, #0a74e1, #00c0b8, #0a74e1);
-    background-size: 200% 200%;
-    animation: rainbow-text 4s infinite 2s linear alternate;
+  background: linear-gradient(-45deg, #0a74e1, #00c0b8, #0a74e1, #00c0b8, #0a74e1);
+  background-size: 200% 200%;
+  animation: rainbow-text 4s infinite 2s linear alternate;
 }
 
 .gradient-border-btn::before,
 .gradient-border-btn::after {
-    content: "";
-    background-size: 200% 200%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    border-radius: 50rem;
-    z-index: -1;
+  content: "";
+  background-size: 200% 200%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  border-radius: 50rem;
+  z-index: -1;
 }
 
 .gradient-border-btn::after {
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    right: 1px;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    background-color: var(--nila-bg-color);
-    background-size: 200% 200%;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  right: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: var(--nila-bg-color);
+  background-size: 200% 200%;
 }
 
-
 .gradient-border-btn:hover.gradient-text {
-    background: #fff !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent;
+  background: #fff !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-border-btn:hover::before {
-    background-color: transparent;
-    color: #fff;
+  background-color: transparent;
+  color: #fff;
 }
 
 .gradient-text-animation:hover {
-    animation: rainbow-text 1s infinite 1s linear alternate;
+  animation: rainbow-text 1s infinite 1s linear alternate;
 }
 
 .btn {
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  text-align: center;
 }
 
 .get-update-btn {
-    background-color: var(--accent-color);
-    color: var(--title-color);
-    margin-right: 20px;
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  margin-right: 20px;
 }
-
 
 /* ****************************** /\ Buttons /\ ****************************** */
 
 /* ****************************** Get In touch section ****************************** */
 .launch-update-section {
-    height: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .input-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .launch-cta-section {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .launch-title {
-    font-size: var(--title-font-size);
-    color: var(--title-color);
-    margin-bottom: 30px;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    font-weight: 600;
+  font-size: var(--title-font-size);
+  color: var(--title-color);
+  margin-bottom: 30px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 600;
 }
 
 .error-message {
-    color: red;
-    margin-top: 10px;
-    height: 10px;
+  color: red;
+  margin-top: 10px;
+  height: 10px;
 }
 
 .focus-border {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 1px;
-    background-image: var(--gradient-color);
-    transition: width 0.5s ease-in;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-image: var(--gradient-color);
+  transition: width 0.5s ease-in;
 }
 
 .focus-border.error {
-    background-image: none;
-    background-color: red;
-    width: 80%;
+  background-image: none;
+  background-color: red;
+  width: 80%;
 }
 
-.email-input:focus~.focus-border {
-    width: 80%;
+.email-input:focus ~ .focus-border {
+  width: 80%;
 }
 
 .email-input {
-    width: 80%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #2d313c;
-    padding: 15px 0;
-    color: #aaaeb8;
-    transition-delay: 0.5s;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #2d313c;
+  padding: 15px 0;
+  color: #aaaeb8;
+  transition-delay: 0.5s;
 }
 
 .email-input::placeholder {
-    color: #2d313c;
+  color: #2d313c;
 }
 
 /* ****************************** /\ Get In touch section /\ ****************************** */
 
 .link-hover:hover {
-    background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
-    background-size: 400% 400%;
-    animation: rainbow-text 1s infinite linear alternate;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #0a74e1, #64f1edb0, #0a74e1);
+  background-size: 400% 400%;
+  animation: rainbow-text 1s infinite linear alternate;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .link-hover img {
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
 .link-hover:hover img {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 /* ****************************** Footer Section ****************************** */
 .text-hover,
 .copy-rights {
-    position: relative;
-    font-size: 16px;
-    color: #636771;
+  position: relative;
+  font-size: 16px;
+  color: #636771;
 }
 
 .text-hover:hover {
-    color: var(--title-color);
+  color: var(--title-color);
 }
 
 .text-hover:hover::after {
-    content: '';
-    position: absolute;
-    background: #ffffff;
-    border-radius: 25em;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    animation: border-slide-in 0.3s ease-in;
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  border-radius: 25em;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  animation: border-slide-in 0.3s ease-in;
 }
 
 /* ****************************** /\ Footer Section /\ ****************************** */
 
 @media screen and (max-width: 2560px) {
-    .get-update-btn {
-        padding: 16px 36px;
-        font-size: 20px;
-    }
+  .get-update-btn {
+    padding: 16px 36px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
-    .get-update-btn {
-        padding: 12px 24px;
-        font-size: 18px;
-    }
+  .get-update-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .t {
-        font-size: 24px;
-    }
+  .t {
+    font-size: 24px;
+  }
 
-    .subtitle-sl {
-        font-size: 36px;
-    }
+  .subtitle-sl {
+    font-size: 36px;
+  }
 
-    .close-waitlist-slider {
-        right: 20px;
-        top: 15px;
-    }
+  .close-waitlist-slider {
+    right: 20px;
+    top: 15px;
+  }
 
-    .waitlist-container {
-        padding: 20px;
-        width: 500px;
-    }
+  .waitlist-container {
+    padding: 20px;
+    width: 500px;
+  }
 
-    .waitlist-email {
-        width: 72%;
-        font-size: 14px;
-    }
+  .waitlist-email {
+    width: 72%;
+    font-size: 14px;
+  }
 
-    .waitlist-btn {
-        width: 30%;
-        padding: 7px 12px;
-        font-size: 14px;
-    }
+  .waitlist-btn {
+    width: 30%;
+    padding: 7px 12px;
+    font-size: 14px;
+  }
 
-    .get-update-btn {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
+  .get-update-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 555px) {
-    .heart-icon {
-        height: 9px;
-        padding-left: 7px;
-    }
+  .heart-icon {
+    height: 9px;
+    padding-left: 7px;
+  }
 
-    .close-video {
-        width: 36px;
-        height: 36px;
-        top: 24%;
-        right: 10px;
-    }
+  .close-video {
+    width: 36px;
+    height: 36px;
+    top: 24%;
+    right: 10px;
+  }
 
-    .launch-update-section {
-        width: 90%;
-        margin: 100 auto;
-    }
+  .launch-update-section {
+    width: 90%;
+    margin: 100px auto;
+  }
 
-    .launch-cta-section {
-        margin: 30px auto;
-        width: 80%;
-    }
+  .launch-cta-section {
+    margin: 30px auto;
+    width: 80%;
+  }
 
-    .get-update-btn {
-        width: 100%;
-        padding: 10px 20px;
-        margin: 0 auto;
-        font-size: 18px;
-    }
+  .email-input,
+  .focus-border.error,
+  .email-input:focus ~ .focus-border {
+    width: 100%;
+  }
+
+  .get-update-btn {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .seperator {
-        height: 8px;
-    }
+  .seperator {
+    height: 8px;
+  }
 
-    .t {
-        font-size: 16px;
-    }
+  .t {
+    font-size: 16px;
+  }
 
-    .waitlist-container {
-        width: 100%;
-        height: 100%;
-        padding: 10px 20px;
-        line-height: 1;
-    }
+  .waitlist-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    line-height: 1;
+  }
 
-    .close-waitlist-slider {
-        width: 12px;
-        height: 12px;
-        right: 20px;
-        top: 20px;
-    }
+  .close-waitlist-slider {
+    width: 12px;
+    height: 12px;
+    right: 20px;
+    top: 20px;
+  }
 
-    .waitlist-title-wrapper {
-        margin-top: 50px;
-        font-size: 50px;
-    }
+  .waitlist-title-wrapper {
+    margin-top: 50px;
+    font-size: 50px;
+  }
 
-    .waitlist-email-wrapper {
-        border: none;
-        padding: 5px 0 5px 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
+  .waitlist-email-wrapper {
+    border: none;
+    padding: 5px 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 
-    .waitlist-email {
-        width: 100%;
-        border: 2px solid #ECF1FA;
-        border-radius: 5rem;
-        padding: 10px;
-        margin-bottom: 20px;
-        font-size: 14px;
-    }
+  .waitlist-email {
+    width: 100%;
+    border: 2px solid #ecf1fa;
+    border-radius: 5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
 
-    .waitlist-btn {
-        width: 35%;
-        text-align: center;
-        padding: 10px 14px;
-        font-size: 14px;
-    }
+  .waitlist-btn {
+    width: 35%;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 
-    .email-input {
-        padding: 5px 0;
-        width: 100%;
-    }
+  .email-input {
+    padding: 5px 0;
+    width: 100%;
+  }
 
-    .focus-border.error {
-        width: 100%;
-    }
+  .focus-border.error {
+    width: 100%;
+  }
 
-    .email-input:focus~.focus-border {
-        width: 100%;
-    }
+  .email-input:focus ~ .focus-border {
+    width: 100%;
+  }
 }

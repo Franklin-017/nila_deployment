@@ -216,6 +216,9 @@
 }
 
 @media screen and (max-width: 771px) {
+  .navbar {
+    height: 10vh;
+  }
   .hamburger-menu {
     display: block;
     z-index: 4;
