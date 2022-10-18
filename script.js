@@ -238,10 +238,8 @@ hamburgerMenu.addEventListener("click", () => {
   document.querySelector(".navlinks").style.transition = "all 0.5s ease-in";
   if (document.querySelector(".hamburger-menu.open")) {
     document.querySelector(".navlinks").style.transform = "translateY(0%)";
-    document.querySelector("html").style.overflow = "hidden";
   } else {
     document.querySelector(".navlinks").style.transform = "translateY(-110%)";
-    document.querySelector("html").style.overflow = "auto";
   }
 });
 
