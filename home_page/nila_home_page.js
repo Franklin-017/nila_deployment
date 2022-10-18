@@ -217,7 +217,7 @@ window.addEventListener("scroll", () => {
     thirdFoldLoader.play();
   }
   const flySoloSectionPosition = document.querySelector(".fly-solo-animation").getBoundingClientRect().top;
-  if (scrollTop > (scrollTop + foldThreePosition).toFixed() - clientHeight * 0.80) {
+  if (scrollTop > (scrollTop + flySoloSectionPosition).toFixed() - clientHeight * 0.80) {
     flySoloLoader.play();
   }
 });
