@@ -236,16 +236,12 @@ hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("open");
 
   document.querySelector(".navlinks").style.transition = "all 0.5s ease-in";
-    document.querySelector(".navbar").style.transition = "all 0.5s ease-in";
   if (document.querySelector(".hamburger-menu.open")) {
-    document.querySelector(".navbar").style.backgroundColor = "#090d18f7";
     document.querySelector(".navlinks").style.transform = "translateY(0%)";
     document.querySelector("html").style.overflow = "hidden";
   } else {
-    document.querySelector(".navlinks").style.zIndex = "-1";
     document.querySelector(".navlinks").style.transform = "translateY(-110%)";
     document.querySelector("html").style.overflow = "auto";
-    document.querySelector(".navbar").style.backgroundColor = "";
   }
 });
 

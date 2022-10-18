@@ -218,26 +218,27 @@
 @media screen and (max-width: 771px) {
   .hamburger-menu {
     display: block;
+    z-index: 4;
   }
   .brand-logo {
     position: absolute;
     top: 20px;
     left: 5vw;
     height: 40px;
+    z-index: 4;
   }
-
 
   .navlinks {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background-color: #090d18f7;
     position: absolute;
-    top: 10vh;
+    top: 0vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     left: 0px;
     transform: translateY(-110%);
-    z-index: -1;
   }
 
   .navlinks,
