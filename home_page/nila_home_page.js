@@ -375,7 +375,7 @@ function renderHeadingsContent(node) {
 function showRespCollabContent(index) {
   collabContent.forEach((element, ind) => {
     if (ind === index - 1) {
-      element.style.transform = "translateY(60px)";
+      element.style.transform = "translateY(20px)";
       element.style.opacity = 1;
     } else {
       element.style.transform = "translateY(30%)";

@@ -380,7 +380,8 @@
   line-height: 1.6;
   letter-spacing: 0.6px;
   width: 75%;
-  transform: translateY(20%);
+  vertical-align: middle;
+  /* transform: translateY(20%); */
   opacity: 0;
   transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
