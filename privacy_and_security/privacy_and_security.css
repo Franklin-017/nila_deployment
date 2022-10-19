@@ -62,18 +62,11 @@ a {
   margin-block: 50px;
 }
 
-.seperator {
-  border-left: 1px solid #9490a0;
-  opacity: 0.4;
-  height: 15px;
-  padding-left: 20px;
-}
-
 .privacy-header {
   position: sticky;
   position: -webkit-sticky;
   width: 95vw;
-  height: 4vh;
+  height: 10vh;
   top: 0;
   padding: 3%;
   box-shadow: 0 0 30px 30px #f0f5ff;
@@ -316,6 +309,17 @@ a.text-hover {
   margin-bottom: 80px;
 }
 
+@media screen and (max-width: 1400px) {
+  .footer-links {
+    line-height: 1.5;
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 1335px) {
   :root {
     --content-width: 75%;
@@ -335,6 +339,10 @@ a.text-hover {
     --list-font-size: 15px;
   }
 
+  .privacy-container li {
+    background-size: 16px;
+  }
+
   .privacy-container li::after {
     width: 15px;
     height: 15px;
@@ -343,10 +351,6 @@ a.text-hover {
 
   .priv-box p::before {
     height: 42px;
-  }
-
-  .seperator {
-    padding-left: 10px;
   }
 }
 
@@ -359,10 +363,34 @@ a.text-hover {
     --box-content-width: 80%;
   }
 
+  body::after {
+    width: 210px;
+    height: 209px;
+  }
+
   .priv-box::after {
     width: 200px;
     height: 200px;
     right: -90px;
+  }
+
+  .privacy-header {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .privacy-container .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 100%;
+    gap: 2px 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .privacy-container .footer-link {
+    justify-self: start;
   }
 }
 
@@ -385,6 +413,7 @@ a.text-hover {
     width: 12px;
     height: 12px;
     background-size: 12px;
+    padding-left: 20px;
   }
 
   body::after {
@@ -404,7 +433,7 @@ a.text-hover {
   }
 
   .privacy-nila-logo {
-    width: 40px;
+    width: 30px;
   }
 
   .privacy-nila-logo.shrink {
@@ -422,6 +451,26 @@ a.text-hover {
     --box-content-width: 90%;
   }
 
+  body::after {
+    width: 156px;
+    height: 155px;
+  }
+
+  .privacy-container li {
+    background: url("../../assets/svg/bullet_point.svg") no-repeat left 2px;
+    background-size: 14px;
+    padding-left: 20px;
+  }
+
+  .privacy-report-title-wrapper {
+    padding-top: 20px;
+    letter-spacing: -1px;
+  }
+
+  .privacy-nila-logo {
+    width: 30px;
+  }
+
   .priv-box::after {
     width: 150px;
     height: 150px;
@@ -431,10 +480,6 @@ a.text-hover {
 
   .priv-box {
     padding: 20px 24px;
-  }
-
-  .seperator {
-    height: 10px;
   }
 }
 
@@ -469,7 +514,7 @@ a.text-hover {
   }
 }
 
-@media screen and (max-width: 418px) {
+@media screen and (max-width: 425px) {
   .privacy-container li::after {
     width: 10px;
     height: 10px;
@@ -480,18 +525,34 @@ a.text-hover {
     width: 25px;
   }
 
-  .shrink.privacy-report-title-wrapper {
-    padding-left: 20px;
+  .privacy-container .footer-left-content {
+    flex-direction: column;
+  }
+
+  .social-media {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .social-media a {
+    display: inline-block;
+  }
+
+  .social-media .footer-link {
+    margin-right: 50px;
+    display: block;
+  }
+
+  .privacy-container .footer-link,
+  .copy-rights {
+    font-size: 13px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .priv-box p::before {
     height: 54px;
-  }
-
-  .seperator {
-    height: 13px;
-    padding-left: 10px;
   }
 }
