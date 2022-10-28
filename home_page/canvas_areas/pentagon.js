@@ -9,7 +9,6 @@ class Pentagon {
             restitution: 0.65
         }
         this.body = Bodies.fromVertices(this.x,this.y,this.vertices,options);
-        console.log(this.body);
         World.add(world,this.body);
         this.show();
     }
