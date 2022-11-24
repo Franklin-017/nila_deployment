@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shortcut icon" href="../../../assets/img/nila-favico.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../privacy_and_security.css" />
+    <title>Understanding shared responsibility with Nila</title>
+</head>
+
+<body>
+    <header class="privacy-header sticky">
+        <a href="../../index.html?src=prenila">
+            <img class="privacy-nila-logo" src="../../../assets/svg/nilagradient-dark.svg" />
+        </a>
+    </header>
+    <div class="privacy-container">
+        <section class="privacy-report-title-wrapper">
+            <span class="gradient-text main-title puvi-medium">Encryption Whitepaper</span>
+        </section>
+
+        <p class="description">Why do companies move to cloud? It is generally because cloud environments are scalable, reliable, and highly available. However, those are not the only considerations- security can trump the other advantages of cloud. This is why cloud providers need to have a comprehensive security strategy. Nila's strategy for security covers multiple dimensions, and encryption is a crucial part of it. This page will tell you all you might want to know about Nila's strategy for encryption and how we use it to keep your data secure.</p>
+        
+        <div class="margin-bottom">
+            <p class="subheading">Overview</p>
+            <p class="description">Here's what we will discuss in this whitepaper</p>
+            <ul>
+                <li>What is Encryption?</li>
+                <li>Encryption In Transit</li>
+                <li>Encryption at Rest</li>
+                <li>Application level encryption</li>
+                <li>Key Management</li>
+                <li>What data we encrypt in our service?</li>
+            </ul>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">What is Encryption?</p>
+
+            <p class="description">Encryption is primarily used to safeguard the contents of a message so that only the intended recipient could read it. This was done by replacing the contents with unrecognizable data, which could be understood only by the intended recipient. This is how encryption became a method to protect data from those who might want to steal it.</p>
+            <p class="description">Encryption is when you change data with a special encoding process so that the data becomes unrecognizable (encrypted). You can then apply a special decoding process and you will get the original data back (decrypted). By keeping the decoding process a secret, nobody else can recover the original data from the encrypted data.</p>
+            <p class="description">The encoding process follows an encryption algorithm like AES 256 which is public. However, the process itself depends on the key, which is used to encrypt the data and decryption it to retrieve the original data.</p>
+            <p class="description">The key is kept secret. Without the key, anyone who might succeed in accessing the data will only see a "Ciphertext", which will have no real meaning. Hence, the data is protected.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Why we encrypt your data</p>
+
+            <p class="description">The final layer of protection- Though a comprehensive security strategy helps a company protect data from hackers, encryption takes the final stand against attempts to steal your data. It brings data protection to completion as it ensures your data can neither be damaged nor be stolen in the unfortunate event of a security breach.</p>
+            <p class="description">Privacy- Encryption is a reassurance to privacy concerns surrounding the internet. Encryption helps protect privacy by turning personal information into “for your eyes only” data intended only for the parties that need them. When you interact with us and store your data in our servers, encryption helps us ensure you have absolute privacy.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">What we mean by 'data'</p>
+
+            <p class="description">There are two types of data that we deal with-</p>
+            <p class="description">Customer data- The data you store with us through Nila. Typically, this data is handled by a Nila through a customer's account that can be identified in our IAM (Identity and Access Management) database. Depending on the sensitivity of data and the user's requirements, some customer data are encrypted while some are not. Sensitive data are those that can cause harm to related individuals or organisations when exposed.</p>
+            <p class="description">Derived data- The data which is not directly given by you, but is derived from your data. For example, auth tokens, unique IDs, URLs and reports etc.. are stored with us. Depending on the sensitivity of data, some derived data are encrypted while others are not.</p>
+            <p class="description">In the subsequent sections, 'data' refers to the data that is encrypted.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Encryption In Transit</p>
+
+            <p class="description">When you use Nila, your data travels over the internet from your browser to our data center or other third parties (while using third-party integrations). Encrypting data in transit protects your data from man-in-the-middle-attacks.</p>
+
+            <p class="description">There are two scenarios when data in transit is encrypted:</p>
+            <ol type="1">
+                <li>When data travels from your browser to our Servers.</li>
+                <li>When data travels from our server to non-Nila servers (third parties)</li>
+            </ol>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Between you and Nila</p>
+
+            <p class="description">Nila has established strict policies to adapt the Transport Layer Security (TLS) to all its connections. TLS ensures a secure connection between you and Nila Servers by allowing the authentication of both parties involved in the connection, and by encryption of data to be transferred. TLS protocol makes sure that no third parties may eavesdrop or tamper with communication between you and Nila.</p>
+            <p class="description">We follow the latest TLS protocol version 1.2/1.3 and use certificates issued by SHA 256 and ciphers (AES_CBC/AES_GCM 256 bit/128 bit keys for encryption, SHA2 for message authentication and ECDHE_RSA as the key exchange mechanism). We also implement perfect forward secrecy and enforce HTTPS Strict Transport Security (HSTS) across all sites.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Between Nila and third parties</p>
+
+            <p class="description">We follow the https protocol during our communication with third parties. For transactions that involve sensitive data and use cases, we use asymmetric encryption, which utilizes a system of public and private keys to encrypt and decrypt data.</p>
+            <p class="description">For this method, we generate a pair of public and private keys in our KMS (Key Management Service), which creates, stores and manages keys across all services. We encrypt these pairs using a master key and the encrypted key pairs are stored in the KMS itself. The master key is stored in a separate server.</p>
+            <p class="description">We make public keys available to third parties through the certificates while we store the private key in KMS, and after authentication, the encrypted data is decrypted in the KMS.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Encryption at Rest</p>
+            <p class="description">There are two major levels of encryption-</p>
+            <ul>
+                <ol type="1">
+                    <li>Application layer encryption</li>
+                    <li>Hardware based full disk encryption</li>
+                </ol>
+            </ul>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="description">The strategy to encrypt data at the application level depends on where and how the data is stored-</p>
+            <ul>
+                <ol type="1">
+                    <li>Database (DB) - stored as tables</li>
+                    <li>Distributed File System (DFS) - stored as files</li>
+                    <li>URL encryption</li>
+                    <li>Backup</li>
+                    <li>Logs</li>
+                    <li>Cache</li>
+                </ol>
+            </ul>
+            <p class="description">The below image paints a broad picture of our encryption strategy:</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Application level encryption</p>
+            <p class="description">Any Nila(or application) that you use involves data: the data you provide and the data we store on your behalf as part of the service. The data may be received as a file or as data fields. Each of these categories is treated differently with respect to how it is encrypted.</p>
+            <p class="description">This section deals with encryption at rest at the application-level.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">DB Encryption</p>
+            <p class="description">The sensitive data you input into the application, or the service data, is stored in our database as tables. Data in these tables are encrypted according to AES 256 standard with AES/CBC/PKCS5Padding mode. The data that is encrypted at rest varies with the services you opt for. Learn more about the data we encrypt in our service. However, depending on the sensitivity of the data field and the user's choice and requirement, the level of encryption varies.</p>
+            <p class="description">There are two levels of DB encryption-</p>
+            <ol type="1">
+                <li>Depending on the sensitivity of data</li>
+                <li>Depending on the search functionality</li>
+            </ol>
+            <p class="description">Note: Henceforth, we will be referring to a customer or an organisation that uses a Nila, and has a finite number of users as an 'Org'.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Depending on the sensitivity of data</p>
+            <p class="description"><strong>Level 1-</strong> This is the default level of encryption that we do for data from all Orgs. In this level, our KMS allots a key to each org. Data corresponding to that org will be encrypted using this key. The key is encrypted using a master key and the encrypted key is stored in a separate server.</p>
+            <p class="description"><strong>Level 2-</strong> We do this level of encryption for sensitive and Personally Identifiable Information (PII). This category includes fields like Bank account numbers, Identification numbers and biometric data.</p>
+            <p class="description">In this level, the KMS generates a unique key to each column in the table. All data in a particular column will be encrypted using the key generated for that column. These keys are again encrypted using a master key and stored in a separate server.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Depending on the search functionality</p>
+            <p class="description">An Initialisation Vector (IV) is a random value that initiates the process of encryption. This random value ensures that each block/unit of data encrypts differently. It also means that encrypting the same data twice yields different ciphertexts.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Why is the IV important?</p>
+            <p class="description">If you had no IV, and used the Cipher Block Chaining (CBC) mode with just your key, two data sets that begin with identical data will produce identical first blocks. IVs make it unlikely that the encryption of two distinct data will ever create the same input/output pairs (at the block cipher level, and using the same key), even when one bears some relation to the other (including but far from limited to: starting with the same first block).</p>
+            <p class="description">When each encryption request enables the usage of a random IV, the first block would be different. The attacker cannot deduce anything that may help them decode the encrypted data.</p>
+            <p class="description"><strong>Equality Preserving Encryption:</strong> This is the default level of encryption for all tables. In this level, the entire table of data gets one IV. This means, the whole block of ciphertext can be used in a search query inside a table. Since the IV is the same for all data inside the table, a search will fetch you the data.</p>
+            <p class="description"><strong>Standard Encryption:</strong> In this level, each data entry has a unique IV. Even if you encrypt the entire table with one key, each encrypted data entry will produce a unique ciphertext. Also, since the IV is random and unique for each data, a search query will not fetch you the data. This is a safer option than the "Equality Preserving" variation.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">In what situations will these variations be used?</p>
+
+            <p class="description">The decision to go for a particular variation usually depends on the requirement. If data must receive the highest level of protection, we go for Level-2 with the standard encryption. However, if not all the fields need the maximum protection but select ones do, Level-2 protection with the standard version would suffice.</p>
+            <p class="description">However, it is not always about protection alone. Sometimes, users might want to search and fetch a field such as 'email ID' to suit their requirements. In that case, a standard option would not make sense, and we go for the "Equality Preserving" variation.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">File or DFS encryption</p>
+
+            <p class="description">The files you create or attach are saved into our Distributed File System (DFS). The files that are encrypted at rest varies with the services you opt for. Learn more about the data we encrypt in our service.</p>
+            <p class="description">The encryption is based on the standard AES 256 algorithm, and the mode of encryption is either CTR or GCM. In AES 256, the plaintext that needs to be encrypted is divided into packets of data or blocks. Since we are encrypting the contents of files here, the algorithm should ensure that each block's encryption is independent of another, so that the attacker does not get any information about the file even if the block ciphers are compromised. For this requirement, the CTR mode is ideal.</p>
+            <p class="description">Like in DB encryption, file encryption also has two levels:</p>
+            <p class="description"><strong>Level 1-</strong> In this level, each Org is provided with a key. Each file from that Org is encrypted using this key, but with a unique random IV which is stored along with the file itself. This key is again encrypted using a master key and stored in the KMS.</p>
+            <p class="description"><strong>Level 2-</strong> In this level, each file is provided with a unique key and is encrypted using that key. Each key used to encrypt a file is encrypted again using a master key, and the encrypted key is stored along with the file in the DFS. This master key is unique for the service or application, and is stored and managed in the KMS.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">URL encryption</p>
+
+            <p class="description">The invitation links or any other communication between us may involve sensitive data being passed in the URLs. To secure this communication, parts of a URL is encrypted. If there's anything that is identifiable in the URL, say the ID of a document, that part is encrypted.</p>
+            <p class="description">This encryption has two levels- One key per Org or One key per URL. Again, this is decided by the sensitivity of data in the URL.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Backup encryption</p>
+            <p class="description">We create backups based on two schedules: daily and weekly. The backup servers are equipped with the same level of protection as the main servers. All data we take as backup will be encrypted at rest. We use AES 256 algorithm for encryption and we store the keys in a separate server. We also have redundant Data Centers (DC) that ensure high availability. These DCs also have a copy of your encrypted data, and they are also backed up like the main DC.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Encryption of Logs</p>
+            <p class="description">Nila Logs uses Hadoop Distributed File System (HDFS) to store and manage logs. We use the encryption technology of Hadoop Inc to encrypt the data while key management is handled by our KMS.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Encryption of cache</p>
+            <p class="description">We use Redis open source software for storing and managing cache data. Cache contains data that is repeatedly used in the operation of the service, and need to be stored for a certain amount of time. Sometimes, your data may be cached to improve the service or for troubleshooting. If any data contains sensitive personal information, we choose to encrypt it.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Key Management</p>
+            <p class="description">Our in-house Key Management Service (KMS) creates, stores and manages keys across all services. We own and maintain the keys using KMS. Currently, we do not have the provision to encrypt data with keys owned by the customer.</p>
+            <p class="description">There are different types of keys used at different stages of encryption:</p>
+            <p class="description"><strong>Data Encryption Key(DEK):</strong> The key used to convert the data from plain text to cipher text, or the key used to encrypt the data.</p>
+            <p class="description"><strong>Key Encryption Key (KEK):</strong> The key used to encrypt the DEK, and is service-specific. It provides an extra layer of security.</p>
+            <p class="description"><strong>Master Key:</strong> The key used to encrypt the KEK. This key is stored in an isolated server for safety.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">How does the KMS work ?</p>
+
+            <p class="description">All types of encryption are according to the AES 256 algorithm. According to this algorithm, the data is treated as 'blocks' which are to be encrypted. Irrespective of whether it is a field in the database or a file in the DFS, encryption begins when a block of data is encrypted using a DEK.</p>
+
+            <p class="description">This DEK is further encrypted with a KEK. The KEK is again encrypted using a master key that is stored in a separate server. So, here are the elements that need to be managed-</p>
+            <ol type="1">
+                <li>Encrypted data</li>
+                <li>DEKs</li>
+                <li>Encrypted DEKs</li>
+                <li>KEKs</li>
+                <li>Encrypted KEKs</li>
+                <li>Master key</li>
+            </ol>
+            <p class="description">The KMS manages these elements in the following manner:</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">How are the keys generated?</p>
+            <p class="description">KMS generates 256-bit keys that conform to the AES 256 protocol, along with an Initialisation Vector (IV). IV, as we have already discussed, ensures that the first block of encrypted data is random. This is why the same plaintext is encrypted into different ciphertexts with the help of the IVs.</p>
+            <p class="description">KMS generates these keys and IV using a Java secure library and a secure random number generator.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">Where are the keys stored?</p>
+            <p class="description">The DEKs generated in the KMS are encrypted using a KEK. This provides an additional layer of security. The encrypted DEKs are stored in the KMS database.</p>
+            <p class="description">We separate the keys physically (store them in different locations) so that an attacker who gets hold of one key cannot get hold of other related keys as well. We encrypt the KEK using a master key and store it in a separate server.</p>
+            <p class="description">An attacker will not be able to compromise the data by merely targeting the KMS alone.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="subheading">How secure are the keys?</p>
+            <p class="description"><strong>Physical separation-</strong> As discussed earlier, the master key remains in a physically separate and secure server. This makes it difficult for an attacker to compromise both DEKs and KEKs.</p>
+            <p class="description"><strong>Access control-</strong> Access control helps us prevent the misuse and unprecedented access of keys. An Access Control List (ACL) allows only selected services to access selected keys. Every time a key is accessed, it is through authentication and the process is logged. Regular audits of these logs help monitor the process.</p>
+            <p class="description">Access to Key Management Servers is restricted, by default, and allowed only to specific personnel of Zohocorp. Any other access is raised as a ticket and allowed only after the approval of management.</p>
+            <p class="description"><strong>Key Rotation-</strong> We use a key rotation system where we change the Root Master key periodically, which ensures additional security. When a new master key and IV are generated, it means that the keys in the database must also be revised. Hence, all the keys in the database are first fetched and decrypted using the old master key and re-encrypted using the new master key and updated in the database.</p>
+            <p class="description">Provision to manually trigger the rotation of keys is available, to handle critical situations that may arise.</p>
+            <p class="description"><strong>Availability of Keys-</strong> If the primary storage of disks in one Data Center (DC) should fail, there is a slave and a secondary slave for backup, that hold the same data as the master DC. Both the slave and the secondary slave have the DEKs encrypted, same as the master.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">What data we encrypt in our service?</p>
+            <p class="description">The following describes data encrypted by Nila</p>
+            <p class="description">We encrypt all the project data stored in Nila, as well as personally identifiable information like email addresses and IP addresses. We also encrypt all files uploaded to Nila. This includes images, audio files, video files.</p>
+        </div>
+
+        <div class="margin-bottom">
+            <p class="section-title">Conclusion</p>
+            <p class="description">We encrypt sensitive customer data when it is stored, when it is in transit over the internet and when it is traveling between our DCs. However, encryption is only a part of our Security strategy. We constantly innovate and strive to enhance data protection by implementing the latest protocols and technology. To learn about our complete security strategy, please visit . https://nila.design/security</p>
+        </div>
+
+
+        <footer id="footer">
+            <div class="footer-line"></div>
+            <div class="footer-container">
+                <div class="footer-left-content">
+                    <p class="design-with-nila title-color">
+                        Designed in Nila
+                        <img class="heart-icon" src="../../assets/svg/heart_icon.svg" />
+                    </p>
+                    <div class="social-media">
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="mailto:hi@nila.cloud">hi@nila.cloud</a>
+                        <a class="media-icons" href="https://twitter.com/nila" target="_blank"
+                            cursor-class="squeeze_circle">
+                            <img src="../../assets/svg/twitter_icon.svg" />
+                        </a>
+                        <a class="media-icons" href="https://www.instagram.com/niladotdesign/" target="_blank"
+                            cursor-class="squeeze_circle">
+                            <img src="../../assets/svg/instagram_icon.svg" />
+                        </a>
+                        <a class="media-icons" href="https://www.youtube.com/nila" target="_blank"
+                            cursor-class="squeeze_circle">
+                            <img src="../../assets/svg/youtube_icon.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right-content">
+                    <div class="footer-links">
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../../index.html?src=prenila">Home</a>
+
+                        <a class="footer-active footer-link" cursor-class="squeeze_circle">Security</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../Compliance_page/compliance.html">Compliance</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../anti_spam_policy_page/anti-spam_policy.html">Anti-spam Policy</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../terms_of_service_page/terms_of_service.html">Terms of Service</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../privacy_page/nila_privacy_page.html">Privacy Policy</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../cookie_policy_page/cookie_policy.html">Cookie Policy</a>
+
+                        <a class="footer-link" cursor-class="squeeze_circle"
+                            href="../abuse_policy_page/abuse_policy.html">Abuse Policy</a>
+                    </div>
+                </div>
+                <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+            </div>
+        </footer>
+        </div>
+        <script>
+            const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
+            const nilaLogo = document.querySelector(".privacy-nila-logo");
+
+            window.addEventListener("scroll", () => {
+                if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
+                    mainTitleWrapperNode.classList.add("shrink");
+                    nilaLogo.classList.add("shrink");
+                } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 30) {
+                    mainTitleWrapperNode.classList.remove("shrink");
+                    nilaLogo.classList.remove("shrink");
+                }
+            });
+        </script>
+</body>
+
+</html>

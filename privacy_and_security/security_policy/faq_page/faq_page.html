@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shortcut icon" href="../../assets/img/nila-favico.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../privacy_and_security.css" />
+    <link rel="stylesheet" href="./faq_page.css" />
+    <title>Security - Frequently Asked Questions (FAQ) | Nila</title>
+  </head>
+
+  <body>
+    <header class="privacy-header sticky">
+      <a href="../../index.html?src=prenila">
+        <img class="privacy-nila-logo" src="../../assets/svg/nilagradient-dark.svg" />
+      </a>
+    </header>
+    <div class="privacy-container">
+      <section class="privacy-report-title-wrapper">
+        <span class="accent-color main-title puvi-medium">Frequently Asked Questions</span>
+      </section>
+
+      <button class="accordion">Does Nila adhere to Information Security Standards?</button>
+      <div class="panel description">
+        <p>
+          We have an Information Security Management System (ISMS) in place derived from ISO standards, which takes into account our security objectives and the risks and mitigations concerning all the interested parties. We have achieved ISO 27001, ISO27017 & ISO27018 certifications to demonstrate our compliance with the standards.
+        </p>
+      </div>
+
+      <button class="accordion">Where is my data stored? Can I choose where my account and data will be located?</button>
+      <div class="panel description">
+        <p>
+          The Data Center where your data is stored is selected automatically based on the country chosen by you while signing up for Nila. The information regarding which Data Center has been selected is displayed right below the Country picklist in the sign up form.
+        </p>
+        <p>
+          At any instant, you can know which Data Center your data resides in by looking at the URL on the browser when you are logged in to Nila and are using our applications, or by <a href="https://vanihq.com/know-your-datacenter.html">clicking here</a>.
+        </p>
+        <p>If the URL is in the format of .nila.design, then your data is stored in the US(United States) DC.</p>
+      </div>
+
+      <button class="accordion">Will Nila employees have access to our data and what data will they have access to?</button>
+      <div class="panel description">
+        <p>
+          Access to your data is restricted to a small number of employees on a need-to-know basis in order to provide you with technical support. This access is reviewed periodically.
+        </p>
+      </div>
+
+      <button class="accordion">Is data stored on Nila cloud products encrypted?</button>
+      <div class="panel description">
+        <p>
+          We encrypt customer data both in transit and at rest. Data at rest is encrypted using industry-standard AES-256. All customer data is encrypted in transit over public networks using Transport Layer Security (TLS) 1.2/1.3 with Perfect Forward Secrecy (PFS) to protect it from unauthorized disclosure or modification. To know more about encryption at Nila, <a href="../encryption_whitepaper_page/">click here</a>.
+        </p>
+      </div>
+
+      <button class="accordion">How are encryption keys managed, and can customers upload their own keys?</button>
+      <div class="panel description">
+        <p>
+          We own and maintain the keys using our in-house Key Management Service(KMS). Currently, there is no provision for customers to upload their own keys.
+        </p>
+      </div>
+
+      <button class="accordion">How are passwords for Nila cloud services stored?</button>
+      <div class="panel description">
+        <p>
+          The passwords you use to access Nila are stored in a non-reversible encryption scheme. We use bcrypt hashing algorithm with per-user-salt, so that even if our login database was stolen, it would be prohibitively expensive to reverse engineer the passwords.
+        </p>
+      </div>
+
+      <button class="accordion">How is customer data segmentation implemented in Nila cloud services?</button>
+      <div class="panel description">
+        <p>
+          Our framework distributes and maintains the cloud space for our customers. Data of multiple customers is logically separated from each other and our framework ensures that no customer's service data becomes accessible to another customer.
+        </p>
+      </div>
+
+      <button class="accordion">How does Nila protect itself against DDos attacks?</button>
+      <div class="panel description">
+        <p>
+          We use technologies from well-established and trustworthy service providers, who offer multiple DDoS mitigation capabilities to prevent disruptions caused by such attacks.
+        </p>
+      </div>
+
+      <button class="accordion">Does Nila conduct penetration tests and code scans?</button>
+      <div class="panel description">
+        <p>
+          Yes, we conduct automated and manual penetration testing efforts regularly. We use a combination of certified third party scanning tools and in-house tools for scanning codes.
+        </p>
+      </div>
+
+      <button class="accordion">I found a vulnerability in one of your products. How do I report it?</button>
+      <div class="panel description">
+        <p>
+          If you discover a vulnerability in one of our products, you can let us know so that we can fix it as soon as possible. We also have a responsible disclosure policy and bug bounty program. Please find further details at https://bugs.zohosecurity.com/
+        </p>
+      </div>
+
+      <button class="accordion">Does Nila have an incident response program?</button>
+      <div class="panel description">
+        <p>
+          We have a dedicated Incident Response Team which is responsible for incident detection, assessment, forensics, containment, and recovery activities. In cases where we are controllers of data and an incident leads to a data breach, the affected customers will be notified within 72 hours after we become aware of it. In cases where we are processors of data and an incident leads to a data breach, the respective controllers will be informed without undue delay.
+        </p>
+        <p>
+          For general incidents, we will notify users through our blogs, forums, and social media. For incidents specific to an individual user or an organization, we will notify the concerned party through email (using their primary email address). The Complete report will be provided to customers on request within 5 to 7 working days.
+        </p>
+      </div>
+
+      <button class="accordion">What are Nila's responsibilities in the event of a security incident?</button>
+      <div class="panel description">
+        <p>
+          We notify the incidents that apply to you, along with suitable actions that you may need to take. We track and close the incidents with appropriate corrective actions. Whenever applicable, we provide you with necessary evidence regarding incidents that apply to you. Root Cause Analysis will be provided on request.
+        </p>
+      </div>
+
+      <button class="accordion">Is Nila PCI DSS compliant?</button>
+      <div class="panel description">
+        <p>The Payments service that the customers use to purchase subscriptions of Nila is PCI compliant.</p>
+        <p>Nila never transmits or stores your credit card details.</p>
+      </div>
+
+      <button class="accordion">As a customer of Nila, what are the additional security options I have to protect my data?</button>
+      <div class="panel description">
+        <p>Additional security features that can be availed by customers:</p>
+        <ul>
+          <li>Multi factor Authentication</li>
+          <li>Configurable password policy</li>
+          <li>IP restrictions</li>
+          <li>Role based Access control</li>
+          <li>Encryption for custom fields</li>
+          <li>Account activity audit</li>
+        </ul>
+      </div>
+
+      <button class="accordion">If a customer discontinues Nila, how long is their data retained?</button>
+      <div class="panel description">
+        <p>
+          We hold the data in your account as long as you choose to use Nila. Once you terminate your Nila user account, your data will eventually get deleted from active database during the next clean-up that occurs once in 6 months. The data deleted from the active database will be deleted from backups after 3 months.
+        </p>
+      </div>
+
+      <button class="accordion">What is Nila's business continuity and disaster recovery plan?</button>
+      <div class="panel description">
+        <p>
+          We have a business continuity plan for our major operations such as support and infrastructure management. For redundancy, Data in primary Data Center (DC) is replicated in the secondary. In case of failure of the primary DC, secondary DC takes over and the operations are carried on smoothly with minimum or no loss of time.
+        </p>
+      </div>
+
+      <button class="accordion">What is your data backup policy?</button>
+      <div class="panel description">
+        <p>
+          We run full back-ups once a week and incremental back-ups everyday. Back-up data in a DC is stored in the same location and encrypted at rest, as the original data. We additionally restore and validate backups every week. A retention time of 3 months is applicable for all backed up data. In case of a request from a specific customer, we will restore their data from the backup and make it available to them.
+        </p>
+      </div>
+
+      <button class="accordion">What controls you have in place while accessing customer data?</button>
+      <div class="panel description">
+        <p>
+          We employ technical access controls and internal policies to prohibit employees from arbitrarily accessing user data. We adhere to the principles of least privilege and role-based permissions to minimize the risk of data exposure. Access to production environments is facilitated through a separate network with stricter rules and hardened devices. Access control is maintained by a central directory and authenticated using a combination of strong passwords, two-factor authentication, and passphrase-protected SSH keys.
+        </p>
+      </div>
+
+      <button class="accordion">What is your availability SLA commitment?</button>
+      <div class="panel description">
+        <p>
+          Our availability SLA commitment is 99.9% monthly uptime. We have redundancies implemented at various levels starting from the infrastructure to the ISP to achieve this. Data from the primary data center is replicated in the secondary, and a read-only version of Nila apps is always served from the secondary data center.
+        </p>
+      </div>
+
+      <button class="accordion">What is your risk assessment process? How often is risk assessment performed?</button>
+      <div class="panel description">
+        <p>
+          We have a risk assessment policy and procedure to identify, analyze and mitigate risks by implementing appropriate controls. We perform risk assessment for every major change that happens in our environment. The overall risks are reviewed and updated once in a year.
+        </p>
+      </div>
+
+      <button class="accordion">What is your employee background verification policy?</button>
+      <div class="panel description">
+        <p>
+          Each employee undergoes a process of background verification. We hire reputed external agencies to perform this check on our behalf. We do this to verify their criminal records, previous employment records if any, and educational background. Until this check is performed, the employee is not assigned tasks that may pose risks to users.
+        </p>
+      </div>
+
+      <button class="accordion">What certifications does Nila possess to demonstrate its compliance with standards?</button>
+      <div class="panel description">
+        <p>
+          We are ISO 27001, ISO 27017 and ISO 27018 certified. And Nila is also SOC 2 Type II compliant in Security, Confidentiality, Processing Integrity , Availability, and Privacy. These ISO and SOC audits are conducted annually, covers all the important and essential controls.
+        </p>
+        <a href="../../Compliance_page/compliance.html">Click here for more details.</a>
+      </div>
+
+      <button class="accordion">Will you share my data for the purpose of law enforcement?</button>
+      <div class="panel description">
+        <p>
+          We always provide utmost importance to customer’s privacy. When we receive requests from law enforcement authorities, we review such requests to see if the applicable legal process is followed to obtain a valid and binding order. We object to overboard or otherwise inappropriate requests. Unless prohibited by law, we notify customers before disclosing customer data so that the customers can seek protection from disclosure.
+        </p>
+      </div>
+
+      <footer id="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+          <div class="footer-left-content">
+            <p class="design-with-nila title-color">
+              Designed in Nila
+              <img class="heart-icon" src="../../assets/svg/heart_icon.svg" />
+            </p>
+            <div class="social-media">
+              <a class="footer-link" cursor-class="squeeze_circle" href="mailto:hi@nila.cloud">hi@nila.cloud</a>
+              <a class="media-icons" href="https://twitter.com/nila" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/twitter_icon.svg" />
+              </a>
+              <a class="media-icons" href="https://www.instagram.com/niladotdesign/" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/instagram_icon.svg" />
+              </a>
+              <a class="media-icons" href="https://www.youtube.com/nila" target="_blank" cursor-class="squeeze_circle">
+                <img src="../../assets/svg/youtube_icon.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-right-content">
+            <div class="footer-links">
+              <a class="footer-link" cursor-class="squeeze_circle" href="../../index.html?src=prenila">Home</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../security_page/nila_security_page.html">Security</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../Compliance_page/compliance.html">Compliance</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../anti_spam_policy_page/anti-spam_policy.html">Anti-spam Policy</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../terms_of_service_page/terms_of_service.html">Terms of Service</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../privacy_page/nila_privacy_page.html">Privacy Policy</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../cookie_policy_page/cookie_policy.html">Cookie Policy</a>
+
+              <a class="footer-link" cursor-class="squeeze_circle" href="../abuse_policy_page/abuse_policy.html">Abuse Policy</a>
+            </div>
+          </div>
+          <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
+      const nilaLogo = document.querySelector(".privacy-nila-logo");
+
+      window.addEventListener("scroll", () => {
+        if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
+          mainTitleWrapperNode.classList.add("shrink");
+          nilaLogo.classList.add("shrink");
+        } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 70) {
+          mainTitleWrapperNode.classList.remove("shrink");
+          nilaLogo.classList.remove("shrink");
+        }
+      });
+
+      const accordion_elements = document.getElementsByClassName("accordion");
+
+      for (let i = 0; i < accordion_elements.length; i++) {
+        accordion_elements[i].addEventListener("click", () => {
+          accordion_elements[i].classList.toggle("accordion-active");
+
+          let panel = accordion_elements[i].nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.style.transition = "all 0.3s ease-out";
+            panel.style.padding = "0px";
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + 40 + "px";
+            panel.style.transition = "max-height 0.3s ease-out";
+            panel.style.padding = "20px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
