@@ -60,7 +60,7 @@
               <td>Session</td>
             </tr>
             <tr>
-              <td>csr* / *csr* / *csr, ZSL_CSRF_TOKEN, CT_CSRF_TOKEN, RTCPLATFORM_CSRF_TOKEN</td>
+              <td>csr* / *csr* / *csr, NILA_CSRF_TOKEN, CT_CSRF_TOKEN, RTCPLATFORM_CSRF_TOKEN</td>
               <td>Website security</td>
               <td>Session</td>
             </tr>
@@ -99,6 +99,16 @@
               <td>Manage sign-in for client portal</td>
               <td>Session</td>
             </tr>
+            <tr>
+              <td>has_js</td>
+              <td>1 or false (1) -</td>
+              <td>Session</td>
+            </tr>
+            <tr>
+              <td>^IAMSATCK_[0-9]+$</td>
+              <td>It is used cases like control signin brute Force attacks from a browser.</td>
+              <td>90 days</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -121,16 +131,24 @@
         <table class="ge-table">
           <tbody>
             <tr>
-              <th>Cookie name</th>
+              <th>Third Party Cookie</th>
               <th>Purpose</th>
               <th>Validity</th>
-              <th>Third Party Name</th>
             </tr>
             <tr>
               <td>__cf_bm</td>
               <td>It is used by Cloudflare’s Bot Management service and helps manage incoming traffic that matches criteria associated with bots</td>
               <td>30 minutes</td>
-              <td>Vimeo</td>
+            </tr>
+            <tr>
+              <td>VISITOR_INFO1_LIVE</td>
+              <td>Measures your bandwidth to determine whether you get the new player interface or the old. Valid for 8 months.</td>
+              <td>8 months</td>
+            </tr>
+            <tr>
+              <td>YSC</td>
+              <td>Registers a unique ID to keep statistics of what videos from YouTube the visitor has seen.</td>
+              <td>Session</td>
             </tr>
           </tbody>
         </table>

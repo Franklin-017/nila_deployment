@@ -25,6 +25,10 @@
   justify-content: end;
 }
 
+.navlink {
+  color: #fff;
+}
+
 .navbar-nav {
   display: flex;
   justify-content: space-between;
@@ -56,17 +60,16 @@
 }
 
 .navlink-btn.gradient-text {
-  background: -webkit-linear-gradient(299deg, #0063f4 60%, #00d0b0 85%);
-  background-clip: border-box;
-  background-clip: border-box;
-  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(299deg, #0063f4 60%, #00d0b0 85%) !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 .navlink:hover,
 .navlink.active {
-  color: #fff;
+  color: var(--accent-color);
 }
 
 .active::after {

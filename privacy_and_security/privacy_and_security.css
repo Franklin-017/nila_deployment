@@ -25,7 +25,7 @@ html {
 
 body {
   width: 100vw;
-  background-color: #f0f5ff;
+  background-color: #ffffff;
 }
 
 body::after {
@@ -69,12 +69,12 @@ a {
   height: 10vh;
   top: 0;
   padding: 3%;
-  box-shadow: 0 0 30px 30px #f0f5ff;
+  box-shadow: 0 0 30px 30px #ffffff;
   z-index: 1;
   margin: auto;
   display: flex;
   align-items: center;
-  background-color: #f0f5ff;
+  background-color: #ffffff;
 }
 
 .privacy-nila-logo {

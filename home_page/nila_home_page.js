@@ -314,16 +314,30 @@ interactiveCanvas.addEventListener("mousemove", () => {
 
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
+let order = 1;
+
+let initialTextSliderWidth = document.querySelector(".is-visible").clientWidth + 4;
+textSlide.style.width = initialTextSliderWidth + 'px';
+
 
 setInterval(() => {
   textSlide.style.width = "0px";
   textSlide.style.overflow = "hidden";
+  if (order >= textAnimation.length) {
+    order = 0;
+  }
   setTimeout(() => {
-    textAnimation.forEach((node) => {
-      node.classList.toggle("is-hidden");
-      node.classList.toggle("is-visible");
+    textAnimation.forEach((node, index) => {
+      if (index === order) {
+        node.classList.add("is-visible");
+        node.classList.remove("is-hidden");
+      } else {
+        node.classList.remove("is-visible");
+        node.classList.add("is-hidden");
+      }
     });
-    const contentWidth = document.querySelector(".is-visible").clientWidth + 3;
+    order++;
+    const contentWidth = document.querySelector(".is-visible").clientWidth + 4;
     textSlide.style.width = contentWidth + "px";
   }, 1000);
 }, 5000);
@@ -376,30 +390,30 @@ collaborationContentNode.forEach((contentNode) => {
   });
 });
 
-const homeSectionContentWords = ["the best product experiences. Together.", "with the flexibility<br /> of the cloud."];
+// const homeSectionContentWords = ["the best product experiences. Together.", "with the flexibility<br /> of the cloud."];
 
-const homeSectionContentElement = document.querySelector(".animate-content");
-let homeSectionContentWordIndex = 0;
+// const homeSectionContentElement = document.querySelector(".animate-content");
+// let homeSectionContentWordIndex = 0;
 
-const animateContent = () => {
-  setInterval(() => {
-    homeSectionContentElement.classList.add("transition");
-    homeSectionContentElement.style.transform = "translateY(15%)";
-    homeSectionContentElement.style.opacity = 0;
-    homeSectionContentWordIndex++;
-    if (homeSectionContentWordIndex >= homeSectionContentWords.length) {
-      homeSectionContentWordIndex = 0;
-    }
-  }, 5000);
-};
+// const animateContent = () => {
+//   setInterval(() => {
+//     homeSectionContentElement.classList.add("transition");
+//     homeSectionContentElement.style.transform = "translateY(15%)";
+//     homeSectionContentElement.style.opacity = 0;
+//     homeSectionContentWordIndex++;
+//     if (homeSectionContentWordIndex >= homeSectionContentWords.length) {
+//       homeSectionContentWordIndex = 0;
+//     }
+//   }, 5000);
+// };
 
-homeSectionContentElement.addEventListener("transitionend", () => {
-  homeSectionContentElement.style.transform = "translateY(0%)";
-  homeSectionContentElement.innerHTML = homeSectionContentWords[homeSectionContentWordIndex];
-  homeSectionContentElement.style.opacity = 1;
-});
+// homeSectionContentElement.addEventListener("transitionend", () => {
+//   homeSectionContentElement.style.transform = "translateY(0%)";
+//   homeSectionContentElement.innerHTML = homeSectionContentWords[homeSectionContentWordIndex];
+//   homeSectionContentElement.style.opacity = 1;
+// });
 
-animateContent();
+// animateContent();
 
 const canvasWrapper = document.querySelector(".canvas-wrapper");
 
