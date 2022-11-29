@@ -5,18 +5,16 @@
   top: 0;
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: difference;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .cursor_circle {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 15px;
+    height: 15px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    opacity: 0.6;
-    background-color: var(--moon-color);
+    background-color: var(--accent-color);
     transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
       width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
@@ -46,8 +44,8 @@
   }
 
   .cursor.squeeze_circle .cursor_circle {
-    width: 20px;
-    height: 20px;
+    width: 5px;
+    height: 5px;
   }
 
   .cursor.remove_circle .cursor_circle {
