@@ -8,16 +8,6 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .cursor_circle {
-    position: relative;
-    width: 15px;
-    height: 15px;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  }
 
   #videoSection {
     cursor: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIAp3aWR0aD0iMzZweCIgaGVpZ2h0PSIzNnB4IiBpZD0iTGF5ZXJfMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMCAwIDcwNC4xNSA4MDEuMTQiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMzUyLjA3IiB5MT0iMCIgeDI9IjM1Mi4wNyIgeTI9IjgwMS4xNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZDBiMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNjNmNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGlkPSJMYXllcl8xLTIiPjxwYXRoIGQ9Ik02ODQuNjcsMzY2LjgzTDU4LjQ0LDUuMjhDMzIuNDctOS43MiwwLDkuMDMsMCwzOS4wMlY3NjIuMTNjMCwyOS45OSwzMi40Nyw0OC43NCw1OC40NCwzMy43NEw2ODQuNjcsNDM0LjMxYzI1Ljk3LTE1LDI1Ljk3LTUyLjQ4LDAtNjcuNDhaIiBzdHlsZT0iZmlsbDp1cmwoI2xpbmVhci1ncmFkaWVudCk7Ii8+PC9nPjwvc3ZnPg=="),
@@ -43,15 +33,6 @@
       width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  .cursor.squeeze_circle .cursor_circle {
-    width: 5px;
-    height: 5px;
-  }
-
-  .cursor.remove_circle .cursor_circle {
-    width: 0px;
-    height: 0px;
-  }
 
   .cursor.video_section .cursor_circle,
   .cursor.canvas_section .cursor_circle {
@@ -60,16 +41,6 @@
 
   .cursor.video_section .video_section_cursor {
     display: block;
-  }
-
-  .cursor.hero_section .opacity_cursor {
-    display: block;
-    opacity: 0;
-    border-radius: 50%;
-  }
-
-  .cursor.cursor.hero_section .opacity_cursor #heroSection::after {
-    opacity: 0;
   }
 }
 
