@@ -31,9 +31,10 @@ body {
 
 .description {
     font-size: 26px;
-    color: #9c9caf;
+    color: #b5b6ba;
     width: 80%;
     line-height: 1.5;
+    letter-spacing: -0.8px;
 }
 
 .contact-us-img {
@@ -51,8 +52,8 @@ input,
 textarea {
     border-radius: 50px;
     outline: none;
-    padding: 20px;
-    border: 1px solid #1b1f2a;
+    padding: 20px 0 20px 30px;
+    border: 1px solid #444a5c;
     background-color: transparent;
     color: #fff;
     width: 100%;
@@ -72,7 +73,7 @@ textarea {
     top: 50%;
     left: 0;
     transform: translate(10px, -50%);
-    color: #3f4249;
+    color: #7e828a;
     background-color: #090d18;
     padding: 0 20px;
     transition: all 0.3s ease-in;
@@ -98,23 +99,29 @@ textarea {
 }
 
 .message-field {
-    margin-bottom: 60px;
-}
-
-.submit-wrapper {
     margin-bottom: 30px;
 }
 
+.submit-wrapper {
+    margin-bottom: 60px;
+}
+
 .submit-btn {
-    background-color: #0063f2;
+    background-color: #263049;
     font-size: 25px;
-    color: #fff;
+    color: #d3d8e5;
     width: 200px;
     height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.submit-btn:hover {
+    background-color: #324566;
 }
 
 input:focus,
@@ -136,10 +143,30 @@ textarea {
 }
 
 a {
-    color: #0063f2;
+    color: #bdbec1;
     text-decoration: none;
+    position: relative;
+}
+a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #bdbec1;
+    transition: all 0.3s ease-in;
+}
+
+a:hover::after {
+    content: '';
+    width: 100%;
 }
 
 .twitter_link {
     color: #00acee;
+}
+
+.twitter_link:hover::after {
+    width: 0;
 }
