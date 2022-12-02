@@ -89,17 +89,28 @@ textarea {
 
 .name-field {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     width: 100%;
 }
 
 .email-field {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
 .message-field {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
+}
+
+.name-empty-error,
+.email-empty-error,
+.email-invalid-error,
+.message-empty-error {
+    visibility: hidden;
+    position: absolute;
+    bottom: -25px;
+    left: 20px;
+    color: #e08585;
 }
 
 .submit-wrapper {
