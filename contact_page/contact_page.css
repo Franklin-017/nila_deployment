@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #090d18;
+}
+
+.contact-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: "Zoho_Puvi_Regular";
+    color: #fff;
+}
+
+.left-layout,
+.right-layout {
+    width: 50%;
+}
+
+.title {
+    font-size: 62px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 26px;
+    color: #9c9caf;
+    width: 80%;
+    line-height: 1.5;
+}
+
+.contact-us-img {
+    margin-top: 100px;
+    width: 300px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #3f4249;
+    visibility: hidden;
+}
+
+input,
+textarea {
+    border-radius: 50px;
+    outline: none;
+    padding: 20px;
+    border: 1px solid #1b1f2a;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.field-area,
+.textarea-field {
+    width: 100%;
+    position: relative;
+}
+
+.field-area .placeholder,
+.textarea-field .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(10px, -50%);
+    color: #3f4249;
+    background-color: #090d18;
+    padding: 0 20px;
+    transition: all 0.3s ease-in;
+}
+
+.animate-input-placeholder {
+    top: 0px !important;
+}
+
+.textarea-field .placeholder {
+    top: 30px;
+}
+
+.name-field {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.email-field {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.message-field {
+    margin-bottom: 60px;
+}
+
+.submit-wrapper {
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    background-color: #0063f2;
+    font-size: 25px;
+    color: #fff;
+    width: 200px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+input:focus,
+textarea:focus {
+    caret-color: #0063f2;
+}
+
+textarea {
+    border-radius: 25px;
+    resize: none;
+    font-size: 16px;
+    font-family: "Zoho_Puvi_Regular";
+}
+
+.help-section {
+    line-height: 2;
+    font-size: 18px;
+    color: #777777;
+}
+
+a {
+    color: #0063f2;
+    text-decoration: none;
+}
+
+.twitter_link {
+    color: #00acee;
+}

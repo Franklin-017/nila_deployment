@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/nila-favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="./contact_page.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="contact-us-container">
+        <div class="left-layout">
+            <div class="heading-section">
+                <p class="title">Contact us</p>
+                <p class="description">Send us a note here, if you'd like to get in touch with us.</p>
+            </div>
+            <div class="animation-section">
+                <img class="contact-us-img" src="../assets/img/contact_us_illustration.png" >
+            </div>
+        </div>
+        <div class="right-layout">
+            <div class="contact-form">
+                <div class="name-field">
+                    <div class="field-area" style="margin-right: 10px;">
+                        <input type="text" placeholder="First name" />
+                        <span class="placeholder">First name</span>
+                    </div>
+                    <div class="field-area">
+                        <input type="text" placeholder="Last name" />
+                        <span class="placeholder">Last name</span>
+                    </div>
+                </div>
+                <div class="email-field">
+                    <div class="field-area">
+                        <input type="email" placeholder="Email address" />
+                        <span class="placeholder">Email address</span>
+                    </div>
+                </div>
+                <div class="message-field">
+                    <div class="textarea-field">
+                        <textarea name="message" id="message" cols="40" rows="5" placeholder="Enter your message"></textarea>
+                        <span class="placeholder">Enter your message</span>
+                    </div>
+                </div>
+
+                <div class="submit-wrapper">
+                    <div class="submit-btn">Submit</div>
+                </div>
+
+                <div class="help-section">
+                    <p>For any help, you can always reach us at <a href="mailto:help@nila.design">help@nila.design</a></p>
+                    <p>Stay in touch on <a class="twitter_link" href="https://twitter.com/nila">Twitter.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const inputField = document.querySelectorAll("input");
+        const textareaField = document.querySelector("textarea");
+        const placeholderText = document.querySelectorAll(".placeholder");
+
+        inputField.forEach(field => {
+            field.addEventListener("focus", () => {
+                const placeholderSpan = field.nextElementSibling;
+                placeholderSpan.classList.add("animate-input-placeholder");
+            })
+        })
+
+        placeholderText.forEach(text => {
+            text.addEventListener("click", () => {
+                text.classList.add("animate-input-placeholder");
+                const inputField = text.previousElementSibling;
+                inputField.focus();
+            })
+        })
+
+        textareaField.addEventListener("focus", () => {
+            const placeholderSpan = textareaField.nextElementSibling;
+            placeholderSpan.classList.add("animate-input-placeholder");
+        })
+
+        document.addEventListener("click", (e) => {
+            inputField.forEach(field => {
+                const inputValue = field.value.trim();
+                const placeholderSpan = field.nextElementSibling;
+                if (inputValue === "" && e.target !== field && e.target !== placeholderSpan) {
+                    placeholderSpan.classList.remove("animate-input-placeholder");
+                    field.value = '';
+                } 
+            })
+
+            const textareaValue = textareaField.value.trim();
+            const placeholderSpan = textareaField.nextElementSibling;
+            if (textareaValue === "" && e.target !== textareaField && e.target !== placeholderSpan) {
+                placeholderSpan.classList.remove("animate-input-placeholder");
+                textareaField.value = '';
+            }
+
+        })
+    </script>
+</body>
+</html>

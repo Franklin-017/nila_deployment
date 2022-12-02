@@ -129,6 +129,40 @@ a {
   height: 4px;
 }
 
+.layout-container {
+  display: flex;
+}
+
+.left-container {
+  width: 15%;
+  height: 100%;
+  position: fixed;
+  margin-top: 12vh;
+}
+
+.right-container {
+  width: 80%;
+  margin: auto;
+  margin-right: 0;
+}
+
+.contains-submenus {
+  cursor: pointer;
+}
+
+.submenus-container {
+  height: 0;
+  margin-left: 20px;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.show-submenu {
+  height: 300px;
+  visibility: visible;
+  transition: all 0.3s ease-in;
+}
+
 .last-updated-on {
   text-align: right;
 }
@@ -173,6 +207,10 @@ a {
 
 .anti-spam-list li::after {
   transform: translateY(50%);
+}
+
+a:-webkit-any-link {
+  color: var(--accent-color);
 }
 
 a.text-hover {
@@ -277,7 +315,7 @@ a.text-hover {
 }
 
 .footer-link {
-  color: #5c5c5c;
+  color: #5c5c5c !important;
   text-decoration: none;
 }
 
@@ -307,6 +345,10 @@ a.text-hover {
 
 .margin-bottom {
   margin-bottom: 80px;
+}
+
+.world-map-img {
+  width: 100%;
 }
 
 @media screen and (max-width: 1400px) {
