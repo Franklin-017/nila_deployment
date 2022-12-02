@@ -77,7 +77,7 @@
 
             <p class="description">There are two types of data that we deal with-</p>
             <p class="description">Customer data- The data you store with us through Nila. Typically, this data is
-                handled by a Nila through a customer's account that can be identified in our IAM (Identity and Access
+                handled by Nila through a customer's account that can be identified in our IAM (Identity and Access
                 Management) database. Depending on the sensitivity of data and the user's requirements, some customer
                 data are encrypted while some are not. Sensitive data are those that can cause harm to related
                 individuals or organisations when exposed.</p>
@@ -154,6 +154,8 @@
                 </ol>
             </ul>
             <p class="description">The below image paints a broad picture of our encryption strategy:</p>
+
+            <img style="width: 80%;" src="../../../assets/img/encryption-strategy.jpg" alt="">
         </div>
 
         <div class="margin-bottom">
@@ -321,6 +323,8 @@
                 <li>Master key</li>
             </ol>
             <p class="description">The KMS manages these elements in the following manner:</p>
+
+            <img style="width: 80%;" src="../../../assets/img/encryption-kms.jpg" />
         </div>
 
         <div class="margin-bottom">
@@ -337,9 +341,11 @@
             <p class="subheading">Where are the keys stored?</p>
             <p class="description">The DEKs generated in the KMS are encrypted using a KEK. This provides an additional
                 layer of security. The encrypted DEKs are stored in the KMS database.</p>
+            <img style="width: 80%;" src="../../../assets/img/encryption-layers-security.jpg" />
             <p class="description">We separate the keys physically (store them in different locations) so that an
                 attacker who gets hold of one key cannot get hold of other related keys as well. We encrypt the KEK
                 using a master key and store it in a separate server.</p>
+            <img style="width: 80%;" src="../../../assets/img/encryption-layers-security1.jpg" />
             <p class="description">An attacker will not be able to compromise the data by merely targeting the KMS
                 alone.</p>
         </div>
