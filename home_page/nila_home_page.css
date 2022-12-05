@@ -102,6 +102,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  display: none;
 }
 
 .vs-content {
@@ -401,6 +402,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  display: none;
 }
 
 .fly-solo-animation,

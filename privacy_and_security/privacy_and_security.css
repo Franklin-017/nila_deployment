@@ -152,15 +152,14 @@ a {
 
 .privacy_policy_nav {
   user-select: none;
-  font-size: 14px;
-  font-family: "Zoho_Puvi_Medium";
-  font-weight: 600;
+  font-size: 16px;
+  font-family: "Zoho_Puvi_Regular";
   margin-bottom: 20px;
 }
 
 .privacy_policy_nav a:-webkit-any-link ,
 .privacy_policy_nav a{
-  color: #888888;
+  color: #5c5c5c;
 }
 
 .privacy_policy_nav a:hover {
@@ -177,8 +176,6 @@ a {
   margin-left: 20px;
   margin-top: 20px;
 }
-
-
 
 .submenu {
   display: block;
@@ -285,8 +282,7 @@ a.text-hover {
 
 .privacy-container #footer {
   width: 80vw;
-  margin-top: 100px;
-  min-height: 180px;
+  margin-top: 80px;
 }
 
 .privacy-container .footer-line {
@@ -296,7 +292,7 @@ a.text-hover {
 
 .privacy-container .footer-container {
   flex-direction: column;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .privacy-container .footer-left-content {
