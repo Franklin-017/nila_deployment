@@ -168,6 +168,7 @@ a {
 
 .privacy_policy_nav a.active-menu {
   color: #0063f4;
+  font-family: "Zoho_Puvi_Medium";
 }
 
 .submenus-container {
@@ -178,8 +179,8 @@ a {
 }
 
 .submenu {
-  display: block;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .last-updated-on {
@@ -296,7 +297,7 @@ a.text-hover {
 .footer-active::after {
   content: "";
   position: absolute;
-  background: var(--accent-color);
+  background: #5c5c5c;
   bottom: -1px;
   left: 0;
   width: 100%;
@@ -304,8 +305,15 @@ a.text-hover {
   animation: border-slide-in 0.3s ease-in;
 }
 
+.active-parent-menu {
+  font-family: "Zoho_Puvi_Medium";
+}
+
+.active-menu.text-hover:hover::after {
+  background-color: #0063f4;
+}
+
 .footer-link {
-  color: #5c5c5c !important;
   text-decoration: none;
 }
 
