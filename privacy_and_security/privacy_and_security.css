@@ -134,14 +134,14 @@ a {
 }
 
 .left-container {
-  width: 15%;
+  width: 40%;
   height: 100%;
   position: fixed;
   margin-top: 12vh;
 }
 
 .right-container {
-  width: 80%;
+  width: 60%;
   margin: auto;
   margin-right: 0;
 }
@@ -150,24 +150,39 @@ a {
   cursor: pointer;
 }
 
-#privacy_policy_nav {
+.privacy_policy_nav {
   user-select: none;
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: "Zoho_Puvi_Medium";
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.privacy_policy_nav a:-webkit-any-link ,
+.privacy_policy_nav a{
+  color: #888888;
+}
+
+.privacy_policy_nav a:hover {
+  color: #777777;
+}
+
+.privacy_policy_nav a.active-menu {
+  color: #0063f4;
 }
 
 .submenus-container {
-  max-height: 0;
-  margin-left: 20px;
-  visibility: hidden;
-  overflow: hidden;
   transition: 0s ;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-.show-submenu {
-  transition: all 0.5s ease-in;
-  max-height: 300px;
-  visibility: visible;
+
+
+.submenu {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .last-updated-on {
