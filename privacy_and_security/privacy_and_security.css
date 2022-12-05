@@ -150,17 +150,24 @@ a {
   cursor: pointer;
 }
 
+#privacy_policy_nav {
+  user-select: none;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
 .submenus-container {
-  height: 0;
+  max-height: 0;
   margin-left: 20px;
   visibility: hidden;
-  transition: all 0.3s ease-in;
+  overflow: hidden;
+  transition: 0s ;
 }
 
 .show-submenu {
-  height: 300px;
+  transition: all 0.5s ease-in;
+  max-height: 300px;
   visibility: visible;
-  transition: all 0.3s ease-in;
 }
 
 .last-updated-on {

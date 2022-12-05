@@ -38,7 +38,7 @@
             <a href="../terms_of_service/ipr_complaints/ipr_complaints.html">IPR complaints</a>
           </div>
           <div id="privacy_policy_nav" >
-            <a class="contains-submenus" href="../security_policy/security_page/nila_security_page.html" >Security</a>
+            <a href="../security_policy/security_page/nila_security_page.html" >Security</a>
             <div class="submenus-container">
               <a class="submenu" href="../security_policy/encryption_whitepaper_page/encryption_whitepaper.html">Encryption whitepaper</a>
               <a class="submenu" href="../security_policy/shared_responsibility/shared_responsibility.html">Understanding shared responsibility with Nila</a>
@@ -813,9 +813,7 @@
         menu.addEventListener('click', () => {
           if (menu.classList.contains("contains-submenus")) {
             const submenuContainer = menu.nextElementSibling;
-            submenuContainer.style.transition = "max-height 0.3s ease-out";
             submenuContainer.classList.toggle("show-submenu");
-            console.log(submenuContainer);
           }
         })
       })

@@ -65,7 +65,7 @@ submitBtn.addEventListener("click", () => {
             } else if (inputFieldName === "email") {
                 emailEmptyError.style.visibility = "visible";
             }
-        } if (inputFieldName === "email" && !isValidEmail(fieldValue)) {
+        } else if (inputFieldName === "email" && !isValidEmail(fieldValue)) {
                 emailInvalidError.style.visibility = "visible";
         } 
     })
