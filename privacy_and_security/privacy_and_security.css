@@ -280,38 +280,10 @@ a.text-hover {
   position: relative;
 }
 
-.privacy-container #footer {
-  width: 80vw;
-  margin-top: 80px;
-}
 
 .privacy-container .footer-line {
   background: url("../../assets/img/nila-privacy-footer-line.png");
   margin-bottom: 20px;
-}
-
-.privacy-container .footer-container {
-  flex-direction: column;
-  padding-bottom: 30px;
-}
-
-.privacy-container .footer-left-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.privacy-container .footer-right-content {
-  margin-bottom: 10px;
-}
-
-.privacy-container .footer-links {
-  margin-bottom: 15px;
-}
-
-.privacy-container .social-media img {
-  cursor: pointer;
 }
 
 .text-hover,
