@@ -1,70 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../assets/img/nila-favico.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./contact_page.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <title>Contact Us</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/img/nila-favico.png" type="image/x-icon">
-    <link rel="stylesheet" href="./contact_page.css">
-    <link rel="stylesheet" href="../css/fonts.css">
-    <title>Contact Us</title>
-</head>
+    <body>
+        <nav class="navbar">
+            <a class="brand-logo-wrapper" cursor-class="squeeze_circle">
+                <img class="brand-logo" src="../assets/svg/nila_logo.svg" />
+            </a>
 
-<body>
-    <div class="contact-us-container">
-        <div class="left-layout">
-            <div class="heading-section">
-                <p class="title">Contact us</p>
-                <p class="description">Send us a note here, if you'd like to get in touch with us.</p>
+            <div class="hamburger-menu">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
             </div>
-            <div class="animation-section">
-                <img class="contact-us-img" src="../assets/img/contact_us_illustration.png">
+
+            <div class="navlinks">
+                <div class="navbar-nav">
+                    <a class="navlink active" cursor-class="squeeze_circle">Home</a>
+                    <a href="./about_page/nila_about_page.html" class="navlink" cursor-class="squeeze_circle">About</a>
+                </div>
+                <button href="#" class="navlink-btn join-waitlist-btn gradient-border-btn gradient-text" cursor-class="squeeze_circle">Join waitlist</button>
             </div>
+        </nav>
+        <div class="container">
+            <div class="contact-us-container">
+                <div class="left-layout">
+                    <div class="heading-section">
+                        <p class="title">Contact us</p>
+                        <p class="description">Send us a note here, if you'd like to get in touch with us.</p>
+                    </div>
+                    <div class="animation-section">
+                        <img class="contact-us-img" src="../assets/img/contact_us_illustration.png" />
+                    </div>
+                </div>
+                <div class="right-layout">
+                    <div class="contact-form">
+                        <div class="name-field">
+                            <div class="field-area" style="margin-right: 10px">
+                                <input type="text" placeholder="name" />
+                                <span class="placeholder">First name</span>
+                                <span class="name-empty-error">Enter a name</span>
+                            </div>
+                            <div class="field-area">
+                                <input type="text" placeholder="last name" />
+                                <span class="placeholder">Last name</span>
+                            </div>
+                        </div>
+                        <div class="email-field">
+                            <div class="field-area">
+                                <input type="email" placeholder="email" />
+                                <span class="placeholder">Email address</span>
+                                <span class="email-empty-error">Enter a email</span>
+                                <span class="email-invalid-error">Enter a valid email</span>
+                            </div>
+                        </div>
+                        <div class="message-field">
+                            <div class="textarea-field">
+                                <textarea name="message" id="message" cols="40" rows="5"></textarea>
+                                <span class="placeholder">Enter your message</span>
+                                <span class="message-empty-error">You can't leave this blank</span>
+                            </div>
+                        </div>
+
+                        <div class="submit-wrapper">
+                            <div class="submit-btn">Submit</div>
+                        </div>
+
+                        <div class="help-section">
+                            <p>For any help, you can always reach us at <a href="mailto:help@nila.design">help@nila.design</a></p>
+                            <p>Stay in touch on <a class="twitter_link" href="https://twitter.com/nila">Twitter.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer-line"></div>
+                <div class="footer-container">
+                    <div class="footer-left-content">
+                        <div class="contribution-wrapper">
+                            <p class="design-with-nila title-color">Designed in Nila</p>
+                            <img class="heart-icon" src="../assets/svg/heart_icon.svg" />
+                        </div>
+
+                        <div class="social-media">
+                            <a href="https://twitter.com/nila" target="_blank" cursor-class="squeeze_circle">
+                                <img src="../assets/svg/twitter_icon.svg" />
+                            </a>
+                            <a href="https://www.instagram.com/niladotdesign/" target="_blank" cursor-class="squeeze_circle">
+                                <img src="../assets/svg/instagram_icon.svg" />
+                            </a>
+                            <a href="https://www.youtube.com/nila" target="_blank" cursor-class="squeeze_circle">
+                                <img src="../assets/svg/youtube_icon.svg" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-right-content">
+                        <div class="footer-links">
+                            <a class="text-hover footer-link" cursor-class="squeeze_circle" href="./contact_page/contact_page.html">Get in touch</a>
+                            <div class="seperator"></div>
+                            <a class="text-hover footer-link" cursor-class="squeeze_circle" href="./privacy_and_security/privacy_page/nila_privacy_page.html"
+                                >Privacy</a
+                            >
+                            <div class="seperator"></div>
+                            <a
+                                class="text-hover footer-link"
+                                cursor-class="squeeze_circle"
+                                href="./privacy_and_security/terms_of_service/terms_of_service_page/terms_of_service.html"
+                                >Legal</a
+                            >
+                        </div>
+                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <div class="right-layout">
-            <div class="contact-form">
-                <div class="name-field">
-                    <div class="field-area" style="margin-right: 10px;">
-                        <input type="text" placeholder="name" />
-                        <span class="placeholder">First name</span>
-                        <span class="name-empty-error">Enter a name</span>
-                    </div>
-                    <div class="field-area">
-                        <input type="text" placeholder="last name" />
-                        <span class="placeholder">Last name</span>
-                    </div>
-                </div>
-                <div class="email-field">
-                    <div class="field-area">
-                        <input type="email" placeholder="email" />
-                        <span class="placeholder">Email address</span>
-                        <span class="email-empty-error">Enter a email</span>
-                        <span class="email-invalid-error">Enter a valid email</span>
-                    </div>
-                </div>
-                <div class="message-field">
-                    <div class="textarea-field">
-                        <textarea name="message" id="message" cols="40" rows="5"></textarea>
-                        <span class="placeholder">Enter your message</span>
-                        <span class="message-empty-error">You can't leave this blank</span>
-                    </div>
-                </div>
-
-                <div class="submit-wrapper">
-                    <div class="submit-btn">Submit</div>
-                </div>
-
-                <div class="help-section">
-                    <p>For any help, you can always reach us at <a href="mailto:help@nila.design">help@nila.design</a>
-                    </p>
-                    <p>Stay in touch on <a class="twitter_link" href="https://twitter.com/nila">Twitter.</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="./contact_page.js"></script>
-</body>
-
+        <script src="./contact_page.js"></script>
+    </body>
 </html>
