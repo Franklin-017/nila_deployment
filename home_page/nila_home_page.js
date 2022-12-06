@@ -220,8 +220,6 @@ window.addEventListener("scroll", () => {
     if (scrollTop > (scrollTop + flySoloSectionPosition).toFixed() - clientHeight * 0.8) {
         flySoloLoader.play();
     }
-
-    animateCollabSection();
 });
 
 const cardsElement = [
@@ -358,10 +356,9 @@ function renderHeadingsContent(node) {
     if (node.className.includes("team-invite")) {
         showRespCollabContent(0);
         inviteTeamLoader.play();
-    } else if (node.className.includes("feedback-fuel")){
+    } else if (node.className.includes("feedback-fuel")) {
         showRespCollabContent(1);
-
-    }else if (node.className.includes("collab")) {
+    } else if (node.className.includes("collab")) {
         showRespCollabContent(2);
         commentConverseLoader.play();
     } else if (node.className.includes("smooth")) {
@@ -383,14 +380,13 @@ function showRespCollabContent(index) {
 }
 
 collaborationContentNode.forEach((contentNode) => {
-    contentNode.addEventListener("click", (event) => {
-        if (event.target.className === "gradient-text") {
-            let parentNode = event.target.parentNode;
-            let greatParentNode = parentNode.parentNode;
-            unselectSelectedContent();
-            renderHeadingsContent(parentNode);
-            greatParentNode.classList.add("content-selected");
-        }
+    contentNode.addEventListener("mouseenter", (event) => {
+        console.log(event.target);
+        let parentNode = event.target;
+        let greatParentNode = parentNode.parentNode;
+        unselectSelectedContent();
+        renderHeadingsContent(parentNode);
+        greatParentNode.classList.add("content-selected");
     });
 });
 
@@ -403,28 +399,3 @@ canvasWrapper.onwheel = () => {
 document.querySelector(".blank").onmousemove = () => {
     document.querySelector(".blank").style.visibility = "hidden";
 };
-
-
-function animateCollabSection() {
-  const collabFeatureSection = document.querySelectorAll(".collab-feature-controller");
-  const { scrollTop } = document.documentElement;
-
-  for (let ind = 0; ind < collabFeatureSection.length; ind++) {
-    let cur_element = collabFeatureSection[ind];
-    let cur_pos = scrollTop + 300;
-    if (innerHeight < 600) {
-      cur_pos = scrollTop + 200;
-    }
-
-    let top = cur_element.offsetTop;
-    let bottom = top + cur_element.clientHeight;
-    let childNode = cur_element.children[0];
-
-    if (cur_pos >= top && cur_pos <= bottom) {
-      childNode.classList.add("content-selected");
-      renderHeadingsContent(childNode.children[1]);
-    } else {
-      childNode.classList.remove("content-selected");
-    }
-  }
-}

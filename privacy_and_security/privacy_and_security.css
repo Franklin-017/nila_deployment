@@ -390,6 +390,14 @@ a.text-hover {
     background-size: 15px;
   }
 
+  .left-container {
+    display: none;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
   .priv-box p::before {
     height: 42px;
   }

@@ -5,27 +5,15 @@
     background-color: transparent;
     color: #3e434e;
     cursor: pointer;
-    padding: 18px;
+    padding: 18px 30px 18px 0px; 
     width: 100%;
-    box-shadow: 0px 0px 7px #a3b8e8;
     text-align: left;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-    border-radius: 10px;
     font-size: 22px;
     position: relative;
-}
-
-.accordion-active {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    position: relative;
-}
-
-.accordion-active,
-.accordion:hover {
-    background-color: #a3b8e8;
+    border: none;
 }
 
 .accordion:after {
@@ -47,12 +35,11 @@
 .panel {
     background-color: transparent;
     max-height: 0;
-    box-shadow: 0px 0px 7px #a3b8e8;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     width: 100%;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
 }
 
 .panel.text-l {
