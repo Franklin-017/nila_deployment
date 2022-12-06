@@ -103,7 +103,7 @@ a {
 }
 
 .privacy-container {
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   color: #4f5460;
   position: relative;
@@ -134,14 +134,14 @@ a {
 }
 
 .left-container {
-  width: 40%;
+  width: 30%;
   height: 100%;
   position: fixed;
   margin-top: 12vh;
 }
 
 .right-container {
-  width: 60%;
+  width: 70%;
   margin: auto;
   margin-right: 0;
 }
