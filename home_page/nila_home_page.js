@@ -315,9 +315,11 @@ interactiveCanvas.addEventListener("mousemove", () => {
 const textAnimation = document.querySelectorAll(".hs-animate-text");
 const textSlide = document.querySelector(".text-slide");
 let order = 1;
-
-let initialTextSliderWidth = document.querySelector(".is-visible").clientWidth + 4;
-textSlide.style.width = initialTextSliderWidth + "px";
+setTimeout(() => {
+    let initialTextSliderWidth = document.querySelector(".is-visible").clientWidth + 4;
+    console.log(initialTextSliderWidth);
+    textSlide.style.width = initialTextSliderWidth + "px";
+}, 10);
 
 setInterval(() => {
     textSlide.style.width = "0px";
