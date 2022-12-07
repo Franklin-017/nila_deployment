@@ -159,6 +159,18 @@ const commentConverseLottie = {
     },
 };
 
+const feedbackFuelElement =  document.querySelector(".feedback-fuel-animation");
+const feedbackFuelLottie = {
+    container: feedbackFuelElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    path: "../assets/lottie/feedbackfuels.json",
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
 const inviteTeamLottieMobile = {
     container: document.querySelector(".invite-team-animation-mobile"),
     renderer: "svg",
@@ -205,6 +217,7 @@ const collabSectionLoader = bodymovin.loadAnimation(collabSectionAnimation);
 const inviteTeamLoader = bodymovin.loadAnimation(inviteTeamLottie);
 const smootherHandsoffLoader = bodymovin.loadAnimation(smootherHandsoffLottie);
 const commentConverseLoader = bodymovin.loadAnimation(commentConverseLottie);
+const feedbackFuelLoader = bodymovin.loadAnimation(feedbackFuelLottie);
 bodymovin.loadAnimation(inviteTeamLottieMobile);
 bodymovin.loadAnimation(smootherHandsoffLottieMobile);
 bodymovin.loadAnimation(commentConverseLottieMobile);
@@ -360,6 +373,7 @@ function renderHeadingsContent(node) {
         inviteTeamLoader.play();
     } else if (node.className.includes("feedback-fuel")) {
         showRespCollabContent(1);
+        feedbackFuelLoader.play();
     } else if (node.className.includes("collab")) {
         showRespCollabContent(2);
         commentConverseLoader.play();
