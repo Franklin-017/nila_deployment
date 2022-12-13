@@ -58,6 +58,8 @@
   /* width: 160px; */
   height: 50px;
   letter-spacing: 0.6px;
+  background-color: transparent;
+  color: #fff;
 }
 
 .navlink-btn.gradient-text {
@@ -143,8 +145,8 @@
 
 .navbar-squeeze {
   background-color: transparent;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
 }
 
 @media screen and (max-width: 2560px) {
@@ -238,7 +240,7 @@
     z-index: 4;
   }
 
-  .navlinks {
+  /* .navlinks {
     width: 100vw;
     height: 100vh;
     background-color: #090d18f7;
@@ -249,7 +251,7 @@
     align-items: flex-start;
     left: 0px;
     transform: translateY(-110%);
-  }
+  } */
 
   .navlinks,
   .navbar-nav {
@@ -270,7 +272,6 @@
 
 @media screen and (max-width: 679px) {
   .navlink-btn {
-    width: 120px;
     height: 40px;
   }
 }

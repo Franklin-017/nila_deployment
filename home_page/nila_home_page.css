@@ -167,6 +167,7 @@
   left: -50%;
   top: 10%;
   height: 75vh;
+  width: 66vw;
 }
 
 .native-mac-section-content {
@@ -303,12 +304,12 @@
 .collab-feature-section {
   height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
 .collab-feature-controller {
-  width: 100%;
+  width: 80%;
   display: flex;
 }
 
@@ -326,8 +327,9 @@
 
 .invite-team-animation,
 .comment-converse-animation,
-.smoother-handsoff-animation {
-  height: 200px;
+.smoother-handsoff-animation,
+.feedback-fuel-animation {
+  height: 180px;
 }
 
 .show-on-hover {
@@ -337,6 +339,7 @@
 
 .col-content {
   width: 100%;
+  height: 100%;
   padding-left: 20px;
   opacity: 0.4;
   transition: opacity 0.5s ease-in;
@@ -426,6 +429,22 @@
 }
 
 /* /Fly Solo Section/ */
+
+.about-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-link img {
+  width: 20px;
+}
 
 /* Responsiveness  */
 
@@ -961,7 +980,8 @@
 
   .invite-team-animation-mobile,
   .comment-converse-animation-mobile,
-  .smoother-handsoff-animation-mobile {
+  .smoother-handsoff-animation-mobile,
+  .feedback-fuel-animation-mobile {
     width: 50%;
     width: 150px;
   }

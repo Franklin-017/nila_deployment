@@ -47,11 +47,11 @@ function updateCursor() {
 }
 
 function cursorMovementLoop() {
-  updateCursor();
-  requestAnimationFrame(cursorMovementLoop);
+  // updateCursor();
+  // requestAnimationFrame(cursorMovementLoop);
 }
 
-requestAnimationFrame(cursorMovementLoop);
+// requestAnimationFrame(cursorMovementLoop);
 
 const cursorModifiers = document.querySelectorAll("[cursor-class]");
 

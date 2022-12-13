@@ -3,605 +3,673 @@
 @import url("../css/animation.css");
 
 :root {
-  --content-width: 75%;
-  --box-content-width: 70%;
-  --main-font-size: 80px;
-  --main-font-size-shrink: 50px;
-  --title-font-size: 35px;
-  --content-font-size: 20px;
-  --list-font-size: 20px;
-  --accent-color: #0063f4;
+    --content-width: 75%;
+    --box-content-width: 70%;
+    --main-font-size: 80px;
+    --main-font-size-shrink: 45px;
+    --title-font-size: 35px;
+    --content-font-size: 20px;
+    --list-font-size: 20px;
+    --accent-color: #0063f4;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  cursor: auto;
+    cursor: auto;
 }
 
 body {
-  width: 100vw;
-  background-color: #ffffff;
+    width: 100vw;
+    background-color: #ffffff;
 }
 
 body::after {
-  content: "";
-  position: fixed;
-  top: -55px;
-  right: -22px;
-  background: url(../../assets/svg/nila-privacy-top-mandala.svg) no-repeat;
-  width: 264px;
-  height: 386px;
-  background-size: 100%;
-  z-index: 2;
+    content: "";
+    position: fixed;
+    top: -55px;
+    right: -22px;
+    background: url(../../assets/svg/nila-privacy-top-mandala.svg) no-repeat;
+    width: 264px;
+    height: 386px;
+    background-size: 100%;
+    z-index: 2;
 }
 
 ul li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(-45deg, #0063f4 70%, #00d0b0 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .accent-color {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .dashed-border {
-  margin-block: 50px;
+    margin-block: 50px;
 }
 
 .privacy-header {
-  position: sticky;
-  position: -webkit-sticky;
-  width: 95vw;
-  height: 10vh;
-  top: 0;
-  padding: 3%;
-  box-shadow: 0 0 30px 30px #ffffff;
-  z-index: 1;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
+    position: sticky;
+    position: -webkit-sticky;
+    width: 95vw;
+    height: 15vh;
+    top: 0;
+    padding: 3%;
+    box-shadow: 0 0 30px 30px #ffffff;
+    z-index: 1;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.privacy-header.shrink {
+    height: 10vh;
 }
 
 .privacy-nila-logo {
-  width: 40px;
-  transition: width 0.3s ease-in;
+    width: 40px;
+    transition: width 0.3s ease-in;
 }
 
 .privacy-report-title-wrapper {
-  margin-bottom: 30px;
-  position: sticky;
-  position: -webkit-sticky;
-  letter-spacing: -3px;
+    margin-bottom: 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    letter-spacing: -3px;
 }
 
 .privacy-report-title-wrapper .gradient-text {
-  background: -webkit-linear-gradient(307deg, #0063f4 70%, #00d0b0 85%);
-  background-clip: border-box;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+    background: -webkit-linear-gradient(307deg, #0063f4 70%, #00d0b0 85%);
+    background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .privacy-nila-logo.shrink {
-  width: 30px;
+    width: 30px;
 }
 
 .privacy-container {
-  width: 90vw;
-  margin: auto;
-  color: #4f5460;
-  position: relative;
-  font-family: "Zoho_Puvi_Regular";
+    width: 90vw;
+    margin: auto;
+    color: #4f5460;
+    position: relative;
+    font-family: "Zoho_Puvi_Regular";
 }
 
 .privacy-container .section-title {
-  font-size: 20px;
-  font-weight: bolder;
-  margin-bottom: 15px;
-  position: relative;
-  margin-left: 35px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    position: relative;
+    margin-left: 35px;
 }
 
 .privacy-container .section-title::after {
-  content: "";
-  background: #00d0b0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -35px;
-  width: 30px;
-  height: 4px;
+    content: "";
+    background: #00d0b0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -35px;
+    width: 30px;
+    height: 4px;
 }
 
 .layout-container {
-  display: flex;
+    display: flex;
 }
 
 .left-container {
-  width: 30%;
-  height: 100%;
-  position: fixed;
-  margin-top: 12vh;
+    width: 30%;
+    position: fixed;
+    top: 20vh;
+}
+
+.desktop-footer {
+  display: inherit;
+}
+
+.mobile-footer {
+  display: none;
 }
 
 .right-container {
-  width: 70%;
-  margin: auto;
-  margin-right: 0;
+    width: 70%;
+    margin: auto;
+    margin-right: 0;
 }
 
 .contains-submenus {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .privacy_policy_nav {
-  user-select: none;
-  font-size: 16px;
-  font-family: "Zoho_Puvi_Regular";
-  margin-bottom: 20px;
+    user-select: none;
+    font-size: 16px;
+    font-family: "Zoho_Puvi_Regular";
+    margin-bottom: 20px;
 }
 
-.privacy_policy_nav a:-webkit-any-link ,
-.privacy_policy_nav a{
-  color: #5c5c5c;
+.privacy_policy_nav a:-webkit-any-link,
+.privacy_policy_nav a {
+    color: #5c5c5c;
 }
 
 .privacy_policy_nav a:hover {
-  color: #777777;
+    color: #777777;
 }
 
 .privacy_policy_nav a.active-menu {
-  color: #0063f4 !important;
-  font-family: "Zoho_Puvi_Medium";
+    color: #0063f4 !important;
+    font-family: "Zoho_Puvi_Medium";
 }
 
 .submenus-container {
-  transition: 0s ;
-  height: auto;
-  margin-left: 20px;
-  margin-top: 20px;
+    transition: 0s;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .submenu {
-  margin-bottom: 20px;
-  width: 100%;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .last-updated-on {
-  text-align: right;
+    text-align: right;
 }
 
 .description {
-  font-size: var(--content-font-size);
-  line-height: 1.6;
-  width: 75%;
-  margin-bottom: 20px;
-  width: var(--content-width);
+    font-size: var(--content-font-size);
+    line-height: 1.6;
+    width: 75%;
+    margin-bottom: 20px;
+    width: var(--content-width);
 }
 
 .subheading {
-  font-size: var(--title-font-size);
-  margin-bottom: 20px;
-  width: var(--content-width);
-  letter-spacing: -1px;
-  color: #3e434e;
+    font-size: var(--title-font-size);
+    margin-bottom: 20px;
+    width: var(--content-width);
+    letter-spacing: -1px;
+    color: #3e434e;
 }
 
 .privacy-container ul {
-  margin: 30px 0 40px;
+    margin: 30px 0 40px;
 }
 
 .privacy-container li {
-  position: relative;
-  font-size: var(--list-font-size);
-  padding-left: 35px;
-  margin-bottom: 18px;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  background: url("../../assets/svg/bullet_point.svg") no-repeat left 5px;
-  background-size: 18px;
-  width: var(--content-width);
-  list-style-type: none;
-  color: #3e434e;
+    position: relative;
+    font-size: var(--list-font-size);
+    padding-left: 35px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    background: url("../../assets/svg/bullet_point.svg") no-repeat left 5px;
+    background-size: 18px;
+    width: var(--content-width);
+    list-style-type: none;
+    color: #3e434e;
 }
 
 .anti-spam-list li {
-  font-size: var(--list-font-size);
+    font-size: var(--list-font-size);
 }
 
 .anti-spam-list li::after {
-  transform: translateY(50%);
+    transform: translateY(50%);
 }
 
 a:-webkit-any-link {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 a.text-hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .privacy-report-title-wrapper {
-  top: 0;
-  padding-top: 15px;
-  z-index: 2;
-  font-size: var(--main-font-size);
-  transition: font-size 0.3s ease-in;
+    top: 0;
+    padding-top: 30px;
+    z-index: 2;
+    font-size: var(--main-font-size);
+    transition: font-size 0.3s ease-in;
 }
 
 .shrink.privacy-report-title-wrapper {
-  font-size: var(--main-font-size-shrink);
+    font-size: var(--main-font-size-shrink);
 }
 
 .priv-box {
-  font-size: var(--content-font-size);
-  background-color: #dfe7f8;
-  border-radius: 5px;
-  padding: 40px 32px;
-  position: relative;
-  overflow: hidden;
-  width: var(--content-width);
-  margin-top: 20px;
-  border-left: 3px solid #00ceff;
+    font-size: var(--content-font-size);
+    background-color: #dfe7f8;
+    border-radius: 5px;
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    width: var(--content-width);
+    margin-top: 20px;
+    border-left: 3px solid #00ceff;
 }
 
 .priv-box::after {
-  content: "";
-  background: url("../../assets/svg/nila-privacy-top-mandala.svg") no-repeat;
-  width: 170px;
-  height: 233px;
-  background-size: 100%;
-  position: absolute;
-  right: -52px;
-  top: -50px;
+    content: "";
+    background: url("../../assets/svg/nila-privacy-top-mandala.svg") no-repeat;
+    width: 170px;
+    height: 233px;
+    background-size: 100%;
+    position: absolute;
+    right: -52px;
+    top: -50px;
 }
 
 .priv-box p {
-  margin-bottom: 0;
-  padding-left: 30px;
-  width: var(--box-content-width);
-  line-height: 1.5;
-  color: #010101;
-  position: relative;
+    margin-bottom: 0;
+    padding-left: 30px;
+    width: var(--box-content-width);
+    line-height: 1.5;
+    color: #010101;
+    position: relative;
 }
 
-
 .privacy-container .footer-line {
-  background: url("../../assets/img/nila-privacy-footer-line.png");
-  margin-bottom: 20px;
+    background: url("../../assets/img/nila-privacy-footer-line.png");
+    margin-bottom: 20px;
+}
+
+.privacy-container .footer-container-mobile {
+    flex-direction: column;
+}
+
+.footer-left-content-mobile {
+    justify-content: space-between;
+}
+
+.social-media-right-mobile,
+.social-media-left-mobile {
+  width: 50%;
+}
+
+.social-media-left-mobile .footer-link{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-media-right-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.footer-right-content-mobile {
+    margin-bottom: 20px;
+}
+
+.copy-rights-mobile {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .text-hover,
 .footer-link {
-  color: #5c5c5c !important;
-  position: relative;
+    color: #858a95 !important;
+    position: relative;
 }
 
 .text-hover:hover::after,
 .footer-link:hover::after,
 .footer-active::after {
-  content: "";
-  position: absolute;
-  background: #5c5c5c;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  animation: border-slide-in 0.3s ease-in;
+    content: "";
+    position: absolute;
+    background: #5c5c5c;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    animation: border-slide-in 0.3s ease-in;
 }
 
 .active-parent-menu {
-  font-family: "Zoho_Puvi_Medium";
+    font-family: "Zoho_Puvi_Medium";
 }
 
 .active-menu.text-hover:hover::after {
-  background-color: #0063f4;
+    background-color: #0063f4;
 }
 
 .footer-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .footer-link:hover::after,
 .footer-active::after {
-  background-color: #202020;
+    background-color: #202020;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 80px;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 80px;
+    gap: 20px;
 }
 
 .contact-div {
-  font-size: 22px;
-  color: #8892a9;
-  font-family: "Zoho_Puvi_Medium";
-  margin-bottom: 10px;
+    font-size: 22px;
+    color: #8892a9;
+    font-family: "Zoho_Puvi_Medium";
+    margin-bottom: 10px;
 }
 
 .grid-container .description {
-  font-size: 23px;
-  line-height: 1.4;
+    font-size: 23px;
+    line-height: 1.4;
 }
 
 .margin-bottom {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .world-map-img {
-  width: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 1400px) {
-  .footer-links {
-    line-height: 1.5;
-    flex-wrap: wrap;
-  }
+    .footer-links {
+        line-height: 1.5;
+        flex-wrap: wrap;
+    }
 
-  .footer-link {
-    margin-bottom: 10px;
-  }
+    .footer-link {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 1335px) {
-  :root {
-    --content-width: 75%;
-    --box-content-width: 80%;
-  }
+    :root {
+        --content-width: 75%;
+        --box-content-width: 80%;
+    }
 
-  .priv-box p::before {
-    height: 48px;
-  }
+    .priv-box p::before {
+        height: 48px;
+    }
 }
 
 @media screen and (max-width: 1058px) {
-  :root {
-    --content-width: 85%;
-    --title-font-size: 24px;
-    --content-font-size: 16px;
-    --list-font-size: 15px;
-  }
+    :root {
+        --content-width: 85%;
+        --title-font-size: 24px;
+        --content-font-size: 16px;
+        --list-font-size: 15px;
+    }
 
-  .privacy-container li {
-    background-size: 16px;
-  }
+    .privacy-container li {
+        background-size: 16px;
+    }
 
-  .privacy-container li::after {
-    width: 15px;
-    height: 15px;
-    background-size: 15px;
-  }
+    .privacy-container li::after {
+        width: 15px;
+        height: 15px;
+        background-size: 15px;
+    }
 
-  .left-container {
-    display: none;
-  }
+    .left-container {
+        display: none;
+    }
 
-  .right-container {
-    width: 100%;
-  }
+    .desktop-footer {
+      display: none;
+    }
 
-  .priv-box p::before {
-    height: 42px;
-  }
+    .mobile-footer {
+      display: inherit;
+    }
+
+    .right-container {
+        width: 92%;
+    }
+
+    .priv-box p::before {
+        height: 42px;
+    }
 }
 
 @media screen and (max-width: 827px) {
-  :root {
-    --main-font-size: 60px;
-    --main-font-size-shrink: 40px;
-    --content-width: 90%;
-    --title-font-size: 20px;
-    --box-content-width: 80%;
-  }
+    :root {
+        --main-font-size: 60px;
+        --main-font-size-shrink: 40px;
+        --content-width: 90%;
+        --title-font-size: 20px;
+        --box-content-width: 80%;
+    }
 
-  body::after {
-    width: 210px;
-    height: 209px;
-  }
+    body::after {
+        width: 210px;
+        height: 209px;
+    }
 
-  .priv-box::after {
-    width: 200px;
-    height: 200px;
-    right: -90px;
-  }
+    .margin-bottom {
+      margin-bottom: 35px;
+    }
 
-  .privacy-header {
-    margin-left: 0;
-  }
+    .priv-box::after {
+        width: 200px;
+        height: 200px;
+        right: -90px;
+    }
+
+    .privacy-header {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .privacy-container .footer-links {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    width: 100%;
-    gap: 2px 50px;
-    align-items: center;
-    justify-content: center;
-  }
+    .privacy-container .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        width: 100%;
+        gap: 2px 50px;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .privacy-container .footer-link {
-    justify-self: start;
-  }
+    .privacy-container .footer-link {
+        justify-self: start;
+    }
 }
 
 @media screen and (max-width: 695px) {
-  :root {
-    --main-font-size: 50px;
-    --main-font-size-shrink: 30px;
-    --content-width: 95%;
-    --title-font-size: 18px;
-    --content-font-size: 14px;
-    --list-font-size: 13px;
-    --box-content-width: 85%;
-  }
+    :root {
+        --main-font-size: 50px;
+        --main-font-size-shrink: 30px;
+        --content-width: 95%;
+        --title-font-size: 18px;
+        --content-font-size: 14px;
+        --list-font-size: 13px;
+        --box-content-width: 85%;
+    }
 
-  .privacy-container li {
-    padding-left: 30px;
-  }
+    .privacy-container li {
+        padding-left: 30px;
+    }
 
-  .privacy-container li::after {
-    width: 12px;
-    height: 12px;
-    background-size: 12px;
-    padding-left: 20px;
-  }
+    .privacy-container li::after {
+        width: 12px;
+        height: 12px;
+        background-size: 12px;
+        padding-left: 20px;
+    }
 
-  body::after {
-    width: 180px;
-    height: 150px;
-  }
+    body::after {
+        width: 180px;
+        height: 150px;
+    }
 
-  .priv-box::after {
-    width: 150px;
-    height: 150px;
-    top: 20px;
-    right: -80px;
-  }
+    .priv-box::after {
+        width: 150px;
+        height: 150px;
+        top: 20px;
+        right: -80px;
+    }
 
-  .priv-box p {
-    padding-left: 20px;
-  }
+    .priv-box p {
+        padding-left: 20px;
+    }
 
-  .privacy-nila-logo {
-    width: 30px;
-  }
+    .privacy-nila-logo {
+        width: 30px;
+    }
 
-  .privacy-nila-logo.shrink {
-    width: 22px;
-    margin-right: 40px;
-  }
+    .privacy-nila-logo.shrink {
+        width: 22px;
+        margin-right: 40px;
+    }
 }
 
 @media screen and (max-width: 563px) {
-  :root {
-    --content-width: 100%;
-    --title-font-size: 18px;
-    --content-font-size: 14px;
-    --list-font-size: 13px;
-    --box-content-width: 90%;
-  }
+    :root {
+        --content-width: 100%;
+        --title-font-size: 18px;
+        --content-font-size: 14px;
+        --list-font-size: 13px;
+        --box-content-width: 90%;
+    }
 
-  body::after {
-    width: 156px;
-    height: 155px;
-  }
+    body::after {
+        width: 156px;
+        height: 155px;
+    }
 
-  .privacy-container li {
-    background: url("../../assets/svg/bullet_point.svg") no-repeat left 2px;
-    background-size: 14px;
-    padding-left: 20px;
-  }
+    .privacy-container li {
+        background: url("../../assets/svg/bullet_point.svg") no-repeat left 2px;
+        background-size: 14px;
+        padding-left: 20px;
+    }
 
-  .privacy-report-title-wrapper {
-    padding-top: 20px;
-    letter-spacing: -1px;
-  }
+    .privacy-report-title-wrapper {
+        padding-top: 20px;
+        letter-spacing: -1px;
+    }
 
-  .privacy-nila-logo {
-    width: 30px;
-  }
+    .privacy-nila-logo {
+        width: 30px;
+    }
 
-  .priv-box::after {
-    width: 150px;
-    height: 150px;
-    top: 20px;
-    right: -75px;
-  }
+    .priv-box::after {
+        width: 150px;
+        height: 150px;
+        top: 20px;
+        right: -75px;
+    }
 
-  .priv-box {
-    padding: 20px 24px;
-  }
+    .priv-box {
+        padding: 20px 24px;
+    }
 }
 
 @media screen and (max-width: 475px) {
-  :root {
-    --main-font-size: 30px;
-    --main-font-size-shrink: 25px;
-    --content-width: 100%;
-    --title-font-size: 14px;
-    --content-font-size: 12px;
-    --list-font-size: 11px;
-    --box-content-width: 100%;
-  }
+    :root {
+        --main-font-size: 30px;
+        --main-font-size-shrink: 25px;
+        --content-width: 100%;
+        --title-font-size: 20px;
+        --content-font-size: 16px;
+        --list-font-size: 15px;
+        --box-content-width: 100%;
+    }
 
-  .priv-box p::before {
-    height: 36px;
-  }
+    .priv-box p::before {
+        height: 36px;
+    }
 
-  .priv-box::after {
-    width: 100px;
-    height: 100px;
-    top: 20px;
-    right: -50px;
-  }
+    .priv-box::after {
+        width: 100px;
+        height: 100px;
+        top: 20px;
+        right: -50px;
+    }
 
-  .priv-box {
-    padding: 15px 20px;
-  }
+    .priv-box {
+        padding: 15px 20px;
+    }
 
-  .privacy-nila-logo.shrink {
-    width: 20px;
-  }
+    .privacy-nila-logo.shrink {
+        width: 20px;
+    }
+
+    .privacy-container .section-title {
+      font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 425px) {
-  .privacy-container li::after {
-    width: 10px;
-    height: 10px;
-    background-size: 10px;
-  }
+    .privacy-container li::after {
+        width: 10px;
+        height: 10px;
+        background-size: 10px;
+    }
 
-  .privacy-nila-logo {
-    width: 25px;
-  }
+    .privacy-nila-logo {
+        width: 25px;
+    }
 
-  .privacy-container .footer-left-content {
-    flex-direction: column;
-  }
+    .privacy-container .footer-left-content {
+        flex-direction: column;
+    }
 
-  .social-media {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 10px;
-    justify-content: space-between;
-  }
+    .social-media {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
 
-  .social-media a {
-    display: inline-block;
-  }
+    .social-media-left {
+      width: 50%;
+    }
 
-  .social-media .footer-link {
-    margin-right: 50px;
-    display: block;
-  }
+    .social-media-left a {
+      width: 100%;
+    }
 
-  .privacy-container .footer-link,
-  .copy-rights {
-    font-size: 13px;
-  }
+    .social-media a {
+        display: inline-block;
+    }
+
+    .social-media .footer-link {
+        margin-right: 50px;
+        display: block;
+    }
+
+    .privacy-container .footer-link,
+    .copy-rights {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 375px) {
-  .priv-box p::before {
-    height: 54px;
-  }
+    .priv-box p::before {
+        height: 54px;
+    }
 }
