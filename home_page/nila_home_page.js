@@ -79,7 +79,7 @@ const collabSectionAnimation = {
     animationData: collabSectionAnimationData,
 };
 
-const cardOneElement = document.querySelector(".card-img-1");
+const cardOneElement = document.querySelector(".card-one-animation");
 const cardOne = {
     container: cardOneElement,
     renderer: "svg",
@@ -91,7 +91,7 @@ const cardOne = {
     },
 };
 
-const cardTwoElement = document.querySelector(".card-img-2");
+const cardTwoElement = document.querySelector(".card-two-animation");
 const cardTwo = {
     container: cardTwoElement,
     renderer: "svg",
@@ -103,7 +103,7 @@ const cardTwo = {
     },
 };
 
-const cardThreeElement = document.querySelector(".card-img-3");
+const cardThreeElement = document.querySelector(".card-three-animation");
 const cardThree = {
     container: cardThreeElement,
     renderer: "svg",
@@ -115,7 +115,7 @@ const cardThree = {
     },
 };
 
-const cardFourElement = document.querySelector(".card-img-4");
+const cardFourElement = document.querySelector(".card-four-animation");
 const cardFour = {
     container: cardFourElement,
     renderer: "svg",
@@ -127,7 +127,7 @@ const cardFour = {
     },
 };
 
-const cardFiveElement = document.querySelector(".card-img-5");
+const cardFiveElement = document.querySelector(".card-five-animation");
 const cardFive = {
     container: cardFiveElement,
     renderer: "svg",
@@ -139,12 +139,84 @@ const cardFive = {
     },
 };
 
-const cardSixElement = document.querySelector(".card-img-6");
+const cardSixElement = document.querySelector(".card-six-animation");
 const cardSix = {
     container: cardSixElement,
     renderer: "svg",
     loop: true,
     autoplay: false,
+    animationData: cardSixAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardOneMobileElement = document.querySelector(".card-one-animation-mobile");
+const cardOneMobile = {
+    container: cardOneMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: cardOneAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardTwoMobileElement = document.querySelector(".card-two-animation-mobile");
+const cardTwoMobile = {
+    container: cardTwoMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: cardTwoAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardThreeMobileElement = document.querySelector(".card-three-animation-mobile");
+const cardThreeMobile = {
+    container: cardThreeMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: cardThreeAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardFourMobileElement = document.querySelector(".card-four-animation-mobile");
+const cardFourMobile = {
+    container: cardFourMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: cardFourAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardFiveMobileElement = document.querySelector(".card-five-animation-mobile");
+const cardFiveMobile = {
+    container: cardFiveMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    animationData: cardFiveAnimationData,
+    rendererSettings: {
+        progressiveLoad: true,
+    },
+};
+
+const cardSixMobileElement = document.querySelector(".card-six-animation-mobile");
+const cardSixMobile = {
+    container: cardSixMobileElement,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
     animationData: cardSixAnimationData,
     rendererSettings: {
         progressiveLoad: true,
@@ -250,6 +322,12 @@ const cardThreeAnimation = bodymovin.loadAnimation(cardThree);
 const cardFourAnimation = bodymovin.loadAnimation(cardFour);
 const cardFiveAnimation = bodymovin.loadAnimation(cardFive);
 const cardSixAnimation = bodymovin.loadAnimation(cardSix);
+const cardOneMobileAnimation = bodymovin.loadAnimation(cardOneMobile);
+const cardTwoMobileAnimation = bodymovin.loadAnimation(cardTwoMobile);
+const cardThreeMobileAnimation = bodymovin.loadAnimation(cardThreeMobile);
+const cardFourMobileAnimation = bodymovin.loadAnimation(cardFourMobile);
+const cardFiveMobileAnimation = bodymovin.loadAnimation(cardFiveMobile);
+const cardSixMobileAnimation = bodymovin.loadAnimation(cardSixMobile);
 const thirdFoldLoader = bodymovin.loadAnimation(thirdFoldAnimation);
 const flySoloLoader = bodymovin.loadAnimation(flySoloAnimation);
 const collabSectionLoader = bodymovin.loadAnimation(collabSectionAnimation);

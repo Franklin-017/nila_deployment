@@ -26,7 +26,7 @@
 }
 
 .navlink {
-  color: #fff;
+  color: #868a94;
   transition: all 0.3s ease-in;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .navlink:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: #c0c3cc;
 }
 
 .navlink.active {
@@ -144,7 +144,7 @@
 }
 
 .navbar-squeeze {
-  background-color: transparent;
+  background: linear-gradient(#090d18df 40%, #090d185e 70%, #090d1800);
   /* backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px); */
 }
@@ -262,6 +262,7 @@
   .navlink {
     margin-bottom: 50px;
     font-size: 32px;
+    display: none;
   }
 
   .navlink:first-child,
