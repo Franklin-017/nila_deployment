@@ -78,6 +78,11 @@
   cursor: pointer;
 }
 
+.gradient-border-btn:hover {
+    color: #fff !important;
+    background: linear-gradient(275deg, #00c0b852, #0a74e14f 53%);
+}
+
 .gradient-border-btn::before {
   background: linear-gradient(-45deg, #0a74e1, #00c0b8, #0a74e1, #00c0b8, #0a74e1);
   background-size: 200% 200%;

@@ -89,6 +89,24 @@
     display: inline-block;
 }
 
+.gradient-short-text {
+    background: -webkit-linear-gradient(-45deg, #0063f4 60%, #00d0b0 80%);
+    background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.gradient-long-text {
+    background: -webkit-linear-gradient(336deg, #0063f4 77%, #00d0b0 85%);
+    background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 .cta-link .gradient-text {
     cursor: var(--cursor-image), pointer;
 }
