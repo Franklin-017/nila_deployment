@@ -282,6 +282,10 @@
     height: 36px;
   }
 
+  .navbar-squeeze .brand-logo {
+    height: 30px;
+  }
+
   .navlink {
     margin-bottom: 30px;
     font-size: 24px;
