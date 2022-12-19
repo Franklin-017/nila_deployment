@@ -211,6 +211,9 @@ const animateWords = () => {
 };
 
 futureOfDesignElement.addEventListener("transitionend", () => {
+  if (futureOfDesignWords[futureOfDesignWordIndex] === "collaborative") {
+    futureOfDesignElement.classList.add("gradient-long-text");
+  }
   futureOfDesignElement.innerText = futureOfDesignWords[futureOfDesignWordIndex];
   futureOfDesignElement.style.transform = "translateY(0%)";
   futureOfDesignElement.style.opacity = 1;
