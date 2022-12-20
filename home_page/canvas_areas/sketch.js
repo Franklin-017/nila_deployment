@@ -321,7 +321,7 @@ function draw() {
     else {
         startX = animationStartPosX;
         startY = animationStartPosY;
-        if(timer >= 230) {
+        if(timer >= 80) {
             animationShapes();
         }
         timer+=1;
@@ -541,7 +541,7 @@ function mouseReleased() {
                 }
                 break;
           }
-          if(countBodies((height/100)*30) >= 2) {
+          if(countBodies((height/100)*30) >= 4) {
             removeGroundFlag = true;
             removeGround();
         }
