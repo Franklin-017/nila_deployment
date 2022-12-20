@@ -27,6 +27,7 @@
   top: 0;
   left: 0;
   background-color: var(--nila-bg-color);
+  box-shadow: 0 0 15px 20px var(--nila-bg-color);
   opacity: 0.7;
   z-index: -1;
 }

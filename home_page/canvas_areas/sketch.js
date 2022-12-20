@@ -8,7 +8,7 @@ MouseConstraint = Matter.MouseConstraint;
 
 var engine,
     world;
-
+let pauseGravityFlag = false;
 let addGroundFlag = true;
 let mouseDraggedFlag = true;
 let timer = 0;
@@ -156,6 +156,18 @@ function animationPositive() {
 function animationNegative() {
     animationX -= 1.5;
     animationY -= 1.5;
+}
+
+function pauseGravity() {
+    for(var i=0;i<shapesList.length;i++) {
+        shapesList[i].body.isStatic = true;
+    }
+}
+
+function startGravity() {
+    for(var i=0;i<shapesList.length;i++) {
+        shapesList[i].body.isStatic = false;
+    }
 }
 
 function animationShapes() {
@@ -328,6 +340,12 @@ function draw() {
         removeGroundFlag = false;
         addGround();
     } 
+    if(pauseGravityFlag) {
+        pauseGravity();
+    }
+    if(!pauseGravityFlag) {
+        startGravity();
+    }
 }
 function drawRectangle() {
     rect(startX,startY,shapeWidth,shapeHeight);
@@ -393,7 +411,45 @@ function mouseDragged() {
 }
 
 function mousePressedEvent() {
-    if(animationCompletionFlag) {
+    if(!animationCompletionFlag) {
+        if(state == 1) {
+            shapesList.push(new Rectangle(animationStartPosX,animationStartPosY,shapeWidth,shapeHeight,color("#ff915a")));
+            bodiesList.push(shapesList[shapesList.length-1].body);
+        }
+        else if(state == 4) {
+            shapesList.push(new Circle(animationStartPosX,animationStartPosY,circleRadius,color("#57ccff")));
+            bodiesList.push(shapesList[shapesList.length-1].body);
+        }
+        else if(state == 7) {
+            vertices = [ 
+            {x:vertexLeftX, y:vertexLeftY},
+            {x:vertextopX, y:vertextopY},
+            {x:vertexRightX, y:vertexRightY}
+            ];
+            shapesList.push(new Triangle(startX,startY,vertices,color("#6b4dff")));
+            bodiesList.push(shapesList[shapesList.length-1].body);
+        }
+        else if(state == 10) {
+            angleMode(DEGREES);
+            for(let a=0; a<360; a+=72) {
+                let xax = -(startX - clientX) * sin(a) + startX;
+                let yax = -(startY - clientY) * cos(a) + startY;
+                pentagonVertices.push({x:xax, y:yax});
+            }
+            shapesList.push(new Pentagon(startX,startY,pentagonVertices,color("#ffe05c")));
+            bodiesList.push(shapesList[shapesList.length-1].body);
+            pentagonVertices = [];
+            angleMode(RADIANS);
+        }
+        shapeWidth = 0;
+        shapeHeight = 0;
+        startX = 0;
+        startY = 0;
+        clientX = 0;
+        clientY = 0;
+
+    }
+    animationCompletionFlag = true;
         mousePressedFlag = true;
         startX = mouseX;
         startY = mouseY;
@@ -413,7 +469,6 @@ function mousePressedEvent() {
         if(!collisionCheckFlag) {
             randomColor = color(getRandomColor());
         }
-    }
 }
 
 function mouseMovedEvent() {
