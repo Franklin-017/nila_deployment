@@ -684,6 +684,10 @@
     --hero-section-font-size: 50px;
   }
 
+  .video_section_cursor {
+    display: none;
+  }
+
   .hero-section-content {
     font-size: 18px;
   }
@@ -784,10 +788,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-  .video_section_cursor {
-    display: none;
-  }
 
   /* Native Mac Section */
   .native-mac-section-title {
