@@ -179,7 +179,7 @@
                 </div>
             </div>
 
-            <footer id="footer">
+            <footer id="footer" class="desktop-footer">
                 <div class="footer-line"></div>
                 <div class="footer-container">
                     <div class="footer-left-content">
@@ -213,12 +213,63 @@
                                 >Legal</a
                             >
                         </div>
-                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
                     </div>
+                </div>
+            </footer>
+
+            <footer id="footer" class="mobile-footer">
+                <div class="footer-line"></div>
+                <div class="footer-container footer-container-mobile">
+                    <div class="footer-left-content-mobile">
+                        <p class="design-with-nila title-color">
+                            Designed in Nila
+                            <img class="heart-icon" src="../../assets/svg/heart_icon.svg" />
+                        </p>
+                        <div class="social-media">
+                            <div class="social-media-left-mobile">
+                                <a class="footer-link" cursor-class="squeeze_circle" href="mailto:hi@nila.cloud">Get in touch</a>
+                            </div>
+                            <div class="social-media-right-mobile">
+                                <a class="media-icons" href="https://twitter.com/nila" target="_blank" cursor-class="squeeze_circle">
+                                    <img src="../../assets/svg/twitter_icon.svg" />
+                                </a>
+                                <a class="media-icons" href="https://www.instagram.com/niladotdesign/" target="_blank" cursor-class="squeeze_circle">
+                                    <img src="../../assets/svg/instagram_icon.svg" />
+                                </a>
+                                <a class="media-icons" href="https://www.youtube.com/nila" target="_blank" cursor-class="squeeze_circle">
+                                    <img src="../../assets/svg/youtube_icon.svg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-right-content-mobile">
+                        <div class="footer-links">
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../../index.html">Home</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../security_policy/security_page/nila_security_page.html">Security</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../Compliance_page/compliance.html">Compliance</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../anti_spam_policy_page/anti-spam_policy.html">Anti-spam Policy</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../terms_of_service/terms_of_service_page/terms_of_service.html"
+                                >Terms of Service</a
+                            >
+
+                            <a class="footer-active footer-link" cursor-class="squeeze_circle">Privacy Policy</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../cookie_policy_page/cookie_policy.html">Cookie Policy</a>
+
+                            <a class="footer-link" cursor-class="squeeze_circle" href="../abuse_policy_page/abuse_policy.html">Abuse Policy</a>
+                        </div>
+                    </div>
+                    <p class="copy-rights-mobile" cursor-class="squeeze_circle">© 2022, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
                 </div>
             </footer>
         </div>
         <script>
+            const privacyHeader = document.querySelector(".privacy-header");
             const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
             const nilaLogo = document.querySelector(".privacy-nila-logo");
 
@@ -226,9 +277,11 @@
                 if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
                     mainTitleWrapperNode.classList.add("shrink");
                     nilaLogo.classList.add("shrink");
+                    privacyHeader.classList.add("shrink");
                 } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 30) {
                     mainTitleWrapperNode.classList.remove("shrink");
                     nilaLogo.classList.remove("shrink");
+                    privacyHeader.classList.remove("shrink");
                 }
             });
         </script>

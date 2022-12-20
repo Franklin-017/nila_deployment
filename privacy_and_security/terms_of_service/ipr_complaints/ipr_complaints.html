@@ -194,12 +194,13 @@
                             <div class="seperator"></div>
                             <a class="text-hover footer-link" cursor-class="squeeze_circle" href="../terms_of_service_page/terms_of_service.html">Legal</a>
                         </div>
-                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
         <script>
+            const privacyHeader = document.querySelector(".privacy-header");
             const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
             const nilaLogo = document.querySelector(".privacy-nila-logo");
 
@@ -207,9 +208,11 @@
                 if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
                     mainTitleWrapperNode.classList.add("shrink");
                     nilaLogo.classList.add("shrink");
+                    privacyHeader.classList.add("shrink");
                 } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 30) {
                     mainTitleWrapperNode.classList.remove("shrink");
                     nilaLogo.classList.remove("shrink");
+                    privacyHeader.classList.remove("shrink");
                 }
             });
         </script>

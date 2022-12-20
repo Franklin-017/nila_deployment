@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="shortcut icon" href="../../../assets/img/nila-favico.png" type="image/x-icon" />
         <link rel="stylesheet" href="../../privacy_and_security.css" />
-        <title>Understanding shared responsibility with Nila</title>
+        <title>Encryption whitepaper</title>
     </head>
 
     <body>
@@ -533,12 +533,13 @@
                                 >Legal</a
                             >
                         </div>
-                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022 Nila.All rights reserved.</p>
+                        <p class="copy-rights" cursor-class="squeeze_circle">© 2022, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
         <script>
+            const privacyHeader = document.querySelector(".privacy-header");
             const mainTitleWrapperNode = document.querySelector(".privacy-report-title-wrapper");
             const nilaLogo = document.querySelector(".privacy-nila-logo");
 
@@ -546,9 +547,11 @@
                 if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) < 1) {
                     mainTitleWrapperNode.classList.add("shrink");
                     nilaLogo.classList.add("shrink");
+                    privacyHeader.classList.add("shrink");
                 } else if (Math.abs(mainTitleWrapperNode.getBoundingClientRect().top) > 30) {
                     mainTitleWrapperNode.classList.remove("shrink");
                     nilaLogo.classList.remove("shrink");
+                    privacyHeader.classList.remove("shrink");
                 }
             });
         </script>

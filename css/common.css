@@ -165,7 +165,7 @@
 .launch-title {
   font-size: var(--title-font-size);
   color: var(--title-color);
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   line-height: 1.1;
   letter-spacing: -1px;
   font-weight: 600;

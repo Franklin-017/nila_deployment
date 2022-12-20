@@ -2,8 +2,8 @@
     height: 10vh;
 }
 .accordion {
-    background-color: transparent;
-    color: #3e434e;
+    background-color: transparent !important;
+    color: #3e434e !important;
     cursor: pointer;
     padding: 18px 30px 18px 0px; 
     width: 100%;
@@ -13,7 +13,9 @@
     transition: 0.4s;
     font-size: 22px;
     position: relative;
-    border: none;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .accordion:after {
@@ -33,13 +35,16 @@
 }
 
 .panel {
-    background-color: transparent;
+    background-color: transparent !important;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     width: 100%;
-    border-bottom: 1px solid #000;
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
     font-size: 16px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .panel.text-l {

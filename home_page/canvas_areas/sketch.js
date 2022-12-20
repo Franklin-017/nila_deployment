@@ -81,7 +81,6 @@ function setup() {
     canvasmouse.pixelRatio = pixelDensity();
     mConstraint = MouseConstraint.create(engine, {mouse: canvasmouse});
     World.add(world,[ground,leftWall,rightWall,ceilWall,mConstraint]);
-    frameRate(60);
 }
 
 function removeGround() {
@@ -149,13 +148,13 @@ function shapeCalculation() {
 }
 
 function animationPositive() {
-    animationX += 1.5;
-    animationY += 1.5;
+    animationX += 10;
+    animationY += 10;
 }
 
 function animationNegative() {
-    animationX -= 1.5;
-    animationY -= 1.5;
+    animationX -= 10;
+    animationY -= 10;
 }
 
 function pauseGravity() {
@@ -322,7 +321,7 @@ function draw() {
     else {
         startX = animationStartPosX;
         startY = animationStartPosY;
-        if(timer >= 290) {
+        if(timer >= 200) {
             animationShapes();
         }
         timer+=1;

@@ -79,15 +79,8 @@ table{
     text-align: left;
     top: 124px;
     height: 70px;
+    z-index: 1;
 }
-
-/* .ge-table th:first-child {
-    border-top-left-radius: 50px;
-}
-
-.ge-table th:last-child {
-    border-top-right-radius: 50px;
-} */
 
 .ge-table th:first-child {
     width: 5%;
