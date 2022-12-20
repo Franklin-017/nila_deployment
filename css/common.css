@@ -119,10 +119,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-animation:hover {
-  animation: rainbow-text 1s infinite 1s linear alternate;
-}
-
 .btn {
   border: none;
   outline: none;

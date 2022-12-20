@@ -448,7 +448,6 @@ const textSlide = document.querySelector(".text-slide");
 let order = 1;
 setTimeout(() => {
     let initialTextSliderWidth = document.querySelector(".is-visible").clientWidth + 5;
-    console.log(initialTextSliderWidth);
     textSlide.style.width = initialTextSliderWidth + "px";
 }, 10);
 
@@ -515,7 +514,6 @@ function showRespCollabContent(index) {
 
 collaborationContentNode.forEach((contentNode) => {
     contentNode.addEventListener("mouseenter", (event) => {
-        console.log(event.target);
         let parentNode = event.target;
         let greatParentNode = parentNode.parentNode;
         unselectSelectedContent();

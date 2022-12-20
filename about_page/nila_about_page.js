@@ -123,7 +123,6 @@ startSlide();
 //     clearTimeout(slideIntervalId);
 //     startSlide();
 //     sliderIndex--;
-//     console.log(sliderIndex);
 //     highlightCarouselText(sliderIndex - 1);
 //     carouselSlider.style.transition = "0.7s";
 //     carouselSlider.style.transform = "translateX(-" + carouselWidth * sliderIndex + "px)";
@@ -210,10 +209,19 @@ const animateWords = () => {
   }, 4000);
 };
 
+function applyBrandIdentity(current_word){
+  futureOfDesignWords.forEach(word => {
+    let gradientClassName = `gradient-${word}-text`
+    if (current_word === word) {
+      futureOfDesignElement.classList.add(gradientClassName);
+    } else {
+      futureOfDesignElement.classList.remove(gradientClassName);
+    }
+  })
+}
+
 futureOfDesignElement.addEventListener("transitionend", () => {
-  if (futureOfDesignWords[futureOfDesignWordIndex] === "collaborative") {
-    futureOfDesignElement.classList.add("gradient-long-text");
-  }
+  applyBrandIdentity(futureOfDesignWords[futureOfDesignWordIndex]);
   futureOfDesignElement.innerText = futureOfDesignWords[futureOfDesignWordIndex];
   futureOfDesignElement.style.transform = "translateY(0%)";
   futureOfDesignElement.style.opacity = 1;
