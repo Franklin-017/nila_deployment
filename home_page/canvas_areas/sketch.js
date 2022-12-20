@@ -148,13 +148,13 @@ function shapeCalculation() {
 }
 
 function animationPositive() {
-    animationX += 10;
-    animationY += 10;
+    animationX += 7;
+    animationY += 7;
 }
 
 function animationNegative() {
-    animationX -= 10;
-    animationY -= 10;
+    animationX -= 7;
+    animationY -= 7;
 }
 
 function pauseGravity() {
@@ -321,7 +321,7 @@ function draw() {
     else {
         startX = animationStartPosX;
         startY = animationStartPosY;
-        if(timer >= 200) {
+        if(timer >= 230) {
             animationShapes();
         }
         timer+=1;

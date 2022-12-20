@@ -167,21 +167,15 @@ const setActiveState = () => {
   }
 };
 
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-hamburgerMenu.addEventListener("click", () => {
-  hamburgerMenu.classList.toggle("open");
-
-  document.querySelector(".navlinks").style.transition = "all 0.5s ease-in";
-  if (document.querySelector(".hamburger-menu.open")) {
-    document.querySelector(".navlinks").style.transform = "translateY(0%)";
-  } else {
-    document.querySelector(".navlinks").style.transform = "translateY(-110%)";
-  }
-});
-
-history.scrollRestoration = "manual";
-
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// const hamburgerMenu = document.querySelector(".hamburger-menu");
+// hamburgerMenu.addEventListener("click", () => {
+//   hamburgerMenu.classList.toggle("open");
+//
+//   document.querySelector(".navlinks").style.transition = "all 0.5s ease-in";
+//   if (document.querySelector(".hamburger-menu.open")) {
+//     document.querySelector(".navlinks").style.transform = "translateY(0%)";
+//   } else {
+//     document.querySelector(".navlinks").style.transform = "translateY(-110%)";
+//   }
+// });
 // ignorei18n_end

@@ -81,7 +81,7 @@
 }
 
 .gradient-ship-text {
-    background: -webkit-linear-gradient(326deg, #0063f4 58%, #00d0b0 72%);
+    background: -webkit-linear-gradient(326deg, #0063f4 54%, #00d0b0 84%);
 }
 
 .gradient-design-text {
@@ -93,35 +93,31 @@
 }
 
 .gradient-fast-text-dot {
-    background: -webkit-linear-gradient(310deg, #0063f4 50%, #00d0b0 72%);
+    background: -webkit-linear-gradient(310deg, #0063f4 53%, #00d0b0 79%);
 }
 
 .gradient-powerful-text-dot {
-    background: -webkit-linear-gradient(-45deg, #0063f4 65%, #00d0b0 85%);
+    background: -webkit-linear-gradient(-45deg, #0063f4 73%, #00d0b0 85%);
 }
 
 .gradient-collaborative-text-dot {
-    background: -webkit-linear-gradient(325deg, #0063f4 77%, #00d0b0 85%);
+    background: -webkit-linear-gradient(307deg, #0063f4 75%, #00d0b0 89%);
 }
 
 .gradient-design-text-dot {
-    background: -webkit-linear-gradient(330deg, #0063f4 54%, #00d0b0 78%);
+    background: -webkit-linear-gradient(310deg, #0063f4 58%, #00d0b0 83%);
 }
 
 .gradient-prototype-text-dot {
-    background: -webkit-linear-gradient(330deg, #0063f4 60%, #00d0b0 85%);
+    background: -webkit-linear-gradient(302deg, #0063f4 67%, #00d0b0 85%);
 }
 
 .gradient-magic-text-dot {
-    background: -webkit-linear-gradient(343deg, #0063f4 59%, #00d0b0 72%);
+    background: -webkit-linear-gradient(346deg, #0063f4 60%, #00d0b0 81%);
 }
 
 .gradient-creativity-text-dot {
-    background: -webkit-linear-gradient(343deg, #0063f4 70%, #00d0b0 86%);
-}
-
-.gradient-you-text-dot {
-    background: -webkit-linear-gradient(-45deg, #0063f4 35%, #00d0b0 65%);
+    background: -webkit-linear-gradient(313deg, #0063f4 75%, #00d0b0 86%);
 }
 
 .gradient-you-text-dot {
@@ -129,15 +125,15 @@
 }
 
 .gradient-nila-text-dot {
-    background: -webkit-linear-gradient(-45deg, #0063f4 44%, #00d0b0 76%);
+    background: -webkit-linear-gradient(318deg, #0063f4 43%, #00d0b0 85%);
 }
 
 .gradient-mission-text {
-    background: -webkit-linear-gradient(-45deg, #0063f4 58%, #00d0b0 85%);
+    background: -webkit-linear-gradient(331deg, #0063f4 62%, #00d0b0 85%);
 }
 
 .gradient-inclusive-text {
-    background: -webkit-linear-gradient(344deg, #0063f4 69%, #00d0b0 89%);
+    background: -webkit-linear-gradient(344deg, #0063f4 75%, #00d0b0 89%);
 }
 
 .gradient-seamless-text {
@@ -145,11 +141,11 @@
 }
 
 .gradient-collaborative-text {
-    background: -webkit-linear-gradient(-45deg, #0063f4 72%, #00d0b0 93%);
+    background: -webkit-linear-gradient(344deg, #0063f4 82%, #00d0b0 90%);
 }
 
 .gradient-nila-text {
-    background: -webkit-linear-gradient(341deg, #0063f4 41%, #00d0b0 80%);
+    background: -webkit-linear-gradient(341deg, #0063f4 55%, #00d0b0 73%);
 }
 
 .gradient-text {

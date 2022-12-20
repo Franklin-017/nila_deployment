@@ -45,18 +45,20 @@
 
         <div class="container">
             <section class="heroSection">
-                <div class="hs-content canvas-cursor" cursor-class="canvas_section" >
-                    <span class="text-slide">
-                        <span class="hs-title puvi-regular gradient-text gradient-design-text hs-animate-text is-visible">Design</span>
-                        <span class="hs-title puvi-regular gradient-text gradient-prototype-text hs-animate-text is-hidden">Prototype</span>
-                        <span class="hs-title puvi-regular gradient-text gradient-ship-text hs-animate-text is-hidden">Ship</span>
-                    </span>
-                    <p class="hs-title puvi-regular animate-content">the best product experiences. Together.</p>
-                    <p class="primary-color pb-3 hero-section-content" data-aos="fade-up">
+                <div class="hs-content canvas-cursor" cursor-class="canvas_section">
+                    <div data-aos="fade-up" >
+                        <span class="text-slide">
+                            <span class="hs-title puvi-regular gradient-text gradient-design-text hs-animate-text is-hidden">Design</span>
+                            <span class="hs-title puvi-regular gradient-text gradient-prototype-text hs-animate-text is-hidden">Prototype</span>
+                            <span class="hs-title puvi-regular gradient-text gradient-ship-text hs-animate-text is-visible">Ship</span>
+                        </span>
+                        <p class="hs-title puvi-regular animate-content">the best product experiences. Together.</p>
+                    </div>
+                    <p class="primary-color pb-3 hero-section-content" data-aos="fade-up" data-aos-delay="100">
                         Nila's got everything your team needs to simplify your design process. Go from design to prototyping to handoff while keeping everyone
                         in sync.
                     </p>
-                    <button class="banner-btn btn get-update-btn puvi-regular" cursor-class="squeeze_circle">Sign up for early access</button>
+                    <button data-aos="fade-up" data-aos-delay="200" class="banner-btn btn get-update-btn puvi-regular" cursor-class="squeeze_circle">Sign up for early access</button>
                 </div>
 
                 <div class="canvas-wrapper">
@@ -113,8 +115,8 @@
                         <span class="gradient-text gradient-powerful-text-dot"> Powerful.</span>
                         <span class="gradient-text gradient-collaborative-text-dot"> Collaborative.</span>
                     </p>
-                    <p class="native-mac-section-subtitle">Meet Nila for Mac</p>
-                    <p class="native-mac-section-description text-m primary-color">
+                    <p class="native-mac-section-subtitle" data-aos="fade-up">Meet Nila for Mac</p>
+                    <p class="native-mac-section-description text-m primary-color" data-aos="fade-up">
                         Create with speed and precision on a native app that's right at home with macOS. Bring the team into your process on Nila for Web —
                         everyone stays connected to a single source of truth.
                     </p>
@@ -161,7 +163,7 @@
                     <div class="card-wrapper">
                         <div class="card-container" data-aos="fade-up">
                             <div class="card-media">
-                            <div class="card-two-animation"></div>
+                                <div class="card-two-animation"></div>
                                 <!-- <video class="card-two-animation" width="100%" loop>
                                     <source src="./assets/video/Auto_Layouts.mp4" type="video/mp4">
                                 </video> -->
@@ -322,8 +324,7 @@
                             <div class="feedback-fuel-animation show-on-hover"></div>
                             <div class="primary-color col-content feedback-fuel text-xl" cursor-class="squeeze_circle">
                                 <span class="gradient-text"
-                                    >Feedback 
-                                    <br />fuels great<br /> 
+                                    >Feedback <br />fuels great<br />
                                     design.</span
                                 >
                             </div>
@@ -361,7 +362,7 @@
                             <div class="smoother-handsoff-animation show-on-hover"></div>
                             <div class="primary-color col-content smooth text-xl" cursor-class="squeeze_circle">
                                 <span class="gradient-text">
-                                    Smoother<br /> 
+                                    Smoother<br />
                                     handoffs.<br />
                                     More clarity.
                                 </span>
@@ -406,12 +407,12 @@
                             </p>
                         </div>
                         <div class="primary-color collab-feature-description" data-aos="fade-up">
-                                <div class="primary-color collab-content-tablet" data-aos="fade-up">
-                                    <p class="text-m">
-                                        Teammates can start conversations around anything you create. Bring context and depth to feedback with marked elements,
-                                        pinned selections, replies, @mentions and emoji reactions.
-                                    </p>
-                                </div>
+                            <div class="primary-color collab-content-tablet" data-aos="fade-up">
+                                <p class="text-m">
+                                    Teammates can start conversations around anything you create. Bring context and depth to feedback with marked elements,
+                                    pinned selections, replies, @mentions and emoji reactions.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="collab-feature-container">
@@ -481,7 +482,9 @@
                     <button class="btn get-update-btn puvi-regular" cursor-class="squeeze_circle">Sign up for early access</button>
                 </div>
                 <div class="about-navigation">
-                    <a class="about-link" href="./about_page/nila_about_page.html">About us<img class="white-arrow" src="https://nila.design/sites/nila/files/nila/arrow_icon_white.svg" /></a>
+                    <a class="about-link" href="./about_page/nila_about_page.html"
+                        >About us<img class="white-arrow" src="https://nila.design/sites/nila/files/nila/arrow_icon_white.svg"
+                    /></a>
                 </div>
             </section>
 
@@ -539,9 +542,6 @@
         <script language="javascript" type="text/javascript" src="./home_page/canvas_areas/sketch.js"></script>
         <script language="javascript" type="text/javascript" src="./home_page/canvas_areas/pentagon.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
         <script src="./lottie.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/vimeo-player/2.13.0/player.min.js"

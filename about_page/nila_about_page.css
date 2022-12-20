@@ -599,6 +599,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .video_section_cursor {
+    display: none;
+  }
+  
   .hs-animation{
     width: 300px;
   }

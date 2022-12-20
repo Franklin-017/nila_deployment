@@ -785,6 +785,10 @@
 
 @media screen and (max-width: 768px) {
 
+  .video_section_cursor {
+    display: none;
+  }
+
   /* Native Mac Section */
   .native-mac-section-title {
     margin-bottom: 10px;
