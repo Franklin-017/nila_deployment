@@ -656,6 +656,27 @@
         margin-top: 0;
     }
 
+    .native-mac-section-container {
+        height: auto;
+        margin: 50px 0;
+    }
+
+    .animation-wrapper-3{
+        height: 500px;
+    }
+
+    .animation-section-3 {
+        height: auto;
+        left: -54%;
+        top: 0;
+    }
+
+    .collab-section-header-container {
+        min-height: unset;
+        margin: 50px 0;
+    }
+
+
     /* Native Mac Section */
     .native-mac-section-subtitle {
         font-size: 26px;
