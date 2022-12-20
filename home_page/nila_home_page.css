@@ -356,7 +356,7 @@
 }
 
 .collab-feature-controller {
-    width: 80%;
+    width: 100%;
     display: flex;
 }
 
@@ -603,7 +603,7 @@
 
     /* Prototype Section */
     .prototype-section-subtitle {
-        width: 60%;
+        width: 65%;
     }
 
     /* /Prototype Section/ */
@@ -652,6 +652,10 @@
         display: none;
     }
 
+    .prototype-section-container {
+        margin-top: 0;
+    }
+
     /* Native Mac Section */
     .native-mac-section-subtitle {
         font-size: 26px;
@@ -682,7 +686,6 @@
     }
 
     .card-container {
-        padding: 40px;
         width: 100%;
     }
 
@@ -691,12 +694,17 @@
         letter-spacing: -1px;
     }
 
+    .card-container:hover .card-desc {
+        padding: 0 20px;
+    }
+
     .card-desc {
         font-size: 16px;
         line-height: 1.3;
         max-height: 200px;
         opacity: 1;
         height: auto;
+        padding: 0 20px;
     }
 
     .card-media {
