@@ -376,7 +376,8 @@
 .comment-converse-animation,
 .smoother-handsoff-animation,
 .feedback-fuel-animation {
-    height: 180px;
+    height: 200px;
+    transform: translateY(-30px);
 }
 
 .show-on-hover {
@@ -741,7 +742,6 @@
     /* Collab Section */
     .col-content {
         font-size: 32px;
-        width: 60%;
     }
 
     /* /Collab Section/ */
